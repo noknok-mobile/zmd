@@ -32,19 +32,25 @@ html{
     font-size: map-get($font-size, m);
 }
 
-@mixin header($font-size) {
+@mixin header($size) {
   font-family: "PT Serif", serif;
-  font-size: $font-size;
+  font-size: map-get($font-size, $size);
 }
-
-%h3 {
-  @include header(map-get($font-size, xl));
+@mixin text($size, $weight: null, $isUppercase:false) {
+    font-size: map-get($font-size, $size);
+    @if $weight{
+        font-weight: $weight;
+    }
+    @if $isUppercase{
+        text-transform: uppercase;
+    } 
 }
-
+%card{
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 12px 24px rgba(0, 0, 0, 0.04);
+}
 .button {
   display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -53,8 +59,9 @@ html{
   background: $color-main;
   transition: background-color 0.2s ease-out;
   padding: 18px 40px;
+  @include text(s, 600, true);
+  text-decoration: none;
   color: white;
-  font-size: map-get($font-size, s);
   &:hover {
     background-color: $color-contrast;
   }
@@ -73,24 +80,12 @@ html{
     }
 }
 .list{
-    list-style-type: circle;
-    list-style-position: outside;
     padding-left: 80px;
     &__item{
         padding-left: 30px;
         margin-bottom: 50px;
         line-height: 180%;
         position: relative;
-        // &::before{
-        //     content: "";
-        //     display: inline-block;
-        //     // position: absolute;
-        //     // left: 0;
-        //     width: 80px;
-        //     height: 15px;
-        //     background: $color-accent;
-        //     // margin-right: 30px;
-        // }
         &::marker{
             content: url(../img/marker.svg);
         }
@@ -99,13 +94,11 @@ html{
 .sidebar-menu{
     list-style-type: none;
     padding: 15px 50px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 12px 24px rgba(0, 0, 0, 0.04);
     max-width: 410px;
+    @extend %card;
     &__item{
         padding: 30px 0;
-        font-size: map-get($font-size, s);
-        text-transform: uppercase;
-        font-weight: 600;
+        @include text(s, 600, true); 
         &:not(:last-of-type){
             border-bottom: 1px solid $color-line;
         }
@@ -118,9 +111,7 @@ html{
     list-style-type: none;
     &__item{
         padding: 20px 0;
-        font-size: map-get($font-size, xs);
-        text-transform: uppercase;
-        font-weight: 600;
+        @include text(s, 600, true);
     }
 }
 .breadcrumb{
@@ -128,10 +119,64 @@ html{
     list-style-type: none;
     &__item{
         color: $color-text-muted;
-        font-size: map-get($font-size, xxs);
+        @include text(xxs, 600);
+        text-decoration: underline;
         &:not(:last-of-type)::after{
             content: '/';
             display: inline-block;
+            padding: 0 10px;
+        }
+        &_active{
+            color: $color-text-semi-muted;
+            text-decoration: none;
         }
     }
+}
+.category{
+    display: flex;
+    align-items: center;
+    background: $color-elem-background;
+    padding: $offset-small;
+    transition: 0.2s ease-in-out;
+    &:hover{
+        @extend %card;
+        color: $color-accent;
+    }
+    &__img{
+        margin-right: $offset-small;
+    }
+    &__name{
+        @include text(m, 600);
+    }
+}
+.card{
+    @extend %card;
+    display: flex;
+    position: relative;
+    &__wrapper{
+        padding: $offset-small;
+    }
+    &__img{
+        background-image: url(../img/image.png);
+        background-repeat: no-repeat;
+        flex: 0 0 50%;
+        height: 436px;
+    }
+    &__overheader{
+        @include text(xxs, 600, true);
+        color: $color-text-muted;
+        margin-bottom: 15px;
+    }
+    &__header{
+        @include text(l);
+        margin-bottom: 15px;
+        line-height: 140%;
+    }
+    &__description{
+        @include text(s);
+    }
+    &__button{
+
+    }
+
 }
