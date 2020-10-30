@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=PT+Serif&display=swap");
+
+$color-text: #000000;
+$color-elem-background: #f4f4f4;
+$color-line: #dad8d5;
+$color-text-semi-muted: #7d7d7d;
+$color-text-muted: #b4b4b4;
+$color-main: #5b423b;
+$color-accent: #852d2e;
+$color-contrast: #c6aa80;
+
+$offset-small: 30px;
+$offset-mid: 60px;
+$offset-large: 120px;
+
+$font-size: (
+  xxl: 48px,
+  xl: 36px,
+  l: 24px,
+  m: 20px,
+  s:18px,
+  xs: 16px,
+  xxs: 14px,
+);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+html{
+    font-size: map-get($font-size, m);
+}
+
+@mixin header($font-size) {
+  font-family: "PT Serif", serif;
+  font-size: $font-size;
+}
+
+%h3 {
+  @include header(map-get($font-size, xl));
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 100px;
+  background: $color-main;
+  transition: background-color 0.2s ease-out;
+  padding: 18px 40px;
+  color: white;
+  font-size: map-get($font-size, s);
+  &:hover {
+    background-color: $color-contrast;
+  }
+}
+.link{
+    text-decoration: none;
+    color: $color-text;
+    &:visited{
+        color: $color-main;
+    }
+    &:hover{
+        color: $color-accent;
+    }
+    &:active{
+        color: $color-contrast;
+    }
+}
+.list{
+    list-style-type: circle;
+    list-style-position: outside;
+    padding-left: 80px;
+    &__item{
+        padding-left: 30px;
+        margin-bottom: 50px;
+        line-height: 180%;
+        position: relative;
+        // &::before{
+        //     content: "";
+        //     display: inline-block;
+        //     // position: absolute;
+        //     // left: 0;
+        //     width: 80px;
+        //     height: 15px;
+        //     background: $color-accent;
+        //     // margin-right: 30px;
+        // }
+        &::marker{
+            content: url(../img/marker.svg);
+        }
+    }
+}
+.sidebar-menu{
+    list-style-type: none;
+    padding: 15px 50px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 12px 24px rgba(0, 0, 0, 0.04);
+    max-width: 410px;
+    &__item{
+        padding: 30px 0;
+        font-size: map-get($font-size, s);
+        text-transform: uppercase;
+        font-weight: 600;
+        &:not(:last-of-type){
+            border-bottom: 1px solid $color-line;
+        }
+    }
+    
+}
+.main-menu{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    &__item{
+        padding: 20px 0;
+        font-size: map-get($font-size, xs);
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+.breadcrumb{
+    display: flex;
+    list-style-type: none;
+    &__item{
+        color: $color-text-muted;
+        font-size: map-get($font-size, xxs);
+        &:not(:last-of-type)::after{
+            content: '/';
+            display: inline-block;
+        }
+    }
+}
