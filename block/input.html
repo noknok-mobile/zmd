@@ -1,0 +1,28 @@
+<!-- input:password -->
+
+<div class="input">
+    <input type="password" class="input__value" placeholder="Ваш пароль">
+    <span class="input__toggle input__toggle_visible"></span>
+</div>
+<script>
+    document.querySelector('.input__toggle').addEventListener('click', function(e){
+        e.target.classList.toggle('input__toggle_hidden');
+        e.target.classList.toggle('input__toggle_visible');
+        switch(e.target.previousElementSibling.type){
+            case 'password':
+                e.target.previousElementSibling.type = 'text';
+                break;
+            case 'text':
+                e.target.previousElementSibling.type = 'password';
+                break;
+        }
+        
+    })
+</script>
+
+
+<!-- input:date -->
+<div class="input">
+    <input type="date" class="input__value input__value_date">
+    <span class="input__icon"></span>
+</div>
