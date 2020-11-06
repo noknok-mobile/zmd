@@ -141,17 +141,27 @@ html {
 }
 
 .card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
   position: relative;
+  justify-content: stretch;
 }
 .card__wrapper {
   padding: 30px;
+  padding-right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 .card__img {
-  background-image: url(../img/image.png);
-  background-repeat: no-repeat;
   flex: 0 0 50%;
   height: 436px;
+  transition: filter 0.2s ease-out;
+  filter: grayscale(1);
+}
+.card__img:hover {
+  filter: grayscale(0);
 }
 .card__overheader {
   font-size: 14px;
@@ -167,7 +177,14 @@ html {
 }
 .card__description {
   font-size: 18px;
+  flex: 1;
+  line-height: 180%;
+  padding-right: 100px;
 }
+.card__button {
+  flex: 0 0;
+}
+
 .control {
   display: block;
   position: relative;

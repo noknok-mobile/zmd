@@ -23,6 +23,8 @@ $font-size: (
   xs: 16px,
   xxs: 14px,
 );
+$col-width: 70px;
+$gutter: 30px;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -170,16 +172,28 @@ html {
 }
 .card {
   @extend %card;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $gutter;
   position: relative;
+  justify-content: stretch;
   &__wrapper {
     padding: $offset-small;
+    padding-right: $col-width;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
   &__img {
-    background-image: url(../img/image.png);
-    background-repeat: no-repeat;
+    // background-image: url('/img/image.png');
+    // background-repeat: no-repeat;
     flex: 0 0 50%;
     height: 436px;
+    transition: filter 0.2s ease-out;
+    filter: grayscale(1);
+    &:hover{
+      filter: grayscale(0);
+    }
   }
   &__overheader {
     @include text(xxs, 600, true);
@@ -193,8 +207,13 @@ html {
   }
   &__description {
     @include text(s);
+    flex: 1;
+    line-height: 180%;
+    padding-right: $col-width + $gutter;
+    
   }
   &__button {
+    flex: 0 0;
   }
 }
 .control {
