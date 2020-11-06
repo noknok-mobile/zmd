@@ -126,7 +126,7 @@ html {
   list-style-type: none;
   &__item {
     padding: 20px 0;
-    @include text(s, 600, true);
+    @include text(xs, 600, true);
   }
   &__wrapper {
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.04);
@@ -332,7 +332,8 @@ html {
   }
 }
 .header {
-  &_top {
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.04);
+  &__top {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid $color-line;
@@ -343,6 +344,10 @@ html {
     max-width: 1200px;
     align-self: center;
     margin: 0 auto;
+    &_user-menu {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   &__logo {
     @extend %absolute-centered;
@@ -356,8 +361,12 @@ html {
   &__button {
     align-self: center;
   }
-}
-.user-menu {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  &__link{
+    color: #852D2E;
+    text-decoration: underline;
+    @include text(inherit,400);
+    & + &{
+      margin-left: 30px;
+    }
+  }
 }
