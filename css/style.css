@@ -347,4 +347,36 @@ html {
   margin-left: 30px;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  padding: 45px 0 55px;
+  background: #f4f4f4;
+}
+.page-header__title {
+  font-family: "PT Serif", serif;
+  font-size: 48px;
+  font-weight: 400;
+}
+.page-header__nav {
+  margin-bottom: 15px;
+}
+.page-header_bskg-pill {
+  background-image: url("/img/pill.png");
+  background-size: 200px;
+}
+.page-header_bskg-cross {
+  background-image: url("/img/cross.png");
+  background-size: 300px;
+  background-position: right bottom;
+}
+.page-header_bskg-stethoscope {
+  background-image: url("/img/stethoscope.png");
+  background-size: 500px;
+  background-position: right bottom;
+}
+
 /*# sourceMappingURL=style.css.map */
