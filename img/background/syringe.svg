@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 198.593 177.923">
+    <defs>
+        <pattern id="a" width="198.759" height="177.948" patternTransform="translate(138.257 -897.169)" patternUnits="userSpaceOnUse" viewBox="0 0 198.759 177.948">
+            <rect width="198.759" height="177.948" style="fill:none"/>
+            <line x1="107.663" y1="90.629" x2="139.304" y2="122.27" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <polyline points="146.767 123.828 142.256 119.318 137.031 124.543 141.542 129.054" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="149.122" y1="128.413" x2="143.917" y2="133.618" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <path d="M151.375,121.824l-9.029,9.029,36.9,36.9,9.029-9.028-36.9-36.905m0-2.828,39.732,39.733L179.25,170.586l-39.733-39.733L151.375,119Z" style="fill:#852d2f"/>
+            <line x1="165.029" y1="144.319" x2="159.823" y2="149.524" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="159.028" y1="142.367" x2="155.846" y2="145.548" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="155.051" y1="138.39" x2="151.87" y2="141.571" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="151.075" y1="134.414" x2="147.893" y2="137.595" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="180.935" y1="160.225" x2="175.729" y2="165.431" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="174.934" y1="158.273" x2="171.753" y2="161.454" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="170.957" y1="154.296" x2="167.776" y2="157.478" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="166.981" y1="150.32" x2="163.8" y2="153.501" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="185.323" y1="164.513" x2="191.975" y2="171.164" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="186.191" y1="176.948" x2="197.759" y2="165.38" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="1" y1="87.319" x2="32.64" y2="55.679" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <polyline points="40.103 54.12 35.593 58.631 30.367 53.406 34.878 48.895" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="42.705" y1="49.782" x2="37.499" y2="44.577" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <path d="M72.587,10.191l-36.9,36.9,9.029,9.029,36.905-36.9-9.029-9.029m0-2.828L84.444,19.22,44.711,58.952,32.854,47.1,72.587,7.363Z" style="fill:#852d2f"/>
+            <line x1="58.611" y1="33.876" x2="53.406" y2="28.67" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="52.611" y1="35.828" x2="49.429" y2="32.647" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="48.634" y1="39.805" x2="45.453" y2="36.623" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="44.657" y1="43.781" x2="41.476" y2="40.6" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="74.518" y1="17.97" x2="69.312" y2="12.764" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="68.517" y1="19.922" x2="65.336" y2="16.741" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="64.54" y1="23.898" x2="61.359" y2="20.717" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="60.564" y1="27.875" x2="57.382" y2="24.694" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="78.66" y1="13.436" x2="85.312" y2="6.784" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <line x1="79.527" y1="1" x2="91.096" y2="12.568" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        </pattern>
+    </defs>
+    <title>Ресурс 8</title>
+    <rect width="198.593" height="177.923" style="fill:url(#a);opacity:0.15"/>
+    <rect width="198.593" height="177.923" style="fill:none"/>
+</svg>
