@@ -1,0 +1,41 @@
+html {
+  --col-width: 70px;
+  --gutter: 30px;
+  --container-width: 1200px;
+  --grid-margin: 20px;
+
+  @media (min-width: 320px) {
+    --gutter: 20px;
+    --grid-margin: 20px;
+  }
+  @media (min-width: 576px) {
+    --grid-margin: 20px;
+  }
+  @media (min-width: 768px) {
+    --col-width: 70px;
+    --container-width: 1200px;
+  }
+  @media (min-width: 960px) {
+    --container-width: 1140px;
+    --grid-margin: 30px;
+  }
+  @media (min-width: 1200px) {
+    --grid-margin: auto;
+  }
+}
+
+$offset-small: 30px;
+$offset-mid: 60px;
+$offset-large: 120px;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$col-width: var(--col-width);
+$gutter: var(--gutter);
+$container-width: 1200px;

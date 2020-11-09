@@ -1,30 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=PT+Serif&display=swap");
+@import '_constants.scss';
 
-$color-text: #000000;
-$color-elem-background: #f4f4f4;
-$color-line: #dad8d5;
-$color-text-semi-muted: #7d7d7d;
-$color-text-muted: #b4b4b4;
-$color-main: #5b423b;
-$color-accent: #852d2e;
-$color-contrast: #c6aa80;
-$color-error: #d93333;
-
-$offset-small: 30px;
-$offset-mid: 60px;
-$offset-large: 120px;
-
-$font-size: (
-  xxl: 48px,
-  xl: 36px,
-  l: 24px,
-  m: 20px,
-  s: 18px,
-  xs: 16px,
-  xxs: 14px,
-);
-$col-width: 70px;
-$gutter: 30px;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -137,6 +113,7 @@ html {
 }
 .breadcrumb {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   &__item {
     color: $color-text-muted;
@@ -177,22 +154,35 @@ html {
   grid-column-gap: $gutter;
   position: relative;
   justify-content: stretch;
+  @media (max-width: 576px){
+    grid-template-columns: 1fr;
+  }
   &__wrapper {
     padding: $offset-small;
-    padding-right: $col-width;
+    padding-right: 0;
     display: flex;
     flex-direction: column;
     align-items: start;
+    @media (max-width: 576px){
+      grid-row-start: 2;
+    }
   }
   &__img {
-    // background-image: url('/img/image.png');
-    // background-repeat: no-repeat;
-    flex: 0 0 50%;
-    height: 436px;
-    transition: filter 0.2s ease-out;
-    filter: grayscale(1);
-    &:hover{
-      filter: grayscale(0);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &-wrapper {
+      transition: filter 0.2s ease-out;
+      filter: grayscale(1);
+      overflow: hidden;
+      &:hover {
+        filter: grayscale(0);
+      }
+      @media (max-width: 576px){
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }
     }
   }
   &__overheader {
@@ -209,8 +199,9 @@ html {
     @include text(s);
     flex: 1;
     line-height: 180%;
-    padding-right: $col-width + $gutter;
-    
+    text-overflow: ellipsis;
+    // padding-right: $col-width + $gutter;
+    margin-bottom: $offset-small;
   }
   &__button {
     flex: 0 0;
@@ -361,7 +352,7 @@ html {
     position: relative;
   }
   &__menu {
-    max-width: 1200px;
+    max-width: $container-width;
     align-self: center;
     margin: 0 auto;
     &_user-menu {
@@ -371,52 +362,57 @@ html {
   }
   &__logo {
     @extend %absolute-centered;
-    left: calc((100vw - 1200px - 500px) / 2);
+    left: calc((100vw - var(--container-width) - 500px) / 2);
   }
   &__phone {
     position: absolute;
-    right: calc((100vw - 1200px - 400px) / 2);
+    right: calc((100vw - var(--container-width) - 400px) / 2);
     @extend %absolute-centered;
   }
   &__button {
     align-self: center;
   }
-  &__link{
-    color: #852D2E;
+  &__link {
+    color: #852d2e;
     text-decoration: underline;
-    @include text(inherit,400);
-    & + &{
+    @include text(inherit, 400);
+    & + & {
       margin-left: 30px;
     }
   }
 }
-.container{
-  max-width: 1200px;
+.container {
+  max-width: var(--container-width);
   margin: 0 auto;
+  margin: 0 var(--grid-margin);
 }
-.page-header{
+.page-header {
   padding: 45px 0 55px;
   background: $color-elem-background;
-  
-  &__title{
+
+  &__title {
     @include header(xxl);
   }
-  &__nav{
+  &__nav {
     margin-bottom: 15px;
   }
-  &_bskg-pill{
-    background-image: url('/img/pill.png');
+  &_bskg-pill {
+    background-image: url("/img/background/pill.svg");
     background-size: 200px;
-    
   }
-  &_bskg-cross{
-    background-image: url('/img/cross.png');
+  &_bskg-cross {
+    background-image: url("/img/background/cross.svg");
     background-size: 300px;
+    // background-position: right bottom;
+  }
+  &_bskg-stethoscope {
+    background-image: url("/img/background/stethoscope.svg");
+    background-size: 500px;
     background-position: right bottom;
   }
-  &_bskg-stethoscope{
-    background-image: url('/img/stethoscope.png');
-    background-size: 500px;
+  &_bskg-syringe {
+    background-image: url("/img/background/syringe.svg");
+    background-size: 150px;
     background-position: right bottom;
   }
 }
