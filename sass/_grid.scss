@@ -3,12 +3,8 @@ html {
   --gutter: 30px;
   --container-width: 1200px;
   --grid-margin: 20px;
-
-  @media (min-width: 320px) {
+  @media (max-width: 576px) {
     --gutter: 20px;
-    --grid-margin: 20px;
-  }
-  @media (min-width: 576px) {
     --grid-margin: 20px;
   }
   @media (min-width: 768px) {
@@ -25,7 +21,7 @@ html {
 }
 
 $offset-small: 30px;
-$offset-mid: 60px;
+$offset-middle: 60px;
 $offset-large: 120px;
 
 $breakpoints: (

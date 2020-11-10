@@ -7,7 +7,7 @@ html{
     --font-xs: 16px;
     --font-xxs: 14px;
 
-    @media (min-width: 0){
+    @media (max-width: 576px){
     --font-xxl: 28px;
     --font-xl: 36px;
     --font-l: 20px;
