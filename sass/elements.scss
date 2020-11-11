@@ -560,3 +560,30 @@ html {
   }
 }
 
+.service{
+  @extend %card;
+  display: flex;
+  flex-direction: column;
+  min-height: 292px;
+  grid-auto-flow: row;
+  // max-width: 262px;
+  padding: 40px;
+  &__wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: var(--gutter);
+    }
+  &__name{
+    margin-bottom: $offset-small;
+  }
+  &__image{
+    &-wrapper{
+      flex: 1 1 50%;
+    }
+  }
+  &__link{
+    @include text(xs);
+    text-decoration: none;
+    color: $color-accent;
+  }
+}

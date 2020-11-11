@@ -77,7 +77,7 @@ html {
   font-size: var(--font-m);
 }
 
-.card, .category:hover, .sidebar-menu {
+.service, .card, .category:hover, .sidebar-menu {
   background: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 12px 24px rgba(0, 0, 0, 0.04);
 }
@@ -633,6 +633,30 @@ html {
   .footer-promo {
     grid-column: 3/5;
   }
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  min-height: 292px;
+  grid-auto-flow: row;
+  padding: 40px;
+}
+.service__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--gutter);
+}
+.service__name {
+  margin-bottom: 30px;
+}
+.service__image-wrapper {
+  flex: 1 1 50%;
+}
+.service__link {
+  font-size: var(--font-xs);
+  text-decoration: none;
+  color: #852d2e;
 }
 
 /*# sourceMappingURL=style.css.map */
