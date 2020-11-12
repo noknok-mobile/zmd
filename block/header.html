@@ -1,33 +1,50 @@
 <header class="header">
     <div class="header__top">
-        <div class="logo header__logo">
-            <a href="#"><img src="/img/logo.png" alt="Зимамед"></a>
+        <div class="logo__wrapper header__logo">
+            <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
         </div>
-        <div class="header__menu header__menu_user-menu">
-            <div class="block block_address">
-                <span class="block__headline">Клиника:</span>
-                <span class="block__content ">
+        <div class="header-menu header__user-menu">
+            <div class="header-menu__block header-menu__block_address">
+                <span class="header-menu__block__headline">Клиника:</span>
+                <span class="header-menu__block__content ">
                     <a href="#" class="header__link">г. Краснодар, ул. Московская, 40</a> 
                 </span>
             </div>
-            <div class="block block_schedule">
-                <span class="block__headline">График работы:</span>
-                <span class="block__content">Пн. — Сб. с 9:00 до 21:00</span>
+            <div class="header-menu__block header-menu__block_schedule">
+                <span class="header-menu__block__headline">График работы:</span>
+                <span class="header-menu__block__content">Пн. — Сб. с 9:00 до 21:00</span>
             </div>
-            <div class="block block_personal">
-                <span class="block__headline">Личный кабинет: </span>
-                <div class="block__content">
+            <div class="header-menu__block header-menu__block_personal">
+                <span class="header-menu__block__headline">Личный кабинет: </span>
+                <div class="header-menu__block__content">
                     <a href="#" class="header__link">Вход</a>
                     <a href="#" class="header__link">Регистрация</a>
                 </div>
             </div>
 
-            <div class="button">Записаться на прием</div>
+            <div class="header-menu__button button">Записаться на прием</div>
         </div>
-        <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
+        <div class="header__contacts">
+            <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
+            <span class="header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu__item mobile-menu__item_personal">
+                <img src="/img/menu/profile.svg" alt="">
+            </div>
+            <div class="mobile-menu__item mobile-menu__item_add">
+                <img src="/img/menu/сalendar.svg" alt="">
+            </div>
+            <div class="mobile-menu__item mobile-menu__item_phone">
+                <img src="/img/menu/phone.svg" alt="">
+            </div>
+            <div class="mobile-menu__burger js-menu">
+                <img src="/img/menu/burger.svg" alt="">
+            </div>
+        </div>
     </div>
-    <div class="header__bottom header__menu">
-        <ul class="main-menu">
+    <div class="header__bottom">
+        <ul class="header__bottom-menu main-menu">
             <li class="main-menu__item link">Лечение</li>
             <li class="main-menu__item link">Диагностика</li>
             <li class="main-menu__item link">Услуги</li>
@@ -39,3 +56,8 @@
         </ul>
     </div>
 </header>
+<script>
+    document.querySelector('.js-menu').addEventListener('click', ()=>{
+        document.querySelector('.main-menu').classList.toggle('main-menu_opened');
+    });
+</script>
