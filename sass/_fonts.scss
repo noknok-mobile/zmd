@@ -1,30 +1,54 @@
 html{
-    --font-xxl: 48px;
-    --font-xl: 36px;
-    --font-l: 24px;
-    --font-m: 20px;
-    --font-s: 18px;
-    --font-xs: 16px;
-    --font-xxs: 14px;
+--font-xxl: 48px;
+--font-xl:  36px;
+--font-l:   24px;
+--font-m:   20px;
+--font-s:   18px;
+--font-xs:  16px;
+--font-xxs: 14px;
 
-    @media (max-width: 576px){
-    --font-xxl: 28px;
-    --font-xl: 36px;
-    --font-l: 20px;
-    --font-m: 20px;
-    --font-s: 14px;
-    --font-xs: 16px;
-    --font-xxs: 14px;
-    }
-  }
-
+@include laptop{
+  --font-xxl: 48px;
+  --font-xl:  36px;
+  --font-l:   18px;
+  --font-m:   20px;
+  --font-s:   18px;
+  --font-xs:  16px;
+}
+@include tablet_hrz{
+  --font-xxl: 48px;
+  --font-xl:  36px;
+  --font-l:   24px;
+  --font-m:   20px;
+  --font-s:   18px;
+  --font-xs:  16px;
+}
+@include tablet{
+  --font-xxl: 48px;
+  --font-xl:  36px;
+  --font-l:   24px;
+  --font-m:   20px;
+  --font-s:   18px;
+  --font-xs:  14px;
+}
+@include phone_hrz{
+  --font-xxl: 28px;
+  --font-xl:  36px;
+  --font-l:   20px;
+  --font-m:   20px;
+  --font-s:   14px;
+  --font-xs:  16px;
+}
+@include phone{
+}
+}
 
   $font-size: (
-    xxl: var(--font-xxl),
-    xl:  var(--font-xl),
-    l:  var(--font-l),
-    m:  var(--font-m),
-    s:  var(--font-s),
+    xxl:  var(--font-xxl),
+    xl:   var(--font-xl),
+    l:    var(--font-l),
+    m:    var(--font-m),
+    s:    var(--font-s),
     xs:   var(--font-xs),
     xxs:  var(--font-xxs),
   );

@@ -15,23 +15,23 @@ $breakpoints: (
     @content;
   }
 }
-@mixin phone_hl{
-  @media(min-width: 576px) and (max-width: 767px){
+@mixin phone_hrz{
+  @media (max-width: 767px){
     @content;
   }
 }
 @mixin tablet{
-  @media(min-width: 768px) and (max-width: 991px){
+  @media (max-width: 991px){
     @content;
   }
 }
-@mixin tablet-hl{
-  @media(min-width: 992px) and (max-width: 1199px){
+@mixin tablet-hrz{
+  @media (max-width: 1199px){
     @content;
   }
 }
 @mixin laptop{
-  @media(min-width: 1200px) and (max-width: 1399px){
+  @media(max-width: 1399px){
     @content;
   }
 }
@@ -53,7 +53,7 @@ html {
     --container-width: 1140px;
     --gutter: 30px;
   }
-  @include tablet-hl{
+  @include tablet-hrz{
     --container-width: 960px;
     --gutter: 20px;
   }
@@ -61,7 +61,7 @@ html {
     --container-width: 720px;
     --gutter: 20px;
   }
-  @include phone-hl{
+  @include phone-hrz{
     --container-width: 540px;
     --gutter: 20px;
   }
