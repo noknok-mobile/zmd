@@ -52,6 +52,7 @@ html {
   @extend %container;
 }
 .button {
+  $height: 66px;
   display: inline-block;
   appearance: none;
   -moz-appearance: none;
@@ -60,10 +61,13 @@ html {
   border-radius: 100px;
   background: $color-main;
   transition: background-color 0.2s ease-out;
-  padding: 18px 40px;
+  padding: 0 40px;
   @include text(s, 600, true);
+  line-height: $height;
+  height: $height;
   text-decoration: none;
   color: white;
+
   &:hover {
     background-color: $color-contrast;
   }
