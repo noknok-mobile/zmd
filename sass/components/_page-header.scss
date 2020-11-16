@@ -1,0 +1,35 @@
+.page-header {
+  padding: 45px 0 55px;
+  background: $color-elem-background;
+
+  &__title {
+    @include header(xxl);
+  }
+
+  &__nav {
+    margin-bottom: 15px;
+  }
+
+  &_bskg-pill {
+    background-image: url("/img/background/pill.svg");
+    background-size: 200px;
+  }
+
+  &_bskg-cross {
+    background-image: url("/img/background/cross.svg");
+    background-size: 300px;
+    // background-position: right bottom;
+  }
+
+  &_bskg-stethoscope {
+    background-image: url("/img/background/stethoscope.svg");
+    background-size: 500px;
+    background-position: right bottom;
+  }
+
+  &_bskg-syringe {
+    background-image: url("/img/background/syringe.svg");
+    background-size: 150px;
+    background-position: right bottom;
+  }
+}

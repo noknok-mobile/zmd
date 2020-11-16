@@ -1,0 +1,13 @@
+.link {
+    text-decoration: none;
+    color: $color-text;
+    &:visited {
+      color: $color-main;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+    &:active {
+      color: $color-contrast;
+    }
+  }

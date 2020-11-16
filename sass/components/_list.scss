@@ -1,0 +1,12 @@
+.list {
+    padding-left: 80px;
+    &__item {
+      padding-left: 30px;
+      margin-bottom: 50px;
+      line-height: 180%;
+      position: relative;
+      &::marker {
+        content: url(../img/marker.svg);
+      }
+    }
+  }

@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=PT+Serif&display=swap");
+
+%card {
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05),
+        0px 12px 24px rgba(0, 0, 0, 0.04);
+}
+
+%input {
+    box-shadow: 2px 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+%absolute-centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%container {
+    max-width: var(--container-width);
+    margin: 0 var(--grid-margin);
+}
+
+%footer-font {
+    @include text(xxs);
+    color: #807a71;
+    text-decoration: none;
+    line-height: 160%;
+}
+html{
+    font-family: "Open Sans", sans-serif;
+    @include text(m);
+}
+.container {
+    @extend %container;
+}

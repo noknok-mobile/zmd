@@ -1,0 +1,20 @@
+/*стили для страницы документов*/
+.docs {
+    &__section {
+        margin-bottom: $offset-middle;
+    }
+
+    &__section-name {
+        @include header(xl);
+        color: $color-accent;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        border-bottom: 1px solid $color-line;
+
+        &:first-of-type {
+            border-top: 1px solid $color-line;
+        }
+    }
+}

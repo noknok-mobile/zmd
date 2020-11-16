@@ -1,0 +1,21 @@
+.button {
+    $height: 66px;
+    display: inline-block;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 100px;
+    background: $color-main;
+    transition: background-color 0.2s ease-out;
+    padding: 0 40px;
+    @include text(s, 600, true);
+    line-height: $height;
+    height: $height;
+    text-decoration: none;
+    color: white;
+  
+    &:hover {
+      background-color: $color-contrast;
+    }
+  }

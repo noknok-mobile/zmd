@@ -1,0 +1,23 @@
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  @include phone_hrz{
+    display: block;
+    transition: 0.3s ease-in;
+    transform: translateX(-100vw);
+    text-align: center;
+    padding: $offset-middle;
+    &_opened{
+      transform: translateX(0);
+    }
+  }
+  
+  &__item {
+    padding: 20px 0;
+    @include text(xs, 600, true);
+  }
+  &__wrapper {
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.04);
+  }
+}

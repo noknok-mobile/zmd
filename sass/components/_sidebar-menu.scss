@@ -1,0 +1,15 @@
+.sidebar-menu {
+  list-style-type: none;
+  padding: 15px 50px;
+  max-width: 410px;
+  @extend %card;
+
+  &__item {
+    padding: 30px 0;
+    @include text(s, 600, true);
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $color-line;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@mixin header($size) {
+    font-family: "PT Serif", serif;
+    font-size: map-get($font-size, $size);
+    font-weight: 400;
+}
+
+@mixin text($size, $weight: null, $isUppercase: false) {
+    @if size !="inherit" {
+        font-size: map-get($font-size, $size);
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+
+    @if $isUppercase {
+        text-transform: uppercase;
+    }
+}
+
+@mixin box($size) {
+    width: $size;
+    height: $size;
+}
+
