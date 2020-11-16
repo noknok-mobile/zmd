@@ -1,0 +1,50 @@
+<div class="swiper-container slider">
+    <div class="swiper-wrapper">
+        <div class="banner swiper-slide">
+            <div class="banner__inner container">
+                <div class="banner__content">
+                    <div class="banner__headline">Скидка 10% на МРТ в воскресенье</div>
+                    <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,
+                        по адресу Московская, 40</div>
+                    <div class="button banner__button">записаться на мрт</div>
+                </div>
+            </div>
+        </div>
+        <div class="banner swiper-slide">
+            <div class="banner__inner container">
+                <div class="banner__content">
+                    <div class="banner__headline">Скидка 10% на МРТ в воскресенье</div>
+                    <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,
+                        по адресу Московская, 40</div>
+                    <div class="button banner__button">записаться на мрт</div>
+                </div>
+            </div>
+        </div>
+        <div class="banner swiper-slide">
+            <div class="banner__inner container">
+                <div class="banner__content">
+                    <div class="banner__headline">Скидка 10% на МРТ в воскресенье</div>
+                    <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,
+                        по адресу Московская, 40</div>
+                    <div class="button banner__button">записаться на мрт</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider__pagination swiper-pagination"></div>
+</div>
+<script>
+    let slider = document.querySelector('.slider');
+    let swiper = new Swiper(slider, {
+        loop: true,
+        speed: 500,
+        pagination: {
+            el: '.slider__pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        autoplay: {
+            delay: 5000,
+        },
+    });
+</script>

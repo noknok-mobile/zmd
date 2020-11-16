@@ -5,80 +5,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="breakpoint.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <script defer src="breakpoint.js"></script> -->
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__top">
-            <div class="logo__wrapper header__logo">
-                <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
-            </div>
-            <div class="header-menu header__user-menu">
-                <div class="header-menu__block header-menu__block_address">
-                    <span class="header-menu__block__headline">Клиника:</span>
-                    <span class="header-menu__block__content ">
-                        <a href="#" class="header__link">г. Краснодар, ул. Московская, 40</a>
-                    </span>
-                </div>
-                <div class="header-menu__block header-menu__block_schedule">
-                    <span class="header-menu__block__headline">График работы:</span>
-                    <span class="header-menu__block__content">Пн. — Сб. с 9:00 до 21:00</span>
-                </div>
-                <div class="header-menu__block header-menu__block_personal">
-                    <span class="header-menu__block__headline">Личный кабинет: </span>
-                    <div class="header-menu__block__content">
-                        <a href="#" class="header__link">Вход</a>
-                        <a href="#" class="header__link">Регистрация</a>
-                    </div>
-                </div>
 
-                <div class="header-menu__button button">Записаться на прием</div>
+    <div class="container">
+        <div class="slider__navigation">
+            <div class="button-arrow button-arrow_prev">
+                <svg width='30' height='20' viewBox='0 0 17 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' />
+                </svg>
             </div>
-            <div class="header__contacts">
-                <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
-                <span class="header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span>
-            </div>
-            <div class="mobile-menu">
-                <div class="mobile-menu__item mobile-menu__item_personal">
-                    <img src="/img/menu/profile.svg" alt="">
-                </div>
-                <div class="mobile-menu__item mobile-menu__item_add">
-                    <img src="/img/menu/сalendar.svg" alt="">
-                </div>
-                <div class="mobile-menu__item mobile-menu__item_phone">
-                    <img src="/img/menu/phone.svg" alt="">
-                </div>
-                <div class="mobile-menu__burger js-menu">
-                    <img src="/img/menu/burger.svg" alt="">
-                </div>
+            <div class="button-arrow button-arrow_next">
+                <svg width='30' height='20' viewBox='0 0 17 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' />
+                </svg>
             </div>
         </div>
-        <div class="header__bottom">
-            <ul class="header__bottom-menu main-menu">
-                <li class="main-menu__item link">Лечение</li>
-                <li class="main-menu__item link">Диагностика</li>
-                <li class="main-menu__item link">Услуги</li>
-                <li class="main-menu__item link">Специалисты</li>
-                <li class="main-menu__item link">Прайс</li>
-                <li class="main-menu__item link">Акции</li>
-                <li class="main-menu__item link">О компании</li>
-                <li class="main-menu__item link">Контакты</li>
-            </ul>
+        <div class="service-list__wrapper swiper-container">
+            <div class="service-list service-list_carousel swiper-wrapper">
+                <div class="service swiper-slide">
+                    <div class="service__img-wrapper"><img class="service__img" src="/img/hirurg.svg" width="35px"
+                            height="35px"></div>
+                    <div class="service__name">Хирургический стационар</div>
+                    <a href="#" class="service__link">Подробнее</a>
+                </div>
+                <div class="service swiper-slide">
+                    <div class="service__img-wrapper"><img class="service__img" src="/img/tomo.svg" width="35px"
+                            height="35px"></div>
+                    <div class="service__name">Анализы и диагностика</div>
+                    <a href="#" class="service__link">Подробнее</a>
+                </div>
+                <div class="service swiper-slide">
+                    <div class="service__img-wrapper"><img class="service__img" src="/img/hirurg.svg" width="35px"
+                            height="35px"></div>
+                    <div class="service__name">Хирургический стационар</div>
+                    <a href="#" class="service__link">Подробнее</a>
+                </div>
+                <div class="service swiper-slide">
+                    <div class="service__img-wrapper"><img class="service__img" src="/img/hirurg.svg" width="35px"
+                            height="35px"></div>
+                    <div class="service__name">Хирургический стационар</div>
+                    <a href="#" class="service__link">Подробнее</a>
+                </div>
+                <div class="service swiper-slide">
+                    <div class="service__img-wrapper"><img class="service__img" src="/img/hirurg.svg" width="35px"
+                            height="35px"></div>
+                    <div class="service__name">Хирургический стационар</div>
+                    <a href="#" class="service__link">Подробнее</a>
+                </div>
+                <div class="service swiper-slide">
+                    <div class="service__img-wrapper"><img class="service__img" src="/img/hirurg.svg" width="35px"
+                            height="35px"></div>
+                    <div class="service__name">Хирургический стационар</div>
+                    <a href="#" class="service__link">Подробнее</a>
+                </div>
+                <div class="service swiper-slide">
+                    <div class="service__img-wrapper"><img class="service__img" src="/img/hirurg.svg" width="35px"
+                            height="35px"></div>
+                    <div class="service__name">Хирургический стационар</div>
+                    <a href="#" class="service__link">Подробнее</a>
+                </div>
+                <div class="service swiper-slide">
+                    <div class="service__img-wrapper"><img class="service__img" src="/img/hirurg.svg" width="35px"
+                            height="35px"></div>
+                    <div class="service__name">Хирургический стационар</div>
+                    <a href="#" class="service__link">Подробнее</a>
+                </div>
+
+            </div>
+            <div class="slider__pagination"></div>
+            
         </div>
-    </header>
-    
+    </div>
 
-
-
-
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        document.querySelector('.js-menu').addEventListener('click', () => {
-            document.querySelector('.main-menu').classList.toggle('main-menu_opened');
+        let slider = document.querySelector('.swiper-container');
+        let swiper = new Swiper(slider, {
+            // loop: true,
+            spaceBetween: 30,
+            speed: 500,
+            slidesPerView: 4,
+            pagination: {
+                el: '.slider__pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.button-arrow_next',
+                prevEl: '.button-arrow_prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            
         });
     </script>
+
+
 
 
 </body>

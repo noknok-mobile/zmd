@@ -1,0 +1,81 @@
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    /* Fix of Webkit flickering */
+    z-index: 1;
+  }
+  
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    transition-timing-function: ease-in;
+  }
+  
+  .swiper-container-android .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+  }
+  
+  .swiper-container-free-mode>.swiper-wrapper {
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+  }
+  
+  /*удалила multirow*/
+  
+  .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+  }
+  
+  .swiper-slide-invisible-blank {
+    visibility: hidden;
+  }
+  
+  /* Auto Height */
+  .swiper-container-autoheight {
+  
+    &,
+    .swiper-slide {
+      height: auto;
+    }
+  
+    .swiper-wrapper {
+      align-items: flex-start;
+      transition-property: transform, height;
+    }
+  }
+  
+  
+  .swiper-pagination {
+    position: absolute;
+    z-index: 1;
+    bottom: $offset-middle;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    &-bullet {
+      display: block;
+      @include box(14px);
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid white;
+      &-active{
+        background: white;
+      }
+    }
+  }

@@ -1,6 +1,6 @@
 .service-list {
-    display: grid;
-    grid-gap: var(--gutter);
+    // display: grid;
+    // grid-gap: var(--gutter);
     grid-template-columns: repeat(2, 1fr);
 
     &_table {
@@ -10,8 +10,11 @@
     }
 
     &_carousel {
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+    }
 
+    &__wrapper {
+        overflow: visible;
     }
 }
 
@@ -71,4 +74,7 @@
             color: $color-accent;
         }
     }
+}
+.slider__navigation{
+    display: flex;
 }

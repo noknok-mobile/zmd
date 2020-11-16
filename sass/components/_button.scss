@@ -1,6 +1,6 @@
 .button {
-    $height: 66px;
-    display: inline-block;
+    $height: 65px;
+    display: block;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -18,4 +18,32 @@
     &:hover {
       background-color: $color-contrast;
     }
+
+    &-arrow{
+      @include box($height);
+      @extend %rounded;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & svg path{
+        fill: $color-accent;
+      }
+      &:hover{
+        background: $color-accent;
+        & svg path{
+          fill: white;
+        }
+      }
+      &_next{
+        transform: rotateZ(-90deg);
+      }
+      &_prev{
+        transform: rotateZ(90deg);
+      }
+      &_up{
+        transform: rotateZ(180deg);
+      }
+      
+    }
+
   }
