@@ -1,6 +1,6 @@
-index.html
 img/background/*.png
 prepros.config
 breakpoint.js
 style.css
 style.css.map
+test.*
