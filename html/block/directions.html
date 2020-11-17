@@ -82,20 +82,20 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    let slider = document.querySelector('.swiper-container');
+    let slider = document.querySelector('.service-list__wrapper');
     let swiper = new Swiper(slider, {
         // loop: true,
         spaceBetween: 30,
         speed: 500,
         slidesPerView: 4,
         pagination: {
-            el: '.slider-pagination',
+            el: '.directions__slider-nav',
             type: 'bullets',
             clickable: true
         },
         navigation: {
-            nextEl: '.button-arrow_next',
-            prevEl: '.button-arrow_prev',
+            nextEl: '.directions__slider-nav .button-arrow_next',
+            prevEl: '.directions__slider-nav .button-arrow_prev',
         },
         autoplay: {
             delay: 5000,
