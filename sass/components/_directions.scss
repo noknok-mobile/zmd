@@ -1,0 +1,20 @@
+.directions {
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter);
+    grid-area: links;
+  }
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--gutter);
+    grid-template-areas: "links links  links . . slider-nav";
+    // display: flex;
+    justify-content: space-between;
+    margin-bottom: $offset-middle;
+  }
+  &__slider-nav {
+    grid-area: slider-nav;
+  }
+}
