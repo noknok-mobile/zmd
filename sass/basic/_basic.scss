@@ -36,6 +36,7 @@
 html {
     font-family: "Open Sans", sans-serif;
     @include text(m);
+    overflow-x: hidden;
 }
 
 .container {

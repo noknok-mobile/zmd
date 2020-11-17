@@ -1,3 +1,4 @@
+<!-- привести в порядок классы: directions или service? -->
 <div class="container directions">
     <div class="directions__nav">
         <div class="directions__links">
@@ -7,13 +8,17 @@
         <div class="directions__slider-nav slider-navigation">
             <div class="directions__slider-nav slider-navigation">
                 <div class="button-arrow button-arrow_prev">
-                    <svg width='22' height='15' viewBox='0 0 17 11' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' />
+                    <svg width='22' height='15' viewBox='0 0 17 11' fill='currentColor'
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                            d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' />
                     </svg>
                 </div>
                 <div class="button-arrow button-arrow_next">
-                    <svg width='22' height='15' viewBox='0 0 17 11' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' />
+                    <svg width='22' height='15' viewBox='0 0 17 11' fill='currentColor'
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                            d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' />
                     </svg>
                 </div>
             </div>
@@ -75,12 +80,10 @@
 
 
         </div>
-        <div class="slider-pagination slider__pagination swiper-pagination"></div>
+        <div class="slider__pagination swiper-pagination"></div>
 
     </div>
 </div>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     let slider = document.querySelector('.service-list__wrapper');
     let swiper = new Swiper(slider, {
@@ -89,7 +92,7 @@
         speed: 500,
         slidesPerView: 4,
         pagination: {
-            el: '.directions__slider-nav',
+            el: '.slider__pagination',
             type: 'bullets',
             clickable: true
         },
