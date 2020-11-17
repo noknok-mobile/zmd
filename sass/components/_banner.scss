@@ -44,5 +44,9 @@
   &__button {
     background: white;
     color: $color-accent;
+    &:hover{
+      background: $color-contrast;
+      color: white;
+    }
   }
 }
