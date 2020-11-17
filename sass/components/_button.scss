@@ -13,10 +13,23 @@
     line-height: $height;
     height: $height;
     text-decoration: none;
+    text-align: center;
     color: white;
   
     &:hover {
       background-color: $color-contrast;
+    }
+    &_light{
+      background: white;
+      color: $color-accent;
+      box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.05);
+      &:hover{
+        color: white;
+        background: $color-main;
+      }
+      &:active{
+        background: $color-accent;
+      }
     }
 
     &-arrow{
@@ -25,9 +38,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      & svg path{
-        fill: $color-accent;
-      }
+      // & svg path{
+      //   fill: $color-accent;
+      // }
       &:hover{
         background: $color-accent;
         & svg path{
