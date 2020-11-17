@@ -1,5 +1,5 @@
 <div class="big-carousel swiper-container">
-    <div class="main-carousel__inner swiper-wrapper">
+    <div class="big-carousel__inner swiper-wrapper">
         <div class="banner swiper-slide">
             <div class="banner__inner container">
                 <div class="banner__content">
@@ -43,6 +43,11 @@
 
 
     </div>
+    <div class="big-carousel__navigation swiper-navigation">
+        <div class="big-carousel__navigation-area big-carousel__navigation-area_prev"></div>
+        <div class="big-carousel__navigation-area big-carousel__navigation-area_next"></div>
+
+    </div>
     <div class="big-carousel__pagination swiper-pagination"></div>
 </div>
 
@@ -51,11 +56,16 @@
     let slider = document.querySelector('.big-carousel');
     let swiper = new Swiper(slider, {
         loop: true,
+        cssMode: true,
         speed: 500,
         pagination: {
             el: '.big-carousel__pagination',
             type: 'bullets',
             clickable: true
+        },
+        navigation: {
+            nextEl: '.big-carousel__navigation-area_next',
+            prevEl: '.big-carousel__navigation-area_prev',
         },
         autoplay: {
             delay: 5000,
