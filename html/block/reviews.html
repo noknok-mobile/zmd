@@ -1,0 +1,108 @@
+<div class="container overview">
+    <div class="overview__nav">
+        <div class="overview__links">
+            <a class="button button_light">все отзывы</a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="button-arrow button-arrow_prev">
+                <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="button-arrow button-arrow_next">
+                <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="reviews-wrapper slider-container">
+        <div class="swiper-wrapper swiper-no-swiping">
+            <blockquote class="review swiper-slide">
+                <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                    на
+                    абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                    консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                    очень
+                    доволен.</p>
+                <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+            </blockquote>
+
+            <blockquote class="review swiper-slide">
+                <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                    на
+                    абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                    консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                    очень
+                    доволен.</p>
+                <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+            </blockquote>
+            <blockquote class="review swiper-slide">
+                <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                    на
+                    абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                    консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                    очень
+                    доволен.</p>
+                <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+            </blockquote>
+            <blockquote class="review swiper-slide">
+                <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                    на
+                    абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                    консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                    очень
+                    доволен.</p>
+                <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+            </blockquote>
+            <blockquote class="review swiper-slide">
+                <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                    на
+                    абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                    консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                    очень
+                    доволен.</p>
+                <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+            </blockquote>
+            <blockquote class="review swiper-slide">
+                <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                    на
+                    абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                    консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                    очень
+                    доволен.</p>
+                <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+            </blockquote>
+        </div>
+
+    </div>
+
+    <div class="slider-pagination swiper-pagination"></div>
+</div>
+
+<script>
+    const slider = document.querySelector('.reviews-wrapper');
+    const swiper = new Swiper(slider, {
+        loop: true,
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.button-arrow_next',
+            prevEl: '.button-arrow_prev',
+        },
+        pagination: {
+            el: '.slider-pagination',
+            type: 'bullets',
+            clickable: true
+        }
+        //to do: добавить уникальные селекторы для блоков навигации, иначе три слайдера на странице не поладят
+    })
+</script>
