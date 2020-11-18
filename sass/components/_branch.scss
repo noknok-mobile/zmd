@@ -1,4 +1,4 @@
-.service-list {
+.branch-list {
     // display: grid;
     // grid-gap: var(--gutter);
     grid-template-columns: repeat(2, 1fr);
@@ -12,13 +12,9 @@
     &_carousel {
         display: flex;
     }
-
-    &__wrapper {
-        overflow: visible;
-    }
 }
 
-.service {
+.branch {
     display: flex;
     transition: 0.2s ease-in-out;
 
@@ -33,11 +29,11 @@
             color: $color-accent;
         }
 
-        .service__img-wrapper {
+        .branch__img-wrapper {
             filter: grayscale(1);
         }
 
-        &:hover .service__img-wrapper {
+        &:hover .branch__img-wrapper {
             filter: grayscale(0);
         }
 
@@ -74,7 +70,4 @@
             color: $color-accent;
         }
     }
-}
-.slider__navigation{
-    display: flex;
 }

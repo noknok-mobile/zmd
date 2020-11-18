@@ -1,0 +1,106 @@
+<div class="container overview">
+    <div class="overview__nav">
+        <div class="overview__links">
+            <a class="button button_light">Bсе направления</a>
+            <a class="button button_light">все специалисты</a>
+        </div>
+
+        <div class="overview__slider-nav slider-navigation">
+            <div class="button-arrow button-arrow_prev">
+                <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="button-arrow button-arrow_next">
+                <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="branch-list__wrapper slider-container">
+        <div class="branch-list branch-list_carousel swiper-wrapper swiper-no-swiping">
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Хирургический стационар</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/tomo.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Анализы и диагностика</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Хирургический стационар</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Хирургический стационар</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Хирургический стационар</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Хирургический стационар</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Хирургический стационар</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Хирургический стационар</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+            <div class="branch swiper-slide">
+                <div class="branch__img-wrapper">
+                    <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                <div class="branch__name">Хирургический стационар</div>
+                <a href="#" class="branch__link">Подробнее</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="slider-pagination swiper-pagination"></div>
+</div>
+<script>
+    let slider = document.querySelector('.slider-container');
+    let swiper = new Swiper(slider, {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 6,
+        pagination: {
+            el: '.slider-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.button-arrow_next',
+            prevEl: '.button-arrow_prev',
+        }
+        //по переопределению см https://github.com/nolimits4web/swiper/blob/master/src/components/core/core-class.js
+    });
+</script>
