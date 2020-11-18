@@ -77,13 +77,13 @@
 
 .swiper-pagination {
   display: flex;
-  // justify-content: space-between;
   min-width: 60px;
   color: $color-accent;
 
   &-bullet {
     $size: 14px;
     display: block;
+    flex-shrink: 0;
     @include box($size);
     &:not(:last-of-type) {
       margin-right: 2 * $size;
@@ -105,15 +105,17 @@
     gap: $offset-small;
     color: $color-accent;
   }
-
-  &__pagination {
+  &-pagination {
     width: 200px;
     margin: $offset-middle auto 0;
   }
   &-container{
-    margin: 0;
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: auto;
     position: relative;
-    left: calc((100vw - var(--container-width)) / 2);
+    padding: $offset-small $offset-small / 2 ;
+    left: -$offset-small / 2;
   }
 }
 
@@ -144,3 +146,13 @@
     color: white;
   }
 }
+/*отладочные стили*/
+// .swiper-slide-prev{
+//   background: rgb(255, 209, 209);
+// }
+// .swiper-slide-next{
+//   background: rgb(160, 255, 173);
+// }
+// .swiper-slide-active{
+//   background: rgb(255, 255, 216);
+// }

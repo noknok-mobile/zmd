@@ -1,0 +1,16 @@
+.overview {
+  &__links {
+    display: flex; 
+    gap: var(--gutter);
+    @supports not (gap: $offset-small){
+      & > :not(:last-of-type){
+        margin-left: var(--gutter);
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $offset-middle;
+  }
+  }
