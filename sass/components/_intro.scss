@@ -1,0 +1,58 @@
+.intro {
+  max-width: 1400px;
+  position: relative;
+  background: $color-text;
+  color: white;
+
+  &__video-wrapper {
+    content: "";
+    display: block;
+    position: relative;
+    padding-top: 50%;
+    z-index: 1;
+    background: black;
+    opacity: 0.5;
+    @include phone {
+      background: none;
+    }
+  }
+
+  &__bckg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: $offset-large 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    // flex-flow: wrap;
+    z-index: 5;
+    @include tablet{
+        padding: $offset-small 0;
+    }
+    @include phone {
+      position: relative;
+      flex-flow: wrap;
+    }
+  }
+  &__link{
+      @extend .button_light;
+  }
+  &__content {
+    flex-basis: 50%;
+  }
+}
