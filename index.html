@@ -6,117 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <!-- <script defer src="breakpoint.js"></script> -->
 </head>
 
 <body>
-
-    <div class="directions__slider-nav slider-navigation">
-        <div class="directions__slider-nav slider-navigation">
-            <div class="button-arrow button-arrow_prev">
-                <svg width='22' height='15' viewBox='0 0 17 11' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' />
-                </svg>
+    <!-- header start -->
+    <header class="header">
+        <div class="header__top">
+            <div class="logo__wrapper header__logo">
+                <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
             </div>
-            <div class="button-arrow button-arrow_next">
-                <svg width='22' height='15' viewBox='0 0 17 11' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' />
-                </svg>
+            <div class="header-menu header__user-menu">
+                <div class="header-menu__block header-menu__block_address">
+                    <span class="header-menu__block__headline">Клиника:</span>
+                    <span class="header-menu__block__content ">
+                        <a href="#" class="header__link">г. Краснодар, ул. Московская, 40</a>
+                    </span>
+                </div>
+                <div class="header-menu__block header-menu__block_schedule">
+                    <span class="header-menu__block__headline">График работы:</span>
+                    <span class="header-menu__block__content">Пн. — Сб. с 9:00 до 21:00</span>
+                </div>
+                <div class="header-menu__block header-menu__block_personal">
+                    <span class="header-menu__block__headline">Личный кабинет: </span>
+                    <div class="header-menu__block__content">
+                        <a href="#" class="header__link">Вход</a>
+                        <a href="#" class="header__link">Регистрация</a>
+                    </div>
+                </div>
+
+                <div class="header-menu__button button">Записаться на прием</div>
             </div>
-        </div>
-    </div>
-    <div class="container slider-container">
-        <div class="reviews__wrapper">
-            <div class="reviews__list swiper-wrapper">
-                <blockquote class="review swiper-slide">
-                    <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на
-                        абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
-                        консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень
-                        доволен.</p>
-                    <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
-                </blockquote>
-
-                <blockquote class="review swiper-slide">
-                    <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на
-                        абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
-                        консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень
-                        доволен.</p>
-                    <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
-                </blockquote>
-
-
-                <blockquote class="review swiper-slide">
-                    <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на
-                        абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
-                        консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень
-                        доволен.</p>
-                    <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
-                </blockquote>
-                <blockquote class="review swiper-slide">
-                    <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на
-                        абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
-                        консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень
-                        доволен.</p>
-                    <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
-                </blockquote>
-                <blockquote class="review swiper-slide">
-                    <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на
-                        абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
-                        консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень
-                        доволен.</p>
-                    <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
-                </blockquote>
+            <div class="header__contacts">
+                <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
+                <span class="header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span>
+            </div>
+            <div class="mobile-menu">
+                <div class="mobile-menu__item mobile-menu__item_personal">
+                    <img src="/img/menu/profile.svg" alt="">
+                </div>
+                <div class="mobile-menu__item mobile-menu__item_add">
+                    <img src="/img/menu/сalendar.svg" alt="">
+                </div>
+                <div class="mobile-menu__item mobile-menu__item_phone">
+                    <img src="/img/menu/phone.svg" alt="">
+                </div>
+                <div class="mobile-menu__burger js-menu">
+                    <img src="/img/menu/burger.svg" alt="">
+                </div>
             </div>
         </div>
-        <div class="slider__pagination swiper-pagination"></div>
-    </div>
-    <style>
-        /* .swiper-slide-active{
-            width: 500px;
-        } */
-
-        .swiper-slide {
-            width: 370px;
-            font-size: 16px;
-            height: 510px;
-        }
-
-        .swiper-slide-active {
-            width: 770px;
-            font-size: 20px;
-        }
-        .swiper-slide:not(:first-of-type) {
-            margin-left: 30px;
-        }
-    </style>
+        <div class="header__bottom">
+            <ul class="header__bottom-menu main-menu">
+                <li class="main-menu__item link">Лечение</li>
+                <li class="main-menu__item link">Диагностика</li>
+                <li class="main-menu__item link">Услуги</li>
+                <li class="main-menu__item link">Специалисты</li>
+                <li class="main-menu__item link">Прайс</li>
+                <li class="main-menu__item link">Акции</li>
+                <li class="main-menu__item link">О компании</li>
+                <li class="main-menu__item link">Контакты</li>
+            </ul>
+        </div>
+    </header>
     <script>
-        const slider = document.querySelector('.reviews__wrapper');
-        const swiper = new Swiper(slider, {
-            // loop: true,
-            slidesPerView: 'auto',
-            slidesPerGroup: 1,
-
-            // spaceBetween: 30,
-            // freeMode:true,
-            navigation: {
-                nextEl: '.directions__slider-nav .button-arrow_next',
-                prevEl: '.directions__slider-nav .button-arrow_prev',
-            },
-            pagination: {
-                el: '.slider__pagination',
-                type: 'bullets',
-                clickable: true
-            },
-
-
-        })
+        document.querySelector('.js-menu').addEventListener('click', () => {
+            document.querySelector('.main-menu').classList.toggle('main-menu_opened');
+        });
     </script>
-    <style>
-    </style>
+    <!-- header end -->
+    <!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документы</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="page-header page-header_bskg-stethoscope">
+        <div class="container">
+            <div class="page-header__nav breadcrumb">
+                <a href="#" class="breadcrumb__item">Крошка1</a>
+                <a href="#" class="breadcrumb__item">Крошка2</a>
+                <a href="#" class="breadcrumb__item">Крошка3</a>
+                <a href="#" class="breadcrumb__item">Крошка4</a>
+                <a href="#" class="breadcrumb__item breadcrumb__item_active">Крошка5</a>
+            </div>
+            <h1 class="page-header__title">Документы</h1>
+        </div>
+    </div>
+    <div class="content content_grid container">
+        <main class="content__content">sdf</main>
+        <nav class="content__left-menu-wrapper">
+            <ul class="content__left-menu sidebar-menu">
+                <li class="sidebar-menu__item link">asdasd 1</li>
+                <li class="sidebar-menu__item link">asdasd 2</li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+
+</html>
 
 </body>
 

@@ -1,16 +1,16 @@
 /*структура любой детальной страницы*/
 .content {
-    padding-top: $offset-large;
+    // padding-top: $offset-large;
 
-    &_grid {
-        display: grid;
-        grid-template-columns: 8fr 4fr;
-        grid-gap: var(--gutter);
+    // &_grid {
+    //     display: grid;
+    //     grid-template-columns: 8fr 4fr;
+    //     grid-gap: var(--gutter);
 
-        @media (max-width: 576px) {
-            display: block;
-        }
-    }
+    //     @media (max-width: 576px) {
+    //         display: block;
+    //     }
+    // }
 
     &__left-menu {
         position: sticky;
