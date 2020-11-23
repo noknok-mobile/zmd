@@ -1,0 +1,80 @@
+<!-- calendar block start -->
+<div class="schedule-wrapper">
+    <table class="calendar">
+        <tr class="calendar__days">
+            <td class="calendar__data">10.11</td>
+            <td class="calendar__data">10.11</td>
+            <td class="calendar__data">10.11</td>
+            <td class="calendar__data">10.11</td>
+            <td class="calendar__data">10.11</td>
+        </tr>
+        <tr class="calendar__week">
+            <td class="calendar__weekday">пн</td>
+            <td class="calendar__weekday">вт</td>
+            <td class="calendar__weekday">ср</td>
+            <td class="calendar__weekday">чт</td>
+            <td class="calendar__weekday">пт</td>
+        </tr>
+    </table>
+    <div class="schedule__wrapper">
+        <table class="schedule">
+            <tr>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+            </tr>
+            <tr>
+                <td class="schedule__cell"><a href="" class="schedule__time">12:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell schedule__cell_empty"></td>
+                <td class="schedule__cell schedule__cell_empty"></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+            </tr>
+            <tr>
+                <td class="schedule__cell schedule__cell_empty"></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+            </tr>
+            <tr>
+                <td class="schedule__cell schedule__cell_empty"></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+            </tr>
+            <tr>
+                <td class="schedule__cell schedule__cell_empty"></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+            </tr>
+            <tr>
+                <td class="schedule__cell schedule__cell_empty"></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+            </tr>
+            <tr>
+                <td class="schedule__cell schedule__cell_empty"></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+            </tr>
+        </table>
+    </div>
+    <a href="#" class="schedule__more link">Развернуть</a>
+    
+</div>
+<script>
+    document.querySelector('.schedule__more').addEventListener('click', function(){
+        document.querySelector('.schedule__wrapper').classList.toggle('schedule__wrapper_expanded')
+    });
+</script>
+<!-- calendar block end -->
