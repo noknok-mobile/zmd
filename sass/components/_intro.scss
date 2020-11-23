@@ -1,17 +1,23 @@
 .intro {
   max-width: 1400px;
   position: relative;
-  background: $color-text;
   color: white;
 
   &__video-wrapper {
-    content: "";
-    display: block;
     position: relative;
     padding-top: 50%;
-    z-index: 1;
-    background: black;
-    opacity: 0.5;
+    &::before {
+      content: "";
+      display: block;
+      background: black;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
     @include phone {
       background: none;
     }
@@ -41,18 +47,30 @@
     align-items: flex-end;
     // flex-flow: wrap;
     z-index: 5;
-    @include tablet{
-        padding: $offset-small 0;
+    @include tablet {
+      padding: $offset-small 0;
     }
     @include phone {
       position: relative;
-      flex-flow: wrap;
+      flex-wrap: wrap;
+      @include flex-gap($offset-small);
     }
   }
-  &__link{
-      @extend .button_light;
+  &__link {
+    @extend .button_light;
+    @include phone{
+      background: $color-main;
+      color: white;
+    }
   }
   &__content {
-    flex-basis: 50%;
+    flex-basis: clamp(320px, 50%, 800px);
+    flex-wrap: wrap;
+    @include flex-gap($offset-small);
+    line-height: 1.8;
+    @include text(h3, 300);
+    @include phone {
+      color: $color-text;
+    }
   }
 }
