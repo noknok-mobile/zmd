@@ -1,0 +1,26 @@
+<!-- pagination start -->
+<div class="pagination">
+    <a href="#" class="pagination__item button-arrow button-arrow_prev pagination__arrow pagination__arrow_prev">
+        <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </a>
+    <a href="#" class="pagination__item pagination__item_current">1</a>
+    <a href="#" class="pagination__item">2</a>
+    <a href="#" class="pagination__item">3</a>
+    <span class="pagination__item pagination__dots">...</span>
+    <a href="#" class="pagination__item">10</a>
+    <a class="pagination__item pagination__arrow button-arrow button-arrow_next pagination__arrow_next">
+        <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </a>
+</div>
+<script>
+    document.querySelector('.pagination__item_current').addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+</script>
+<!-- pagination end -->
