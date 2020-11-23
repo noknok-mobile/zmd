@@ -1,10 +1,11 @@
-<div class="container overview">
+<!-- reviews block start -->
+<div class="container overview review-list">
     <div class="overview__nav">
         <div class="overview__links">
             <a class="button button_light">все отзывы</a>
         </div>
 
-        <div class="slider-navigation">
+        <div class="review-list__navigation slider-navigation">
             <div class="button-arrow button-arrow_prev">
                 <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
@@ -84,25 +85,27 @@
 
     </div>
 
-    <div class="slider-pagination swiper-pagination"></div>
+    <div class="review-list__pagination slider-pagination swiper-pagination"></div>
 </div>
 
 <script>
-    const slider = document.querySelector('.reviews-wrapper');
-    const swiper = new Swiper(slider, {
+    const slider3 = document.querySelector('.reviews-wrapper');
+    const swiper3 = new Swiper(slider3, {
         loop: true,
         slidesPerView: 2,
         slidesPerGroup: 1,
         spaceBetween: 30,
         navigation: {
-            nextEl: '.button-arrow_next',
-            prevEl: '.button-arrow_prev',
+            nextEl: '.review-list__navigation .button-arrow_next',
+            prevEl: '.review-list__navigation .button-arrow_prev',
         },
         pagination: {
-            el: '.slider-pagination',
+            el: 'review-list__pagination',
             type: 'bullets',
             clickable: true
         }
         //to do: добавить уникальные селекторы для блоков навигации, иначе три слайдера на странице не поладят
     })
 </script>
+<!-- reviews block end -->
+
