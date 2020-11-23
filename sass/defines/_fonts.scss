@@ -36,10 +36,11 @@ html {
   }
 }
 
-$font-size: (max: var(--font-max),
-  xxl: var(--h1),
-  xl: var(--h2),
-  l: var(--h3),
+$font-size: (
+  max: var(--font-max),
+  h1: var(--h1),
+  h2: var(--h2),
+  h3: var(--h3),
   m: var(--font-basic),
   s: var(--font-s),
   xs: var(--font-xs),

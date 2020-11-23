@@ -15,6 +15,7 @@
     text-decoration: none;
     text-align: center;
     color: white;
+    flex-shrink: 0;
   
     &:hover {
       background-color: $color-contrast;

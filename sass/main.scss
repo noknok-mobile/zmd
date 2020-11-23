@@ -3,9 +3,10 @@
 @import './defines/fonts';
 @import './defines/colors';
 
-@import './basic/normalize';
-@import './basic/tools';
-@import './basic/basic';
+@import './basic/normalize',
+'./basic/tools',
+'./basic/basic',
+'./basic/text';
 
 @import './components/control',
 './components/button',
@@ -25,7 +26,8 @@
 './components/page-header',
 './components/sidebar-menu',
 './components/review',
-'./components/intro';
+'./components/intro',
+'./components/calendar';
 
 @import './page-blocks/content',
 './page-blocks/overview',

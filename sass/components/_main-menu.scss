@@ -3,12 +3,13 @@
   justify-content: space-between;
   list-style-type: none;
   @include phone_hrz{
-    display: block;
+    display: none;
     transition: 0.3s ease-in;
     transform: translateX(-100vw);
     text-align: center;
     padding: $offset-middle;
     &_opened{
+      display: block;
       transform: translateX(0);
     }
   }

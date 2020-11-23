@@ -1,0 +1,6 @@
+.lead{
+    @include text(h2, 300);
+}
+.mark{
+    color: $color-accent;
+}
