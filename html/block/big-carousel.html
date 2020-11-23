@@ -49,7 +49,7 @@
         <div class="big-carousel__navigation-area big-carousel__navigation-area_next"></div>
 
     </div>
-    <div class="big-carousel__pagination swiper-pagination"></div>
+    <div class="big-carousel__pagination slider-pagination swiper-pagination"></div>
 </div>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -57,7 +57,11 @@
     let slider = document.querySelector('.big-carousel');
     let swiper = new Swiper(slider, {
         loop: true,
-        cssMode: true,
+        breakpoints: {
+            1200: {
+                cssMode: true
+            }
+        },
         speed: 500,
         pagination: {
             el: '.big-carousel__pagination',

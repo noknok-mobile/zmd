@@ -1,10 +1,13 @@
 html {
   --grid-margin: auto;
+  --offset-small: 30px;
+  --offset-middle: 60px;
+  --offset-large: 120px;
   @include desktop{
     --container-width: 1200px;
     --gutter: 30px;
     --col-width: 70px;
-    
+  
   }
   @include laptop{
     --container-width: 1140px;
@@ -17,6 +20,9 @@ html {
   @include tablet{
     --container-width: 720px;
     --gutter: 20px;
+    --offset-large: 100px;
+    --offset-middle: 45px;
+    --offset-small: 24px;
   }
   @include phone-hrz{
     --container-width: 540px;
@@ -25,16 +31,19 @@ html {
   @include phone{
     --container-width: 320px;
     --gutter: 20px;
+    --offset-large: 70px;
+    --offset-middle: 32px;
+    --offset-small: 16px;
   }
   @include phone_xs{
     --grid-margin:15px;
   }
 }
 
-$offset-small: 30px;
-$offset-middle: 60px;
-$offset-large: 120px;
+$offset-small: var(--offset-small);
+$offset-middle: var(--offset-middle);
+$offset-large: var(--offset-large);
 
 $col-width: var(--col-width);
 $gutter: var(--gutter);
-$container-width: 1200px;
+$container: var(--container-width);

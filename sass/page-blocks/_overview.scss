@@ -1,9 +1,12 @@
 .overview {
+  &__desc{
+    margin-bottom: $offset-small;
+  }
   &__links {
-    display: flex; 
+    display: flex;
     gap: var(--gutter);
-    @supports not (gap: $offset-small){
-      & > :not(:last-of-type){
+    @supports not (gap: $offset-small) {
+      & > :not(:last-of-type) {
         margin-left: var(--gutter);
       }
     }
@@ -13,4 +16,4 @@
     justify-content: space-between;
     margin-bottom: $offset-middle;
   }
-  }
+}
