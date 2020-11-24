@@ -24,7 +24,9 @@
     padding: $offset-small 0;
     z-index: 1;
     color: $color-accent;
-    @extend %lead;
+    font-size: 32px;
+    line-height: 1.8;
+    font-weight: 300;
     // transition: border-bottom-color 0.1s ease-out;
 
     &::before {
