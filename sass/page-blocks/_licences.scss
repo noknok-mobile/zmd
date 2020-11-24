@@ -1,0 +1,35 @@
+.licence {
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $gutter;
+    @include phone_hrz{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include phone{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &-wrapper {
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 150%;
+      }
+    }
+
+  }
+  &__caption {
+    @include text(xs);
+    color: $color-accent;
+    line-height: 1.6;
+  }
+}
