@@ -1,0 +1,28 @@
+.page-grid{
+    display: grid;
+    grid-gap: $gutter;
+    grid-template-columns: 8fr 4fr;
+    // grid-template-areas: 'content sidebar';
+    &_reverse{
+        grid-template-columns: 4fr 8fr;
+    }
+    // &__content{
+    //     grid-area: content;
+    // }
+    &__sidebar{
+        @include tablet{
+            display: none;
+        }
+    }
+    @include tablet{
+        grid-template-columns: auto;
+    }
+}
+.page-block{
+    margin: $offset-large 0;
+    &_background{
+        margin: 0;
+        padding: $offset-large 0;
+        background: $color-elem-background;
+    }
+}
