@@ -5,113 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <script defer src="breakpoint.js"></script> -->
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="breakpoint.js"></script>
 </head>
 
 <body>
-    <!-- header start -->
-    <header class="header">
-        <div class="header__top">
-            <div class="logo__wrapper header__logo">
-                <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
-            </div>
-            <div class="header-menu header__user-menu">
-                <div class="header-menu__block header-menu__block_address">
-                    <span class="header-menu__block__headline">Клиника:</span>
-                    <span class="header-menu__block__content ">
-                        <a href="#" class="header__link">г. Краснодар, ул. Московская, 40</a>
-                    </span>
-                </div>
-                <div class="header-menu__block header-menu__block_schedule">
-                    <span class="header-menu__block__headline">График работы:</span>
-                    <span class="header-menu__block__content">Пн. — Сб. с 9:00 до 21:00</span>
-                </div>
-                <div class="header-menu__block header-menu__block_personal">
-                    <span class="header-menu__block__headline">Личный кабинет: </span>
-                    <div class="header-menu__block__content">
-                        <a href="#" class="header__link">Вход</a>
-                        <a href="#" class="header__link">Регистрация</a>
-                    </div>
-                </div>
 
-                <div class="header-menu__button button">Записаться на прием</div>
-            </div>
-            <div class="header__contacts">
-                <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
-                <span class="header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span>
-            </div>
-            <div class="mobile-menu">
-                <div class="mobile-menu__item mobile-menu__item_personal">
-                    <img src="/img/menu/profile.svg" alt="">
-                </div>
-                <div class="mobile-menu__item mobile-menu__item_add">
-                    <img src="/img/menu/сalendar.svg" alt="">
-                </div>
-                <div class="mobile-menu__item mobile-menu__item_phone">
-                    <img src="/img/menu/phone.svg" alt="">
-                </div>
-                <div class="mobile-menu__burger js-menu">
-                    <img src="/img/menu/burger.svg" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="header__bottom">
-            <ul class="header__bottom-menu main-menu">
-                <li class="main-menu__item link">Лечение</li>
-                <li class="main-menu__item link">Диагностика</li>
-                <li class="main-menu__item link">Услуги</li>
-                <li class="main-menu__item link">Специалисты</li>
-                <li class="main-menu__item link">Прайс</li>
-                <li class="main-menu__item link">Акции</li>
-                <li class="main-menu__item link">О компании</li>
-                <li class="main-menu__item link">Контакты</li>
-            </ul>
-        </div>
-    </header>
-    <script>
-        document.querySelector('.js-menu').addEventListener('click', () => {
-            document.querySelector('.main-menu').classList.toggle('main-menu_opened');
-        });
-    </script>
-    <!-- header end -->
-    <!DOCTYPE html>
-<html lang="ru">
+    <div class="page-block">
+        <div class="container page-grid">
+            <div class="table">
+                <div class="table__head table__row">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Документы</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+                    <div class="table__cell">Дата и время</div>
+                    <div class="table__cell">Адрес</div>
+                    <div class="table__cell">Врач</div>
+                    <div class="table__cell">Статус</div>
 
-<body>
-    <div class="page-header page-header_bskg-stethoscope">
-        <div class="container">
-            <div class="page-header__nav breadcrumb">
-                <a href="#" class="breadcrumb__item">Крошка1</a>
-                <a href="#" class="breadcrumb__item">Крошка2</a>
-                <a href="#" class="breadcrumb__item">Крошка3</a>
-                <a href="#" class="breadcrumb__item">Крошка4</a>
-                <a href="#" class="breadcrumb__item breadcrumb__item_active">Крошка5</a>
+                </div>
+                <div class="table__body">
+                    <details class="order order_paid table__row-wrapper">
+                        <summary class="table__row">
+                            <div class="table__cell">Четверг,<br>
+                                14.10.20, 9:00</div>
+                            <div class="table__cell">г. Краснодар, ул.Московская,&nbsp;40</div>
+                            <div class="table__cell">Мейпариани Елена Владимировна</div>
+                            <div class="table__cell">
+                                <span class="order__status order__status_paid">оплачен</span>
+                            </div>
+                        </summary>
+                        <div class="order__more">
+                            <div class="order__desc">
+                                <div class="order__name">
+                                    Запись к акушер-гинекологу
+                                </div>
+                                <div class="order__price">
+                                    Стоимость приема 2 500 руб.
+                                </div>
+                            </div>
+                            <div class="order__actions">
+                                <div class="order__button order__button_cancel button">отменить запись</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="order order_unpaid table__row-wrapper">
+                        <summary class="table__row">
+                            <div class="table__cell">Четверг,<br>
+                                14.10.20, 9:00</div>
+                            <div class="table__cell">г. Краснодар, ул.Московская,&nbsp;40</div>
+                            <div class="table__cell">Мейпариани Елена Владимировна</div>
+                            <div class="table__cell">
+                                <span class="order__status">ожидает оплаты</span>
+                            </div>
+                        </summary>
+                        <div class="order__more">
+                            <div class="order__desc">
+                                <div class="order__name">
+                                    Запись к акушер-гинекологу
+                                </div>
+                                <div class="order__price">
+                                    Стоимость приема 2 500 руб.
+                                </div>
+                            </div>
+                            <div class="order__actions">
+                                <div class="order__button order__button_pay button">Оплатить</div>
+                                <div class="order__button order__button_cancel button">отменить запись</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="order table__row-wrapper">
+                        <summary class="table__row">
+                            <div class="table__cell">Четверг,<br>
+                                14.10.20, 9:00</div>
+                            <div class="table__cell">г. Краснодар, ул.Московская,&nbsp;40</div>
+                            <div class="table__cell">Мейпариани Елена Владимировна</div>
+                            <div class="table__cell">
+                                <span class="order__status">Оплата наличными</span>
+                            </div>
+                        </summary>
+                        <div class="order__more">
+                            <div class="order__desc">
+                                <div class="order__name">
+                                    Запись к акушер-гинекологу
+                                </div>
+                                <div class="order__price">
+                                    Стоимость приема 2 500 руб.
+                                </div>
+                            </div>
+                            <div class="order__actions">
+                                <div class="order__button order__button_pay button">Оплатить</div>
+                                <div class="order__button order__button_cancel button">отменить запись</div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
             </div>
-            <h1 class="page-header__title">Документы</h1>
         </div>
     </div>
-    <div class="content content_grid container">
-        <main class="content__content">sdf</main>
-        <nav class="content__left-menu-wrapper">
-            <ul class="content__left-menu sidebar-menu">
-                <li class="sidebar-menu__item link">asdasd 1</li>
-                <li class="sidebar-menu__item link">asdasd 2</li>
-            </ul>
-        </nav>
-    </div>
-
-</body>
-
-</html>
-
 </body>
 
 </html>

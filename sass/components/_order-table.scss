@@ -1,0 +1,62 @@
+.table {
+  // display: table;
+  width: 100%;
+
+  &__body {
+    // display: table-column-group;
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-gap: $gutter;
+    align-items: center;
+    padding: 15px 0;
+    &-wrapper:nth-of-type(2n + 1) {
+      background: $color-elem-background;
+    }
+    // & :first-child{
+    //     color: $color-accent;
+    // }
+  }
+  &__head {
+    @include text(xs, 600);
+    line-height: 1.8;
+    color: $color-text-muted;
+    // border-top: 1px solid $color-line;
+    border-bottom: 1px solid $color-line;
+    padding: 20px 0;
+  }
+  &__cell {
+    // display: table-cell
+  }
+}
+.order {
+  &__more {
+    display: flex;
+    justify-content: space-between;
+    padding: $offset-small 0;
+  }
+  &__button {
+    &_cancel {
+      @extend .button_light;
+      color: $color-text;
+    }
+  }
+  &__status {
+    display: inline-block;
+    padding: 10px 0;
+    text-align: center;
+    @include text(xxs, 600, true);
+    background: #FFE4BC;
+    width: 100px;
+  }
+  &_paid &__status {
+    background: #bee3d2;
+  }
+  &_unpaid &__status {
+    background: #ffb6b2;
+  }
+  &__price {
+    font-weight: 600;
+  }
+}
