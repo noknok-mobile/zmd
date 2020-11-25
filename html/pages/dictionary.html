@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="breakpoint.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-block">
+            <div class="switch__block">
+                <label class="switch__label js-label-current" for="switch">Взрослое отделение </label>
+                <label for="switch" class="toggle">
+                    <input class="toggle__checkbox js-switch" type="checkbox" name="" id="switch">
+                    <span class="toggle__button"></span>
+                </label>
+                <label class="switch__label" for="switch">Детское отделение</label>
+            </div>
+
+            <div class="section js-section-switched">
+                <div class="dictionary">
+                    <div class="dictionary-filter">
+                        <span class="dictionary-filter__item js-filter js-filter-active" data-filter="">A-Я</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="1">A</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="2">Г</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="3">Д</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="1">A</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="2">Г</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="3">Д</span>
+                    </div>
+
+                    <div class="dictionary__group tile filter-item" data-filter="1">
+                        <div class="dictionary__letter title">A</div>
+                        <div class="dictionary__item-list">
+                            <a href="" class="dictionary__item link">Аллерголог-иммунолог</a>
+                            <a href="" class="dictionary__item link">Акушерство и гинекология</a>
+                            <a href="" class="dictionary__item link">Ангиохирург</a>
+                            <a href="" class="dictionary__item link">Анестезиология</a>
+                        </div>
+                    </div>
+
+                    <div class="dictionary__group tile filter-item" data-filter="2">
+                        <div class="dictionary__letter title">Г</div>
+                        <div class="dictionary__item-list">
+                            <a href="#" class="dictionary__item link">Гастроэнтерология</a>
+                            <a href="#" class="dictionary__item link">Гипнотерапия</a>
+                            <a href="#" class="dictionary__item link">Гематология</a>
+                            <a href="#" class="dictionary__item link">Гирудотерапия</a>
+                        </div>
+                    </div>
+
+                    <div class="dictionary__group tile filter-item" data-filter="3">
+                        <div class="dictionary__letter title">Д</div>
+                        <div class="dictionary__item-list">
+                            <a href="#" class="dictionary__item link">Дерматовенерология</a>
+                            <a href="#" class="dictionary__item link">Диетолог-психолог</a>
+                            <a href="#" class="dictionary__item link">Дневной стационар</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section_hidden js-section-switched">
+                <div class="dictionary">
+                    <div class="dictionary-filter">
+                        <span class="dictionary-filter__item js-filter js-filter-active" data-filter=""> A-Я</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="1">A</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="2">Г</span>
+                        <span class="dictionary-filter__item js-filter" data-filter="3">Д</span>
+                    </div>
+
+                    <div class="dictionary__group tile filter-item" data-filter="1">
+                        <div class="dictionary__letter title">A</div>
+                        <div class="dictionary__item-list">
+                            <a href="" class="dictionary__item link">Аллерголог-иммунолог</a>
+                            <a href="" class="dictionary__item link">Ангиохирург</a>
+                        </div>
+                    </div>
+
+                    <div class="dictionary__group tile filter-item" data-filter="2">
+                        <div class="dictionary__letter title">Г</div>
+                        <div class="dictionary__item-list">
+                            <a href="#" class="dictionary__item link">Гастроэнтерология</a>
+                            <a href="#" class="dictionary__item link">Гипнотерапия</a>
+                        </div>
+                    </div>
+
+                    <div class="dictionary__group tile filter-item" data-filter="3">
+                        <div class="dictionary__letter title">Д</div>
+                        <div class="dictionary__item-list">
+                            <a href="#" class="dictionary__item link">Диетолог-психолог</a>
+                            <a href="#" class="dictionary__item link">Дневной стационар</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                //switch
+                document.querySelector('.js-switch').onchange = function (e) {
+                    console.log(e.target.checked);
+                    for (section of document.querySelectorAll('.js-section-switched')) {
+                        section.classList.toggle('section_hidden');
+                    }
+                    document.querySelector('')
+                }
+                // filter
+                //должен работать в пределах данной секции
+                function filterElem(e, currentSection) {
+                    let selection = e.target.dataset.filter;
+                    if (selection) {
+                        for (elem of currentSection.querySelectorAll(`.filter-item:not([data-filter="${selection}"])`)) {
+                            elem.classList.add('filter-item_hidden');
+                        }
+                    }
+
+                }
+                function higlightActiveItem(e, currentSection) {
+                    let activeClass = 'js-filter-active';
+                    currentSection.querySelector(`.${activeClass}`).classList.remove(activeClass);
+                    event.target.classList.add(activeClass);
+                }
+                function resetFilter(currentSection) {
+                    for (elem of currentSection.querySelectorAll(`.filter-item_hidden`)) {
+                        elem.classList.remove('filter-item_hidden');
+                    }
+                }
+
+                function filter(e) {
+                    let currentSection = e.target.closest('.section');
+                    resetFilter(currentSection);
+                    higlightActiveItem(e, currentSection);
+                    filterElem(e, currentSection);
+                }
+                for (trigger of document.querySelectorAll('.js-filter')) {
+                    // trigger.addEventListener('click', resetFilter);
+                    // trigger.addEventListener('click', filterElem);
+                    // trigger.addEventListener('click', higlightActiveItem);
+                    trigger.addEventListener('click', filter);
+
+                }
+                document.querySelector('.js-filter-reset').addEventListener('click', resetFilter);
+            </script>
+        </div>
+
+    </div>
+</body>
+
+</html>

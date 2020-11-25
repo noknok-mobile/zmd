@@ -30,11 +30,14 @@
 './components/calendar',
 './components/pagination',
 './components/accordion',
-'./components/price-list';
+'./components/price-list',
+'./components/dictionary',
+'./components/filter';
 
 @import './page-blocks/content',
 './page-blocks/overview',
 './page-blocks/docs',
 './page-blocks/mainpage',
 './page-blocks/licences',
-'./page-blocks/page';
+'./page-blocks/page',
+'./page-blocks/gallery';
