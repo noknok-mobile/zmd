@@ -16,6 +16,7 @@
     @include text(s, 600);
     color: $color-text-semi-muted;
     transition: all 0.2s ease-in;
+    font-family: inherit;
 
     &:hover {
       @extend %input;

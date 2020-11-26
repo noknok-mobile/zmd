@@ -1,44 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=PT+Serif&display=swap");
 
 %card {
-    background: white;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05),
-        0px 12px 24px rgba(0, 0, 0, 0.04);
+  background: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05),
+    0px 12px 24px rgba(0, 0, 0, 0.04);
 }
 
 %input {
-    box-shadow: 2px 8px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 8px 40px rgba(0, 0, 0, 0.1);
 }
 
 %absolute-centered {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 %container {
-    max-width: var(--container-width);
-    margin: 0 var(--grid-margin);
+  max-width: var(--container-width);
+  margin: 0 var(--grid-margin);
 }
 
 %rounded {
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 %footer-font {
-    @include text(xxs);
-    color: #807a71;
-    text-decoration: none;
-    line-height: 160%;
+  @include text(xxs);
+  color: #807a71;
+  text-decoration: none;
+  line-height: 160%;
 }
 
 html {
-    font-family: "Open Sans", sans-serif;
-    @include text(m);
-    overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  @include text(m);
+  overflow-x: hidden;
 }
 
 .container {
-    @extend %container;
+  @extend %container;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
 }

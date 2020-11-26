@@ -1,10 +1,8 @@
 .accordion {
   &__item[open] > &__more {
-    animation: spoiler 0.5s;
+    animation: fadeIn 0.5s;
   }
-  &__item[open] &__title::after {
-    transform: rotateZ(-180deg);
-  }
+  
   &__item[open] &__title::before {
     transform: translate(-50%, 50%) rotateZ(45deg);
   }
@@ -43,39 +41,36 @@
     }
 
     //стрелка
-    &::after {
-      content: "";
-      @extend %rounded;
-      @include box(33px);
-      display: block;
-      right: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 2 27 29' fill=' %23852d2e' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z' fill=' %23852d2e' stroke=' %23852d2e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-      background-size: 18px 18px;
-      background-repeat: no-repeat;
-      background-position: center;
-      transform: rotateZ(0);
-      transition: transform 0.3s ease-out;
-      flex: 0 0 33px;
-    }
   }
 
   &__more {
     display: block;
     padding: 40px;
-    @include phone{
-        padding: 30px 20px;
+    @include phone {
+      padding: 30px 20px;
     }
     background: $color-elem-background;
     box-shadow: inset 0px 10px 20px -15px rgba(0, 0, 0, 0.1),
       inset 0px -15px 20px -15px rgba(0, 0, 0, 0.1);
   }
-  @keyframes spoiler {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 100%;
-    }
+}
+.spoiler {
+  &[open] &__header::after {
+    transform: rotateZ(-180deg);
+  }
+  &__header::after {
+    content: "";
+    @extend %rounded;
+    @include box(33px);
+    display: block;
+    right: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 2 27 29' fill=' %23852d2e' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z' fill=' %23852d2e' stroke=' %23852d2e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateZ(0);
+    transition: transform 0.3s ease-out;
+    flex: 0 0 33px;
   }
 }
 
