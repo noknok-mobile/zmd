@@ -13,7 +13,7 @@
     <div class="container">
         <div class="page-block">
             <div class="switch__block">
-                <label class="switch__label js-label-current" for="switch">Взрослое отделение </label>
+                <label class="switch__label switch__label_active" for="switch">Взрослое отделение </label>
                 <label for="switch" class="toggle">
                     <input class="toggle__checkbox js-switch" type="checkbox" name="" id="switch">
                     <span class="toggle__button"></span>
@@ -21,7 +21,7 @@
                 <label class="switch__label" for="switch">Детское отделение</label>
             </div>
 
-            <div class="section js-section-switched">
+            <div class="section section_adult js-section-switched">
                 <div class="dictionary">
                     <div class="dictionary-filter">
                         <span class="dictionary-filter__item js-filter js-filter-active" data-filter="">A-Я</span>
@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="section section_hidden js-section-switched">
+            <div class="section section_hidden section_children js-section-switched">
                 <div class="dictionary">
                     <div class="dictionary-filter">
                         <span class="dictionary-filter__item js-filter js-filter-active" data-filter=""> A-Я</span>
@@ -99,51 +99,11 @@
                 </div>
             </div>
 
+            <script src="/filter.js"></script>
             <script>
-                //switch
-                document.querySelector('.js-switch').onchange = function (e) {
-                    console.log(e.target.checked);
-                    for (section of document.querySelectorAll('.js-section-switched')) {
-                        section.classList.toggle('section_hidden');
-                    }
-                    document.querySelector('')
-                }
-                // filter
-                //должен работать в пределах данной секции
-                function filterElem(e, currentSection) {
-                    let selection = e.target.dataset.filter;
-                    if (selection) {
-                        for (elem of currentSection.querySelectorAll(`.filter-item:not([data-filter="${selection}"])`)) {
-                            elem.classList.add('filter-item_hidden');
-                        }
-                    }
+                let sectionToggle = new Switch();
+                for (let section of document.querySelectorAll('.section')) new Filter(section);
 
-                }
-                function higlightActiveItem(e, currentSection) {
-                    let activeClass = 'js-filter-active';
-                    currentSection.querySelector(`.${activeClass}`).classList.remove(activeClass);
-                    event.target.classList.add(activeClass);
-                }
-                function resetFilter(currentSection) {
-                    for (elem of currentSection.querySelectorAll(`.filter-item_hidden`)) {
-                        elem.classList.remove('filter-item_hidden');
-                    }
-                }
-
-                function filter(e) {
-                    let currentSection = e.target.closest('.section');
-                    resetFilter(currentSection);
-                    higlightActiveItem(e, currentSection);
-                    filterElem(e, currentSection);
-                }
-                for (trigger of document.querySelectorAll('.js-filter')) {
-                    // trigger.addEventListener('click', resetFilter);
-                    // trigger.addEventListener('click', filterElem);
-                    // trigger.addEventListener('click', higlightActiveItem);
-                    trigger.addEventListener('click', filter);
-
-                }
-                document.querySelector('.js-filter-reset').addEventListener('click', resetFilter);
             </script>
         </div>
 

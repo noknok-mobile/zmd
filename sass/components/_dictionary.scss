@@ -95,6 +95,9 @@
   }
   &__label {
     @extend .dictionary__item;
+    &_active{
+      color: $color-accent;
+    }
     &:hover {
       color: $color-accent;
     }
