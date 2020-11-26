@@ -3,40 +3,49 @@ class Filter {
         itemClass: 'js-filter',
         activeClass: 'js-filter-active',
         higlightActiveItem: function (e) {
-            scope.querySelector(`.${this.activeClass}`).classList.remove(this.activeClass);
+            for (let elem of this.list) {
+                elem.classList.remove(filter.filterControls.activeClass);
+            }
             e.target.classList.add(this.activeClass);
 
         },
         list: null
     };
+
     filterTarget = {
         itemClass: 'filter-item',
         hiddenClass: 'filter-item_hidden',
-        parentBlock: '',
-        resetFilter: this.resetFilter
+        list: null,
+
+        resetFilter: function() {
+            for(let elem of this.list){
+                elem.classList.remove(this.hiddenClass);
+            }
+        },
+
+        filterItems: function(e){
+            let filter = e.target.dataset.filter;
+            if(filter){
+                for(let elem of this.list){
+                    if(elem.dataset.filter != filter)elem.classList.add(this.hiddenClass)
+                }
+            }
+        }
+
     };
     constructor(selector) {
-        this.filterTarget.parentBlock = document.querySelector(selector);
+        this.filterTarget.list = document.querySelectorAll(`${selector} .${this.filterTarget.itemClass}`);
         this.filterControls.list = document.querySelectorAll(`${selector} .${this.filterControls.itemClass}`)
     }
-    resetFilter() {
-        /* for(elem of this.filterTarget.parentBlock.querySelectorAll(hiddenClass)){
-            elem.classList.remove(hiddenClass);
-        } */
-        console.log(this);
-    }
+    
     init() {
         for (let trigger of this.filterControls.list) {
             trigger.addEventListener('click', (e) => {
-                this.filterControls.higlightActiveItem(e, this.filterTarget.parentBlock)
+                this.filterControls.higlightActiveItem(e);
+                this.filterTarget.resetFilter();
+                this.filterTarget.filterItems(e);
             })
         }
-    }
-    higlightActiveControlsItem() {
-        // let activeClass = this.filterControls.activeClass;
-        // this.filterTarget.parentBlock.querySelector(activeClass).classList.remove(activeClass);
-        // e.target.classList.add(activeClass);
-        console.log(this);
     }
 
 }
