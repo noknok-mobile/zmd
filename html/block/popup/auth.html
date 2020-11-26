@@ -1,0 +1,146 @@
+<div class="container">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+        <div class="container"><a href="#modal1" data-modal="1" class="button js-open">Открыть модальное окно</a></div>
+        <!-- start modal -->
+        <div class="modal__wrapper" data-modal="1">
+            <div class="modal__overlay"></div>
+
+            <div class="modal">
+                <button class="modal__close js-close" role="button" aria-label="Закрыть">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#EEEEEE" />
+                        <line x1="13.636" y1="13.7783" x2="26.3639" y2="26.5062" stroke="white" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="26.364" y1="13.7785" x2="13.6361" y2="26.5064" stroke="white" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+                <div class="modal__header">
+                    <div class="tab__list">
+                        <a href="#auth" data-page="auth" class="tab tab_active">Вход</a>
+                        <a href="#signin" data-page="signin" class="tab">Регистрация</a>
+                    </div>
+                </div>
+                <div class="modal__body">
+                    <!-- tab page1 start -->
+                    <div class="tab__page tab__page tab__page_active" data-href="auth">
+                        <form action="#" name="auth" class="modal__form form">
+                            <div class="input form__input">
+                                <select name="" class="input__value">
+                                    <option value="" selected>ананас</option>
+                                    <option value="">блоблов</option>
+                                    <option value="">Краснодар</option>
+                                </select>
+                                <span class="input__icon input__icon_arrow"></span>
+                            </div>
+                            <div class="input form__input">
+                                <input type="password" class="input__value" placeholder="Ваш пароль">
+                                <span class="input__icon input__icon_password-visible js-toggle"></span>
+                            </div>
+                            <div class="form__input">
+                                <label class="control">
+                                    <input class="control__input" type="checkbox" name=""><span class="control__label">Я
+                                        согласен с условиями обработки персональных данных</span>
+                                </label>
+                            </div>
+                            <button class="button form__button" type="submit">отправить</button>
+                        </form>
+                    </div>
+                    <!-- tab page1 end -->
+
+                    <!-- tab page2 start -->
+                    <div class="tab__page" data-href="signin">
+                        <form name="signin" class="modal__form form">
+                            <div class="input form__input">
+                                <input type="text" class="input__value" placeholder="ФИО*">
+                            </div>
+                            <div class="input form__input">
+                                <input type="text" class="input__value" placeholder="Номер телефона">
+                            </div>
+                            <div class="input form__input">
+                                <input type="email" class="input__value" placeholder="Email">
+                            </div>
+                            <div class="input form__input">
+                                <input type="password" class="input__value" placeholder="Ваш пароль">
+                                <span class="input__icon input__icon_password-visible js-toggle"></span>
+                            </div>
+                            <div class="form__input">
+                                <label class="control">
+                                    <input class="control__input" type="checkbox" name=""><span class="control__label">Я
+                                        согласен с условиями обработки персональных данных</span>
+                                </label>
+                            </div>
+                            <button class="button form__button" type="submit">отправить</button>
+                        </form>
+                    </div>
+                    <!-- tab page2 end -->
+
+
+                </div>
+            </div>
+        </div>
+        <!-- end modal -->
+        <script>
+            // script for modal
+            document.querySelector('.js-open').addEventListener('click', openModal);
+            document.querySelector('.js-close').addEventListener('click', (e) => closeModal(e.target.closest('.modal__wrapper')));
+            document.querySelector('.modal__wrapper').addEventListener('click', function (e) {
+                if (e.target.className != 'modal') closeModal(e.target);
+            });
+
+            function openModal(e) {
+                let targetModal = document.querySelector(`.modal__wrapper[data-modal="${e.target.dataset.modal}"]`);
+                targetModal.classList.add('modal__wrapper_open');
+                window.addEventListener('keydown', function (event) {
+                    if (event.code == 'Escape') closeModal(targetModal);
+                }, { once: true });
+            }
+
+            function closeModal(modalWindow) {
+                modalWindow.classList.remove('modal__wrapper_open');
+            }
+
+
+
+            //script for tabs
+            for (tab of document.querySelectorAll('.tab')) tab.addEventListener('click', tabHandler);
+
+            function tabHandler(e) {
+                resetTabControl();
+                setActiveTab(e);
+                resetTabPages();
+                setActivePage(e);
+            }
+            function resetTabPages() {
+                for (let elem of document.querySelectorAll('.tab__page_active')) {
+                    elem.classList.remove('tab__page_active');
+                }
+            }
+            function setActivePage(e) {
+                let filter = e.target.dataset.page;
+                document.querySelector(`.tab__page[data-href="${filter}"]`).classList.add('tab__page_active');
+            }
+            function resetTabControl() {
+                for (let elem of document.querySelectorAll('.tab_active')) {
+                    elem.classList.remove('tab_active');
+                }
+            }
+            function setActiveTab(e) {
+                e.target.classList.add('tab_active');
+            }
+
+        </script>
+</div>
+</body>
+
+</html>
