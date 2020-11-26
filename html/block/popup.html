@@ -1,0 +1,73 @@
+<div class="container">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+        <div class="container"><a href="#modal1" data-modal="1" class="button js-open">Открыть модальное окно</a></div>
+        <!-- start modal -->
+        <div class="modal__wrapper" data-modal="1">
+            <div class="modal__overlay"></div>
+
+            <div class="modal">
+                <button class="modal__close js-close" role="button" aria-label="Закрыть">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#EEEEEE" />
+                        <line x1="13.636" y1="13.7783" x2="26.3639" y2="26.5062" stroke="white" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="26.364" y1="13.7785" x2="13.6361" y2="26.5064" stroke="white" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+                <div class="modal__header">Выберите филиал клиники</div>
+                <div class="modal__body">
+                    <form class="modal__form form">
+                        <div class="input form__input">
+                            <select name="" class="input__value">
+                                <option value="" selected>ананас</option>
+                                <option value="">блоблов</option>
+                                <option value="">Краснодар</option>
+                            </select>
+                            <span class="input__icon input__icon_arrow"></span>
+                        </div>
+                        <div class="input form__input">
+                            <input type="password" class="input__value" placeholder="Ваш пароль">
+                            <span class="input__icon input__icon_password-visible js-toggle"></span>
+                        </div>
+                        <button class="button form__button" type="submit">отправить</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!-- end modal -->
+        <script>
+            document.querySelector('.js-open').addEventListener('click', openModal);
+            document.querySelector('.js-close').addEventListener('click', (e) => closeModal(e.target.closest('.modal__wrapper')));
+            document.querySelector('.modal__wrapper').addEventListener('click', function (e) {
+                if (e.target.className != 'modal') closeModal(e.target);
+            });
+
+            function openModal(e) {
+                console.log(e.target.dataset.modal);
+                let targetModal = document.querySelector(`.modal__wrapper[data-modal="${e.target.dataset.modal}"]`);
+                targetModal.classList.add('modal__wrapper_open');
+                window.addEventListener('keydown', function (event) {
+                    if (event.code == 'Escape') closeModal(targetModal);
+                }, { once: true });
+            }
+
+            function closeModal(modalWindow) {
+                modalWindow.classList.remove('modal__wrapper_open');
+            }
+        </script>
+</div>
+</body>
+
+</html>
