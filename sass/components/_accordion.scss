@@ -2,7 +2,7 @@
   &__item[open] > &__more {
     animation: fadeIn 0.5s;
   }
-  
+
   &__item[open] &__title::before {
     transform: translate(-50%, 50%) rotateZ(45deg);
   }
@@ -17,10 +17,8 @@
     justify-content: space-between;
     @include flex-gap($gutter);
     align-items: center;
-    list-style: none;
-    border-bottom: 1px solid $color-line;
-    padding: $offset-small 0;
     z-index: 1;
+    border-bottom: 1px solid $color-line;
     color: $color-accent;
     font-size: 32px;
     line-height: 1.8;
@@ -42,7 +40,6 @@
 
     //стрелка
   }
-
   &__more {
     display: block;
     padding: 40px;
@@ -54,23 +51,3 @@
       inset 0px -15px 20px -15px rgba(0, 0, 0, 0.1);
   }
 }
-.spoiler {
-  &[open] &__header::after {
-    transform: rotateZ(-180deg);
-  }
-  &__header::after {
-    content: "";
-    @extend %rounded;
-    @include box(33px);
-    display: block;
-    right: 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 2 27 29' fill=' %23852d2e' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z' fill=' %23852d2e' stroke=' %23852d2e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-    background-size: 18px 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotateZ(0);
-    transition: transform 0.3s ease-out;
-    flex: 0 0 33px;
-  }
-}
-

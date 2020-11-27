@@ -1,0 +1,35 @@
+.spoiler {
+
+    &[open] &__header::after {
+      transform: translateY(-50%) rotateZ(-180deg);
+    }
+    &__header{
+      list-style: none;
+      position: relative;
+      padding: $offset-small 0;
+      &::-webkit-details-marker{
+        display: none;
+      }
+      &::after {
+        content: "";
+        @extend %rounded;
+        @extend %absolute-centered;
+        @include box(33px);
+        display: block;
+        right: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 2 27 29' fill=' %23852d2e' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z' fill=' %23852d2e' stroke=' %23852d2e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translateY(-50%) rotateZ(0);
+        transition: transform 0.3s ease-out;
+        flex: 0 0 33px;
+      }
+    }
+    &__more{
+        padding: $offset-small 0;
+    }
+    &[open] > &__more {
+      animation: fadeIn 0.5s;
+    }
+  }
