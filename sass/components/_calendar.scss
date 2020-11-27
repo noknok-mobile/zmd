@@ -1,13 +1,26 @@
 .schedule {
-  width: 100%;
-  border-spacing: $offset-middle $offset-small;
-  text-align: center;
+  // border-spacing: $offset-middle $offset-small;
+  // text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  &_timetable{
+    grid-row-gap: $offset-small ;
+  }
+  flex: 0 0 auto;
+  & tbody,
+  tr {
+    display: contents;
+  }
+
   &__time {
     border: 1px solid $color-line;
-    height: 25px;
+    height: 20px;
     text-decoration: none;
-    line-height: 25px;
-    padding: 2px 10px;
+    line-height: 20px;
+    padding: 2px 6px;
     border-radius: 20px;
     color: $color-text-semi-muted;
   }
@@ -22,33 +35,52 @@
       margin: 0 auto;
     }
   }
-  &__wrapper {
+  &__inner {
     height: 200px;
     overflow-y: scroll;
     transition: height 0.5s ease-in;
-    &_expanded{
-        height: auto;
-        overflow-y: visible;
+    &_expanded {
+      height: auto;
+      overflow-y: visible;
     }
   }
 
   &-wrapper {
-    max-width: 800px;
+    padding: 15px $offset-middle;
+    @include phone{
+      padding: $offset-small 20px;
+    }
+  }
+  &-header {
+    background-color: $color-elem-background;
+    border-radius: 38px;
+    
   }
 }
+
 .calendar {
-  width: 100%;
-  border-spacing: $offset-middle 0;
-  text-align: center;
-  background-color: $color-elem-background;
-  padding: 15px 40px;
-  border-radius: 38px;
+  // text-align: center;
+  position: relative;
   &__days {
     @include text(s, 600);
     font-size: 12px;
   }
-  &__weekday {
+  &__week {
     @include text(xs, 600, true);
     color: $color-accent;
+  }
+  &__nav{
+    $offset: 15px;
+    @extend %absolute-centered;
+    @include phone{
+      @include box(24px);
+      $offset: 5px;
+    }
+    &_prev{
+      left: $offset;
+    }
+    &_next{
+      right:$offset;
+    }
   }
 }
