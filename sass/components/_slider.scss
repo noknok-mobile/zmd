@@ -120,7 +120,8 @@
   }
   &-container{
     overflow-x: hidden;
-    width: 100vw;
+    // width: 100vw;
+    width: calc(50vw + var(--container-width)/2); //simplify from $container + (100vw - $container/2) 
     max-width: auto;
     position: relative;
     padding: 30px 15px ;
