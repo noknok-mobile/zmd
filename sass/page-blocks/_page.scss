@@ -1,4 +1,4 @@
-.page-grid{
+    .page-grid{
     display: grid;
     grid-gap: $gutter;
     grid-template-columns: 8fr 4fr;
@@ -10,6 +10,7 @@
     //     grid-area: content;
     // }
     &__sidebar{
+        z-index: 10;
         @include tablet{
             display: none;
         }
@@ -20,9 +21,27 @@
 }
 .page-block{
     margin: $offset-large 0;
+    // display: contents;
+    position: relative;
+    z-index: 1;
+    
     &_background{
         margin: 0;
         padding: $offset-large 0;
         background: $color-elem-background;
+        &-wide{    
+            background: none;        
+            &::before{
+                content: "";
+                width: 100vw;
+                background: $color-elem-background;
+                position: absolute;
+                height:100%;
+                top: 0;
+                z-index: -10;
+                transform: translateX(calc(var(--container-width)/2 - 50%));
+            }
+        }
     }
+    
 }
