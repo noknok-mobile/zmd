@@ -6,7 +6,7 @@
 
   &__item {
     padding: 30px 0;
-    @include text(s, 600, true);
+    @extend %tag;
 
     &:not(:last-of-type) {
       border-bottom: 1px solid $color-line;

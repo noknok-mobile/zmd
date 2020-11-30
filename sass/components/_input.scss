@@ -13,7 +13,7 @@
     width: 100%;
     background: $color-elem-background;
     border-radius: 35px;
-    @include text(s, 600);
+    @extend %tag;
     color: $color-text-semi-muted;
     transition: all 0.2s ease-in;
     font-family: inherit;
@@ -36,8 +36,7 @@
     }
 
     &::placeholder {
-      @include text(s, 600, true);
-      color: $color-text-muted;
+      @extend .tag;
     }
 
     &::-webkit-calendar-picker-indicator {

@@ -20,7 +20,6 @@
   }
   &__head {
     @include text(xs, 600);
-    line-height: 1.8;
     color: $color-text-muted;
     // border-top: 1px solid $color-line;
     border-bottom: 1px solid $color-line;

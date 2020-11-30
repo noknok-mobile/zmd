@@ -1,7 +1,3 @@
-.heading {
-    @include text(s, 600, true);
-    color: $color-text-muted;
-}
 .title{
     @include header(h1);
 }

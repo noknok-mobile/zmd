@@ -67,7 +67,6 @@
     flex-basis: clamp(320px, 50%, 800px);
     flex-wrap: wrap;
     // @include flex-gap($offset-small);
-    line-height: 1.8;
     @include text(h3, 300);
     @include phone {
       color: $color-text;

@@ -40,9 +40,8 @@
     }
   }
   &__header {
-    @include text(s, 600, true);
+    @extend %tag;
     color: $color-text-semi-muted;
-    line-height: 1.8;
     margin-bottom: $offset-middle;
   }
 }

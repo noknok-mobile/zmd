@@ -37,17 +37,17 @@
       }
     }
     &__overheader {
-      @include text(xxs, 600, true);
-      color: $color-text-muted;
       margin-bottom: 15px;
     }
     &__header {
-      @include text(l);
+      @include header(h2);
+      // @include text(h3,400);
       margin-bottom: 15px;
-      line-height: 140%;
+      line-height: 1.4;
     }
     &__description {
       @include text(s);
+      // @include text(xs);
       flex: 1;
       line-height: 180%;
       text-overflow: ellipsis;

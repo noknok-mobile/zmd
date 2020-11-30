@@ -1,16 +1,23 @@
 %lead{
     @include text(h2, 300);
-    line-height: 1.8;
 }
 .mark{
     color: $color-accent;
 }
 %text{
     @include text(m, 400);
-    line-height: 1.8;
 }
 %price{
     @include text(m, 600);
-    line-height: 1.8;
     white-space: nowrap;
+}
+%tag {
+    @include text(s,600,true);
+}
+.tag {
+    @extend %tag;
+    color: $color-text-muted;
+}
+.title{
+    @include header(h1);
 }

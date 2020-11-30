@@ -7,7 +7,6 @@
     &__item {
         $size: 33px;
         @include box($size);
-        line-height: 1.8;
         text-align: center;
         @include text(s);
         flex: 0 0 $size;

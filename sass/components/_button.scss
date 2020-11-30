@@ -9,7 +9,7 @@
     background: $color-main;
     transition: background-color 0.2s ease-out;
     padding: 0 40px;
-    @include text(s, 600, true);
+    @extend %tag;          
     line-height: $height;
     height: $height;
     text-decoration: none;
