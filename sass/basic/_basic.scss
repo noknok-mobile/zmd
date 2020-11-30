@@ -30,7 +30,7 @@
   @include text(xxs);
   color: #807a71;
   text-decoration: none;
-  line-height: 1.6%;
+  line-height: 1.6;
 }
 
 html {
@@ -43,11 +43,17 @@ html {
 .container {
   @extend %container;
   @include phone_smallest {
-    padding: 0 15px; 
+    padding: 0 15px;
   }
 }
 .mobile-scrollable {
+  &_snap {
+    scroll-snap-type: x mandatory;
+    overscroll-behavior: contain;
+    touch-action: pan-x;
+  }
   @include tablet {
+    width: calc(50vw + var(--container-width) / 2);
     overflow-x: scroll;
     padding: 15px 0;
   }

@@ -27,9 +27,9 @@
   width: $size;
   height: $size;
 }
-@mixin flex-gap($vertical, $horizontal: null) {
+@mixin flex-gap($horizontal, $vertical: null) {
   gap: $vertical $horizontal;
-  @supports not (gap: $vertical) {
+  @supports not (gap: $horizontal) {
     & :not(:last-child) {
       margin-right: $horizontal;
       margin-bottom: $vertical;

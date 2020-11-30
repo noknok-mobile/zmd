@@ -2,8 +2,8 @@
 <html lang="ru">
 
 <head>
-    <tag charset="UTF-8">
-    <tag name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/style.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -133,7 +133,7 @@
         let slider = document.querySelector('.big-carousel');
         let swiper = new Swiper(slider, {
             loop: true,
-            breakpoints:{
+            breakpoints: {
                 1200: {
                     cssMode: true
                 }
@@ -166,7 +166,7 @@
                         <span class="mark">весь перечень</span> лабораторных
                         и диагностических исследований</h2>
                 </div>
-                <div class="overview__nav">
+                <div class="overview__nav mobile-scrollable">
                     <div class="overview__links">
                         <a class="button button_light">Bсе направления</a>
                         <a class="button button_light">все специалисты</a>
@@ -195,7 +195,7 @@
 
 
                 <div class="branch-list__wrapper slider-container">
-                    <div class="branch-list branch-list_carousel swiper-wrapper swiper-no-swiping">
+                    <div class="branch-list branch-list_carousel swiper-wrapper swiper-no-swiping mobile-scrollable mobile-scrollable_snap">
                         <div class="branch swiper-slide">
                             <div class="branch__img-wrapper">
                                 <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
@@ -257,23 +257,25 @@
             </div>
         </div>
         <script>
-            let slider2 = document.querySelector('.branch-list__wrapper');
-            let swiper2 = new Swiper(slider2, {
-                loop: true,
-                slidesPerView: 'auto',
-                slidesPerGroup: 1,
-                spaceBetween: 30,
-                pagination: {
-                    el: '.branch-list__pagination',
-                    type: 'bullets',
-                    clickable: true
-                },
-                navigation: {
-                    nextEl: '.button-arrow_next',
-                    prevEl: '.button-arrow_prev',
-                },
-                //по переопределению см https://github.com/nolimits4web/swiper/blob/master/src/components/core/core-class.js
-            });
+            if (window.innerWidth > 990) {
+                let slider2 = document.querySelector('.branch-list__wrapper');
+                let swiper2 = new Swiper(slider2, {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                    pagination: {
+                        el: '.branch-list__pagination',
+                        type: 'bullets',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.button-arrow_next',
+                        prevEl: '.button-arrow_prev',
+                    },
+                    //по переопределению см https://github.com/nolimits4web/swiper/blob/master/src/components/core/core-class.js
+                });
+            }
         </script>
     </div>
     <!-- branches block end -->
@@ -338,7 +340,7 @@
                     Отзывы наших клиентов — <span class="mark">лучшее&nbsp;подтверждение</span> нашего прoфессионализма
                 </div>
             </div>
-            <div class="overview__nav">
+            <div class="overview__nav mobile-scrollable">
                 <div class="overview__links">
                     <a class="button button_light">все отзывы</a>
                 </div>
@@ -427,22 +429,24 @@
         </div>
 
         <script>
-            const slider3 = document.querySelector('.reviews-wrapper');
-            const swiper3 = new Swiper(slider3, {
-                loop: true,
-                slidesPerView: 'auto',
-                slidesPerGroup: 1,
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: '.reviews__navigation .button-arrow_next',
-                    prevEl: '.reviews__navigation .button-arrow_prev',
-                },
-                pagination: {
-                    el: '.reviews__pagination',
-                    type: 'bullets',
-                    clickable: true
-                }
-            })
+            if (window.innerWidth > 990) {
+                const slider3 = document.querySelector('.reviews-wrapper');
+                const swiper3 = new Swiper(slider3, {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                    navigation: {
+                        nextEl: '.reviews__navigation .button-arrow_next',
+                        prevEl: '.reviews__navigation .button-arrow_prev',
+                    },
+                    pagination: {
+                        el: '.reviews__pagination',
+                        type: 'bullets',
+                        clickable: true
+                    }
+                })
+            }
         </script>
     </div>
     <!-- reviews block end -->

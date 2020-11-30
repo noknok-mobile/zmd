@@ -2,16 +2,17 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    filter: grayscale(1);
     @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include phone {
       grid: 1fr / auto-flow 80%;
       scroll-snap-type: x mandatory;
       overscroll-behavior: contain;
       touch-action: pan-x;
     }
     grid-gap: $gutter;
+    &:hover{
+      filter: grayscale(0);
+    }
   }
   &__nav {
     display: flex;
