@@ -15,7 +15,6 @@
         margin-left: 40px;
       }
       gap: 40px;
-      line-height: 180%;
       @include text(s);
       &:hover::before {
         background: $color-accent;

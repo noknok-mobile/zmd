@@ -49,7 +49,6 @@
       @include text(s);
       // @include text(xs);
       flex: 1;
-      line-height: 180%;
       text-overflow: ellipsis;
       // padding-right: $col-width + $gutter;
       margin-bottom: $offset-small;

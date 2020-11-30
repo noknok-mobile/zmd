@@ -70,7 +70,6 @@
   &__schedule {
     display: none;
     @include text(xxs);
-    line-height: 180%;
 
     @include laptop {
       display: block;
@@ -126,7 +125,6 @@
   &__block {
     @include text(xxs, 500);
     padding-left: 42px;
-    line-height: 180%;
     position: relative;
 
     @include laptop {
