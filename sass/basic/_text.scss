@@ -1,23 +1,64 @@
-%lead{
-    @include text(h2, 300);
+%h1 {
+  @include header(h1);
 }
-.mark{
-    color: $color-accent;
+%h2 {
+  @include header(h2);
 }
-%text{
-    @include text(m, 400);
+%h3 {
+  @include header(h3);
+ 
 }
-%price{
-    @include text(m, 600);
-    white-space: nowrap;
+
+%paragraph {
+  margin-top: 1em;
+  &:not(:last-child) {
+    margin-bottom: $text-margin;
+  }
+}
+
+%text {
+  @include text(m, 400);
+}
+.price {
+  @include text(m, 600);
+  white-space: nowrap;
 }
 %tag {
-    @include text(s,600,true);
+  @include text(s, 600, true);
+}
+/*attention! global styles! поместить в самое начало результирующей табюлицы стилей*/
+h1 {
+  @extend %h1;
+}
+h2 {
+  @extend %h2;
+}
+h3 {
+  @extend %h3;
+}
+p {
+  @extend %paragraph;
+}
+// ul{
+//     @extend .list;
+//     & li {
+//         @extend .list__item;
+//     }
+// }
+/*attention! global styles*/
+
+.lead {
+  @include text(h2, 300);
+  line-height: 1.4; //не по макету
+}
+.mark {
+  color: $color-accent;
 }
 .tag {
-    @extend %tag;
-    color: $color-text-muted;
+  @extend %tag;
+  color: $color-text-muted;
 }
-.title{
-    @include header(h1);
+.title {
+  @extend %h1;
+  margin: 0;
 }

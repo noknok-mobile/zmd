@@ -30,7 +30,7 @@
   @include text(xxs);
   color: #807a71;
   text-decoration: none;
-  line-height: 160%;
+  line-height: 1.6%;
 }
 
 html {
@@ -42,6 +42,9 @@ html {
 
 .container {
   @extend %container;
+  @include phone_smallest{
+    padding: 0 15px;
+  }
 }
 @keyframes fadeIn {
   0% {

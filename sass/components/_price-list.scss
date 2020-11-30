@@ -14,7 +14,7 @@
     }
     & td:last-of-type {
       text-align: right;
-      @extend %price;
+      @extend .price;
     }
   }
   &__price {

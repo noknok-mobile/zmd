@@ -1,34 +1,38 @@
-@mixin header($size) {
-    font-family: "PT Serif", serif;
-    font-size: map-get($font-size, $size);
-    font-weight: 400;
+@mixin header($size, $offset: true) {
+  font-family: "PT Serif", serif;
+  font-size: map-get($font-size, $size);
+  font-weight: 400;
+  line-height: 1.4;
+  @if $offset {
+    margin-top: 1.8em;
+    margin-bottom: $text-margin;
+  }
 }
 
 @mixin text($size, $weight: null, $isUppercase: false) {
-    @if size !="inherit" {
-        font-size: map-get($font-size, $size);
-    }
+  @if size != "inherit" {
+    font-size: map-get($font-size, $size);
+  }
 
-    @if $weight {
-        font-weight: $weight;
-    }
+  @if $weight {
+    font-weight: $weight;
+  }
 
-    @if $isUppercase {
-        text-transform: uppercase;
-    }
+  @if $isUppercase {
+    text-transform: uppercase;
+  }
 }
 
 @mixin box($size) {
-    width: $size;
-    height: $size;
+  width: $size;
+  height: $size;
 }
 @mixin flex-gap($vertical, $horizontal: null) {
-    gap: $vertical $horizontal;
-    @supports not (gap: $vertical){
-        & :not(:last-child){
-            margin-right: $horizontal;
-            margin-bottom: $vertical;
-        }
+  gap: $vertical $horizontal;
+  @supports not (gap: $vertical) {
+    & :not(:last-child) {
+      margin-right: $horizontal;
+      margin-bottom: $vertical;
     }
+  }
 }
-

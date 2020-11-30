@@ -35,15 +35,14 @@ html {
     --offset-middle: 32px;
     --offset-small: 16px;
   }
-  @include phone_xs{
-    // --grid-margin:15px;
-  }
 }
 
 $offset-small: var(--offset-small);
 $offset-middle: var(--offset-middle);
 $offset-large: var(--offset-large);
+$text-margin: 1.8rem;
 
 $col-width: var(--col-width);
 $gutter: var(--gutter);
 $container: var(--container-width);
+

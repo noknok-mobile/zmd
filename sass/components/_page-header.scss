@@ -2,10 +2,6 @@
   padding: 45px 0 55px;
   background: $color-elem-background;
 
-  &__title {
-    @include header(xxl);
-  }
-
   &__nav {
     margin-bottom: 15px;
   }
