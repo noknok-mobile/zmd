@@ -1,11 +1,58 @@
-<div class="gallery">
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-    <div class="gallery__item-wrap"><img src="img/image.png" alt="" class="gallery__item"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/filter.js"></script>
+</head>
+
+<body>
+    <!-- gallery start -->
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery__nav mobile-scrollable">
+                <a href="" class="button js-filter js-filter-active" data-filter="">Все</a>
+                <a href="" class="button js-filter" data-filter="2">доктор</a>
+                <a href="" class="button js-filter" data-filter="1">море</a></div>
+            <div class="gallery__wrapper mobile-scrollable">
+                <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item " data-filter="2"><img src="/img/doctor.jpg" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="2"><img src="/img/doctor.jpg" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="2"><img src="/img/doctor.jpg" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="2"><img src="/img/doctor.jpg" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="2"><img src="/img/doctor.jpg" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt="" class="gallery__item">
+                </div>
+                <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt="" class="gallery__item">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let gallery = document.querySelector('.gallery');
+        let filter = new Filter(gallery);
+    </script>
+    <!-- gallery end -->
+</body>
+
+</html>

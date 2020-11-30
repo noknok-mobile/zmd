@@ -1,14 +1,23 @@
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  @include tablet {
-    grid-template-columns: repeat(2, 1fr);
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include phone {
+      grid: 1fr / auto-flow 80%;
+      scroll-snap-type: x mandatory;
+      overscroll-behavior: contain;
+      touch-action: pan-x;
+    }
+    grid-gap: $gutter;
   }
-  @include phone {
-    grid-template-columns: 1fr;
+  &__nav {
+    display: flex;
+    @include flex-gap(15px);
+    flex-wrap: nowrap;
   }
-  grid-gap: $gutter;
-
   &__item {
     position: absolute;
     top: 0;
@@ -23,6 +32,7 @@
 
     &-wrap {
       position: relative;
+      scroll-snap-align: start;
       &:before {
         content: "";
         display: block;
@@ -31,19 +41,17 @@
     }
 
     &_hidden {
-        // animation: fadeOut 1s;
-        display: none;
-
+      // animation: fadeOut 1s;
+      display: none;
     }
-
   }
 }
-@keyframes fadeOut{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        display: none;
-    }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }

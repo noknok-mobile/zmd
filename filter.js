@@ -42,6 +42,7 @@ class Filter {
     init() {
         for (let trigger of this.filterControls.list) {
             trigger.addEventListener('click', (e) => {
+                e.preventDefault();
                 this.filterControls.higlightActiveItem(e);
                 this.filterTarget.resetFilter();
                 this.filterTarget.filterItems(e);

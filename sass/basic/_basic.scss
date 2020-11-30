@@ -42,8 +42,14 @@ html {
 
 .container {
   @extend %container;
-  @include phone_smallest{
-    padding: 0 15px;
+  @include phone_smallest {
+    padding: 0 15px; 
+  }
+}
+.mobile-scrollable {
+  @include tablet {
+    overflow-x: scroll;
+    padding: 15px 0;
   }
 }
 @keyframes fadeIn {
