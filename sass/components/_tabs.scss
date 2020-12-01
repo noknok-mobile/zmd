@@ -1,0 +1,9 @@
+.tab{
+    @include text(xxs, 400, false);
+    text-transform: none;
+    &-nav{
+        display: flex;
+        @include flex-gap($gutter);
+        margin-bottom: $offset-small;
+    }
+}

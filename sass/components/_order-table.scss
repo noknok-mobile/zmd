@@ -1,53 +1,91 @@
-.table {
-  // display: table;
-  width: 100%;
-
-  &__body {
-    // display: table-column-group;
-  }
+%table-row{
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: $gutter;
+}
+.table { 
+  // min-width: 720px;
+  // &-wrapper{
+  //   overflow-x: auto;
+  // }
   &__row {
-    display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    grid-gap: $gutter;
+    @extend %table-row;
     align-items: center;
-    padding: 15px 0;
-    &-wrapper:nth-of-type(2n + 1) {
-      background: $color-elem-background;
+    padding: 1rem $gutter;  
+    @include phone_hrz{
+      grid-template-columns: 1fr;
     }
-    // & :first-child{
-    //     color: $color-accent;
-    // }
   }
   &__head {
     @include text(xs, 600);
     color: $color-text-muted;
-    // border-top: 1px solid $color-line;
+    border-top: 1px solid $color-line;
     border-bottom: 1px solid $color-line;
-    padding: 20px 0;
-  }
-  &__cell {
-    // display: table-cell
+    // padding: 20px 0;
+    @include phone_hrz{
+      display: none;
+    }
   }
 }
+
 .order {
+  
+  
+  &__head{
+    & > :first-child{
+      @include text(inherit, 600);
+      color: $color-accent;
+    }
+    &::before, &::after{
+      right: 15px;
+      @include phone_hrz{
+        top: 30px;
+      }
+    }
+    
+  }
+  &:nth-of-type(2n + 1) {
+    background: $color-elem-background;
+  }
   &__more {
     display: flex;
     justify-content: space-between;
     padding: $offset-small 0;
+    align-items: center;
+    padding-left: $gutter;
+    @include phone_hrz{
+      flex-direction: column;
+      @include flex-gap(30px, 30px);
+      align-items: stretch;
+    }
   }
   &__button {
     &_cancel {
-      @extend .button_light;
-      color: $color-text;
+      background: transparent;
+      color: $color-accent;
+      padding: 0;
+      &:hover{
+        background: transparent;
+      }
     }
   }
   &__status {
     display: inline-block;
-    padding: 10px 0;
+    padding: 0.5rem 0;
     text-align: center;
     @include text(xxs, 600, true);
+    font-size: 13px;
     background: #FFE4BC;
     width: 100px;
+  }
+  &__actions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    @include flex-gap(20px);
+    @include phone_hrz{
+      justify-content: space-between;
+    }
   }
   &_paid &__status {
     background: #bee3d2;

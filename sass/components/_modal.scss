@@ -55,7 +55,7 @@
     margin-top: $offset-middle;
   }
 }
-.tab {
+.modal-tab {
   &__list {
     display: flex;
     @include flex-gap($offset-middle);

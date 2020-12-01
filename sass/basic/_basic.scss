@@ -47,6 +47,8 @@ html {
   }
 }
 .mobile-scrollable {
+  display: flex;
+  flex-wrap: nowrap;
   &_snap {
     scroll-snap-type: x mandatory;
     overscroll-behavior: contain;

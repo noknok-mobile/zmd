@@ -3,9 +3,10 @@
   padding: 15px 50px;
   max-width: 410px;
   @extend %card;
-
+  
   &__item {
-    padding: 30px 0;
+    display: block;
+    padding: 1.5rem 0;
     @extend %tag;
 
     &:not(:last-of-type) {

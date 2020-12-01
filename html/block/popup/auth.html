@@ -26,14 +26,14 @@
                     </svg>
                 </button>
                 <div class="modal__header">
-                    <div class="tab__list">
-                        <a href="#auth" data-page="auth" class="tab tab_active">Вход</a>
-                        <a href="#signin" data-page="signin" class="tab">Регистрация</a>
+                    <div class="modal-modal-tab__list">
+                        <a href="#auth" data-page="auth" class="modal-tab modal-modal-tab_active">Вход</a>
+                        <a href="#signin" data-page="signin" class="modal-tab">Регистрация</a>
                     </div>
                 </div>
                 <div class="modal__body">
                     <!-- tab page1 start -->
-                    <div class="tab__page tab__page tab__page_active" data-href="auth">
+                    <div class="modal-tab__page modal-tab__page modal-tab__page_active" data-href="auth">
                         <form action="#" name="auth" class="modal__form form">
                             <div class="input form__input">
                                 <select name="" class="input__value">
@@ -59,7 +59,7 @@
                     <!-- tab page1 end -->
 
                     <!-- tab page2 start -->
-                    <div class="tab__page" data-href="signin">
+                    <div class="modal-tab__page" data-href="signin">
                         <form name="signin" class="modal__form form">
                             <div class="input form__input">
                                 <input type="text" class="input__value" placeholder="ФИО*">
@@ -122,21 +122,21 @@
                 setActivePage(e);
             }
             function resetTabPages() {
-                for (let elem of document.querySelectorAll('.tab__page_active')) {
-                    elem.classList.remove('tab__page_active');
+                for (let elem of document.querySelectorAll('.modal-tab__page_active')) {
+                    elem.classList.remove('modal-tab__page_active');
                 }
             }
             function setActivePage(e) {
                 let filter = e.target.dataset.page;
-                document.querySelector(`.tab__page[data-href="${filter}"]`).classList.add('tab__page_active');
+                document.querySelector(`.modal-tab__page[data-href="${filter}"]`).classList.add('modal-tab__page_active');
             }
             function resetTabControl() {
-                for (let elem of document.querySelectorAll('.tab_active')) {
-                    elem.classList.remove('tab_active');
+                for (let elem of document.querySelectorAll('.modal-tab_active')) {
+                    elem.classList.remove('modal-tab_active');
                 }
             }
             function setActiveTab(e) {
-                e.target.classList.add('tab_active');
+                e.target.classList.add('modal-tab_active');
             }
 
         </script>

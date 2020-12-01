@@ -2,13 +2,9 @@
     display: grid;
     column-gap: $gutter;
     grid-template-columns: 8fr 4fr;
-    // grid-template-areas: 'content sidebar';
     &_reverse{
         grid-template-columns: 4fr 8fr;
     }
-    // &__content{
-    //     grid-area: content;
-    // }
     &__sidebar{
         z-index: 10;
         padding: $offset-large 0;
@@ -17,7 +13,7 @@
         }
     }
     @include tablet{
-        grid-template-columns: 1fr;
+        grid-template-columns: var(--container-width);
         column-gap: 0;
     }
 }
