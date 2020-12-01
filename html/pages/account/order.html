@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Записаться на прием</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container page-grid">
+        <main class="order-page page-block">
+            <form action="" class="order-page__form">
+                <fieldset class="order-page__section order-page__section_customer">
+                    <h4 class="tag">Пациент</h4>
+                    <div class="input">
+                        <input id="name" name="name" type="text" class="input__value" placeholder="иванов иван иванович">
+                    </div>
+                    <div class="input">
+                        <input id="name" name="email" type="text" class="input__value" placeholder="test@kfjgdfg.et">
+                    </div>
+                    <div class="input account__input ">
+                        <input id="name" name="phone" type="text" class="input__value" placeholder="+7 908 123 23 23">
+                    </div>
+                    <a href="" class="order-page__nav order-page__nav js-section-next">Далее</a>
+                </fieldset>
+                <h4 class="tag">Способ оплаты</h4>
+                <fieldset class="order-page__section order-page__section_payment">
+                    <label class="control control_payment control_payment-card tile">
+                        <input class="control__input" type="radio" name="payment"><span class="control__label">Банковской картой</span>
+                    </label>
+                    <label class="control control_payment  control_payment-cashe tile">
+                        <input class="control__input" type="radio" name="payment"><span class="control__label">Наличными</span>
+                    </label>
+                </fieldset>
+
+            </form>
+        </main>
+    </div>
+
+</body>
+
+</html>
