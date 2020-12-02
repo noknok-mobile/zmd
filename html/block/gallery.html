@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <!-- gallery start -->
-    <div class="container">
+        <div class="container">
+                <!-- gallery start -->
         <div class="gallery">
-            <div class="gallery__nav filter-nav mobile-scrollable">
-                <a href="" class="button js-filter js-filter-active" data-filter="">Все</a>
-                <a href="" class="button js-filter" data-filter="2">доктор</a>
-                <a href="" class="button js-filter" data-filter="1">море</a>
+            <div class="gallery__nav tab-nav filter-nav mobile-scrollable">
+                <a href="" class="button tab js-filter js-filter-active" data-filter="">Все</a>
+                <a href="" class="button tab js-filter" data-filter="2">доктор</a>
+                <a href="" class="button tab js-filter" data-filter="1">море</a>
             </div>
             <div class="gallery__wrapper mobile-scrollable">
                 <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
@@ -61,12 +61,13 @@
                 </div>
             </div>
         </div>
+        <script>
+                let gallery = document.querySelector('.gallery');
+                let filter = new Filter(gallery);
+            </script>
+            <!-- gallery end -->
     </div>
-    <script>
-        let gallery = document.querySelector('.gallery');
-        let filter = new Filter(gallery);
-    </script>
-    <!-- gallery end -->
+    
 </body>
 
 </html>

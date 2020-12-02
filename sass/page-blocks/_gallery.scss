@@ -2,7 +2,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    filter: grayscale(1);
+    
     @include tablet {
       grid: 1fr / auto-flow 80%;
       scroll-snap-type: x mandatory;
@@ -10,9 +10,7 @@
       touch-action: pan-x;
     }
     grid-gap: $gutter;
-    &:hover{
-      filter: grayscale(0);
-    }
+    
   }
   &__nav {
     display: flex;
@@ -34,6 +32,10 @@
     &-wrap {
       position: relative;
       scroll-snap-align: start;
+      filter: grayscale(1);
+      &:hover{
+        filter: grayscale(0);
+      }
       &:before {
         content: "";
         display: block;

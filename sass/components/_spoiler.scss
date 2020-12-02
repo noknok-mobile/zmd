@@ -15,7 +15,7 @@
     &__more{
         padding: $offset-small 0;
     }
-    &[open] > &__more {
+    &[open] &__more {
       animation: fadeIn 0.5s;
     }
   }

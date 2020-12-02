@@ -49,13 +49,13 @@
         background: $color-main;
         color: white;
       }
-      &_next svg{
+      &_next {
         transform: rotateZ(-90deg);
       }
-      &_prev svg{
+      &_prev{
         transform: rotateZ(90deg);
       }
-      &_up svg{
+      &_up{
         transform: rotateZ(180deg);
       }
       

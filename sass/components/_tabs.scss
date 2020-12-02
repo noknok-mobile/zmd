@@ -1,6 +1,6 @@
 .tab{
     @include text(xxs, 400, false);
-    text-transform: none;
+    text-transform: capitalize;
     &-nav{
         display: flex;
         @include flex-gap($gutter);
