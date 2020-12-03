@@ -4,12 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Запись на прием</title>
+    <title>Шаблон страницы</title>
     <link rel="stylesheet" href="/style.css">
-    <script src="/filter.js"></script>
 </head>
 
 <body>
+    <!-- header start -->
+<header class="header">
+    <div class="header__top">
+        <div class="logo__wrapper header__logo">
+            <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
+        </div>
+        <div class="header-menu header__user-menu">
+            <div class="header-menu__block header-menu__block_address">
+                <span class="header-menu__block__headline">Клиника:</span>
+                <span class="header-menu__block__content ">
+                    <a href="#" class="header__link">г. Краснодар, ул. Московская, 40</a> 
+                </span>
+            </div>
+            <div class="header-menu__block header-menu__block_schedule">
+                <span class="header-menu__block__headline">График работы:</span>
+                <span class="header-menu__block__content">Пн. — Сб. с 9:00 до 21:00</span>
+            </div>
+            <div class="header-menu__block header-menu__block_personal">
+                <span class="header-menu__block__headline">Личный кабинет: </span>
+                <div class="header-menu__block__content">
+                    <a href="#" class="header__link">Вход</a>
+                    <a href="#" class="header__link">Регистрация</a>
+                </div>
+            </div>
+
+            <div class="header-menu__button button">Записаться на прием</div>
+        </div>
+        <div class="header__contacts">
+            <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
+            <span class="header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu__item mobile-menu__item_personal">
+                <img src="/img/menu/profile.svg" alt="">
+            </div>
+            <div class="mobile-menu__item mobile-menu__item_add">
+                <img src="/img/menu/сalendar.svg" alt="">
+            </div>
+            <div class="mobile-menu__item mobile-menu__item_phone">
+                <img src="/img/menu/phone.svg" alt="">
+            </div>
+            <div class="mobile-menu__burger js-menu">
+                <img src="/img/menu/burger.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <ul class="header__bottom-menu main-menu">
+            <li class="main-menu__item link">Лечение</li>
+            <li class="main-menu__item link">Диагностика</li>
+            <li class="main-menu__item link">Услуги</li>
+            <li class="main-menu__item link">Специалисты</li>
+            <li class="main-menu__item link">Прайс</li>
+            <li class="main-menu__item link">Акции</li>
+            <li class="main-menu__item link">О компании</li>
+            <li class="main-menu__item link">Контакты</li>
+        </ul>
+    </div>
+</header>
+<script>
+    document.querySelector('.js-menu').addEventListener('click', ()=>{
+        document.querySelector('.main-menu').classList.toggle('main-menu_opened');
+    });
+</script>
+<!-- header end -->
+    <!-- page header start -->
+    <div class="page-header page-header_bskg-stethoscope">
+        <div class="container">
+            <div class="page-header__nav breadcrumb">
+                <a href="#" class="breadcrumb__item">Главная</a>
+                <a href="#" class="breadcrumb__item">Личный кабинет</a>
+                <a href="#" class="breadcrumb__item breadcrumb__item_active">Мои записи</a>
+            </div>
+            <h1 class="page-header__title title">Мои записи</h1>
+        </div>
+    </div>
+    <!--  page header ens-->
+    <!-- page start  -->
     <div class="container page-grid">
         <main class="page-block page__content">
             <div class="tab-nav mobile-scrollable">
@@ -30,14 +107,16 @@
                 </div>
                 <div class="table__body">
                     <details class="order order_unpaid spoiler">
-                        <summary class="order__head table__row spoiler__header">
-                            <span>Четверг,<br>
-                                14.10.20, 9:00</span>
-                            <span>г. Краснодар, ул.Московская,&nbsp;40</span>
-                            <span>Мейпариани Елена Владимировна</span>
-                            <span>
-                                <span class="order__status">ожидает оплаты</span>
-                            </span>
+                        <summary class="spoiler__header">
+                            <div class="order__head table__row">
+                                <span>Четверг,<br>
+                                    14.10.20, 9:00</span>
+                                <span>г. Краснодар, ул.Московская,&nbsp;40</span>
+                                <span>Мейпариани Елена Владимировна</span>
+                                <span>
+                                    <span class="order__status">ожидает оплаты</span>
+                                </span>
+                            </div>
                         </summary>
                         <div class="order__more spoiler__more">
                             <div class="order__desc">
@@ -55,14 +134,16 @@
                         </div>
                     </details>
                     <details class="order order_paid spoiler">
-                        <summary class="order__head table__row spoiler__header">
-                            <span>Четверг,<br>
-                                14.10.20, 9:00</span>
-                            <span>г. Краснодар, ул.Московская,&nbsp;40</span>
-                            <span>Мейпариани Елена Владимировна</span>
-                            <span>
-                                <span class="order__status">ожидает оплаты</span>
-                            </span>
+                        <summary class="spoiler__header">
+                            <div class="order__head table__row">
+                                <span>Четверг,<br>
+                                    14.10.20, 9:00</span>
+                                <span>г. Краснодар, ул.Московская,&nbsp;40</span>
+                                <span>Мейпариани Елена Владимировна</span>
+                                <span>
+                                    <span class="order__status">ожидает оплаты</span>
+                                </span>
+                            </div>
                         </summary>
                         <div class="order__more spoiler__more">
                             <div class="order__desc">
@@ -94,11 +175,13 @@
                 </div>
                 <div class="table__body">
                     <details class="order order_unpaid spoiler">
-                        <summary class="order__head table__row spoiler__header">
-                            <span>Четверг,<br>
-                                14.10.20, 9:00</span>
-                            <span>г. Краснодар, ул.Московская,&nbsp;40</span>
-                            <span>Мейпариани Елена Владимировна</span>
+                        <summary class="spoiler__header">
+                            <div class="order__head table__row">
+                                <span>Четверг,<br>
+                                    14.10.20, 9:00</span>
+                                <span>г. Краснодар, ул.Московская,&nbsp;40</span>
+                                <span>Мейпариани Елена Владимировна</span>
+                            </div>
                             
                         </summary>
                         <div class="order__more">
@@ -114,11 +197,13 @@
                         </div>
                     </details>
                     <details class="order order_paid spoiler">
-                        <summary class="order__head table__row spoiler__header">
-                            <span>Четверг,<br>
-                                14.10.20, 9:00</span>
-                            <span>г. Краснодар, ул.Московская,&nbsp;40</span>
-                            <span>Мейпариани Елена Владимировна</span>
+                        <summary class="spoiler__header">
+                            <div class="order__head table__row">
+                                <span>Четверг,<br>
+                                    14.10.20, 9:00</span>
+                                <span>г. Краснодар, ул.Московская,&nbsp;40</span>
+                                <span>Мейпариани Елена Владимировна</span>
+                            </div>
                             
                         </summary>
                         <div class="order__more">
@@ -144,12 +229,68 @@
         <nav class="page-grid__sidebar">
             <div class="content__left-menu sidebar-menu">
                 <a href="/html/pages/account/signin.html" class="sidebar-menu__item link">Профиль</a>
-                <a href="/html/pages/account/orders.html" class="sidebar-menu__item link">мои записи</li>
+                <a href="/html/pages/account/orders.html" class="sidebar-menu__item link">мои записи</a>
             </div>
         </nav>
 
 
     </div>
+    <!-- page end -->
+    <!-- footer start -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copyright">
+            <div class="logo__wrapper footer__logo">
+                <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
+            </div>
+            <a href="#" class="footer__link footer__link_privacy">
+                Политика обработки персональных данных и
+                пользовательское соглашение</a>
+        </div>
+        <nav class="footer__nav">
+            <div class="footer__nav-section">
+                <a href="#" class="footer__link footer__nav-item">Лечение</a>
+                <a href="#" class="footer__link footer__nav-item">Профилактика</a>
+                <a href="#" class="footer__link footer__nav-item">Сдать анализы</a>
+                <a href="#" class="footer__link footer__nav-item">Комплексное лечение</a>
+                <a href="#" class="footer__link footer__nav-item">Комплексное обследование</a>
+            </div>
+            <div class="footer__nav-section">
+                <a href="#" class="footer__link footer__nav-item">asdasd 1</a>
+                <a href="#" class="footer__link footer__nav-item">asdasd 2</a>
+                <a href="#" class="footer__link footer__nav-item">asdasd 3</a>
+            </div>
+            <div class="footer__nav-section">
+                <a href="#" class="footer__link footer__nav-item">Кардиология</a>
+                <a href="#" class="footer__link footer__nav-item">Практология</a>
+                <a href="#" class="footer__link footer__nav-item">Педиатрия</a>
+                <a href="#" class="footer__link footer__nav-item">Урология</a>
+                <a href="#" class="footer__link footer__nav-item">Хирургия</a>
+
+            </div>
+        </nav>
+        <div class="footer__info">
+            <span class="footer__info-item footer__info-item_address">
+                г. Краснодар<br>ул. Ленина 10
+            </span>
+            <span class="footer__info-item footer__info-item_contacts">
+                <a href="tel:8 (8642) 233-03-03" class="footer__info-item footer__link">8 (8642) 233-03-03</a>
+                <a class="footer__info-item">пн-сб 8:00 — 23:00</a>
+            </span>
+
+            <span class="footer-promo">
+                <div class="footer__link footer-promo__text">Скачайте приложение на телефон</div>
+                <div class="footer-promo__app-icons">
+                    <a href=""><img src="/img/app_store.png" alt=""></a>
+                    <a href=""><img src="/img/app_store.png" alt=""></a>
+                </div>
+            </span>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
+
+
 
 </body>
 
