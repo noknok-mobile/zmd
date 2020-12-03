@@ -100,8 +100,8 @@
             </div>
             <div class="banner swiper-slide">
                 <div class="banner__img-wrapper">
-                    <video class="intro__bckg" poster="/img/high.jpg" poster="/img/high.jpg" autoplay loop muted playsinline
-                    src="/high.mp4">
+                    <video class="intro__bckg" poster="/img/high.jpg" poster="/img/high.jpg" autoplay loop muted
+                        playsinline src="/high.mp4">
                     </video>
                 </div>
                 <div class="banner__inner container">
@@ -162,16 +162,16 @@
 
                     <div class="overview__slider-nav slider-navigation branch-list__navigation">
                         <div class="button-arrow branch-list__navigation_prev">
-                            <svg class="button-arrow_prev" width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="button-arrow_prev" width="27" height="27" viewBox="0 2 27 29"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
                                     stroke="currentColor" stroke-width="3" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                         </div>
                         <div class="button-arrow  branch-list__navigation_next">
-                            <svg class="button-arrow_next" width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="button-arrow_next" width="27" height="27" viewBox="0 2 27 29"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
                                     stroke="currentColor" stroke-width="3" stroke-linecap="round"
                                     stroke-linejoin="round" />
@@ -183,7 +183,8 @@
 
 
                 <div class="branch-list__wrapper slider-container">
-                    <div class="branch-list branch-list_carousel swiper-wrapper swiper-no-swiping mobile-scrollable mobile-scrollable_snap">
+                    <div
+                        class="branch-list branch-list_carousel swiper-wrapper swiper-no-swiping mobile-scrollable mobile-scrollable_snap">
                         <div class="branch swiper-slide">
                             <div class="branch__img-wrapper">
                                 <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
@@ -271,8 +272,7 @@
     <div class="page-block">
         <div class="intro container">
             <div class="intro__video-wrapper">
-                <video class="intro__bckg" autoplay loop muted playsinline
-                    src="/high.mp4">
+                <video class="intro__bckg" autoplay loop muted playsinline src="/high.mp4">
                 </video>
             </div>
 
@@ -301,9 +301,8 @@
         </div>
         <div class="intro container">
             <div class="intro__video-wrapper">
-                <video class="intro__bckg" poster="/img/high.jpg" autoplay loop muted playsinline
-                    src="/high.mp4">
-                    </video>
+                <video class="intro__bckg" poster="/img/high.jpg" autoplay loop muted playsinline src="/high.mp4">
+                </video>
             </div>
 
             <div class="intro__inner container">
@@ -494,6 +493,28 @@
     </footer>
     <!-- footer end -->
 
+    <script>
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        }
+
+        var callback = function (entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('intro_moved');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        var observer = new IntersectionObserver(callback, options);
+        let targets = document.querySelectorAll('.intro');
+        for(let target of targets){
+            observer.observe(target);
+        }
+    </script>
 </body>
 
 </html>
