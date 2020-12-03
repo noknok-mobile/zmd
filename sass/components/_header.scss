@@ -24,9 +24,8 @@
     }
 
     @include phone_hrz {
-      display: contents;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "menu menu menu menu" "logo logo mobile mobile";
+      grid-template-areas: "menu menu menu menu""logo logo mobile mobile";
     }
   }
 
@@ -38,9 +37,6 @@
 
     &-menu {
       flex: 0 0 var(--container-width);
-      @include phone_hrz{
-        grid-area: menu;
-      }
     }
   }
 
@@ -85,7 +81,7 @@
     text-decoration: underline;
     @include text(inherit, 400);
 
-    & + & {
+    &+& {
       margin-left: 30px;
     }
   }
@@ -113,10 +109,6 @@
     display: block;
   }
 
-  @include phone_hrz{
-    display: contents;
-  }
-
   &__button {
     grid-area: button;
     @include text(xs);
@@ -127,9 +119,6 @@
 
     @include tablet {
       display: none;
-    }
-    @include phone_hrz{
-      display: block;
     }
   }
 
@@ -176,9 +165,6 @@
       @include laptop {
         display: none;
       }
-      @include phone_hrz{
-        display: block;
-      }
 
       &::before {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle  cx='12' cy='12' r='12' fill='%235B423B'/%3E%3Cpath d='M12 6C8.6916 6 6 8.6916 6 12C6 15.3084 8.6916 18 12 18C15.3084 18 18 15.3084 18 12C18 8.6916 15.3084 6 12 6Z' fill='white'/%3E%3Cpath  d='M15.127 11.8147H12.4305V8.57264C12.4305 8.29982 12.2093 8.07861 11.9365 8.07861C11.6637 8.07861 11.4425 8.29982 11.4425 8.57264V12.3087C11.4425 12.5816 11.6637 12.8028 11.9365 12.8028H15.127C15.3998 12.8028 15.621 12.5816 15.621 12.3087C15.621 12.0359 15.3998 11.8147 15.127 11.8147Z' fill='%235B423B'/%3E%3C/svg%3E");
@@ -219,8 +205,7 @@
       cursor: pointer;
     }
 
-    &_closed {
-    }
+    &_closed {}
   }
 
   @include tablet {
@@ -229,19 +214,3 @@
     grid-area: mobile;
   }
 }
-
-// .header {
-//   @include phone_hrz {
-//     display: grid;
-//     grid-template-areas:
-//       "address address"
-//       "logo mobile"
-//       "menu menu"
-//       "schedule schedule"
-//       "button button";
-//   }
-// }
-
-// .menu-opener:checked ~  {
-//   display: block;
-// }
