@@ -1,5 +1,5 @@
 .button {
-    $height: 3em;
+    $height: 3rem;
     display: inline-block;
     appearance: none;
     -moz-appearance: none;
@@ -37,10 +37,12 @@
     &-arrow{
       @include box(33px);
       @extend %rounded;
+      transition: background-color 0.2s ease-out;
       display: flex;
       align-items: center;
       justify-content: center;
       color: $color-accent;
+      background: white;
       flex: 0 0 auto;
       & svg{
         @include box(18px);

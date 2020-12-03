@@ -131,21 +131,31 @@
 
 .big-carousel {
   position: relative;
-  &__navigation {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+  &__inner{
+    width: 100%;
+  }
+  &__navigation { 
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: stretch;
     &-area {
+      z-index: 2;
       width: 200px;
-      height: 100%;
       cursor: pointer;
+      &_next{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+      }
+      &_prev{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
     }
+    
   }
   &__pagination {
     position: absolute;

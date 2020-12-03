@@ -78,7 +78,6 @@
 
   &__link {
     color: #852d2e;
-    text-decoration: underline;
     @include text(inherit, 400);
 
     &+& {

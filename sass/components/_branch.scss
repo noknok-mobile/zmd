@@ -1,15 +1,15 @@
 .branch-list {
-  display: grid;
-  grid-gap: var(--gutter);
-  grid-template-columns: repeat(2, 1fr);
-
   &_table {
+    display: grid;
+    grid-gap: var(--gutter);
+    grid-template-columns: repeat(2, 1fr);
     @include phone_hrz {
       grid-template-columns: 1fr;
     }
   }
 
   &_carousel {
+    display: flex;
     @include tablet {
       display: grid;
       grid: 1fr / auto-flow 260px;
@@ -72,6 +72,7 @@
       @include text(xs);
       text-decoration: none;
       color: $color-accent;
+      @extend %alter-hover;
     }
   }
 }

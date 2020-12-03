@@ -37,7 +37,8 @@
 
         &-item {
             display: block;
-            margin-bottom: $offset-small / 2;
+            margin-bottom: 2em;
+            
         }
 
         @include phone {

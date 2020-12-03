@@ -59,14 +59,20 @@
         </div>
         <div class="header__bottom">
             <ul class="header__bottom-menu main-menu">
-                <li class="main-menu__item link">Лечение</li>
-                <li class="main-menu__item link">Диагностика</li>
-                <li class="main-menu__item link">Услуги</li>
-                <li class="main-menu__item link">Специалисты</li>
-                <li class="main-menu__item link">Прайс</li>
-                <li class="main-menu__item link">Акции</li>
-                <li class="main-menu__item link">О компании</li>
-                <li class="main-menu__item link">Контакты</li>
+                <li class="main-menu__item link">Лечение
+                    <ul class="main-menu__submenu sidebar-menu">
+                        <li class="sidebar-menu__item">Лечение</li>
+                        <li class="sidebar-menu__item">Другое лечение</li>
+                        <li class="sidebar-menu__item">Лечение</li>
+                    </ul>
+                </li>
+                <li class="main-menu__item link"><a href="asd" class="link">Диагностика</a></li>
+                <li class="main-menu__item link"><a href="a" class="link">Услуги</a></li>
+                <li class="main-menu__item link"><a href="zcz" class="link">Специалисты</a></li>
+                <li class="main-menu__item link"><a href="as" class="link">Прайс</a></li>
+                <li class="main-menu__item link"><a href="cxf" class="link">Акции</a></li>
+                <li class="main-menu__item link"><a href="aqawrq" class="link">О компании</a></li>
+                <li class="main-menu__item link"><a href="adg" class="link">Контакты</a></li>
             </ul>
         </div>
     </header>
@@ -80,42 +86,30 @@
     <div class="big-carousel swiper-container">
         <div class="big-carousel__inner swiper-wrapper">
             <div class="banner swiper-slide">
+                <div class="banner__img-wrapper">
+                    <img class="banner__img" src="/img/banner.png" alt="">
+                </div>
                 <div class="banner__inner container">
                     <div class="banner__content">
-                        <div class="banner__headline">Скидка 10% на МРТ в воскресенье</div>
-                        <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,
+                        <h2 class="banner__headline title">Скидка 10% на МРТ в&nbsp;воскресенье</h2>
+                        <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,<br>
                             по адресу Московская, 40</div>
-                        <div class="button banner__button">записаться на мрт</div>
+                        <a href="#" class="button banner__button">записаться на мрт</a>
                     </div>
                 </div>
             </div>
             <div class="banner swiper-slide">
-                <div class="banner__inner container">
-                    <div class="banner__content">
-                        <div class="banner__headline">Скидка 10% на МРТ в воскресенье</div>
-                        <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,
-                            по адресу Московская, 40</div>
-                        <div class="button banner__button">записаться на мрт</div>
-                    </div>
+                <div class="banner__img-wrapper">
+                    <video class="intro__bckg" poster="/img/high.jpg" poster="/img/high.jpg" autoplay loop muted playsinline
+                    src="/high.mp4">
+                    </video>
                 </div>
-            </div>
-            <div class="banner swiper-slide">
                 <div class="banner__inner container">
                     <div class="banner__content">
-                        <div class="banner__headline">Скидка 10% на МРТ в воскресенье</div>
-                        <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,
+                        <h2 class="banner__headline title">Скидка 10% на МРТ в&nbsp;воскресенье</h2>
+                        <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,<br>
                             по адресу Московская, 40</div>
-                        <div class="button banner__button">записаться на мрт</div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner swiper-slide">
-                <div class="banner__inner container">
-                    <div class="banner__content">
-                        <div class="banner__headline">Скидка 10% на МРТ в воскресенье</div>
-                        <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,
-                            по адресу Московская, 40</div>
-                        <div class="button banner__button">записаться на мрт</div>
+                        <a href="#" class="button banner__button">записаться на мрт</a>
                     </div>
                 </div>
             </div>
@@ -125,7 +119,6 @@
         <div class="big-carousel__navigation swiper-navigation">
             <div class="big-carousel__navigation-area big-carousel__navigation-area_prev"></div>
             <div class="big-carousel__navigation-area big-carousel__navigation-area_next"></div>
-
         </div>
         <div class="big-carousel__pagination slider-pagination swiper-pagination"></div>
     </div>
@@ -133,11 +126,6 @@
         let slider = document.querySelector('.big-carousel');
         let swiper = new Swiper(slider, {
             loop: true,
-            breakpoints: {
-                1200: {
-                    cssMode: true
-                }
-            },
             speed: 500,
             pagination: {
                 el: '.big-carousel__pagination',
@@ -162,7 +150,7 @@
             <div class="overview">
                 <div class="overview__desc about">
                     <div class="about__heading tag">Направления</div>
-                    <h2 class="title">В центре производится
+                    <h2 class="title">В центре производится<br>
                         <span class="mark">весь перечень</span> лабораторных
                         и диагностических исследований</h2>
                 </div>
@@ -173,7 +161,7 @@
                     </div>
 
                     <div class="overview__slider-nav slider-navigation branch-list__navigation">
-                        <div class="button-arrow">
+                        <div class="button-arrow branch-list__navigation_prev">
                             <svg class="button-arrow_prev" width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
@@ -181,7 +169,7 @@
                                     stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <div class="button-arrow">
+                        <div class="button-arrow  branch-list__navigation_next">
                             <svg class="button-arrow_next" width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
@@ -270,8 +258,8 @@
                         clickable: true
                     },
                     navigation: {
-                        nextEl: '.button-arrow_next',
-                        prevEl: '.button-arrow_prev',
+                        nextEl: '.branch-list__navigation_next',
+                        prevEl: '.branch-list__navigation_prev',
                     },
                     //по переопределению см https://github.com/nolimits4web/swiper/blob/master/src/components/core/core-class.js
                 });
@@ -283,8 +271,8 @@
     <div class="page-block">
         <div class="intro container">
             <div class="intro__video-wrapper">
-                <video class="intro__bckg" autoplay loop
-                    src="https://storage.coverr.co/videos/9Jd00zdrM4M4kCo01OGVY6nD81BL9MTl001?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjM4Q0MzQTdGQTlGMUVDNDgxQjk3IiwiaWF0IjoxNjA2MTM5MDgwfQ.A9jUvus-vJJRIAgBUge_-djosa8IXom884i2uEC3g_A">
+                <video class="intro__bckg" autoplay loop muted playsinline
+                    src="/high.mp4">
                 </video>
             </div>
 
@@ -306,16 +294,16 @@
             <div class="about about_single">
                 <div class="about__heading tag">специалисты</div>
                 <div class="title">
-                    Наши врачи - доктора
+                    Наши врачи - доктора <br>
                     и <span class="mark">кандидаты медицинских наук</span>
                 </div>
             </div>
         </div>
         <div class="intro container">
             <div class="intro__video-wrapper">
-                <video class="intro__bckg" autoplay loop
-                    src="https://storage.coverr.co/videos/9Jd00zdrM4M4kCo01OGVY6nD81BL9MTl001?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjM4Q0MzQTdGQTlGMUVDNDgxQjk3IiwiaWF0IjoxNjA2MTM5MDgwfQ.A9jUvus-vJJRIAgBUge_-djosa8IXom884i2uEC3g_A">
-                </video>
+                <video class="intro__bckg" poster="/img/high.jpg" autoplay loop muted playsinline
+                    src="/high.mp4">
+                    </video>
             </div>
 
             <div class="intro__inner container">
@@ -345,7 +333,7 @@
                     <a class="button button_light">все отзывы</a>
                 </div>
 
-                <div class="reviews__navigation slider-navigation">
+                <div class="overview__slider-nav slider-navigation">
                     <div class="button-arrow button-arrow_prev">
                         <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
@@ -437,11 +425,11 @@
                     slidesPerGroup: 1,
                     spaceBetween: 30,
                     navigation: {
-                        nextEl: '.reviews__navigation .button-arrow_next',
-                        prevEl: '.reviews__navigation .button-arrow_prev',
+                        nextEl: '.reviews .button-arrow_next',
+                        prevEl: '.reviews .button-arrow_prev',
                     },
                     pagination: {
-                        el: '.reviews__pagination',
+                        el: '.reviews .slider-pagination',
                         type: 'bullets',
                         clickable: true
                     }
@@ -470,9 +458,11 @@
                     <a href="#" class="footer__link footer__nav-item">Комплексное обследование</a>
                 </div>
                 <div class="footer__nav-section">
-                    <a href="#" class="footer__link footer__nav-item">asdasd 1</a>
-                    <a href="#" class="footer__link footer__nav-item">asdasd 2</a>
-                    <a href="#" class="footer__link footer__nav-item">asdasd 3</a>
+                    <a href="" class="footer__link footer__nav-item">Кардиология</a>
+                    <a href="" class="footer__link footer__nav-item">Проктология</a>
+                    <a href="" class="footer__link footer__nav-item">Педиатрия</a>
+                    <a href="" class="footer__link footer__nav-item">Урология</a>
+                    <a href="" class="footer__link footer__nav-item">Хирургия</a>
                 </div>
                 <div class="footer__nav-section">
                     <a href="#" class="footer__link footer__nav-item">Кардиология</a>

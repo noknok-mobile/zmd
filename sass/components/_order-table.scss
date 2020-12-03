@@ -4,19 +4,16 @@
   grid-gap: $gutter;
 }
 .table { 
-  // min-width: 720px;
-  // &-wrapper{
-  //   overflow-x: auto;
-  // }
   &__row {
     @extend %table-row;
     align-items: center;
-    padding: 1rem $gutter;  
     @include phone_hrz{
       grid-template-columns: 1fr;
     }
+    padding: $offset-small 0;
   }
   &__head {
+    padding: 1rem $gutter;  
     @include text(xs, 600);
     color: $color-text-muted;
     border-top: 1px solid $color-line;
@@ -29,8 +26,7 @@
 }
 
 .order {
-  
-  
+  padding: 0 30px;
   &__head{
     & > :first-child{
       @include text(inherit, 600);
@@ -50,9 +46,7 @@
   &__more {
     display: flex;
     justify-content: space-between;
-    padding: $offset-small 0;
     align-items: center;
-    padding-left: $gutter;
     @include phone_hrz{
       flex-direction: column;
       @include flex-gap(30px, 30px);
