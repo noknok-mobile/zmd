@@ -1,6 +1,7 @@
 .contact {
   &__address {
     border-bottom: 1px solid $color-line;
+    padding: 1rem 0;
   }
   &__more {
     border-bottom: 1px solid $color-line;
@@ -53,12 +54,19 @@
     }
 
     &__map {
+      position: relative;
       filter: grayscale(1);
       height: 100vh;
+      @include tablet{
+        max-height: 50vh;
+      }
       &-wrapper {
         position: absolute;
         height: 100%;
         width: calc(100% + (100vw - var(--container-width)) / 2);
+        @include tablet{
+          width: 100%;
+        }
       }
       &:hover {
         filter: grayscale(0);
