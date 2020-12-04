@@ -28,11 +28,12 @@
     height: 100%;
     max-height: 100%;
     object-fit: cover;
-
+    animation: fadeIn 0.5s ease-in-out alternate;
     &-wrap {
       position: relative;
       scroll-snap-align: start;
       filter: grayscale(1);
+      transition: filter 0.2s ease-out;
       &:hover{
         filter: grayscale(0);
       }
@@ -44,8 +45,9 @@
     }
 
     &_hidden {
-      // animation: fadeOut 1s;
-      display: none;
+      animation: fadeOut 1s;
+      transform: scale(0.2);
+      // display: none;
     }
   }
 }

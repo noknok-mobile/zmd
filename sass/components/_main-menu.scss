@@ -18,6 +18,7 @@
     position: relative;
     padding: 20px 0;
     @include text(xs, 600, true);
+    cursor: pointer;
   }
   &__item:hover &__submenu{
     display: block;

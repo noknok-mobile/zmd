@@ -59,6 +59,6 @@ p {
   color: $color-text-muted;
 }
 .title {
-  @extend %h1;
+  font-family: 'PT Serif';
   margin: 0;
 }

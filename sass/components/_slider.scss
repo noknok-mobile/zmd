@@ -103,7 +103,7 @@
   overflow-x: visible;
   &-navigation {
     display: flex;
-    gap: $offset-small;
+    @include flex-gap($offset-small);
     color: $color-accent;
   }
   &-pagination {

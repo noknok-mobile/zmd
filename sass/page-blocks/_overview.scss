@@ -4,12 +4,7 @@
   }
   &__links {
     display: flex;
-    gap: var(--gutter);
-    @supports not (gap: $offset-small) {
-      & > :not(:last-of-type) {
-        margin-left: var(--gutter);
-      }
-    }
+    @include flex-gap($gutter);
   }
   &__nav {
     display: flex;

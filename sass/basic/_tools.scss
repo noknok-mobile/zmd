@@ -28,12 +28,9 @@
   height: $size;
 }
 @mixin flex-gap($horizontal, $vertical: 0) {
-    gap: $vertical $horizontal;
-  @supports not (gap: $horizontal) {
-    & :not(:last-child) {
+    & > :not(:last-child) {
       margin-right: $horizontal;
       margin-bottom: $vertical;
-    }
   }
 }
 @mixin arrow($size) {

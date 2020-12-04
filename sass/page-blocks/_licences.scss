@@ -2,7 +2,7 @@
   &-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: $gutter;
+    grid-gap: 2rem $gutter;
     @include phone_hrz{
         grid-template-columns: repeat(3, 1fr);
     }
@@ -19,6 +19,7 @@
 
     &-wrapper {
       position: relative;
+      margin-bottom: 0.5rem;
       &:before {
         content: "";
         display: block;
@@ -31,5 +32,10 @@
     @include text(xs);
     color: $color-accent;
     line-height: 1.6;
+    transition: opacity 0.2s ease-in;
+    display: inline-block;
+    &:hover{
+      opacity: 0.8;
+    }
   }
 }

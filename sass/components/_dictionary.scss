@@ -33,6 +33,8 @@
   &__letter {
     grid-area: letter;
     padding-left: calc(var(--gutter) + var(--col-width));
+    line-height: 1.8rem;
+    align-self: start;
   }
   &__item-list {
     grid-area: list;
@@ -51,7 +53,7 @@
 
 .tile {
   background: $color-elem-background;
-  padding: $offset-small;
+  padding: 2rem;
   transition: 0.2s ease-in-out;
   &:hover {
     @extend %card;

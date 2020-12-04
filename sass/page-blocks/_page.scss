@@ -1,55 +1,68 @@
-    .page-grid{
-    display: grid;
-    column-gap: $gutter;
-    grid-template-columns: 8fr 4fr;
-    &_reverse{
-        grid-template-columns: 4fr 8fr;
-    }
-    &__sidebar{
-        z-index: 10;
-        padding: $offset-large 0;
-        @include tablet{
-            display: none;
-        }
-    }
-    @include tablet{
-        grid-template-columns: var(--container-width);
-        column-gap: 0;
-    }
-}
-.page-block{
-    margin: $offset-large 0;
+.page-grid {
+  display: grid;
+  column-gap: $gutter;
+  grid-template-columns: 8fr 4fr;
+  &_reverse {
+    grid-template-columns: 4fr 8fr;
+  }
+  &__sidebar {
     position: relative;
-    z-index: 1;
-
-    & > :first-child{
-        margin-top:0;
+    // position: sticky;
+    // top: $offset-middle;
+    z-index: 10;
+    padding: $offset-large 0;
+    @include tablet {
+      display: none;
     }
-
-    &_wide{
-        grid-column: 1/3;
-        @include tablet{
-            // grid-column: auto;
-        }
+    &-menu{
+        top: 20px;
     }
-    &_background{
-        margin: 0;
-        padding: $offset-large 0;
+  }
+  @include tablet {
+    grid-template-columns: var(--container-width);
+    column-gap: 0;
+  }
+}
+.page-block {
+  margin: $offset-large 0;
+  position: relative;
+  z-index: 1;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  &_wide {
+    grid-column: 1/3;
+    @include tablet {
+      // grid-column: auto;
+    }
+  }
+  &_background {
+    margin: 0;
+    padding: $offset-large 0;
+    background: $color-elem-background;
+
+    &-wide {
+      background: none;
+      &::before {
+        content: "";
+        width: 100vw;
         background: $color-elem-background;
-        
-        &-wide{    
-            background: none;        
-            &::before{
-                content: "";
-                width: 100vw;
-                background: $color-elem-background;
-                position: absolute;
-                height:100%;
-                top: 0;
-                z-index: -10;
-                transform: translateX(calc(var(--container-width)/2 - 50%));
-            }
-        }
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: -10;
+        transform: translateX(calc(var(--container-width) / 2 - 50%));
+      }
     }
-    
+  }
+}
+.banner-left{
+    margin-top: $offset-small;
+    &__img{ 
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }

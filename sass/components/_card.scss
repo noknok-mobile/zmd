@@ -2,7 +2,7 @@
   @extend %card;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: $gutter;
+  // grid-column-gap: $gutter;
   position: relative;
   justify-content: stretch;
 
@@ -16,7 +16,6 @@
 
   &__wrapper {
     padding: $offset-small;
-    padding-right: 0;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -27,6 +26,7 @@
   }
 
   &__img {
+    display: block;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -52,25 +52,36 @@
   }
 
   &__header {
-    // @include header(h2);
     @include text(h3, 400);
+    font-family: inherit;
+    margin-top: 0;
     margin-bottom: 15px;
     line-height: 1.4;
   }
 
-  &__description {
+  .news-list &__header {
+    margin-top: 0;
+    font-family: initial;
+    @include text(h2);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  .news-list &__description{
     @include text(s);
-    // @include text(xs);
+  }
+
+  &__description {
+    @include text(xs);
     flex: 1;
     text-overflow: ellipsis;
-    // padding-right: $col-width + $gutter;
     margin-bottom: $offset-small;
   }
 
   &__button {
     flex: 0 0;
   }
-  &__footer{
+
+  &__footer {
     display: flex;
     justify-content: space-between;
   }
@@ -78,10 +89,10 @@
   &-list {
     display: grid;
     grid-template-columns: auto;
-    row-gap: $offset-small;
+    grid-row-gap: $offset-small;
   }
 }
-.doctor-list{
+.doctor-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: $gutter;
