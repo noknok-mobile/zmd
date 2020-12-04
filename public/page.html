@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон страницы</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/filter.js"></script>
+</head>
+
+<body>
+    <!-- header start -->
+<header class="header">
+    <div class="header__top">
+        <div class="logo__wrapper header__logo">
+            <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
+        </div>
+        <div class="header-menu header__user-menu">
+            <div class="header-menu__block header-menu__block_address">
+                <span class="header-menu__block__headline">Клиника:</span>
+                <span class="header-menu__block__content ">
+                    <a href="#" class="header__link">г. Краснодар, ул. Московская, 40</a> 
+                </span>
+            </div>
+            <div class="header-menu__block header-menu__block_schedule">
+                <span class="header-menu__block__headline">График работы:</span>
+                <span class="header-menu__block__content">Пн. — Сб. с 9:00 до 21:00</span>
+            </div>
+            <div class="header-menu__block header-menu__block_personal">
+                <span class="header-menu__block__headline">Личный кабинет: </span>
+                <div class="header-menu__block__content">
+                    <a href="#" class="header__link">Вход</a>
+                    <a href="#" class="header__link">Регистрация</a>
+                </div>
+            </div>
+
+            <div class="header-menu__button button">Записаться на прием</div>
+        </div>
+        <div class="header__contacts">
+            <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
+            <span class="header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu__item mobile-menu__item_personal">
+                <img src="/img/menu/profile.svg" alt="">
+            </div>
+            <div class="mobile-menu__item mobile-menu__item_add">
+                <img src="/img/menu/сalendar.svg" alt="">
+            </div>
+            <div class="mobile-menu__item mobile-menu__item_phone">
+                <img src="/img/menu/phone.svg" alt="">
+            </div>
+            <div class="mobile-menu__burger js-menu">
+                <img src="/img/menu/burger.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <ul class="header__bottom-menu main-menu">
+            <li class="main-menu__item link">Лечение</li>
+            <li class="main-menu__item link">Диагностика</li>
+            <li class="main-menu__item link">Услуги</li>
+            <li class="main-menu__item link">Специалисты</li>
+            <li class="main-menu__item link">Прайс</li>
+            <li class="main-menu__item link">Акции</li>
+            <li class="main-menu__item link">О компании</li>
+            <li class="main-menu__item link">Контакты</li>
+        </ul>
+    </div>
+</header>
+<script>
+    document.querySelector('.js-menu').addEventListener('click', ()=>{
+        document.querySelector('.main-menu').classList.toggle('main-menu_opened');
+    });
+</script>
+<!-- header end -->
+<!-- page header start -->
+    <div class="page-header page-header_bskg-stethoscope">
+        <div class="container">
+            <div class="page-header__nav breadcrumb">
+                <a href="#" class="breadcrumb__item">Главная</a>
+                <a href="#" class="breadcrumb__item breadcrumb__item_active">О компании</a>
+            </div>
+            <h1 class="page-header__title title">Общая информация</h1>
+        </div>
+    </div>
+<!-- page header end -->
+
+    <div class="container page-grid">
+        <main class="page__content">
+            <section class="page-block">
+                <p class="lead">Медицинский центр ЗИМАMED - это новая современная многопрофильная медицинская клиника, с
+                    диагностическим оборудованием экспертного класса фирмы Siemens (Германия). Наши специалисты –
+                    доктора и кандидаты медицинских наук, большинство которых имеют высшую категорию.</p>
+                <p>Общество с ограниченной ответственностью «Здоровье Кубани» , Общество с ограниченной ответственностью
+                    «Формула здоровья», Общество с ограниченной ответственностью «Импульс» работающие на основании
+                    лицензий Департамента здравоохранения Краснодарского края под брендом.</p>
+                <h2 class="mark">У нас лучшая комплектация диагностического оборудования:</h2>
+                <ul class="list">
+                    <li class="list__item">Компьютерный томограф Siemens Emotion</li>
+                    <li class="list__item">Магнитно-резонансный томограф Siemens Magnetom Essenza</li>
+                    <li class="list__item">Ультразвуковая система Siemens Acuson x300</li>
+                    <li class="list__item">Цифровой рентгенный аппарат Siemens Mobilett XP Digital</li>
+                </ul>
+
+            </section>
+            <section class="page-block page-block_background-wide page-block_background">
+                <h2>В центре производится весь перечень лабораторных и диагностических исследований:</h2>
+                <p>
+                    Лабораторные обследования проводятся в полном объеме в кратчайшее время! Под контролем УЗИ,
+                    компьютерных томографов, выполняются все виды пункции органов брюшной полости, щитовидной, молочной
+                    железы, патологических очагов в мягких тканях и т.д.
+                </p>
+                <p>
+                    Наш медицинский центр распологает программами по диагностике всей сосудистой патологии головного
+                    мозга, кардиологической программой по диагностике опухолевых процессов, независимо от их нахождения.
+                </p>
+                <p>
+                    Для удобства и комфорта клиентов у клиники имеется широкая парковка, большой просторный холл.
+                </p>
+                <p>
+                    При медицинском центре имеется гостиница, которой могут воспользоваться пациенты, приехавшие на
+                    обследование из других городов. Гостиничные номера укомплектованы ТВ, холодильником, кондиционером,
+                    выходом в интернет (Wi-Fi) и всем необходимым для комфортного проживания.
+                </p>
+            </section>
+        </main>
+        <nav class="page-grid__sidebar">
+            <div class="content__left-menu sidebar-menu">
+                <a class="sidebar-menu__item link">общая информация</a>
+                <a class="sidebar-menu__item link">лицензии и сертификаты</a>
+                <a class="sidebar-menu__item link">Новости</a>
+                <a class="sidebar-menu__item link">Тендеры</a>
+                <a class="sidebar-menu__item link">вакансии</a>
+                <a class="sidebar-menu__item link">Вопрос-ответ</a>
+                <a class="sidebar-menu__item link">документы</a>
+            </div>
+        </nav>
+        <section class="page-block page-block_wide">
+            <h2>Галерея</h2>
+            <!-- gallery start -->
+            <div class="gallery">
+                <div class="gallery__nav tab-nav filter-nav mobile-scrollable">
+                    <a href="" class="button tab js-filter js-filter-active" data-filter="">Все</a>
+                    <a href="" class="button tab js-filter" data-filter="2">доктор</a>
+                    <a href="" class="button tab js-filter" data-filter="1">море</a>
+                </div>
+                <div class="gallery__wrapper mobile-scrollable">
+                    <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item " data-filter="2"><img src="/img/doctor.jpg" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="2"><img src="/img/doctor.jpg" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="2"><img src="/img/doctor.jpg" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="2"><img src="/img/doctor.jpg" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="2"><img src="/img/doctor.jpg" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
+                            class="gallery__item">
+                    </div>
+                    <div class="gallery__item-wrap filter-item" data-filter="1"><img src="/img/image.png" alt=""
+                            class="gallery__item">
+                    </div>
+                </div>
+            </div>
+            <script>
+                let gallery = document.querySelector('.gallery');
+                let filter = new Filter(gallery);
+            </script>
+            <!-- gallery end -->
+
+        </section>
+
+
+    </div>
+
+    </div>
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__copyright">
+                <div class="logo__wrapper footer__logo">
+                    <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
+                </div>
+                <a href="#" class="footer__link footer__link_privacy">
+                    Политика обработки персональных данных и
+                    пользовательское соглашение</a>
+            </div>
+            <nav class="footer__nav">
+                <div class="footer__nav-section">
+                    <a href="#" class="footer__link footer__nav-item">Лечение</a>
+                    <a href="#" class="footer__link footer__nav-item">Профилактика</a>
+                    <a href="#" class="footer__link footer__nav-item">Сдать анализы</a>
+                    <a href="#" class="footer__link footer__nav-item">Комплексное лечение</a>
+                    <a href="#" class="footer__link footer__nav-item">Комплексное обследование</a>
+                </div>
+                <div class="footer__nav-section">
+                    <a href="#" class="footer__link footer__nav-item">asdasd 1</a>
+                    <a href="#" class="footer__link footer__nav-item">asdasd 2</a>
+                    <a href="#" class="footer__link footer__nav-item">asdasd 3</a>
+                </div>
+                <div class="footer__nav-section">
+                    <a href="#" class="footer__link footer__nav-item">Кардиология</a>
+                    <a href="#" class="footer__link footer__nav-item">Практология</a>
+                    <a href="#" class="footer__link footer__nav-item">Педиатрия</a>
+                    <a href="#" class="footer__link footer__nav-item">Урология</a>
+                    <a href="#" class="footer__link footer__nav-item">Хирургия</a>
+
+                </div>
+            </nav>
+            <div class="footer__info">
+                <span class="footer__info-item footer__info-item_address">
+                    г. Краснодар<br>ул. Ленина 10
+                </span>
+                <span class="footer__info-item footer__info-item_contacts">
+                    <a href="tel:8 (8642) 233-03-03" class="footer__info-item footer__link">8 (8642) 233-03-03</a>
+                    <a class="footer__info-item">пн-сб 8:00 — 23:00</a>
+                </span>
+
+                <span class="footer-promo">
+                    <div class="footer__link footer-promo__text">Скачайте приложение на телефон</div>
+                    <div class="footer-promo__app-icons">
+                        <a href=""><img src="/img/app_store.png" alt=""></a>
+                        <a href=""><img src="/img/app_store.png" alt=""></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+</body>
+
+</html>

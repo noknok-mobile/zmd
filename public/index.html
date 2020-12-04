@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="header">
+        <div class="header__top">
+            <div class="logo__wrapper header__logo">
+                <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
+            </div>
+            <div class="header-menu header__user-menu">
+                <div class="header-menu__block header-menu__block_address">
+                    <span class="header-menu__block__headline">Клиника:</span>
+                    <span class="header-menu__block__content ">
+                        <a href="#" class="header__link">г. Краснодар, ул. Московская, 40</a>
+                    </span>
+                </div>
+                <div class="header-menu__block header-menu__block_schedule">
+                    <span class="header-menu__block__headline">График работы:</span>
+                    <span class="header-menu__block__content">Пн. — Сб. с 9:00 до 21:00</span>
+                </div>
+                <div class="header-menu__block header-menu__block_personal">
+                    <span class="header-menu__block__headline">Личный кабинет: </span>
+                    <div class="header-menu__block__content">
+                        <a href="#" class="header__link">Вход</a>
+                        <a href="#" class="header__link">Регистрация</a>
+                    </div>
+                </div>
+
+                <div class="header-menu__button button">Записаться на прием</div>
+            </div>
+            <div class="header__contacts">
+                <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
+                <span class="header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span>
+            </div>
+            <div class="mobile-menu">
+                <div class="mobile-menu__item mobile-menu__item_personal">
+                    <img src="/img/menu/profile.svg" alt="">
+                </div>
+                <div class="mobile-menu__item mobile-menu__item_add">
+                    <img src="/img/menu/сalendar.svg" alt="">
+                </div>
+                <div class="mobile-menu__item mobile-menu__item_phone">
+                    <img src="/img/menu/phone.svg" alt="">
+                </div>
+                <div class="mobile-menu__burger js-menu">
+                    <img src="/img/menu/burger.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <ul class="header__bottom-menu main-menu">
+                <li class="main-menu__item link">Лечение
+                    <ul class="main-menu__submenu sidebar-menu">
+                        <li class="sidebar-menu__item">Лечение</li>
+                        <li class="sidebar-menu__item">Другое лечение</li>
+                        <li class="sidebar-menu__item">Лечение</li>
+                    </ul>
+                </li>
+                <li class="main-menu__item link"><a href="asd" class="link">Диагностика</a></li>
+                <li class="main-menu__item link"><a href="a" class="link">Услуги</a></li>
+                <li class="main-menu__item link"><a href="zcz" class="link">Специалисты</a></li>
+                <li class="main-menu__item link"><a href="as" class="link">Прайс</a></li>
+                <li class="main-menu__item link"><a href="cxf" class="link">Акции</a></li>
+                <li class="main-menu__item link"><a href="aqawrq" class="link">О компании</a></li>
+                <li class="main-menu__item link"><a href="adg" class="link">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        document.querySelector('.js-menu').addEventListener('click', () => {
+            document.querySelector('.main-menu').classList.toggle('main-menu_opened');
+        });
+    </script>
+    <!-- header end -->
+    <!-- big-carousel start -->
+    <div class="big-carousel swiper-container">
+        <div class="big-carousel__inner swiper-wrapper">
+            <div class="banner swiper-slide">
+                <div class="banner__img-wrapper">
+                    <video class="intro__bckg" poster="/img/mrt.jpg" poster="/img/high.jpg" autoplay loop muted
+                        playsinline src="/video/mrt.mp4">
+                    </video>
+                </div>
+                <div class="banner__inner container">
+                    <div class="banner__content">
+                        <h2 class="banner__headline title">Скидка 10% на МРТ в&nbsp;воскресенье</h2>
+                        <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,<br>
+                            по адресу Московская, 40</div>
+                        <a href="#" class="button banner__button">записаться на мрт</a>
+                    </div>
+                </div>
+            </div>
+            <div class="banner swiper-slide">
+                <div class="banner__img-wrapper">
+                    <img class="banner__img" src="/img/banner.png" alt="">
+                </div>
+                <div class="banner__inner container">
+                    <div class="banner__content">
+                        <h2 class="banner__headline title">Скидка 10% на МРТ в&nbsp;воскресенье</h2>
+                        <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,<br>
+                            по адресу Московская, 40</div>
+                        <a href="#" class="button banner__button">записаться на мрт</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="big-carousel__navigation swiper-navigation">
+            <div class="big-carousel__navigation-area big-carousel__navigation-area_prev"></div>
+            <div class="big-carousel__navigation-area big-carousel__navigation-area_next"></div>
+        </div>
+        <div class="big-carousel__pagination slider-pagination swiper-pagination"></div>
+    </div>
+    <script>
+        let slider = document.querySelector('.big-carousel');
+        let swiper = new Swiper(slider, {
+            loop: true,
+            speed: 500,
+            pagination: {
+                el: '.big-carousel__pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.big-carousel__navigation-area_next',
+                prevEl: '.big-carousel__navigation-area_prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    </script>
+    <!-- big-carousel end -->
+
+    <!-- branches block start -->
+
+    <div class="page-block">
+        <div class="container">
+            <div class="overview">
+                <div class="overview__desc about">
+                    <div class="about__heading tag">Направления</div>
+                    <h2 class="title">В центре производится<br>
+                        <span class="mark">весь перечень</span> лабораторных
+                        и диагностических исследований</h2>
+                </div>
+                <div class="overview__nav mobile-scrollable">
+                    <div class="overview__links">
+                        <a class="button button_light">Bсе направления</a>
+                        <a class="button button_light">все специалисты</a>
+                    </div>
+
+                    <div class="overview__slider-nav slider-navigation branch-list__navigation">
+                        <div class="button-arrow branch-list__navigation_prev">
+                            <svg class="button-arrow_prev" width="27" height="27" viewBox="0 2 27 29"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                                    stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="button-arrow  branch-list__navigation_next">
+                            <svg class="button-arrow_next" width="27" height="27" viewBox="0 2 27 29"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                                    stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="branch-list__wrapper slider-container">
+                    <div
+                        class="branch-list branch-list_carousel swiper-wrapper swiper-no-swiping mobile-scrollable mobile-scrollable_snap">
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Хирургический стационар</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/tomo.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Анализы и диагностика</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Хирургический стационар</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Хирургический стационар</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Хирургический стационар</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Хирургический стационар</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Хирургический стационар</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Хирургический стационар</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                        <div class="branch swiper-slide">
+                            <div class="branch__img-wrapper">
+                                <img class="branch__img" src="/img/hirurg.svg" width="35px" height="35px"></div>
+                            <div class="branch__name">Хирургический стационар</div>
+                            <a href="#" class="branch__link">Подробнее</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="branch-list__pagination slider-pagination swiper-pagination"></div>
+            </div>
+        </div>
+        <script>
+            if (window.innerWidth > 990) {
+                let slider2 = document.querySelector('.branch-list__wrapper');
+                let swiper2 = new Swiper(slider2, {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                    pagination: {
+                        el: '.branch-list__pagination',
+                        type: 'bullets',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.branch-list__navigation_next',
+                        prevEl: '.branch-list__navigation_prev',
+                    },
+                    //по переопределению см https://github.com/nolimits4web/swiper/blob/master/src/components/core/core-class.js
+                });
+            }
+        </script>
+    </div>
+    <!-- branches block end -->
+    <!-- start video -->
+    <div class="page-block">
+        <div class="intro container">
+            <div class="intro__video-wrapper">
+                <video class="intro__bckg" poster="/img/walk.jpg" autoplay loop muted playsinline src="/video/walk.mp4">
+                </video>
+            </div>
+
+            <div class="intro__inner container">
+                <div class="intro__content about">
+                    <div class="about__heading tag">медцентры</div>
+                    <div class="title">6 современных медицинских центров
+                        в Краснодарском крае и Республике Адыгея</div>
+                </div>
+                <a href="#" class="intro__link button">контакты медцентров</a>
+            </div>
+        </div>
+    </div>
+    <!-- end video -->
+
+    <!-- start video -->
+    <div class="page-block">
+        <div class="container ">
+            <div class="about about_single">
+                <div class="about__heading tag">специалисты</div>
+                <div class="title">
+                    Наши врачи - доктора <br>
+                    и <span class="mark">кандидаты медицинских наук</span>
+                </div>
+            </div>
+        </div>
+        <div class="intro container">
+            <div class="intro__video-wrapper">
+                <video class="intro__bckg" poster="/img/doctor_demo.jpg" autoplay loop muted playsinline src="/video/doctor.mp4">
+                </video>
+            </div>
+
+            <div class="intro__inner container">
+                <div class="intro__content">
+                    В клинике работают профессионалы высшей медицинской категории. В отделениях центра стабильный
+                    кадровый состав, который в своей работе применяет научный подход и регулярно повышает квалификацию в
+                    лучших клиниках России и мира.
+                </div>
+                <a href="#" class="intro__link button">контакты медцентров</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end video -->
+
+    <!-- reviews block start -->
+    <div class="page-block page-block_background">
+        <div class="container overview reviews">
+            <div class="overview__desc about">
+                <div class="about__heading tag">отзывы</div>
+                <div class="title">
+                    Отзывы наших клиентов — <span class="mark">лучшее&nbsp;подтверждение</span> нашего прoфессионализма
+                </div>
+            </div>
+            <div class="overview__nav mobile-scrollable">
+                <div class="overview__links">
+                    <a class="button button_light">все отзывы</a>
+                </div>
+
+                <div class="overview__slider-nav slider-navigation">
+                    <div class="button-arrow button-arrow_prev">
+                        <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="button-arrow button-arrow_next">
+                        <svg width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="reviews-wrapper slider-container">
+                <div class="swiper-wrapper swiper-no-swiping">
+                    <blockquote class="review swiper-slide">
+                        <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                            на
+                            абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                            консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                            очень
+                            доволен.</p>
+                        <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+                    </blockquote>
+
+                    <blockquote class="review swiper-slide">
+                        <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                            на
+                            абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                            консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                            очень
+                            доволен.</p>
+                        <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+                    </blockquote>
+                    <blockquote class="review swiper-slide">
+                        <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                            на
+                            абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                            консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                            очень
+                            доволен.</p>
+                        <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+                    </blockquote>
+                    <blockquote class="review swiper-slide">
+                        <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                            на
+                            абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                            консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                            очень
+                            доволен.</p>
+                        <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+                    </blockquote>
+                    <blockquote class="review swiper-slide">
+                        <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                            на
+                            абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                            консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                            очень
+                            доволен.</p>
+                        <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+                    </blockquote>
+                    <blockquote class="review swiper-slide">
+                        <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил
+                            на
+                            абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную
+                            консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался
+                            очень
+                            доволен.</p>
+                        <cite class="review__author">Воробьев<br> Михаил Петрович</cite>
+                    </blockquote>
+                </div>
+
+            </div>
+
+            <div class="reviews__pagination slider-pagination swiper-pagination"></div>
+        </div>
+
+        <script>
+            if (window.innerWidth > 990) {
+                const slider3 = document.querySelector('.reviews-wrapper');
+                const swiper3 = new Swiper(slider3, {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                    navigation: {
+                        nextEl: '.reviews .button-arrow_next',
+                        prevEl: '.reviews .button-arrow_prev',
+                    },
+                    pagination: {
+                        el: '.reviews .slider-pagination',
+                        type: 'bullets',
+                        clickable: true
+                    }
+                })
+            }
+        </script>
+    </div>
+    <!-- reviews block end -->
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__copyright">
+                <div class="logo__wrapper footer__logo">
+                    <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
+                </div>
+                <a href="#" class="footer__link footer__link_privacy">
+                    Политика обработки персональных данных и
+                    пользовательское соглашение</a>
+            </div>
+            <nav class="footer__nav">
+                <div class="footer__nav-section">
+                    <a href="#" class="footer__link footer__nav-item">Лечение</a>
+                    <a href="#" class="footer__link footer__nav-item">Профилактика</a>
+                    <a href="#" class="footer__link footer__nav-item">Сдать анализы</a>
+                    <a href="#" class="footer__link footer__nav-item">Комплексное лечение</a>
+                    <a href="#" class="footer__link footer__nav-item">Комплексное обследование</a>
+                </div>
+                <div class="footer__nav-section">
+                    <a href="" class="footer__link footer__nav-item">Кардиология</a>
+                    <a href="" class="footer__link footer__nav-item">Проктология</a>
+                    <a href="" class="footer__link footer__nav-item">Педиатрия</a>
+                    <a href="" class="footer__link footer__nav-item">Урология</a>
+                    <a href="" class="footer__link footer__nav-item">Хирургия</a>
+                </div>
+                <div class="footer__nav-section">
+                    <a href="#" class="footer__link footer__nav-item">Кардиология</a>
+                    <a href="#" class="footer__link footer__nav-item">Проктология</a>
+                    <a href="#" class="footer__link footer__nav-item">Педиатрия</a>
+                    <a href="#" class="footer__link footer__nav-item">Урология</a>
+                    <a href="#" class="footer__link footer__nav-item">Хирургия</a>
+
+                </div>
+            </nav>
+            <div class="footer__info">
+                <span class="footer__info-item footer__info-item_address">
+                    г. Краснодар<br>ул. Ленина 10
+                </span>
+                <span class="footer__info-item footer__info-item_contacts">
+                    <a href="tel:8 (8642) 233-03-03" class="footer__info-item footer__link">8 (8642) 233-03-03</a>
+                    <a class="footer__info-item">пн-сб 8:00 — 23:00</a>
+                </span>
+
+                <span class="footer-promo">
+                    <div class="footer__link footer-promo__text">Скачайте приложение на телефон</div>
+                    <div class="footer-promo__app-icons">
+                        <a href=""><img src="/img/app_store.png" alt=""></a>
+                        <a href=""><img src="/img/app_store.png" alt=""></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        }
+
+        var callback = function (entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('intro_moved');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        var observer = new IntersectionObserver(callback, options);
+        let targets = document.querySelectorAll('.intro');
+        for(let target of targets){
+            observer.observe(target);
+        }
+    </script>
+</body>
+
+</html>
