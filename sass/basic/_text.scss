@@ -39,12 +39,13 @@ h3 {
 p {
   @extend %paragraph;
 }
-// ul{
-//     @extend .list;
-//     & li {
-//         @extend .list__item;
-//     }
-// }
+ul:not([class]){
+  list-style-position: inside;
+  & li{
+    list-style-type: '-';
+    @extend %paragraph;
+  }
+}
 /*attention! global styles*/
 
 .lead {

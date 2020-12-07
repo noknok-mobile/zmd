@@ -44,6 +44,8 @@
     background: $color-elem-background;
 
     &-wide {
+      margin: 0;
+      padding: $offset-large 0;
       background: none;
       &::before {
         content: "";
