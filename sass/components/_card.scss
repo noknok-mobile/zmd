@@ -92,8 +92,3 @@
     grid-row-gap: $offset-small;
   }
 }
-.doctor-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: $gutter;
-}
