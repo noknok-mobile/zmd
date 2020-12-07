@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон страницы</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="header">
+        <div class="header__top">
+            <div class="logo__wrapper header__logo">
+                <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
+            </div>
+            <div class="header-menu header__user-menu">
+                <div class="header-menu__block header-menu__block_address">
+                    <span class="header-menu__block__headline">Клиника:</span>
+                    <span class="header-menu__block__content ">
+                        <a href="#" class="header__link">г. Краснодар, ул. Московская, 40</a>
+                    </span>
+                </div>
+                <div class="header-menu__block header-menu__block_schedule">
+                    <span class="header-menu__block__headline">График работы:</span>
+                    <span class="header-menu__block__content">Пн. — Сб. с 9:00 до 21:00</span>
+                </div>
+                <div class="header-menu__block header-menu__block_personal">
+                    <span class="header-menu__block__headline">Личный кабинет: </span>
+                    <div class="header-menu__block__content">
+                        <a href="#" class="header__link">Вход</a>
+                        <a href="#" class="header__link">Регистрация</a>
+                    </div>
+                </div>
+
+                <div class="header-menu__button button">Записаться на прием</div>
+            </div>
+            <div class="header__contacts">
+                <a href="tel:8 (8642) 233-03-03" class="header__phone link">8 (8642) 233-03-03</a>
+                <span class="header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span>
+            </div>
+            <div class="mobile-menu">
+                <div class="mobile-menu__item mobile-menu__item_personal">
+                    <img src="/img/menu/profile.svg" alt="">
+                </div>
+                <div class="mobile-menu__item mobile-menu__item_add">
+                    <img src="/img/menu/сalendar.svg" alt="">
+                </div>
+                <div class="mobile-menu__item mobile-menu__item_phone">
+                    <img src="/img/menu/phone.svg" alt="">
+                </div>
+                <div class="mobile-menu__burger js-menu">
+                    <img src="/img/menu/burger.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <ul class="header__bottom-menu main-menu">
+                <li class="main-menu__item link">Лечение</li>
+                <li class="main-menu__item link">Диагностика</li>
+                <li class="main-menu__item link">Услуги</li>
+                <li class="main-menu__item link">Специалисты</li>
+                <li class="main-menu__item link">Прайс</li>
+                <li class="main-menu__item link">Акции</li>
+                <li class="main-menu__item link">О компании</li>
+                <li class="main-menu__item link">Контакты</li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        document.querySelector('.js-menu').addEventListener('click', () => {
+            document.querySelector('.main-menu').classList.toggle('main-menu_opened');
+        });
+    </script>
+    <!-- header end -->
+    <!-- page header start -->
+    <div class="page-header page-header_overflow page-header_bskg-stethoscope">
+        <div class="container page-header__top">
+            <div class="page-header__nav breadcrumb">
+                <a href="#" class="breadcrumb__item">Главная</a>
+                <a href="#" class="breadcrumb__item">Направления лечения</a>
+                <a href="#" class="breadcrumb__item breadcrumb__item_active">Акушерство и гинекология</a>
+            </div>
+            <h1 class="page-header__title title">Акушерство и гинекология</h1>
+        </div>
+        <div class="intro container page-header__more">
+            <div class="intro__video-wrapper">
+                <video class="intro__bckg" poster="/img/walk.jpg" autoplay loop muted playsinline src="/video/walk.mp4">
+                </video>
+            </div>
+            <div class="intro__inner container">
+                <div class="intro__content about">
+                   
+                    <div class="lead">Одним из самых важных докторов в жизни женщины является врач-гинеколог. Именно от его компетентности зависит и здоровье самой женщины на протяжении всей жизни, и здоровье ее будущих детей</div>
+                </div>
+                <a href="#" class="intro__link button">ЗАПИСАТЬСЯ К ВРАЧУ</a>
+            </div>
+        </div>
+    </div>
+    <!--  page header ens-->
+    <!-- page start  -->
+    <div class="container page-grid">
+        
+        <main>
+            <section class="page-block">
+                <p>
+                    В клинике «ЗИМАМЕD» вас ждут специалисты самой высокой квалификации, женщина любого возраста
+                    получает
+                    профессиональные консультации врачей, полноценное обследование и эффективное лечение многих
+                    заболеваний.
+                </p>
+
+                <p>
+                    Комплексный подход к сохранению и восстановлению здоровья женщины является ключевой составляющей в
+                    работе наших специалистов.
+                </p>
+
+                <p>
+                    В клинике можно получить консультации и пройти лечение даже в самых сложных случаях, как в области
+                    общей
+                    гинекологии, так и по вопросам нарушений репродуктивной функции женщин и мужчин.
+                </p>
+
+                <p>
+                    Врачи проводят консультации по вопросам планирования семьи и брака, и в индивидуальном порядке
+                    помогают
+                    осуществить правильный выбор средств контрацепции, а также предотвращения нежелательной
+                    беременности.
+                </p>
+            </section>
+            <section class="page-block page-block_background">
+                <h2>Наша клиника оказывает следующие медицинские услуги:</h2>
+                <table class="price-list">
+                    <tbody>
+                        <tr class="price-list__row">
+                            <td>Коррекция нарушений</td>
+                            <td>2200</td>
+                        </tr>
+                        <tr class="price-list__row">
+                            <td>Консультации по вопросам пролонгирования беременности</td>
+                            <td>2200</td>
+                        </tr>
+                        <tr class="price-list__row">
+                            <td>Коррекция нарушений менструальной функции (репродуктивного и климактерического периода)
+                            </td>
+                            <td>2200</td>
+                        </tr>
+                        <tr class="price-list__row">
+                            <td>Индивидуальный подбор средств и методов контрацепции</td>
+                            <td>17 000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="page-block">
+                <h2>Мы также предлагаем <span class="mark">комплексные программы:</span></h2>
+                <section class="card-list">
+                    <article class="card">
+                        <div class="card__wrapper">
+                            <div class="card__subheader tag">12.05.1996</div>
+                            <h2 class="card__header">Открылся филиал нашего центра в Адыгейске</h2>
+                           
+                            <a href="#" class="button card__button">Подробнее</a>
+
+                        </div>
+                        <div class="card__img-wrapper">
+                            <img class="card__img" src="/img/image.png" alt="">
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__wrapper">
+                            <div class="card__subheader tag">12.05.1996</div>
+                            <h2 class="card__header title">Открылся филиал нашего центра в Адыгейске</h2>
+                            
+                            <a href="#" class="button card__button">Подробнее</a>
+
+                        </div>
+                        <div class="card__img-wrapper">
+                            <img class="card__img" src="/img/image.png" alt="">
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__wrapper">
+                            <div class="card__subheader tag">12.05.1996</div>
+                            <h2 class="card__header">Открылся филиал нашего центра в Адыгейске</h2>
+                            
+                            <a href="#" class="button card__button">Подробнее</a>
+
+                        </div>
+                        <div class="card__img-wrapper">
+                            <img class="card__img" src="/img/image.png" alt="">
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__wrapper">
+                            <div class="card__subheader tag">12.05.1996</div>
+                            <h2 class="card__header title">Открылся филиал нашего<br> центра в Адыгейске</h2>
+                            
+                            <a href="#" class="button card__button">Подробнее</a>
+
+                        </div>
+                        <div class="card__img-wrapper">
+                            <img class="card__img" src="/img/image.png" alt="">
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </main>
+        <nav class="page-grid__sidebar">
+            <div class="content__left-menu sidebar-menu">
+                <a href="/html/pages/account/signin.html" class="sidebar-menu__item link">Профиль</a>
+                <a href="/html/pages/account/orders.html" class="sidebar-menu__item link">мои записи</a>
+            </div>
+        </nav>
+    </div>
+    <!-- page end -->
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__copyright">
+                <div class="logo__wrapper footer__logo">
+                    <a href="#"><img class="logo" src="/img/logo.png" alt="Зимамед"></a>
+                </div>
+                <a href="#" class="footer__link footer__link_privacy">
+                    Политика обработки персональных данных и
+                    пользовательское соглашение</a>
+            </div>
+            <nav class="footer__nav">
+                <div class="footer__nav-section">
+                    <a href="#" class="footer__link footer__nav-item">Лечение</a>
+                    <a href="#" class="footer__link footer__nav-item">Профилактика</a>
+                    <a href="#" class="footer__link footer__nav-item">Сдать анализы</a>
+                    <a href="#" class="footer__link footer__nav-item">Комплексное лечение</a>
+                    <a href="#" class="footer__link footer__nav-item">Комплексное обследование</a>
+                </div>
+                <div class="footer__nav-section">
+                    <a href="" class="footer__link footer__nav-item">Кардиология</a>
+                    <a href="" class="footer__link footer__nav-item">Проктология</a>
+                    <a href="" class="footer__link footer__nav-item">Педиатрия</a>
+                    <a href="" class="footer__link footer__nav-item">Урология</a>
+                    <a href="" class="footer__link footer__nav-item">Хирургия</a>
+
+                </div>
+                <div class="footer__nav-section">
+                    <a href="#" class="footer__link footer__nav-item">Кардиология</a>
+                    <a href="#" class="footer__link footer__nav-item">Проктология</a>
+                    <a href="#" class="footer__link footer__nav-item">Педиатрия</a>
+                    <a href="#" class="footer__link footer__nav-item">Урология</a>
+                    <a href="#" class="footer__link footer__nav-item">Хирургия</a>
+
+                </div>
+            </nav>
+            <div class="footer__info">
+                <span class="footer__info-item footer__info-item_address">
+                    г. Краснодар<br>ул. Ленина 10
+                </span>
+                <span class="footer__info-item footer__info-item_contacts">
+                    <a href="tel:8 (8642) 233-03-03" class="footer__info-item footer__link">8 (8642) 233-03-03</a>
+                    <a class="footer__info-item">пн-сб 8:00 — 23:00</a>
+                </span>
+
+                <span class="footer-promo">
+                    <div class="footer__link footer-promo__text">Скачайте приложение на телефон</div>
+                    <div class="footer-promo__app-icons">
+                        <a href=""><img src="/img/app_store.png" alt=""></a>
+                        <a href=""><img src="/img/app_store.png" alt=""></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+</body>
+
+</html>
