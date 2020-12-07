@@ -1298,15 +1298,12 @@ ul:not([class]) li {
 .page-header_bskg-stethoscope {
   background-image: url("/img/background/stethoscope.svg");
   background-size: 550px;
-  background-position: right bottom;
+  background-position: center bottom;
 }
 .page-header_bskg-syringe {
   background-image: url("/img/background/syringe.svg");
   background-size: 250px;
   background-position: right bottom;
-}
-.page-header__top {
-  margin-bottom: 30px;
 }
 .page-header_overflow {
   max-height: 615px;
@@ -2007,6 +2004,101 @@ ul:not([class]) li {
   margin-bottom: 0;
 }
 
+.page-grid {
+  display: grid;
+  column-gap: var(--gutter);
+  grid-template-columns: 8fr 4fr;
+}
+.page-grid_reverse {
+  grid-template-columns: 4fr 8fr;
+}
+.page-grid__sidebar {
+  position: relative;
+  z-index: 10;
+  padding: var(--offset-large) 0;
+}
+@media (max-width: 991px) {
+  .page-grid__sidebar {
+    display: none;
+  }
+}
+.page-grid__sidebar-menu {
+  top: 20px;
+}
+@media (max-width: 991px) {
+  .page-grid {
+    grid-template-columns: var(--container-width);
+    column-gap: 0;
+  }
+}
+
+.page-block {
+  margin: var(--offset-large) 0;
+  position: relative;
+  z-index: 1;
+}
+.page-block > :first-child {
+  margin-top: 0;
+}
+.page-block_wide {
+  grid-column: 1/3;
+}
+.page-block_background {
+  margin: 0;
+  padding: var(--offset-large) 0;
+  background: #f4f4f4;
+}
+.page-block_background-wide {
+  margin: 0;
+  padding: var(--offset-large) 0;
+}
+.page-block_background-wide::before {
+  content: "";
+  width: 100vw;
+  background-color: #f4f4f4;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: -10;
+  transform: translateX(calc(var(--container-width) / 2 - 50%));
+}
+.page-block_background-image {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.page-block_background-image::before {
+  content: "";
+  width: 100vw;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: -10;
+  background-color: #f4f4f4;
+  background-image: url("/img/background/stethoscope.svg");
+  background-size: 550px;
+  background-position: center 385px;
+  height: 80%;
+}
+@media (max-width: 1199px) {
+  .page-block_background-image::before {
+    height: 100%;
+    background: none;
+  }
+}
+.page-block_cropped {
+  padding: 0;
+}
+
+.banner-left {
+  margin-top: var(--offset-small);
+}
+.banner-left__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .doctor-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2019,7 +2111,8 @@ ul:not([class]) li {
   gap: 20px;
   margin-bottom: var(--offset-large);
 }
-.doctor-summary tr, .doctor-summary tbody {
+.doctor-summary tr,
+.doctor-summary tbody {
   display: contents;
 }
 .doctor-summary tr :first-child {
@@ -2042,6 +2135,22 @@ ul:not([class]) li {
   display: block;
   padding-top: 100%;
 }
+.doctor-more {
+  position: relative;
+  padding: 0 !important;
+}
+.doctor-more::before {
+  background-image: url("/img/background/stethoscope.svg");
+  background-size: 550px;
+  background-position: center 385px;
+  height: 80%;
+}
+@media (max-width: 1199px) {
+  .doctor-more::before {
+    height: 100%;
+  }
+}
+
 .overview__desc {
   margin-bottom: var(--offset-small);
 }
@@ -2137,75 +2246,6 @@ ul:not([class]) li {
 }
 .licence__caption:hover {
   opacity: 0.8;
-}
-
-.page-grid {
-  display: grid;
-  column-gap: var(--gutter);
-  grid-template-columns: 8fr 4fr;
-}
-.page-grid_reverse {
-  grid-template-columns: 4fr 8fr;
-}
-.page-grid__sidebar {
-  position: relative;
-  z-index: 10;
-  padding: var(--offset-large) 0;
-}
-@media (max-width: 991px) {
-  .page-grid__sidebar {
-    display: none;
-  }
-}
-.page-grid__sidebar-menu {
-  top: 20px;
-}
-@media (max-width: 991px) {
-  .page-grid {
-    grid-template-columns: var(--container-width);
-    column-gap: 0;
-  }
-}
-
-.page-block {
-  margin: var(--offset-large) 0;
-  position: relative;
-  z-index: 1;
-}
-.page-block > :first-child {
-  margin-top: 0;
-}
-.page-block_wide {
-  grid-column: 1/3;
-}
-.page-block_background {
-  margin: 0;
-  padding: var(--offset-large) 0;
-  background: #f4f4f4;
-}
-.page-block_background-wide {
-  margin: 0;
-  padding: var(--offset-large) 0;
-  background: none;
-}
-.page-block_background-wide::before {
-  content: "";
-  width: 100vw;
-  background: #f4f4f4;
-  position: absolute;
-  height: 100%;
-  top: 0;
-  z-index: -10;
-  transform: translateX(calc(var(--container-width) / 2 - 50%));
-}
-
-.banner-left {
-  margin-top: var(--offset-small);
-}
-.banner-left__img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .gallery__wrapper {
