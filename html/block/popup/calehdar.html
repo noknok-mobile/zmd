@@ -1,0 +1,167 @@
+<div class="container">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+        <div class="container"><a href="#modal1" data-modal="1" class="button js-open">Открыть модальное окно</a></div>
+        <!-- start modal -->
+        <div class="modal__wrapper" data-modal="1">
+            <div class="modal__overlay"></div>
+
+            <div class="modal">
+                <button class="modal__close js-close" role="button" aria-label="Закрыть">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#EEEEEE"></circle>
+                        <line x1="13.636" y1="13.7783" x2="26.3639" y2="26.5062" stroke="white" stroke-width="2"
+                            stroke-linecap="round"></line>
+                        <line x1="26.364" y1="13.7785" x2="13.6361" y2="26.5064" stroke="white" stroke-width="2"
+                            stroke-linecap="round"></line>
+                    </svg>
+                </button>
+                <div class="modal__header">
+                    <div class="card-grid">
+                        <div class="card__img-wrapper">
+                            <img class="card__img" src="/img/lady.jpg" alt="">
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__description">
+                                <div class="card__header">Ледовская Лариса Павловна
+                                </div>
+                                <div class="card__overheader tag">Акушер-гинеколог</div>
+                                <span class="price">Приём от 2500 руб.</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__body">
+                    <form class="modal__form form">
+                        <div class="calendar filter__item schedule-page-grid__calendar">
+                            <a class="calendar__nav calendar__nav_prev calendar__ button-arrow">
+                                <svg class="button-arrow_prev" width="27" height="27" viewBox="0 2 27 29"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z"
+                                        fill="currentColor" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                            <table class="schedule-grid">
+                                <tbody>
+                                    <tr class="calendar__days">
+                                        <td>10.11</td>
+                                        <td>10.11</td>
+                                        <td>10.11</td>
+                                        <td>10.11</td>
+                                        <td>10.11</td>
+                                    </tr>
+                                    <tr class="calendar__week">
+                                        <td>пн</td>
+                                        <td>вт</td>
+                                        <td>ср</td>
+                                        <td>чт</td>
+                                        <td>пт</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a class="calendar__nav calendar__nav_next calendar__ button-arrow ">
+                                <svg class="button-arrow_next" width="27" height="27" viewBox="0 2 27 29"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z"
+                                        fill="currentColor" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="card__more schedule-page-grid__calendar">
+                            <table class="schedule schedule_timetable schedule-grid">
+                                <tbody>
+                                    <tr>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">12:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"></td>
+                                        <td class="schedule__cell"></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="schedule__cell"></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="schedule__cell"></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="schedule__cell"></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="schedule__cell"></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="schedule__cell"></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                        <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!-- end modal -->
+        <script>
+            document.querySelector('.js-open').addEventListener('click', openModal);
+            document.querySelector('.js-close').addEventListener('click', (e) => closeModal(e.target.closest('.modal__wrapper')));
+            document.querySelector('.modal__wrapper').addEventListener('click', function (e) {
+                if (e.target.className != 'modal') closeModal(e.target);
+            });
+
+            function openModal(e) {
+                console.log(e.target.dataset.modal);
+                let targetModal = document.querySelector(`.modal__wrapper[data-modal="${e.target.dataset.modal}"]`);
+                targetModal.classList.add('modal__wrapper_open');
+                window.addEventListener('keydown', function (event) {
+                    if (event.code == 'Escape') closeModal(targetModal);
+                }, { once: true });
+            }
+
+            function closeModal(modalWindow) {
+                modalWindow.classList.remove('modal__wrapper_open');
+            }
+        </script>
+</div>
+</body>
+
+</html>
