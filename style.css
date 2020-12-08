@@ -386,23 +386,61 @@ ul:not([class]) li {
   transform: rotateZ(180deg);
 }
 
-.card {
+.card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: var(--gutter);
   position: relative;
   justify-content: stretch;
 }
 @media (max-width: 576px) {
-  .card {
+  .card-grid {
     grid-template-columns: 1fr;
   }
 }
-.card_vertical {
+.card-grid_vertical {
   grid-template-columns: 1fr;
 }
-.card_schedule {
-  grid-template-columns: 3fr 4fr 5fr;
-  gap: var(--gutter);
+.card_schedule .card__header {
+  font-weight: bold;
+}
+.card_schedule .card__wrapper {
+  padding: var(--offset-small) 0;
+}
+@media (min-width: 1200px) {
+  .card_schedule .card-grid {
+    display: contents;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .card_schedule .card-grid {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 575px) {
+  .card_schedule .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter);
+  }
+}
+.card_schedule .card__wrapper {
+  justify-content: space-between;
+}
+@media (max-width: 575px) {
+  .card_schedule .card__wrapper {
+    grid-row-start: auto;
+    display: contents;
+  }
+}
+.card_schedule .card__footer {
+  align-self: end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media (max-width: 575px) {
+  .card_schedule .card__footer {
+    grid-column: 1/3;
+  }
 }
 .card__wrapper {
   padding: var(--offset-small);
@@ -462,9 +500,6 @@ ul:not([class]) li {
   text-overflow: ellipsis;
   margin-bottom: var(--offset-small);
 }
-.card__button {
-  flex: 0 0;
-}
 .card__footer {
   display: flex;
   justify-content: space-between;
@@ -473,9 +508,6 @@ ul:not([class]) li {
   display: grid;
   grid-template-columns: auto;
   grid-row-gap: var(--offset-small);
-}
-.card__more {
-  padding: var(--offset-middle);
 }
 
 .breadcrumb {
@@ -972,6 +1004,7 @@ ul:not([class]) li {
   content: "";
   width: 33px;
   height: 33px;
+  background: white;
   display: block;
   right: 0px;
   flex: 0 0 33px;
@@ -1541,7 +1574,7 @@ ul:not([class]) li {
   font-size: var(--font-smallest);
   font-weight: 600;
 }
-.schedule__cell_empty:after {
+.schedule__cell:empty:after {
   content: "";
   display: block;
   height: 1px;
@@ -1566,6 +1599,45 @@ ul:not([class]) li {
 }
 .schedule-header {
   background-color: #f4f4f4;
+}
+
+.schedule-page-grid {
+  display: grid;
+  grid-template-columns: 3fr 4fr 5fr;
+  gap: var(--gutter);
+}
+@media (max-width: 1199px) {
+  .schedule-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .schedule-page-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.schedule-page-grid__calendar {
+  padding: 1rem 2rem;
+}
+@media (max-width: 1199px) {
+  .schedule-page-grid__calendar {
+    border-left: 1px solid #dad8d5;
+    border-radius: 0 50px 50px 0;
+  }
+}
+@media (max-width: 991px) {
+  .schedule-page-grid__calendar {
+    grid-column: 1/3;
+    border-left: 0;
+    border-radius: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .schedule-page-grid__calendar {
+    border-left: 1px solid #dad8d5;
+    border-radius: 0 50px 50px 0;
+    grid-column: auto;
+  }
 }
 
 .calendar {
@@ -1651,6 +1723,7 @@ ul:not([class]) li {
   content: "";
   width: 33px;
   height: 33px;
+  background: white;
   display: block;
   right: 0px;
   flex: 0 0 33px;
@@ -1860,15 +1933,48 @@ ul:not([class]) li {
   background: #f4f4f4;
   border-radius: 50px;
 }
+@media (max-width: 1199px) {
+  .filter__wrapper {
+    background: none;
+    border-radius: 0;
+  }
+}
 .filter__item {
   padding: 1rem 2rem;
 }
-.filter__item:not(:first-of-type) {
-  border-left: 1px solid #dad8d5;
+@media (min-width: 1200px) {
+  .filter__item:not(:first-of-type) {
+    border-left: 1px solid #dad8d5;
+  }
 }
-
-.schedule-filter {
-  grid-template-columns: 3fr 4fr 5fr;
+@media (max-width: 1199px) {
+  .filter__item {
+    background: #f4f4f4;
+    border-left: none;
+  }
+  .filter__item:first-of-type {
+    border-radius: 50px;
+    grid-column: 1/3;
+  }
+  .filter__item:nth-of-type(2) {
+    border-radius: 50px 0 0 50px;
+  }
+}
+@media (max-width: 991px) {
+  .filter__item:first-of-type {
+    border-radius: 50px 0 0 50px;
+    grid-column: auto;
+  }
+  .filter__item:nth-of-type(2) {
+    border-radius: 0 50px 50px 0;
+  }
+}
+@media (max-width: 575px) {
+  .filter__item:nth-of-type(n) {
+    grid-column: auto;
+    border-left: none;
+    border-radius: 50px;
+  }
 }
 
 .price-filter {

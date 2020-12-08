@@ -1,22 +1,54 @@
 .card {
   @extend %card;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  // grid-column-gap: $gutter;
-  position: relative;
-  justify-content: stretch;
-
-  @media (max-width: 576px) {
-    grid-template-columns: 1fr;
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $gutter;
+    position: relative;
+    justify-content: stretch;
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+    &_vertical {
+      grid-template-columns: 1fr;
+    }
   }
 
-  &_vertical {
-    grid-template-columns: 1fr;
+  &_schedule &__header{
+    font-weight: bold;
   }
-  &_schedule{
-    grid-template-columns: 3fr 4fr 5fr;
-    gap: $gutter;
+  &_schedule &__wrapper{
+    padding: $offset-small 0;
   }
+
+  &_schedule &-grid {
+    @include desktop_only {
+      display: contents;
+    }
+    @media (min-width: 576px) and (max-width:992px) {
+      grid-column: 1/3;
+    }
+    @include phone{
+      grid-template-columns: repeat(2, 1fr);
+      gap: $gutter;
+    }
+  }
+  &_schedule &__wrapper {
+    justify-content: space-between;
+    @include phone{
+      grid-row-start: auto;
+      display: contents;
+    }
+  }
+  &_schedule &__footer {
+    align-self: end;
+    flex-direction: column;
+    align-items: flex-end;
+    @include phone{
+      grid-column: 1/3;
+    }
+  }
+  
   &__wrapper {
     padding: $offset-small;
     display: flex;
@@ -69,7 +101,7 @@
     line-height: 1.2;
     margin-bottom: 1.5rem;
   }
-  .news-list &__description{
+  .news-list &__description {
     @include text(s);
   }
 
@@ -81,7 +113,7 @@
   }
 
   &__button {
-    flex: 0 0;
+    // flex: 0 0;
   }
 
   &__footer {
@@ -93,8 +125,5 @@
     display: grid;
     grid-template-columns: auto;
     grid-row-gap: $offset-small;
-  }
-  &__more{
-    padding: $offset-middle;
   }
 }

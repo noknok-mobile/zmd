@@ -33,3 +33,13 @@
     @content;
   }
 }
+@mixin desktop_only {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin tablet_only {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
+}

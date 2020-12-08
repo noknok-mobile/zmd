@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шаблон страницы</title>
     <link rel="stylesheet" href="/style.css">
+    <script defer src="/breakpoint.js"></script>
+
 </head>
 
 <body>
     <div class="container">
         <section class="page-block  card-list">
-            <div class="filter__wrapper schedule-filter">
+            <div class="filter__wrapper schedule-page-grid">
                 <div class="select filter__item">
                     <label class="select__label" for="part">Филиал</label>
                     <select name="part" id="part" class="select__item">
@@ -24,15 +26,15 @@
     
                 </div>
                 <div class="select filter__item">
-                    <label class="select__label" for="part">Направление</label>
-                    <select name="part" id="part" class="select__item">
+                    <label class="select__label" for="branch">Направление</label>
+                    <select name="part" id="branch" class="select__item">
                         <option value="" selected>акушерство и гинекология</option>
                         <option value="">кардиология</option>
                         <option value="">Ул. московская, 40</option>
                     </select>
                     <span class="select__icon"></span>
                 </div>
-                <div class="calendar filter__item">
+                <div class="calendar filter__item schedule-page-grid__calendar">
                     <a class="calendar__nav calendar__nav_prev calendar__ button-arrow ">
                         <svg class="button-arrow_prev" width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
@@ -67,16 +69,25 @@
             </div>
 
             <div class="schedule__inner">
-                <article class="card card_schedule">
-                    <div class="card__img-wrapper">
-                        <img class="card__img" src="/img/image.png" alt="">
+                <article class="card card_schedule schedule-page-grid">
+                    <div class="card-grid">
+                        <div class="card__img-wrapper">
+                            <img class="card__img" src="/img/lady.jpg" alt="">
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__description">
+                                <div class="card__header">Ледовская Лариса Павловна
+                                </div>
+                                <div class="card__overheader tag">Акушер-гинеколог</div>
+                                <span class="price">Приём от 2500 руб.</span>
+                            </div>
+                            
+                            <div class="card__footer">
+                                <a href="#" class="button card__button">Записаться на прием</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card__wrapper">
-                        <div class="card__header">Ледовская Лариса Павловна</div>
-                        <div class="card__overheader tag">Акушер-гинеколог</div>
-                        <a href="#" class="button card__button">Подробнее</a>
-                    </div>
-                    <div class="card__more">
+                    <div class="card__more schedule-page-grid__calendar">
                         <table class="schedule schedule_timetable schedule-grid">
                             <tr>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
@@ -88,40 +99,40 @@
                             <tr>
                                 <td class="schedule__cell"><a href="" class="schedule__time">12:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
-                                <td class="schedule__cell schedule__cell_empty"></td>
-                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"></td>
+                                <td class="schedule__cell"></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                             </tr>
                             <tr>
-                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                             </tr>
                             <tr>
-                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                             </tr>
                             <tr>
-                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                             </tr>
                             <tr>
-                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                             </tr>
                             <tr>
-                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>

@@ -1,29 +1,63 @@
 /*нужно только для js*/
-.filter-item{
-    &_hidden{
-        display: none;
-    }
+.filter-item {
+  &_hidden {
+    display: none;
+  }
 }
 
 /*горизонтальный фильтр в начале страницы*/
 .filter {
-    &__wrapper {
-      display: grid;
-      gap: $gutter;
-      background: $color-elem-background;
-      border-radius: 50px;
+  &__wrapper {
+    display: grid;
+    gap: $gutter;
+    background: $color-elem-background;
+    border-radius: 50px;
+    @include tablet_hrz {
+      background: none;
+      border-radius: 0;
+      // gap: $gutter 0;
     }
-  
-    &__item {
-      padding: 1rem 2rem;
+    
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+    @include desktop_only{
       &:not(:first-of-type) {
         border-left: 1px solid $color-line;
       }
     }
+    @include tablet_hrz {
+      background: $color-elem-background;
+      border-left: none;
+      &:first-of-type {
+        border-radius: 50px;
+        grid-column: 1/3;
+      }
+      &:nth-of-type(2){
+        border-radius:  50px 0 0 50px;
+      }
+    }
+    @include tablet{
+      &:first-of-type {
+        border-radius:  50px 0 0 50px;
+        grid-column: auto;
+      }
+      &:nth-of-type(2){
+        border-radius: 0 50px 50px 0;
+      }
+      
+    }
+    @include phone{
+      &:nth-of-type(n){
+        grid-column: auto;
+        border-left: none;
+        border-radius:  50px;
+      }
+    }
   }
-  .schedule-filter{
-      grid-template-columns: 3fr 4fr 5fr;
-  }
-  .price-filter{
-      grid-template-columns: repeat(2, 1fr);
-  }
+}
+
+.price-filter {
+  grid-template-columns: repeat(2, 1fr);
+}
