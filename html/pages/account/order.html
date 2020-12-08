@@ -10,31 +10,94 @@
 
 <body>
     <div class="container page-grid">
-        <main class="order-page page-block">
-            <form action="" class="order-page__form">
-                <fieldset class="order-page__section order-page__section_customer">
-                    <h4 class="tag">Пациент</h4>
-                    <div class="input">
-                        <input id="name" name="name" type="text" class="input__value" placeholder="иванов иван иванович">
+        <main class="order-wrapper page-block">
+            <form action="" class="order__form">
+                <div class="order-step">
+                    <div class="order-step__header">
+                        <h4 class="tag">Пациент</h4>
+                        <a href="#" class="order-step__edit">Изменить</a>
                     </div>
-                    <div class="input">
-                        <input id="name" name="email" type="text" class="input__value" placeholder="test@kfjgdfg.et">
-                    </div>
-                    <div class="input account__input ">
-                        <input id="name" name="phone" type="text" class="input__value" placeholder="+7 908 123 23 23">
-                    </div>
-                    <a href="" class="order-page__nav order-page__nav js-section-next">Далее</a>
-                </fieldset>
-                <h4 class="tag">Способ оплаты</h4>
-                <fieldset class="order-page__section order-page__section_payment">
-                    <label class="control control_payment control_payment-card tile">
-                        <input class="control__input" type="radio" name="payment"><span class="control__label">Банковской картой</span>
-                    </label>
-                    <label class="control control_payment  control_payment-cashe tile">
-                        <input class="control__input" type="radio" name="payment"><span class="control__label">Наличными</span>
-                    </label>
-                </fieldset>
 
+                    <div class="order-step__content">
+                        <div class="input">
+                            <label for="name" class="tag">Фамилия Имя Отчество*</label>
+                            <input id="name" name="name" type="text" class="input__value" placeholder="иванов иван иванович">
+                        </div>
+                        <div class="input">
+                            <input id="name" name="email" type="text" class="input__value" placeholder="test@kfjgdfg.et">
+                        </div>
+                        <div class="input account__input ">
+                            <input id="name" name="phone" type="text" class="input__value" placeholder="+7 908 123 23 23">
+                        </div>
+                    </div>
+                    <div class="order-step__more">
+                        <a href="" class="order-step__next">Далее</a>
+                    </div>
+                </div>
+
+                <div class="order-step">
+                    <div class="order-step__header">
+                        <h4 class="tag">Способ оплаты</h4>
+                        <a href="#" class="order-step__edit">Изменить</a>
+                    </div>
+
+                    <div class="order-step__content order-step__content_payment">
+                        <label class="control control_payment control_payment-card tile">
+                            <input class="control__input" type="radio" name="payment"><span class="control__label">Банковской картой</span>
+                        </label>
+                        <label class="control control_payment  control_payment-cache tile">
+                            <input class="control__input" type="radio" name="payment"><span class="control__label">Наличными</span>
+                        </label>
+                    </div>
+                    <div class="order-step__more">
+                        <a href="" class="order-step__next">Далее</a>
+                    </div>
+                </div>
+
+                <div class="order-step">
+                    <div class="order-step__header">
+                        <h4 class="tag">Запись к врачу</h4>
+                        <a href="#" class="order-step__edit">Изменить</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Специалист</td>
+                                <td>Дата и время приема</td>
+                                <td>Стоимость</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="card-grid">
+                                        <div class="card__img-wrapper">
+                                            <img class="card__img" src="/img/lady.jpg" alt="">
+                                        </div>
+                                        <div class="card__wrapper">
+                                            <div class="card__description">
+                                                <div class="card__header">Ледовская Лариса Павловна
+                                                </div>
+                                                <div class="tag">Акушер-гинеколог</div>
+                                                <div class="tag">Ул. московская, 40</div>
+                                               
+                                            </div>
+                                    
+                                        
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>16 октября , 12:00</td>
+                                <td>2500 Р</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+                <button class="button">Записаться на прием</button>
+                <label class="control">
+                    <input class="control__input" type="checkbox" name=""><span class="control__label">Я согласен с условиями обработки персональных данных</span>
+                </label>
             </form>
         </main>
     </div>
