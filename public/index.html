@@ -269,7 +269,7 @@
     <!-- branches block end -->
     <!-- start video -->
     <div class="page-block">
-        <section class="intro container">
+        <div class="intro intro_animated container">
             <div class="intro__video-wrapper">
                 <video class="intro__bckg" poster="/img/walk.jpg" autoplay loop muted playsinline src="/video/walk.mp4">
                 </video>
@@ -297,8 +297,8 @@
                     и <span class="mark">кандидаты медицинских наук</span>
                 </h2>
             </div>
-        </section>
-        <div class="intro container">
+        </div>
+        <div class="intro intro_animated container">
             <div class="intro__video-wrapper">
                 <video class="intro__bckg" poster="/img/doctor_demo.jpg" autoplay loop muted playsinline src="/video/doctor.mp4">
                 </video>
@@ -509,7 +509,7 @@
         };
 
         var observer = new IntersectionObserver(callback, options);
-        let targets = document.querySelectorAll('.intro');
+        let targets = document.querySelectorAll('.intro_animated');
         for(let target of targets){
             observer.observe(target);
         }

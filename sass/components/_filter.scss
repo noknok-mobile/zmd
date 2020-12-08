@@ -1,5 +1,29 @@
+/*нужно только для js*/
 .filter-item{
     &_hidden{
         display: none;
     }
 }
+
+/*горизонтальный фильтр в начале страницы*/
+.filter {
+    &__wrapper {
+      display: grid;
+      gap: $gutter;
+      background: $color-elem-background;
+      border-radius: 50px;
+    }
+  
+    &__item {
+      padding: 1rem 2rem;
+      &:not(:first-of-type) {
+        border-left: 1px solid $color-line;
+      }
+    }
+  }
+  .schedule-filter{
+      grid-template-columns: 3fr 4fr 5fr;
+  }
+  .price-filter{
+      grid-template-columns: repeat(2, 1fr);
+  }

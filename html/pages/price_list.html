@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шаблон страницы</title>
+    <title>Прайс-лист</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -87,16 +87,115 @@
     </div>
     <!--  page header ens-->
     <!-- page start  -->
-    <div class="container page-grid">
+    <div class="container">
         <main>
-            <section class="page-block"></section>
+            <section class="page-block page-block_wide">
+                <div class="filter__wrapper price-filter">
+                    <div class="select filter__item ">
+                        <select name="part" id="part" class="select__item">
+                            <option value="" selected>выберите филиал</option>
+                            <option value="">кардиология</option>
+                            <option value="">Ул. московская, 40</option>
+                        </select>
+                        <span class="select__icon"></span>
+                    </div>
+                    <div class="select filter__item">
+                        <select name="part" id="part" class="select__item">
+                            <option value="" selected>Ул. московская, 40</option>
+                            <option value="">Ул. московская, 40</option>
+                            <option value="">Ул. московская, 40</option>
+                        </select>
+                        <span class="select__icon"></span>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <details class="accordion__item spoiler" open>
+                        <summary class="accordion__title spoiler__header">Аллергология и иммунология - врачебные приемы
+                        </summary>
+                        <div class="accordion__more spoiler__more">
+                            <table class="price-list">
+                                <tbody>
+                                    <tr class="price-list__row">
+                                        <td>Коррекция нарушений</td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Консультации по вопросам пролонгирования беременности</td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Коррекция нарушений менструальной функции (репродуктивного и
+                                            климактерического периода)
+                                        </td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Индивидуальный подбор средств и методов контрацепции</td>
+                                        <td>17 000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </span>
+                    </details>
+                    <details class="accordion__item spoiler">
+                        <summary class="accordion__title spoiler__header">Пульмонология - врачебные приемы
+                        </summary>
+                        <div class="accordion__more spoiler__more">
+                            <table class="price-list">
+                                <tbody>
+                                    <tr class="price-list__row">
+                                        <td>Коррекция нарушений</td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Консультации по вопросам пролонгирования беременности</td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Коррекция нарушений менструальной функции (репродуктивного и
+                                            климактерического периода)
+                                        </td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Индивидуальный подбор средств и методов контрацепции</td>
+                                        <td>17 000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    <details class="accordion__item spoiler">
+                        <summary class="accordion__title spoiler__header">Гинекология и акушерство - врачебные приемы
+                        </summary>
+                        <div class="accordion__more spoiler__more">
+                            <table class="price-list">
+                                <tbody>
+                                    <tr class="price-list__row">
+                                        <td>Коррекция нарушений</td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Консультации по вопросам пролонгирования беременности</td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Коррекция нарушений менструальной функции (репродуктивного и
+                                            климактерического периода)
+                                        </td>
+                                        <td>2200</td>
+                                    </tr>
+                                    <tr class="price-list__row">
+                                        <td>Индивидуальный подбор средств и методов контрацепции</td>
+                                        <td>17 000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                </div>
+            </section>
         </main>
-        <nav class="page-grid__sidebar">
-            <div class="content__left-menu sidebar-menu">
-                <a href="/html/pages/account/signin.html" class="sidebar-menu__item link">Профиль</a>
-                <a href="/html/pages/account/orders.html" class="sidebar-menu__item link">мои записи</a>
-            </div>
-        </nav>
     </div>
     <!-- page end -->
     <!-- footer start -->

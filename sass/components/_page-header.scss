@@ -1,7 +1,6 @@
 .page-header {
   padding: 45px 0 55px;
   background: $color-elem-background;
-
   &__nav {
     // margin-bottom: 15px;
   }
@@ -19,12 +18,31 @@
   &_bskg-stethoscope {
     background-image: url("/img/background/stethoscope.svg");
     background-size: 550px;
-    background-position: right bottom;
+    background-position: center bottom;
   }
 
   &_bskg-syringe {
     background-image: url("/img/background/syringe.svg");
     background-size: 250px;
     background-position: right bottom;
+  }
+  &_overflow{
+    max-height: 615px;
+    padding-bottom: 0;
+    @include tablet_hrz{
+      max-height: unset;
+    }
+  }
+  &_overflow + .container {
+    margin-top: 200px;
+    @include tablet_hrz{
+      margin-top: 0;
+    }
+    
+  }
+  &__more {
+    @include phone_hrz {
+      background: white;
+    }
   }
 }

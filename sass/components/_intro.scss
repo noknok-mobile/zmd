@@ -3,45 +3,39 @@
   position: relative;
   color: white;
   overflow: hidden;
-
-  &::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    z-index: 10;
-  }
-  &::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $color-contrast;
-    z-index: 5;
-  }
-  
-  &_moved{
-    &::before{
-      animation: move 1s ease-out alternate forwards; 
+  &_animated {
+    &::before {
+      content: "";
+      @extend %stretch;
+      background: white;
+      z-index: 10;
     }
-    &::after{
+    &::after {
+      content: "";
+      @extend %stretch;
+      background: $color-contrast;
+      z-index: 5;
+    }
+  }
+
+  &_moved {
+    &::before {
+      animation: move 1s ease-out alternate forwards;
+    }
+    &::after {
       animation: move 0.6s ease-out 0.2s alternate forwards;
     }
-  } 
-  &_moved &__content{
-    opacity: 0;
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation: slideUp 2.5s cubic-bezier(.19,1,.22,1) 1s alternate forwards;
   }
-  &_moved &__link{
+  &_moved &__content {
     opacity: 0;
     // animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation: slideUp 2.5s cubic-bezier(.19,1,.22,1) 1.5s alternate forwards;
+    animation: slideUp 2.5s cubic-bezier(0.19, 1, 0.22, 1) 1s alternate forwards;
+  }
+  &_moved &__link {
+    opacity: 0;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: slideUp 2.5s cubic-bezier(0.19, 1, 0.22, 1) 1.5s alternate
+      forwards;
   }
 
   &__video-wrapper {
@@ -50,13 +44,9 @@
     &::before {
       content: "";
       display: block;
+      @extend %stretch;
       background: black;
       opacity: 0.5;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
       z-index: 1;
     }
     @include phone {
@@ -65,27 +55,15 @@
   }
 
   &__bckg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: cover;
-    width: 100%;
-    width: 100%;
-    height: 100%;
+    @extend %fill;
   }
 
   &__inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: $offset-large 0;
+    @extend %stretch;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 5rem 0;
     // flex-flow: wrap;
     z-index: 5;
     @include tablet {
@@ -94,12 +72,11 @@
     @include phone {
       position: relative;
       flex-wrap: wrap;
-      
     }
   }
   &__link {
     @extend .button_light;
-    @include phone{
+    @include phone {
       background: $color-main;
       color: white;
     }
@@ -114,20 +91,20 @@
     }
   }
 }
-@keyframes move{
-  0%{
+@keyframes move {
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(-100%);
   }
 }
-@keyframes slideUp{
-  0%{
+@keyframes slideUp {
+  0% {
     transform: translateY(100px);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0);
     opacity: 1;
   }

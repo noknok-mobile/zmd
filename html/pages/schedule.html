@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон страницы</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="page-block  card-list">
+            <div class="filter__wrapper schedule-filter">
+                <div class="select filter__item">
+                    <label class="select__label" for="part">Филиал</label>
+                    <select name="part" id="part" class="select__item">
+                        <option value="" selected>Ул. московская, 40</option>
+                        <option value="">Ул. московская, 40</option>
+                        <option value="">Ул. московская, 40</option>
+                    </select>
+                    <span class="select__icon"></span>
+    
+    
+                </div>
+                <div class="select filter__item">
+                    <label class="select__label" for="part">Направление</label>
+                    <select name="part" id="part" class="select__item">
+                        <option value="" selected>акушерство и гинекология</option>
+                        <option value="">кардиология</option>
+                        <option value="">Ул. московская, 40</option>
+                    </select>
+                    <span class="select__icon"></span>
+                </div>
+                <div class="calendar filter__item">
+                    <a class="calendar__nav calendar__nav_prev calendar__ button-arrow ">
+                        <svg class="button-arrow_prev" width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <table class="schedule-grid">
+                        <tr class="calendar__days">
+                            <td>10.11</td>
+                            <td>10.11</td>
+                            <td>10.11</td>
+                            <td>10.11</td>
+                            <td>10.11</td>
+                        </tr>
+                        <tr class="calendar__week">
+                            <td>пн</td>
+                            <td>вт</td>
+                            <td>ср</td>
+                            <td>чт</td>
+                            <td>пт</td>
+                        </tr>
+                    </table>
+                    <a class="calendar__nav calendar__nav_next calendar__ button-arrow ">
+                        <svg class="button-arrow_next" width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6067 24.2132L24.2133 13.6066H3.00009L13.6067 24.2132Z" fill="currentColor"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="schedule__inner">
+                <article class="card card_schedule">
+                    <div class="card__img-wrapper">
+                        <img class="card__img" src="/img/image.png" alt="">
+                    </div>
+                    <div class="card__wrapper">
+                        <div class="card__header">Ледовская Лариса Павловна</div>
+                        <div class="card__overheader tag">Акушер-гинеколог</div>
+                        <a href="#" class="button card__button">Подробнее</a>
+                    </div>
+                    <div class="card__more">
+                        <table class="schedule schedule_timetable schedule-grid">
+                            <tr>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                            </tr>
+                            <tr>
+                                <td class="schedule__cell"><a href="" class="schedule__time">12:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                            </tr>
+                            <tr>
+                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                            </tr>
+                            <tr>
+                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                            </tr>
+                            <tr>
+                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                            </tr>
+                            <tr>
+                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                            </tr>
+                            <tr>
+                                <td class="schedule__cell schedule__cell_empty"></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">13:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                                <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </article>
+
+
+            </div>
+        </section>
+
+    </div>
+  
+
+</body>
+
+</html>

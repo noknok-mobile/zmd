@@ -1,18 +1,22 @@
 .schedule {
   // border-spacing: $offset-middle $offset-small;
   // text-align: center;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  justify-content: space-between;
-  align-items: center;
-  &_timetable{
-    grid-row-gap: $offset-small ;
+  &-grid {
+    
+    // padding: 0 $offset-middle;
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    & tbody,
+    tr {
+      display: contents;
+    }
   }
-  flex: 0 0 auto;
-  & tbody,
-  tr {
-    display: contents;
+  &_timetable {
+    grid-row-gap: $offset-small;
   }
 
   &__time {
@@ -35,8 +39,8 @@
     }
   }
   &__inner {
-    height: 200px;
-    overflow-y: scroll;
+    // height: 200px;
+    // overflow-y: scroll;
     transition: height 0.5s ease-in;
     &_expanded {
       height: auto;
@@ -45,15 +49,13 @@
   }
 
   &-wrapper {
-    padding: 15px $offset-middle;
-    @include phone{
+    border-radius: 38px;
+    @include phone {
       padding: $offset-small 20px;
     }
   }
   &-header {
     background-color: $color-elem-background;
-    border-radius: 38px;
-    
   }
 }
 
@@ -68,18 +70,18 @@
     @extend %tag;
     color: $color-accent;
   }
-  &__nav{
+  &__nav {
     $offset: 15px;
     @extend %absolute-centered;
-    @include phone{
+    @include phone {
       @include box(24px);
       $offset: 5px;
     }
-    &_prev{
+    &_prev {
       left: $offset;
     }
-    &_next{
-      right:$offset;
+    &_next {
+      right: $offset;
     }
   }
 }

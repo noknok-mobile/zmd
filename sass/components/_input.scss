@@ -17,7 +17,7 @@
     color: $color-text-semi-muted;
     transition: all 0.2s ease-in;
     font-family: inherit;
-
+    
     &:hover {
       @extend %input;
     }
@@ -72,5 +72,35 @@
       background-image: url("data:image/svg+xml,%3Csvg width='17' height='11' viewBox='0 0 17 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.462145 2.90642L7.45105 10.5018C8.06595 11.17 9.06625 11.1652 9.67526 10.4922L16.5465 2.89682C17.5218 1.81931 16.8201 -2.94092e-06 15.43 -2.69786e-06L1.56984 -2.74479e-07C0.17382 -3.03917e-08 -0.524923 1.8337 0.462145 2.90642Z' fill='%23852D2E'/%3E%3C/svg%3E");
       background-color: white;
     }
+  }
+}
+
+.select {
+  position: relative;
+  &__icon {
+    @include arrow(33px);
+  }
+
+  &__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: $color-text-semi-muted;
+  }
+  &__item {
+    display: block;
+    width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+    border: none;
+    font-family: inherit;
+    @extend.tag;
+  }
+
+  &__item:focus + &__icon::after {
+    transform: translateY(-50%) rotateZ(-180deg);
   }
 }

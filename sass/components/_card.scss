@@ -13,7 +13,10 @@
   &_vertical {
     grid-template-columns: 1fr;
   }
-
+  &_schedule{
+    grid-template-columns: 3fr 4fr 5fr;
+    gap: $gutter;
+  }
   &__wrapper {
     padding: $offset-small;
     display: flex;
@@ -91,9 +94,7 @@
     grid-template-columns: auto;
     grid-row-gap: $offset-small;
   }
-}
-.doctor-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: $gutter;
+  &__more{
+    padding: $offset-middle;
+  }
 }

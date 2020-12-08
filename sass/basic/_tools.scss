@@ -27,6 +27,14 @@
   width: $size;
   height: $size;
 }
+@mixin ratio($ratio){
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: $ratio * 100%;
+  }
+}
 @mixin flex-gap($horizontal, $vertical: 0) {
     & > :not(:last-child) {
       margin-right: $horizontal;

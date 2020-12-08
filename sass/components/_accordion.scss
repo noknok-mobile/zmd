@@ -10,8 +10,8 @@
     align-items: center;
     z-index: 1;
     font-weight: 300;
-    @extend .lead;
     @extend %color-link;
+    font-size: 32px;
     padding: 1.5rem 0;
     padding-right: 50px;
   }
