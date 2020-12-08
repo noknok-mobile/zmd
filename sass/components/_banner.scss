@@ -49,8 +49,8 @@
   }
 
   &__headline {
-    @include header(max, false);
-    margin-bottom: $offset-small;
+    @include header(max);
+    margin:0 0 $offset-small;
   }
 
   &__description {

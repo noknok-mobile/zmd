@@ -70,9 +70,8 @@
 
     &__link {
       @include text(xs);
+      @extend %color-link;
       text-decoration: none;
-      color: $color-accent;
-      @extend %alter-hover;
     }
   }
 }

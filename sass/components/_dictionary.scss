@@ -13,6 +13,10 @@
     &__item {
       // @include customFont(26px, 700, 1.8);
       @include text(h3, 700);
+      cursor: pointer;
+      &:hover {
+        color: $color-accent;
+      }
       &.js-filter-active {
         color: $color-accent;
       }
@@ -26,11 +30,12 @@
     grid-template-columns: repeat(5, 2fr);
     grid-template-areas: "letter list list list list";
     grid-gap: $gutter;
-  }
-  &__group:hover &__letter {
-      color: $color-accent;
+    &:hover{
+        color: $color-accent;
+    }
   }
   &__letter {
+    @extend %h1;
     grid-area: letter;
     padding-left: calc(var(--gutter) + var(--col-width));
     line-height: 1.8rem;
@@ -68,6 +73,7 @@
   height: 22px;
   border-radius: 100px;
   background: $color-elem-background;
+  cursor: pointer;
   &__button {
     content: "";
     display: inline-block;
@@ -96,13 +102,11 @@
     align-items: center;
   }
   &__label {
-    @extend .dictionary__item;
+    @extend .dictionary-filter__item;
     &_active{
       color: $color-accent;
     }
-    &:hover {
-      color: $color-accent;
-    }
+    
   }
 }
 .section {

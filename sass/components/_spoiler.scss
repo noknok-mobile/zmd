@@ -4,13 +4,13 @@
       transform: translateY(-50%) rotateZ(-180deg);
     }
     &__header{
-      list-style: none;
       position: relative;
-      // padding: $offset-small 0;
+      list-style: none;
       &::-webkit-details-marker{
         display: none;
       }
       @include arrow(33px);
+      cursor: pointer;
     }
     &__more{
         padding: $offset-small 0;

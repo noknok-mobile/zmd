@@ -20,11 +20,11 @@
   max-width: var(--container-width);
   margin: 0 var(--grid-margin);
 }
-%alter-hover{
-  transition: opacity 0.1s ease-in;
+%color-link{
+  color: $color-accent;
+  transition: opacity 0.1s ease-in-out;
   &:hover{
     opacity: 0.8;
-    
   }
 }
 %rounded {

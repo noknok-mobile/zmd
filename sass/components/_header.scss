@@ -78,13 +78,10 @@
   }
 
   &__link {
-    color: #852d2e;
     @include text(inherit, 400);
-    &:hover{
-      opacity: 0.8;
-    }
-    &+& {
-      margin-left: 30px;
+    @extend %color-link;
+    &:not(:last-of-type){
+      margin-right: $gutter;
     }
   }
 }

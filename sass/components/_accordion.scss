@@ -9,10 +9,9 @@
     @include flex-gap($gutter);
     align-items: center;
     z-index: 1;
-    color: $color-accent;
     font-weight: 300;
     @extend .lead;
-    @extend .mark;
+    @extend %color-link;
     padding: 1.5rem 0;
     padding-right: 50px;
   }

@@ -29,13 +29,9 @@
 
   }
   &__caption {
-    @include text(xs);
-    color: $color-accent;
-    line-height: 1.6;
-    transition: opacity 0.2s ease-in;
     display: inline-block;
-    &:hover{
-      opacity: 0.8;
-    }
+    @include text(xs);
+    @extend %color-link;
+    line-height: 1.6;
   }
 }

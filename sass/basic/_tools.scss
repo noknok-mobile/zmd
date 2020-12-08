@@ -1,4 +1,4 @@
-@mixin header($size, $offset: true) {
+@mixin header($size, $offset: false) {
   font-family: "PT Serif", serif;
   font-size: map-get($font-size, $size);
   font-weight: 400;
