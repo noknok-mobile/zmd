@@ -1,6 +1,5 @@
 .footer {
     background: #e5d9c6;
-    @extend %footer-font;
 
     &__inner {
         display: grid;
@@ -38,7 +37,7 @@
         &-item {
             display: block;
             margin-bottom: 2em;
-            
+
         }
 
         @include phone {
@@ -47,7 +46,12 @@
     }
 
     &__link {
-        @extend %footer-font;
+        display: block;
+        @include text(xs);
+        color: $color-text;
+        text-decoration: none;
+        line-height: 1.6;
+        opacity: 0.95;
 
         &_privacy {
             text-decoration: underline;
@@ -82,6 +86,10 @@
     }
 
     &-promo {
+        &__text {
+            color: $color-text-semi-muted;
+        }
+
         &__app-icons {
             display: flex;
 

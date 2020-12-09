@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=PT+Serif:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=PT+Serif:wght@300;400&display=swap");
 html {
   --grid-margin: auto;
   --offset-small: 30px;
@@ -139,13 +139,6 @@ fieldset {
 .spoiler__header::before, .select__icon::before, .input__icon_arrow, .button-arrow {
   border-radius: 50%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-.input-tip, .footer__link, .footer {
-  font-size: var(--font-smallest);
-  color: #807a71;
-  text-decoration: none;
-  line-height: 1.6;
 }
 
 .intro__inner, .intro__video-wrapper::before, .intro_animated::after, .intro_animated::before, .gallery__item, .doctor-avatar__img, .intro__bckg, .card__img {
@@ -648,6 +641,14 @@ ul:not([class]) li {
     display: none;
   }
 }
+.footer__link {
+  display: block;
+  font-size: var(--font-xs);
+  color: #000000;
+  text-decoration: none;
+  line-height: 1.6;
+  opacity: 0.95;
+}
 .footer__link_privacy {
   text-decoration: underline;
 }
@@ -677,6 +678,9 @@ ul:not([class]) li {
   .footer__info-item {
     margin-bottom: 0;
   }
+}
+.footer-promo__text {
+  color: #7d7d7d;
 }
 .footer-promo__app-icons {
   display: flex;
@@ -768,7 +772,6 @@ ul:not([class]) li {
 }
 .header__schedule {
   display: none;
-  font-size: var(--font-smallest);
 }
 @media (max-width: 1399px) {
   .header__schedule {
@@ -776,7 +779,7 @@ ul:not([class]) li {
   }
 }
 .header__link {
-  font-weight: 400;
+  font-weight: 600;
 }
 .header__link:not(:last-of-type) {
   margin-right: var(--gutter);
@@ -823,7 +826,7 @@ ul:not([class]) li {
 }
 .header-menu__block {
   font-size: var(--font-smallest);
-  font-weight: 500;
+  font-weight: 600;
   padding-left: 42px;
   position: relative;
 }
@@ -884,7 +887,7 @@ ul:not([class]) li {
 }
 .header-menu__block__headline {
   display: block;
-  font-weight: 600;
+  font-weight: 800;
 }
 .header-menu__block__content {
   display: block;
@@ -992,9 +995,13 @@ ul:not([class]) li {
   transition: transform 0.3s ease-out;
   cursor: pointer;
 }
+.select__icon::before, .select__icon::after {
+  right: 15px;
+}
 .select__label {
   display: block;
   font-size: 12px;
+  line-height: 1rem;
   font-weight: 600;
   color: #7d7d7d;
 }
@@ -1716,7 +1723,7 @@ ul:not([class]) li {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 32px;
   padding: 1.5rem 0;
   padding-right: 50px;
@@ -1888,7 +1895,6 @@ ul:not([class]) li {
 .filter__wrapper {
   display: grid;
   grid-template-areas: "place spec week";
-  gap: var(--gutter);
   background: #f4f4f4;
   border-radius: 50px;
 }
@@ -1916,14 +1922,88 @@ ul:not([class]) li {
 .filter__item {
   padding: 1rem 2rem;
 }
+@media (max-width: 1199px) {
+  .filter__item {
+    background-color: #f4f4f4;
+  }
+}
 .filter__item_place {
   grid-area: place;
+}
+@media (max-width: 1199px) {
+  .filter__item_place {
+    border-radius: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .filter__item_place {
+    border-radius: 50px 0 0 50px;
+    position: relative;
+  }
+  .filter__item_place::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    height: 100%;
+    width: var(--gutter);
+    background-color: #f4f4f4;
+    border-right: 1px solid #dad8d5;
+  }
+}
+@media (max-width: 575px) {
+  .filter__item_place::after {
+    content: none;
+  }
 }
 .filter__item_spec {
   grid-area: spec;
 }
+@media (max-width: 1199px) {
+  .filter__item_spec {
+    border-radius: 50px 0 0 50px;
+    position: relative;
+  }
+  .filter__item_spec::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    height: 100%;
+    width: var(--gutter);
+    background-color: #f4f4f4;
+    border-right: 1px solid #dad8d5;
+  }
+}
+@media (max-width: 991px) {
+  .filter__item_spec {
+    border-radius: 0 50px 50px 0;
+  }
+  .filter__item_spec::after {
+    content: none;
+  }
+}
 .filter__item_week {
   grid-area: week;
+}
+@media (max-width: 1199px) {
+  .filter__item_week {
+    border-radius: 0 50px 50px 0;
+  }
+}
+@media (max-width: 991px) {
+  .filter__item_week {
+    border-radius: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .filter__item {
+    border-radius: 50px;
+  }
 }
 .price-filter {
   grid-template-columns: repeat(2, 1fr);

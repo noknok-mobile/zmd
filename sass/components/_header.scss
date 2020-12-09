@@ -70,7 +70,7 @@
 
   &__schedule {
     display: none;
-    @include text(xxs);
+    // @include text(xxs);
 
     @include laptop {
       display: block;
@@ -78,7 +78,7 @@
   }
 
   &__link {
-    @include text(inherit, 400);
+    @include text(inherit, 600);
     @extend %color-link;
     &:not(:last-of-type){
       margin-right: $gutter;
@@ -122,7 +122,7 @@
   }
 
   &__block {
-    @include text(xxs, 500);
+    @include text(xxs, 600);
     padding-left: 42px;
     position: relative;
 
@@ -184,7 +184,7 @@
 
     &__headline {
       display: block;
-      @include text(inherit, 600);
+      @include text(inherit, 800);
     }
 
     &__content {
