@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <section class="page-block  card-list">
+        <section class="page-block  doctor-card-list">
             <div class="filter__wrapper schedule-page-grid">
                 <div class="select filter__item">
                     <label class="select__label" for="part">Филиал</label>
@@ -68,16 +68,18 @@
                 </div>
             </div>
             <div class="schedule__inner">
-                <article class="card card_schedule schedule-page-grid">
-                    <div class="card-grid">
-                        <div class="card__img-wrapper">
+
+                <article class="doctor-card schedule-page-grid">
+                    
+                    <div class="doctor-card__info card">
+                        <div class="card__img-wrapper doctor-card__img">
                             <img class="card__img" src="/img/lady.jpg" alt="">
                         </div>
-                        <div class="card__wrapper">
-                            <div class="card__description">
-                                <div class="card__header">Ледовская Лариса Павловна
+                        <div class="card__inner">
+                            <div class="doctor-card__description">
+                                <div class="card__title doctor-card__name">Ледовская Лариса Павловна
                                 </div>
-                                <div class="card__overheader tag">Акушер-гинеколог</div>
+                                <div class="tag">Акушер-гинеколог</div>
                                 <span class="price">Приём от 2500 руб.</span>
                             </div>
                             
@@ -86,7 +88,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card__more schedule-page-grid__calendar">
+
+                    <div class="doctor-card__more schedule-page-grid__calendar">
                         <table class="schedule schedule_timetable schedule-grid">
                             <tr>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>
