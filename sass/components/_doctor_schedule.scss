@@ -1,0 +1,58 @@
+.doctor-schedule {
+  @extend %card;
+  @include desktop_only {
+    grid-template-areas: "info info calendar";
+  }
+  @include tablet_hrz {
+    grid-template-areas: "info calendar";
+  }
+  @include tablet {
+    grid-template-areas: "info info" "calendar calendar";
+  }
+  @include phone {
+    grid-template-areas: "info" "calendar";
+  }
+
+  &__info {
+    grid-area: info;
+    grid-template-columns: 3fr 4fr;
+    grid-template-areas: "image content";
+    gap: $gutter;
+    max-height: 100%;
+    box-shadow: none;
+    // @include desktop_only {
+    //     display: contents;
+    // }
+    @include tablet_hrz {
+      grid-template-columns: 2fr 4fr;
+    }
+    @include tablet {
+      grid-template-columns: 1fr 6fr;
+    }
+    @include phone_hrz{
+        grid-template-columns: 1fr 3fr;
+    }
+    @include phone {
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "image content" "button button";
+      &-inner {
+        display: contents;
+      }
+    }
+  }
+  &__action {
+    @include phone {
+      grid-area: button;
+      justify-content: center;
+    }
+  }
+  &__calendar {
+    grid-area: calendar;
+    max-height: 300px;
+    // overflow-y: auto;
+
+    &_expanded {
+      max-height: 100%;
+    }
+  }
+}

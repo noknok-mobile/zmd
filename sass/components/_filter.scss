@@ -9,6 +9,7 @@
 .filter {
   &__wrapper {
     display: grid;
+    grid-template-areas: 'place spec week';
     gap: $gutter;
     background: $color-elem-background;
     border-radius: 50px;
@@ -17,44 +18,64 @@
       border-radius: 0;
       // gap: $gutter 0;
     }
+
+    @include tablet_hrz{
+      grid-template-areas: 'place place' 'spec week';
+    }
+    @include tablet{
+      grid-template-areas: 'place spec' 'week week';
+    }
     
+    @include phone{
+      grid-template-areas: 'place' 'spec' 'week';
+    }
   }
 
   &__item {
     padding: 1rem 2rem;
+
+    &_place{
+      grid-area: place;
+    }
+    &_spec{
+      grid-area: spec;
+    }
+    &_week{
+      grid-area: week;
+    }
     @include desktop_only{
       &:not(:first-of-type) {
-        border-left: 1px solid $color-line;
+        // border-left: 1px solid $color-line;
       }
     }
-    @include tablet_hrz {
-      background: $color-elem-background;
-      border-left: none;
-      &:first-of-type {
-        border-radius: 50px;
-        grid-column: 1/3;
-      }
-      &:nth-of-type(2){
-        border-radius:  50px 0 0 50px;
-      }
-    }
-    @include tablet{
-      &:first-of-type {
-        border-radius:  50px 0 0 50px;
-        grid-column: auto;
-      }
-      &:nth-of-type(2){
-        border-radius: 0 50px 50px 0;
-      }
+    // @include tablet_hrz {
+    //   background: $color-elem-background;
+    //   border-left: none;
+    //   &:first-of-type {
+    //     border-radius: 50px;
+    //     grid-column: 1/3;
+    //   }
+    //   &:nth-of-type(2){
+    //     border-radius:  50px 0 0 50px;
+    //   }
+    // }
+    // @include tablet{
+    //   &:first-of-type {
+    //     border-radius:  50px 0 0 50px;
+    //     grid-column: auto;
+    //   }
+    //   &:nth-of-type(2){
+    //     border-radius: 0 50px 50px 0;
+    //   }
       
-    }
-    @include phone{
-      &:nth-of-type(n){
-        grid-column: auto;
-        border-left: none;
-        border-radius:  50px;
-      }
-    }
+    // }
+    // @include phone{
+    //   &:nth-of-type(n){
+    //     grid-column: auto;
+    //     border-left: none;
+    //     border-radius:  50px;
+    //   }
+    // }
   }
 }
 

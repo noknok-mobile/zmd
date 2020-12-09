@@ -7,14 +7,16 @@
     <title>Шаблон страницы</title>
     <link rel="stylesheet" href="/style.css">
     <script defer src="/breakpoint.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 
 </head>
 
 <body>
     <div class="container">
-        <section class="page-block  doctor-card-list">
+        <section class="page-block doctor-card-list">
             <div class="filter__wrapper schedule-page-grid">
-                <div class="select filter__item">
+                <div class="select filter__item filter__item_place">
                     <label class="select__label" for="part">Филиал</label>
                     <select name="part" id="part" class="select__item">
                         <option value="" selected>Ул. московская, 40</option>
@@ -25,7 +27,7 @@
     
     
                 </div>
-                <div class="select filter__item">
+                <div class="select filter__item filter__item_spec">
                     <label class="select__label" for="branch">Направление</label>
                     <select name="part" id="branch" class="select__item">
                         <option value="" selected>акушерство и гинекология</option>
@@ -34,7 +36,7 @@
                     </select>
                     <span class="select__icon"></span>
                 </div>
-                <div class="calendar filter__item schedule-page-grid__calendar">
+                <div class="calendar filter__item filter__item_week schedule-page-grid__calendar">
                     <a class="calendar__nav calendar__nav_prev calendar__ button-arrow ">
                         <svg class="button-arrow_prev" width="27" height="27" viewBox="0 2 27 29" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
@@ -68,14 +70,13 @@
                 </div>
             </div>
             <div class="schedule__inner">
+                <article class="doctor-schedule schedule-page-grid">
 
-                <article class="doctor-card schedule-page-grid">
-                    
-                    <div class="doctor-card__info card">
+                    <div class="doctor-card doctor-schedule__info card schedule-page-grid__info">
                         <div class="card__img-wrapper doctor-card__img">
                             <img class="card__img" src="/img/lady.jpg" alt="">
                         </div>
-                        <div class="card__inner">
+                        <div class="card__inner doctor-schedule__info-inner">
                             <div class="doctor-card__description">
                                 <div class="card__title doctor-card__name">Ледовская Лариса Павловна
                                 </div>
@@ -83,13 +84,13 @@
                                 <span class="price">Приём от 2500 руб.</span>
                             </div>
                             
-                            <div class="card__footer">
+                            <div class="card__footer doctor-schedule__action">
                                 <a href="#" class="button card__button">Записаться на прием</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="doctor-card__more schedule-page-grid__calendar">
+                    <div class="doctor-schedule__calendar schedule-page-grid__calendar" data-simplebar>
                         <table class="schedule schedule_timetable schedule-grid">
                             <tr>
                                 <td class="schedule__cell"><a href="" class="schedule__time">16:00</a></td>

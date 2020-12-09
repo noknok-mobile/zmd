@@ -18,7 +18,7 @@
     }
   }
   @include tablet {
-    grid-template-columns: var(--container-width);
+    grid-template-columns: 1fr;
     column-gap: 0;
   }
 }

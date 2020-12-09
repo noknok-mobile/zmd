@@ -1,8 +1,7 @@
 .doctor-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: $gutter;
-  
 }
 .doctor-summary {
   display: grid;
@@ -49,61 +48,14 @@
 
 .doctor-card {
   @extend %card;
-  &__info {
-    max-height: 200px;
-    box-shadow: none;
-  }
-
   &__name {
     font-weight: 600;
   }
-  &__link{
+  &__link {
     @extend %color-link;
     @extend %tag;
   }
   &__spec {
     @include text(xxs);
   }
-  @include desktop_only {
-    &__info {
-      display: contents;
-    }
-  }
-  @include phone {
-    &__info {
-      grid-template-columns: repeat(2, 1fr);
-      gap: $gutter;
-    }
-  }
-
-  @media (min-width: 576px) and (max-width: 992px) {
-    &__info {
-      grid-column: 1/3;
-    }
-  }
-
-  &__description {
-  }
-  /*
-  & &__wrapper{
-    padding: $offset-small 0;
-  }
-  & &__wrapper {
-    justify-content: space-between;
-    @include phone{
-      grid-row-start: auto;
-      display: contents;
-    }
-  }
-  & &__footer {
-    align-self: end;
-    flex-direction: column;
-    align-items: flex-end;
-    @include phone{
-      grid-column: 1/3;
-    }
-  }*/
-}
-
-.doctor {
 }
