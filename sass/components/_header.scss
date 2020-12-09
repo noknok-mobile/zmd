@@ -33,7 +33,7 @@
   &__bottom {
     display: flex;
     justify-content: center;
-    border-top: 1px solid $color-line;
+    border-top: $line;
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.04);
 
     &-menu {

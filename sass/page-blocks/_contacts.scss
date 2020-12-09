@@ -1,10 +1,10 @@
 .contact {
   &__address {
-    border-bottom: 1px solid $color-line;
+    border-bottom: $line;
     padding: 1rem 0;
   }
   &__more {
-    border-bottom: 1px solid $color-line;
+    border-bottom: $line;
   }
 
   &__table {
@@ -45,9 +45,9 @@
       margin-right: -10px;
     }
     &__info {
-      border-top: 1px solid $color-line;
+      border-top: $line;
       padding: $offset-small 0;
-      border-bottom: 1px solid $color-line;
+      border-bottom: $line;
       & .mark {
         font-weight: bold;
       }

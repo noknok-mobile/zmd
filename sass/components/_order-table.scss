@@ -16,8 +16,8 @@
     padding: 1rem $gutter;  
     @include text(xs, 600);
     color: $color-text-muted;
-    border-top: 1px solid $color-line;
-    border-bottom: 1px solid $color-line;
+    border-top: $line;
+    border-bottom: $line;
     // padding: 20px 0;
     @include phone_hrz{
       display: none;

@@ -1,6 +1,6 @@
 .accordion {
   &__item{
-    border-bottom: 1px solid $color-line;
+    border-bottom: $line;
   }
   &__title {
     position: relative;

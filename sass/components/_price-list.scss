@@ -6,7 +6,7 @@
     padding: $offset-small 0;
     @extend %text;
     &:not(:last-of-type) {
-      border-bottom: 1px solid $color-line;
+      border-bottom: $line;
     }
 
     & td {
