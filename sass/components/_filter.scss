@@ -27,6 +27,7 @@
     // gap: $gutter;
     background: $color-elem-background;
     border-radius: 50px;
+    margin-bottom: 1.5rem;
 
     @include tablet_hrz {
       background: none;

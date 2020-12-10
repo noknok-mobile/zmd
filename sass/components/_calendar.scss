@@ -71,6 +71,17 @@
 
   &__calendar {
     padding: 1rem 2rem;
+    position: relative;
+    overflow-y: auto;
+    
+    &-resize{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: $offset-small 0;
+      background: white;
+    }
     // @include tablet_hrz {
     //   border-left: $line;
     //   border-radius: 0 50px 50px 0;

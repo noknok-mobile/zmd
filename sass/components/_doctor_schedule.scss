@@ -23,21 +23,26 @@
     // @include desktop_only {
     //     display: contents;
     // }
+    &_text-only {
+      grid-template-columns: 1fr;
+      grid-template-areas: "content ";
+      & > div{
+        padding-right: 0;
+      }
+    }
+
     @include tablet_hrz {
       grid-template-columns: 2fr 4fr;
     }
     @include tablet {
       grid-template-columns: 1fr 6fr;
     }
-    @include phone_hrz{
-        grid-template-columns: 1fr 3fr;
+    @include phone_hrz {
+      grid-template-columns: 1fr 3fr;
     }
     @include phone {
       grid-template-columns: 1fr 2fr;
       grid-template-areas: "image content" "button button";
-      &-inner {
-        display: contents;
-      }
     }
   }
   &__action {
@@ -49,10 +54,32 @@
   &__calendar {
     grid-area: calendar;
     max-height: 300px;
+    
     // overflow-y: auto;
 
     &_expanded {
       max-height: 100%;
+    }
+
+  }
+  &__description{
+    position: relative;
+  }
+  &__more-link{
+    $size: 33px;
+    position: relative;
+    padding-right: $size + 15px;
+    font-size: 14px;
+    line-height: 3em;
+    font-weight: normal;
+    color: $color-text-semi-muted;
+    background-color: $color-elem-background;
+    @include arrow(33px);
+    &::before, &::after{
+      right: 5px;
+    }
+    &::after{
+      
     }
   }
 }
