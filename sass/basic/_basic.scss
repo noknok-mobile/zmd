@@ -54,6 +54,7 @@ html {
   @extend %text;
   overflow-x: hidden;
   line-height: 1.8;
+  scroll-behavior: smooth;
 }
 
 .container {
