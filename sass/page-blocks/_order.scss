@@ -1,0 +1,129 @@
+.order-step {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: $gutter;
+
+  /*modifiers*/
+
+  /*если блок пройден*/
+  &_complete {
+    animation: fadeIn 0.5s ease-in;
+  }
+  &_complete &__content,
+  &_not-visited &__content {
+    display: none;
+  }
+  &_complete &__next,
+  &_not-visited &__next {
+    display: none;
+  }
+  &_complete &__content_fake {
+    display: block;
+  }
+  &_not-visited &__content_fake {
+    display: none;
+  }
+  &_complete &__edit {
+    display: block;
+  }
+  &_not-visited &__edit {
+    display: none;
+  }
+  &_complete &__title {
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.75' y='0.75' width='24.5' height='24.5' rx='12.25' stroke='%2373C59D' stroke-width='1.5'/%3E%3Cpath d='M7 12.6984L12.1395 17.8379L19.6977 8.46582' stroke='%2373C59D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      display: block;
+      @extend %absolute-centered;
+      left: -40px;
+      //   transform: translateX(-100%);
+    }
+  }
+  /*elements*/
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    @include text(m, 600);
+    color: $color-text-semi-muted;
+    position: relative;
+  }
+  &__edit {
+    @extend %color-link;
+    display: none;
+  }
+  &__content {
+    display: grid;
+    gap: $gutter;
+    &_payment {
+      grid-template-columns: repeat(2, 1fr);
+      @include phone_hrz {
+        grid-template-columns: 1fr;
+      }
+    }
+    /*стили для свернутого вида*/
+    &_fake {
+      display: none;
+      @extend %tag;
+      color: $color-accent;
+    }
+  }
+  &__next {
+    @extend %color-link;
+    align-self: end;
+  }
+  &__more {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.order-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: $offset-middle;
+  &__confirm {
+    justify-self: start;
+    width: clamp(250px, 50%, 400px);
+  }
+}
+
+.basket {
+  display: grid;
+  grid-template-columns: 5fr 3fr 1fr;
+  gap: $gutter;
+  align-items: start;
+  line-height: 1;
+
+  @include phone_hrz {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    align-items: baseline;
+  }
+  &__info {
+    align-self: start;
+  }
+
+  &__card {
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas: "image content";
+    align-items: start;
+    box-shadow: none;
+    &__description {
+      padding: 0;
+    }
+  }
+  & tbody,
+  thead,
+  tr {
+    display: contents;
+  }
+  & thead {
+    @include text(xxs);
+  }
+  &__date,
+  &__price {
+    @extend %tag;
+    line-height: 34px;
+  }
+}

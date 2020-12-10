@@ -1,0 +1,21 @@
+.control-payment {
+    &__label {
+      padding: 1rem 2rem;
+      display: block;
+      @extend %tag;
+      // display: flex;
+      align-content: center;
+    }
+    &__icon{
+      margin-right: $offset-small;
+      vertical-align: middle;
+    }
+    &__name{
+      vertical-align: middle;
+      // color: $color-main;
+    }
+    &__input:checked + &__label{
+      color: $color-accent;
+      @extend %card;
+    }
+  }

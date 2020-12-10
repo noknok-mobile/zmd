@@ -11,96 +11,176 @@
 <body>
     <div class="container page-grid">
         <main class="order-wrapper page-block">
-            <form action="" class="order__form">
+            <form action="" class="order-form">
                 <div class="order-step">
                     <div class="order-step__header">
-                        <h4 class="tag">Пациент</h4>
-                        <a href="#" class="order-step__edit">Изменить</a>
+                        <h4 class="order-step__title">Пациент</h4>
+                        <a href="#" class="order-step__edit js-edit">Изменить</a>
                     </div>
-
                     <div class="order-step__content">
                         <div class="input">
-                            <label for="name" class="tag">Фамилия Имя Отчество*</label>
-                            <input id="name" name="name" type="text" class="input__value" placeholder="иванов иван иванович">
+                            <!-- <label for="name" class="tag">Фамилия Имя Отчество*</label> -->
+                            <input id="name" name="name" type="text" class="input__value"
+                                placeholder="иванов иван иванович">
                         </div>
                         <div class="input">
-                            <input id="name" name="email" type="text" class="input__value" placeholder="test@kfjgdfg.et">
+                            <input id="name" name="email" type="text" class="input__value"
+                                placeholder="test@kfjgdfg.et">
                         </div>
                         <div class="input account__input ">
-                            <input id="name" name="phone" type="text" class="input__value" placeholder="+7 908 123 23 23">
+                            <input id="name" name="phone" type="text" class="input__value"
+                                placeholder="+7 908 123 23 23">
                         </div>
                     </div>
+                    <div class="order-step__content_fake">
+                        <div>Иванов иван Иванович</div>
+                        <div>ivanov_ii1971@mail.ru</div>
+                        <div>8 (928) 132 56 93</div>
+                    </div>
                     <div class="order-step__more">
-                        <a href="" class="order-step__next">Далее</a>
+                        <a href="" class="order-step__next js-next">Далее</a>
                     </div>
                 </div>
 
-                <div class="order-step">
+                <div class="order-step order-step_not-visited">
                     <div class="order-step__header">
-                        <h4 class="tag">Способ оплаты</h4>
-                        <a href="#" class="order-step__edit">Изменить</a>
+                        <h4 class="order-step__title">Способ оплаты</h4>
+                        <a href="#" class="order-step__edit js-edit">Изменить</a>
                     </div>
 
                     <div class="order-step__content order-step__content_payment">
-                        <label class="control control_payment control_payment-card tile">
-                            <input class="control__input" type="radio" name="payment"><span class="control__label">Банковской картой</span>
-                        </label>
-                        <label class="control control_payment  control_payment-cache tile">
-                            <input class="control__input" type="radio" name="payment"><span class="control__label">Наличными</span>
-                        </label>
+                        <div class="control-payment">
+                            <input class="control-payment__input control__input" type="radio" id="card" name="payment">
+                            <label class="control-payment__label link tile" for="card">
+                                <svg class="control-payment__icon " height="24" viewBox="0 0 33 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M30.8974 22H2.57505C1.70556 22 1 21.3054 1 20.4494V2.55062C1 1.69462 1.70556 1 2.57505 1H30.8974C31.7669 1 32.4724 1.69462 32.4724 2.55062V20.4494C32.4796 21.3054 31.774 22 30.8974 22Z"
+                                        stroke="currentColor" stroke-miterlimit="10" />
+                                    <path
+                                        d="M16.1876 5.39981H3.67992C3.37346 5.39981 3.12402 5.15424 3.12402 4.85254V3.46329C3.12402 3.16159 3.37346 2.91602 3.67992 2.91602H16.1876C16.4941 2.91602 16.7436 3.16159 16.7436 3.46329V4.85254C16.7364 5.15424 16.487 5.39981 16.1876 5.39981Z"
+                                        fill="currentColor" />
+                                    <path
+                                        d="M24.6043 19.5236C25.7772 19.5236 26.7281 18.5874 26.7281 17.4327C26.7281 16.2779 25.7772 15.3418 24.6043 15.3418C23.4313 15.3418 22.4805 16.2779 22.4805 17.4327C22.4805 18.5874 23.4313 19.5236 24.6043 19.5236Z"
+                                        fill="currentColor" />
+                                    <path
+                                        d="M27.4058 15.3418C27.1421 15.3418 26.8856 15.3979 26.6504 15.4821C27.1493 15.9873 27.4629 16.6749 27.4629 17.4327C27.4629 18.1904 27.1493 18.878 26.6504 19.3832C26.8856 19.4744 27.135 19.5236 27.4058 19.5236C28.5818 19.5236 29.5297 18.5904 29.5297 17.4327C29.5297 16.282 28.5747 15.3418 27.4058 15.3418Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="control-payment__name">
+                                    Банковской картой
+                                </span>
+                            </label>
+                        </div>
+                        <div class="control-payment">
+                            <input class="control-payment__input control__input" type="radio" id="cache" name="payment">
+                            <label class="control-payment__label link tile" for="cache">
+                                <svg class="control-payment__icon " height="24" viewBox="0 0 33 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M30.8974 22H2.57505C1.70556 22 1 21.3054 1 20.4494V2.55062C1 1.69462 1.70556 1 2.57505 1H30.8974C31.7669 1 32.4724 1.69462 32.4724 2.55062V20.4494C32.4796 21.3054 31.774 22 30.8974 22Z"
+                                        stroke="currentColor" stroke-miterlimit="10" />
+                                    <path
+                                        d="M16.1876 5.39981H3.67992C3.37346 5.39981 3.12402 5.15424 3.12402 4.85254V3.46329C3.12402 3.16159 3.37346 2.91602 3.67992 2.91602H16.1876C16.4941 2.91602 16.7436 3.16159 16.7436 3.46329V4.85254C16.7364 5.15424 16.487 5.39981 16.1876 5.39981Z"
+                                        fill="currentColor" />
+                                    <path
+                                        d="M24.6043 19.5236C25.7772 19.5236 26.7281 18.5874 26.7281 17.4327C26.7281 16.2779 25.7772 15.3418 24.6043 15.3418C23.4313 15.3418 22.4805 16.2779 22.4805 17.4327C22.4805 18.5874 23.4313 19.5236 24.6043 19.5236Z"
+                                        fill="currentColor" />
+                                    <path
+                                        d="M27.4058 15.3418C27.1421 15.3418 26.8856 15.3979 26.6504 15.4821C27.1493 15.9873 27.4629 16.6749 27.4629 17.4327C27.4629 18.1904 27.1493 18.878 26.6504 19.3832C26.8856 19.4744 27.135 19.5236 27.4058 19.5236C28.5818 19.5236 29.5297 18.5904 29.5297 17.4327C29.5297 16.282 28.5747 15.3418 27.4058 15.3418Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="control-payment__name">
+                                    наличными
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="order-step__content_fake">
+                        <div>банковской Картой</div>
                     </div>
                     <div class="order-step__more">
-                        <a href="" class="order-step__next">Далее</a>
+                        <a href="#" class="order-step__next js-next">Далее</a>
                     </div>
                 </div>
 
-                <div class="order-step">
+                <div class="order-step order-step_not-visited">
                     <div class="order-step__header">
-                        <h4 class="tag">Запись к врачу</h4>
+                        <h4 class="order-step__title">Запись к врачу</h4>
                         <a href="#" class="order-step__edit">Изменить</a>
                     </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>Специалист</td>
-                                <td>Дата и время приема</td>
-                                <td>Стоимость</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="card-grid">
-                                        <div class="card__img-wrapper">
-                                            <img class="card__img" src="/img/lady.jpg" alt="">
-                                        </div>
-                                        <div class="card__inner">
-                                            <div class="card__description">
-                                                <div class="card__title">Ледовская Лариса Павловна
+                    <div class="order-step__content">
+                        <table class="basket">
+                            <thead>
+                                <tr>
+                                    <td>Специалист</td>
+                                    <td>Дата и время приема</td>
+                                    <td>Стоимость</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="basket__info">
+                                        <div class="card doctor-card basket__card">
+                                            <div class="card__img-wrapper">
+                                                <img class="card__img" src="/img/lady.jpg" alt="">
+                                            </div>
+
+                                            <div class="card__description basket-card__description">
+                                                <div class="card__title doctor-card__name">Ледовская Лариса Павловна
                                                 </div>
                                                 <div class="tag">Акушер-гинеколог</div>
                                                 <div class="tag">Ул. московская, 40</div>
-                                               
+
                                             </div>
-                                    
-                                        
                                         </div>
-                                    </div>
-                                </td>
-                                <td>16 октября , 12:00</td>
-                                <td>2500 Р</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
+                                    </td>
+                                    <td class="basket__date">16 октября, 12:00</td>
+                                    <td class="basket__price price">2500 Р</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
-                <button class="button">Записаться на прием</button>
-                <label class="control">
-                    <input class="control__input" type="checkbox" name=""><span class="control__label">Я согласен с условиями обработки персональных данных</span>
-                </label>
+                <div class="order-step order-form__confirm">
+                    <button class="button">Записаться на прием</button>
+                    <label class="control">
+                        <input class="control__input" type="checkbox" name="privacy">
+                        <span class="control__label">
+                            <span class="control__label_agreement">
+                                Я согласен с<a href="/privacy" class="color-link"> условиями обработки
+                                    персональных данных</a>
+                            </span>
+                        </span>
+                    </label>
+                </div>
             </form>
         </main>
     </div>
+    <script>
+        function nextStep(link) {
+            link.closest('.order-step').classList.add('order-step_complete');
+            link.closest('.order-step').nextElementSibling.classList.remove('order-step_not-visited');
+        }
+        function editStep(link) {
+            link.closest('.order-step').classList.remove('order-step_complete');
+        }
+        for (let elem of document.querySelectorAll('.js-next')) {
+            elem.addEventListener('click', (e) => {
+                e.preventDefault();
+                nextStep(e.target)
+            });
+        }
+        for(let elem of document.querySelectorAll('.js-edit')){
+            elem.addEventListener('click', (e) => {
+                e.preventDefault();
+                editStep(e.target)
+            });
+        }
+
+    </script>
 
 </body>
 

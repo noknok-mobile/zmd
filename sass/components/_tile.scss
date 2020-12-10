@@ -1,0 +1,8 @@
+.tile {
+    background: $color-elem-background;
+    padding: 2rem;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      @extend %card;
+    }
+  }

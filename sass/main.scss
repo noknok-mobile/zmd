@@ -12,6 +12,7 @@
 './components/link',
 './components/button',
 './components/card',
+'./components/tile',
 './components/breadcrumb',
 './components/banner',
 './components/document',
@@ -40,7 +41,8 @@
 './page-blocks/page',
 './components/doctor',
 './components/news',
-'./components/doctor_schedule';
+'./components/doctor_schedule',
+'./components/payment';
 
 @import './page-blocks/overview',
 './page-blocks/docs',
@@ -48,4 +50,6 @@
 './page-blocks/licences',
 './page-blocks/gallery',
 './page-blocks/contacts',
-'./page-blocks/account';
+'./page-blocks/account',
+'./page-blocks/order',
+'./page-blocks/result';
