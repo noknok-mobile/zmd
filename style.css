@@ -317,6 +317,20 @@ ul:not([class]) li {
   background: #852d2e;
 }
 
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+.link:visited {
+  color: #5b423b;
+}
+.link:hover {
+  color: #852d2e;
+}
+.link:active {
+  color: #c6aa80;
+}
+
 .button {
   display: inline-block;
   appearance: none;
@@ -1181,20 +1195,6 @@ ul:not([class]) li {
 }
 
 /*отладочные стили*/
-.link {
-  text-decoration: none;
-  color: #000000;
-}
-.link:visited {
-  color: #5b423b;
-}
-.link:hover {
-  color: #852d2e;
-}
-.link:active {
-  color: #c6aa80;
-}
-
 .branch-list_table {
   display: grid;
   grid-gap: var(--gutter);
