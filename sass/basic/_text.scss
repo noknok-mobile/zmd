@@ -24,7 +24,7 @@
 }
 
 .price {
-  @include text(m, 600);
+  @include text(inherit, 600);
   white-space: nowrap;
 }
 

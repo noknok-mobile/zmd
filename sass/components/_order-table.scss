@@ -1,93 +1,100 @@
-%table-row{
+%table-row {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
   grid-gap: $gutter;
 }
-.table { 
+.table {
   &__row {
     @extend %table-row;
     align-items: center;
-    @include phone_hrz{
+    padding: 1rem $offset-small;
+    @include phone_hrz {
       grid-template-columns: 1fr;
     }
-    padding: $offset-small 0;
+    // padding: $offset-small 0;
   }
   &__head {
-    padding: 1rem $gutter;  
-    @include text(xs, 600);
+    // padding: 1rem $gutter;
+    @include text(xxs);
     color: $color-text-muted;
     border-top: $line;
-    border-bottom: $line;
-    // padding: 20px 0;
-    @include phone_hrz{
+    @include phone_hrz {
       display: none;
     }
   }
 }
 
 .order {
-  padding: 0 30px;
-  &__head{
-    & > :first-child{
-      @include text(inherit, 600);
-      color: $color-accent;
-    }
-    &::before, &::after{
+  &__head {
+    @include text(xxs);
+    // & > :first-child {
+    //   @include text(inherit, 600);
+    //   color: $color-accent;
+    // }
+
+    &::before,
+    &::after {
       right: 15px;
-      @include phone_hrz{
+      @include phone_hrz {
         top: 30px;
       }
     }
-    
+  }
+  &__date{
+    @include text(inherit, 600);
+    color: $color-accent;
   }
   &:nth-of-type(2n + 1) {
     background: $color-elem-background;
   }
+
   &__more {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include phone_hrz{
+    @include text(xs);
+    @include phone_hrz {
       flex-direction: column;
       @include flex-gap(30px, 30px);
       align-items: stretch;
     }
   }
   &__button {
-    &_cancel {
-      background: transparent;
-      color: $color-accent;
-      padding: 0;
-      &:hover{
-        background: transparent;
-      }
+    @include text(xxs, 400);
+    line-height: 3em;
+    &_cancel{
+      color: $color-text;
     }
+    
   }
   &__status {
-    display: inline-block;
-    padding: 0.5rem 0;
+    line-height: 1.5rem;
+    padding: 8px;
     text-align: center;
-    @include text(xxs, 600, true);
-    font-size: 13px;
-    background: #FFE4BC;
-    width: 100px;
-  }
-  &__actions{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    @include flex-gap(20px);
-    @include phone_hrz{
-      justify-content: space-between;
+    font-size: 12px;
+    border-radius: 3px;
+    color: #c3811b;
+    background-color: #ffedd2;
+    &_unpaid {
+      color: #ba5751;
+      background-color: #fad5d3;
+    }
+    &_paid {
+      color: #536f62;
+      background-color: #bee3d2;
     }
   }
-  &_paid &__status {
-    background: #bee3d2;
-  }
-  &_unpaid &__status {
-    background: #ffb6b2;
-  }
-  &__price {
-    font-weight: 600;
+  &__actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, auto);
+    grid-auto-flow: column;
+    grid-auto-flow: row;
+    gap: 20px;
+    
+    
+    @include phone_hrz {
+      grid-template-columns: auto;
+      justify-content: start;
+    }
   }
 }
