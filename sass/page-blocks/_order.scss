@@ -70,23 +70,13 @@
   }
   &__next {
     @extend %color-link;
-    align-self: end;
+    // align-self: end;
   }
   &__more {
     display: flex;
     flex-direction: column;
   }
 }
-.order-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: $offset-middle;
-  &__confirm {
-    justify-self: start;
-    width: clamp(250px, 50%, 400px);
-  }
-}
-
 .basket {
   display: grid;
   grid-template-columns: 5fr 3fr 1fr;

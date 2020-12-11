@@ -1,0 +1,9 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: $offset-middle;
+    &__footer {
+      justify-self: start;
+      width: clamp(250px, 50%, 400px);
+    }
+  }
