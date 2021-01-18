@@ -1,0 +1,16 @@
+.header-info {
+  &_mobile-top{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__headline {
+    display: block;
+    @include text(inherit, 800);
+  }
+  &__content {
+    display: block;
+  }
+
+}
+

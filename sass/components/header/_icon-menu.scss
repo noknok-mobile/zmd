@@ -1,0 +1,30 @@
+.icon-menu {
+  display: none;
+  @include flex-gap($offset-middle);
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    grid-area: mobile;
+  }
+
+  @include phone{
+      display: contents;
+      @include flex-gap(unset);
+  }
+
+  &__toggle {
+    &_close {
+      display: none;
+    }
+  }
+
+  .js-menu-toggler_active {
+    .icon-menu__toggle_open {
+      display: none;
+    }
+    .icon-menu__toggle_close {
+      display: block;
+    }
+  }
+}

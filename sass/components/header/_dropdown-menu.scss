@@ -1,0 +1,29 @@
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: $offset-middle;
+  padding-top: 170px;
+  background-color: white;
+  text-align: center;
+  z-index: 5;
+  @include phone_hrz{
+
+  }
+  &_visible {
+    display: block;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include flex-gap(0, $offset-middle);
+  }
+}
+/*для body*/
+.no-scrollable {
+  overflow: hidden;
+  max-height: 100vh;
+}

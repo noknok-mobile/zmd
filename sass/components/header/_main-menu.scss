@@ -2,16 +2,11 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  @include phone_hrz{
-    display: none;
-    transition: 0.3s ease-in;
-    transform: translateX(-100vw);
+
+  &_mobile{
+    display: block;
     text-align: center;
-    padding: $offset-middle;
-    &_opened{
-      display: block;
-      transform: translateX(0);
-    }
+    list-style-type: none;
   }
   
   &__item {
