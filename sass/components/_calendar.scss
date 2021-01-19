@@ -1,6 +1,7 @@
 .schedule {
   // border-spacing: $offset-middle $offset-small;
   // text-align: center;
+
   &-grid {
     // padding: 0 $offset-middle;
     flex: 0 0 auto;
@@ -39,14 +40,16 @@
   }
   &__inner {
     // height: 200px;
-    // overflow-y: scroll;
+    // overflow: hidden;
     transition: height 0.5s ease-in;
     &_expanded {
       height: auto;
-      overflow-y: visible;
+      // overflow-y: visible;
     }
   }
-
+  &__footer{
+    padding: 1rem 0;
+  }
   &-wrapper {
     border-radius: 38px;
     @include phone {
@@ -56,6 +59,7 @@
   &-header {
     background-color: $color-elem-background;
   }
+  
 }
 .schedule-page-grid {
   display: grid;
@@ -72,15 +76,14 @@
   &__calendar {
     padding: 1rem 2rem;
     position: relative;
+    overflow-x: hidden;
     overflow-y: auto;
-    
-    &-resize{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: $offset-small 0;
-      background: white;
+    max-height: 300px;
+    &_expanded{
+      max-height: 100%;
+    }
+    .simplebar-track.simplebar-vertical{
+      right: 10px;
     }
     // @include tablet_hrz {
     //   border-left: $line;
@@ -97,6 +100,7 @@
     //   grid-column: auto;
     // }
   }
+  
 }
 
 .calendar {
@@ -124,5 +128,5 @@
       right: $offset;
     }
   }
+  
 }
-

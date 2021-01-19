@@ -1,4 +1,5 @@
 .doctor-schedule {
+  // border: $line; //debug
   @extend %card;
   @include desktop_only {
     grid-template-areas: "info info calendar";
@@ -53,8 +54,12 @@
   }
   &__calendar {
     grid-area: calendar;
-    max-height: 300px;
-    
+    text-align: center;
+    // max-height: 300px;
+    border-left: $line;
+    @include tablet_hrz{
+      border-left: none;
+    }
     // overflow-y: auto;
 
     &_expanded {
@@ -78,8 +83,17 @@
     &::before, &::after{
       right: 5px;
     }
-    &::after{
-      
+    &:hover{
+      background: transparent;
+      color: $color-accent;
+    }
+    &_transparent{
+      background-color: transparent;
+    }
+    &[data-expand="true"]{
+      &:after{
+        transform: translateY(-50%) rotateZ(-180deg);
+      }
     }
   }
 }
