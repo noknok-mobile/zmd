@@ -7,22 +7,11 @@ mixin overview(props)
             .overview__links
                 each button in props.buttons
                     a.button.button_light(href="#")= button
-        .overview__slider-nav.slider-navigation
-            .button-arrow.button-arrow_prev 
-                svg #[use(xlink:href="#arrow")]
-            .button-arrow.button-arrow_next 
-                svg #[use(xlink:href="#arrow")]
+            .overview__slider-nav.slider-navigation
+                .button-arrow.button-arrow_prev 
+                    svg #[use(xlink:href="#arrow")]
+                .button-arrow.button-arrow_next 
+                    svg #[use(xlink:href="#arrow")]
         .slider-container(class=attributes.class)
             .swiper-wrapper.swiper-no-swiping
                 block
-//- each element in elements 
-//-     +#{elemName}(element)   
-
-//-title
-//-desc
-//-кнопки
-//-класс обертки
-//- из каких компонентов слайдер
-//- данные для слайдера
-    //- как заинклудить блок с несколькими слотами для блоков?1
-        
