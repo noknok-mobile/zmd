@@ -1,0 +1,9 @@
+.mobile-menu{
+    &-wrapper{
+        border-bottom: $line;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+}

@@ -1,0 +1,6 @@
+mixin branch(title, img)
+    .branch 
+        .branch__img-wrapper
+            img.branch__img(src=img, alt=title width="35px" height="35px")
+        .branch__name= title
+        a.branch__link(href="#") Подробнее

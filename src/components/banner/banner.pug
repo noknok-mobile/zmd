@@ -1,0 +1,9 @@
+mixin banner(src, title, desc, buttonText)
+    .banner 
+        .banner__img-wrapper
+            img.banner__img(src=src, alt= desc)
+        .banner__inner.container
+            .banner__content
+                h2.banner__headline.title !{title}
+                .banner__description !{desc} 
+                +button(buttonText, '#', 'banner__button')

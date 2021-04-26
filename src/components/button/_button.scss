@@ -1,0 +1,44 @@
+.button {
+  $height: 3rem;
+  display: inline-block;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 100px;
+  background: $color-main;
+  transition: background-color 0.2s ease-out;
+  padding: 0 2em;
+  @extend %tag;
+  line-height: $height;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  flex-shrink: 0;
+  font-family: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-contrast;
+  }
+
+  &_light {
+    background: white;
+    color: $color-accent;
+    box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      color: white;
+      background: $color-main;
+    }
+
+    &:active {
+      background: $color-accent;
+    }
+  }
+
+  &_large {
+    line-height: 3.5rem;
+  }
+
+}

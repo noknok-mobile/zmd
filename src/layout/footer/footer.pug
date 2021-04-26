@@ -1,0 +1,37 @@
+- 
+    var footerLinks 
+    = [['Лечение','Профилактика','Сдать анализы','Комплексное лечение','Комплексное обследование'],
+    ['Кардиология','Проктология','Педиатрия','Урология','Хирургия'],
+    ['Кардиология','Проктология','Педиатрия','Урология','Хирургия']]
+
+footer.footer
+    .container.footer__inner 
+        .footer__copyright
+            .logo__wrapper.footer__logo
+                a(href="/")
+                    img.logo(src="/img/logo.png", alt=sitename) 
+            a.footer__link(href="/privacy") 
+                | Политика обработки персональных данных и пользовательское соглашение
+        .footer__nav
+            each footerSection in footerLinks 
+                .footer__nav-section
+                    each link in footerSection 
+                        a.footer__link.link.footer__nav-item(href="#")= link
+        .footer__info 
+            span.footer__info-item.footer__info-item_address
+                | #{address.city}
+                br
+                | #{address.address}
+                
+            span.footer__info-item.footer__info-item_contacts
+                a.footer__info-item.footer__link(href='tel:'+phone)= phone
+                span.footer__info-item= footerSchedule
+            .footer__promo 
+                .footer__link.footer-promo__text 
+                    | Скачайте приложение на телефон
+                .footer-promo__app-icons
+                    a(href="#")
+                        img(src="/img/app_store.png", alt="AppStore")
+                    a(href="#")
+                        img(src="/img/app_store.png", alt="GooglePlay")
+

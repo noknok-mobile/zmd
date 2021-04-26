@@ -1,0 +1,37 @@
+
+- const sitename = 'Зимамед'
+//- - let title = 'Главная'
+- const phone = '8 (8642) 233-03-03'
+- let address = { city: 'г. Краснодар', address:' ул. Московская, 40'}
+- let scheduleInfo = 'Пн. — Сб. с&nbsp;9:00 до 21:00'
+- let footerSchedule = 'пн-сб 8:00 — 23:00'
+//- - let path = ['Главная','Крошка1','Второстепенная']
+//- - let mainpage = false
+
+
+include /components/button/button 
+include /components/breadcrumb/breadcrumb
+include /components/arrow/arrow.svg
+
+block vars
+    - var cost = 20
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= title 
+        link(rel="stylesheet", href="main.css")
+    body 
+        include header/header 
+        include page-header/page-header
+        if !mainpage
+            +page-header('stethoscope')
+            .container
+                block content 
+        else 
+            block content
+        include footer/footer
+        block scripts

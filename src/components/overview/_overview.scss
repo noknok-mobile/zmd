@@ -1,0 +1,24 @@
+.overview {
+  &__desc{
+    margin-bottom: $offset-small;
+  }
+  &__links {
+    display: flex;
+    @include flex-gap($gutter);
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin: $offset-middle 0;
+  }
+  &__slider-nav{
+    & .button-arrow{
+      height: 60px;
+      width: 60px;
+      & svg{
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}

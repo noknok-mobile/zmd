@@ -1,0 +1,9 @@
+mixin intro(isAnimated, video, poster, button)
+    .intro.container(class=isAnimated? 'intro_animated':'')
+        .intro__video-wrapper 
+            video.intro__bckg(src=video, poster=poster, autoplay, loop, muted, playsinline)
+        .intro__inner.container 
+            .intro__content 
+                block 
+                    
+            a.intro__link.button(href="#")= button 

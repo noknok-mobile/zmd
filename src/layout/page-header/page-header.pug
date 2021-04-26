@@ -1,0 +1,6 @@
+mixin page-header(bckg)
+    .page-header(class="page-header_bskg-"+bckg)
+        .container
+            .page-header__nav
+                +breadcrumbs(path)
+            h1.page-header__title.title= title

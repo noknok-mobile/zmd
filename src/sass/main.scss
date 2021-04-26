@@ -1,0 +1,15 @@
+@import './defines/media_queries';
+@import './defines/grid';
+@import './defines/fonts';
+@import './defines/colors';
+
+@import './basic/normalize',
+'./basic/tools',
+'./basic/basic',
+'./basic/text';
+
+@import '../../src/components/*';
+@import '../../src/layout/*' 
+
+
+//как заставить его компилиться первым?
