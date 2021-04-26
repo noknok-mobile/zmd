@@ -1,6 +1,15 @@
 extends /layout/template
 
 block vars 
-    - const title = 'Услуги'
-    - const path = ['Главная', 'Услуги']
+    - const title = 'Диагностика'
+    - const path = ['Главная', title]
+    - const branches = [{text:'Хирургический стационар', img: '/img/hirurg.svg'}, {text:'Функциональная диагностика', img: ''},{text:'Функциональная диагностика', img:''}]
+
+block content 
+    .container
+        main.page-block
+            .branch-list.branch-list_table
+                each branch in branches 
+                    +branch(branch.text)(type='tile', src=branch.img, class=['tile', 'branch_tile'])
+
 

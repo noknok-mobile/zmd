@@ -1,6 +1,7 @@
-mixin branch(title, img)
-    .branch 
+mixin branch(title)
+    .branch(class=attributes.class)
         .branch__img-wrapper
-            img.branch__img(src=img, alt=title width="35px" height="35px")
-        .branch__name= title
-        a.branch__link(href="#") Подробнее
+            img.branch__img(src=attributes.src, alt=title width="35px" height="35px")
+        a.branch__name(href="#")= title
+        if attributes.type != 'tile'
+            a.branch__link(href="#") Подробнее

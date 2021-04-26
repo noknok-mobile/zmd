@@ -22,7 +22,7 @@
   display: flex;
   transition: 0.2s ease-in-out;
 
-  &-list_table & {
+  &_tile{
     align-items: center;
     gap: $offset-small;
     background: $color-elem-background;
@@ -41,13 +41,13 @@
       filter: grayscale(0);
     }
 
-    &__name {
+    .branch__name {
       @include text(m, 600);
       @include flex-gap(auto, $offset-small);
     }
   }
 
-  &-list_carousel & {
+  &_carousel{
     @extend %card;
     flex-direction: column;
     align-items: start;
@@ -57,18 +57,18 @@
     @include tablet_hrz {
       scroll-snap-align: start;
     }
-
-    &__name {
+    
+    .branch__name {
       margin-bottom: $offset-small;
     }
 
-    &__img {
+    .branch__img {
       &-wrapper {
         flex: 1 1 50%;
       }
     }
 
-    &__link {
+    .branch__link {
       @include text(xs);
       @extend %color-link;
       text-decoration: none;
