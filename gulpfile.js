@@ -1,9 +1,9 @@
 const {dest, src, series, parallel, watch} = require('gulp');
 const pug = require('gulp-pug');
 const browserSync = require("browser-sync").create();
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const concat = require('gulp-concat');
-sass.compiler = require('node-sass');
+// sass.compiler = require('node-sass');
 const bulkSass = require('gulp-sass-bulk-import');
 
 function compileHtml(){
