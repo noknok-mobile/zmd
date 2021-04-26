@@ -11,6 +11,7 @@ block content
             +overview(branchParams)(class="branch-list__wrapper")
                 each branch in branches 
                     +branch(branch.text)(src=branch.img, class="branch_carousel")
+
     .page-block
         +intro({video: '/walk.mp4', poster: '/walk.mp4', button:'контакты медцентров'})(class='intro_animated') 
             +about('медцентры')

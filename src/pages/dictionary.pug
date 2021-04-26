@@ -16,8 +16,9 @@ block content
 block scripts 
     script 
         include /components/filter/filter.js
-        | let sectionToggle = new Switch();
-        | for (let section of document.querySelectorAll('.section')) new Filter(section);
+        .
+            let sectionToggle = new Switch();
+            for (let section of document.querySelectorAll('.section')) new Filter(section);
                  
 block vars
     - const title = 'Направления лечения'
