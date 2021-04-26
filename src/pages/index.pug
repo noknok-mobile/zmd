@@ -1,16 +1,5 @@
 extends /layout/template 
 
-
-append vars 
-    - mainpage = true;
-    - const title = 'Главная'
-    - const banners = [{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться'}]
-    - const branchParams = {title:'Направления', desc:"В центре производится<br><span class='mark'>весь перечень</span> лабораторных и диагностических исследований", buttons:['Bсе направления','все специалисты']}
-    - const branches = [{text:'Хирургический стационар', img: '/img/hirurg.svg'}]
-    - const reviewParams = {title:'отзывы', desc:"Отзывы наших клиентов&nbsp;— <span class='mark'>лучшее&nbsp;подтверждение</span> нашего прoфессионализма", buttons:['Все отзывы']};
-    - const reviews = [{text: 'Text', author: 'Джеки'},{text: 'Супер ваще очень круто неверояьно!', author: 'Джеки'}]
-
-
 block content
     .big-carousel 
         .big-carousel__inner
@@ -40,7 +29,15 @@ block content
                 each review in reviews 
                     +review(review.text, review.author)
 
-
 block scripts
     script
         include index.js
+
+block vars 
+    - const title = 'Главная'
+    - const mainpage = true;
+    - const banners = [{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться'}]
+    - const branchParams = {title:'Направления', desc:"В центре производится<br><span class='mark'>весь перечень</span> лабораторных и диагностических исследований", buttons:['Bсе направления','все специалисты']}
+    - const branches = [{text:'Хирургический стационар', img: '/img/hirurg.svg'}]
+    - const reviewParams = {title:'отзывы', desc:"Отзывы наших клиентов&nbsp;— <span class='mark'>лучшее&nbsp;подтверждение</span> нашего прoфессионализма", buttons:['Все отзывы']};
+    - const reviews = [{text: 'Text', author: 'Джеки'},{text: 'Супер ваще очень круто неверояьно!', author: 'Джеки'}]

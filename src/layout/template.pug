@@ -1,19 +1,15 @@
+include mixins
+include /components/arrow/arrow.svg
 
 - const sitename = 'Зимамед'
-//- - let title = 'Главная'
 - const phone = '8 (8642) 233-03-03'
 - let address = { city: 'г. Краснодар', address:' ул. Московская, 40'}
 - let scheduleInfo = 'Пн. — Сб. с&nbsp;9:00 до 21:00'
 - let footerSchedule = 'пн-сб 8:00 — 23:00'
-//- - let path = ['Главная','Крошка1','Второстепенная']
-//- - let mainpage = false
-
-
-include mixins
-include /components/arrow/arrow.svg
 
 block vars
-    - var cost = 20
+    - const title = 'Страница'
+    - const pageHeaderImage;
 
 doctype html
 html(lang="ru")
@@ -27,7 +23,7 @@ html(lang="ru")
         include header/header 
         include page-header/page-header
         if !mainpage
-            +page-header('stethoscope')
+            +page-header(pageHeaderImage)
             .container
                 block content 
         else 
