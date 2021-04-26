@@ -1,0 +1,10 @@
+include /components/dictionary/dictionary__item
+
+.dictionary
+    .dictionary-filter
+        a.dictionary-filter__item.js-filter.js-filter_active(data-filter="") A-Я
+        each value, key in filterSection  
+            a.dictionary-filter__item.js-filter(data-filter=key)= key
+
+    each value, key in filterSection 
+            +dictionary__item(key, value)

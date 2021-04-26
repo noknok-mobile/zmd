@@ -1,0 +1,45 @@
+/*нужно только для js*/
+.filter-item {
+  &_hidden {
+    display: none;
+  }
+}
+
+@mixin filter_group {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    height: 100%;
+    width: $gutter;
+    background-color: $color-elem-background;
+    border-right: $line;
+  }
+}
+
+/*горизонтальный фильтр в начале страницы*/
+.filter {
+  background-color: $color-elem-background;
+  border-radius: 50px;
+  &__wrapper {
+    display: grid;
+
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+
+    @include tablet_hrz {
+      background-color: $color-elem-background;
+    }
+  }
+}
+
+.price-filter {
+  grid-template-columns: repeat(2, 1fr);
+}
