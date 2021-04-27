@@ -10,7 +10,7 @@ block content
         .container 
             +overview(branchParams)(class="branch-list__wrapper")
                 each branch in branches 
-                    +branch(branch.text)(src=branch.img, class="branch_carousel")
+                    +branch(branch.text)(svgIcon=branch.icon, type="carousel")
 
     .page-block
         +intro({video: '/walk.mp4', poster: '/walk.mp4', button:'контакты медцентров'})(class='intro_animated') 
@@ -29,6 +29,8 @@ block content
             +overview(reviewParams)(class="review-wrapper")
                 each review in reviews 
                     +review(review.text, review.author)
+    svg 
+        use(xlink:href="#heart")
 
 block scripts
     script
@@ -39,6 +41,6 @@ block vars
     - const mainpage = true;
     - const banners = [{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться'}]
     - const branchParams = {title:'Направления', desc:"В центре производится<br><span class='mark'>весь перечень</span> лабораторных и диагностических исследований", buttons:['Bсе направления','все специалисты']}
-    - const branches = [{text:'Хирургический стационар', img: '/img/hirurg.svg'}]
+    - const branches = [{text:'Хирургический стационар', icon: '#heart'}, {text:'Анализы и диагностика', icon: '#tomo'}]
     - const reviewParams = {title:'отзывы', desc:"Отзывы наших клиентов&nbsp;— <span class='mark'>лучшее&nbsp;подтверждение</span> нашего прoфессионализма", buttons:['Все отзывы']};
     - const reviews = [{text: 'Text', author: 'Джеки'},{text: 'Супер ваще очень круто неверояьно!', author: 'Джеки'}]

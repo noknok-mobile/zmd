@@ -22,6 +22,12 @@
   display: flex;
   transition: 0.2s ease-in-out;
 
+  &__img{
+    &_carousel{
+      width: 40px;
+      height: 40px;
+    }
+  }
   &_tile{
     align-items: center;
     gap: $offset-small;
