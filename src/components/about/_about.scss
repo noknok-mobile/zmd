@@ -1,0 +1,13 @@
+.about{
+    max-width: 800px;
+    &__heading{
+        margin-bottom: 1.8rem;
+    }
+    &__title{
+      @extend %h1;
+      margin: 0;
+    }
+    &_single{
+      margin-bottom: $offset-middle;  
+    }
+}
