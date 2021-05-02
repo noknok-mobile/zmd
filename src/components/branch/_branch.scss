@@ -16,8 +16,11 @@
       column-gap: $gutter;
     }
   }
+  
 }
-
+.branch-list__wrapper{
+  grid-auto-columns: max-content;
+}
 .branch {
   display: flex;
   transition: 0.2s ease-in-out;

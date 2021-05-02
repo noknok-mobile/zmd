@@ -19,6 +19,8 @@
   transition-property: width;
   box-sizing: content-box;
   transition-timing-function: ease-in;
+  //временно, пока не подключен слайдер
+  display: contents;
 }
 
 .swiper-container-android .swiper-slide,
@@ -126,6 +128,10 @@
     position: relative;
     padding: 30px 15px ;
     left: -15px;
+    display: grid;
+    grid-auto-flow: column;
+    // grid-auto-columns: max-content;
+    gap: $gutter;
   }
 }
 

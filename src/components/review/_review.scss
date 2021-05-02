@@ -23,5 +23,8 @@
     font-style: normal;
     line-height: 1.6;
   }
+  &-wrapper{
+    grid-auto-columns: 800px;
+  }
 
 }

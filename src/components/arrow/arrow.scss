@@ -13,8 +13,8 @@
     background: white;
     flex: 0 0 auto;
 
-    & svg {
-        @include box(18px);
+    &__icon {
+        @include box(30px);
     }
 
     &:hover {

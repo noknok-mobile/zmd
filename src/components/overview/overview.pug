@@ -8,10 +8,10 @@ mixin overview(props)
                 each button in props.buttons
                     a.button.button_light(href="#")= button
             .overview__slider-nav.slider-navigation
-                .button-arrow.button-arrow_prev 
-                    svg #[use(xlink:href="#arrow")]
-                .button-arrow.button-arrow_next 
-                    svg #[use(xlink:href="#arrow")]
+                a(href="#prev").button-arrow
+                    svg.button-arrow__icon #[use(xlink:href="#arrow")]
+                a(href="#next").button-arrow
+                    svg.button-arrow__icon #[use(xlink:href="#arrow", transform="rotate(180 15 15)")]
         .slider-container(class=attributes.class)
             .swiper-wrapper.swiper-no-swiping
                 block

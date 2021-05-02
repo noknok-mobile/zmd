@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
-    <symbol viewBox="0 2 27 29" fill="currentColor" id="arrow"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.607 24.213l10.606-10.606H3l10.607 10.606z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <symbol fill="none" viewBox="0 0 20 25" id="arrow">
+        <path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M2 12.607l10.607 10.606V2L2 12.607z"/>
     </symbol>
     <symbol class="modal__close-icon" viewBox="0 0 14 14" fill="#fff" id="close"
         xmlns="http://www.w3.org/2000/svg">
