@@ -44,7 +44,7 @@ function watcher() {
 }
 
 function svg() {
-    return src('assets/svg/*.svg')
+    return src('assets/bckg/*.svg')
         .pipe(svgSprite({
             svg: { // General options for created SVG files
                 xmlDeclaration: false, // Add XML declaration to SVG sprite
@@ -55,15 +55,19 @@ function svg() {
                 dimensionAttributes: true // Width and height attributes on the sprite
             },
             mode: {
-                symbol: {
+                stack: {
                     dest: './',
-                    sprite: 'icons.svg'
+                    sprite: 'bckg.svg'
                 }
             },
         }))
-        .pipe(dest('src/layout/'));
+        .pipe(dest('build/'));
+}
+function fonts(){
+    return src('assets/font/*.ttf')
+    .pipe(dest('build/font/'))
 }
 exports.server = parallel(server, watcher);
-exports.build = parallel(compileHtml, styles);
+exports.build = parallel(compileHtml, styles, fonts);
 exports.styles = series(styles);
 exports.svg = series(svg);
