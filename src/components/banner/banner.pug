@@ -1,5 +1,5 @@
 mixin banner(src, title, desc, buttonText)
-    .banner 
+    .banner(class= attributes.class) 
         .banner__img-wrapper
             img.banner__img(src=src, alt= desc)
         .banner__inner.container

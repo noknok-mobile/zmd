@@ -1,16 +1,23 @@
 extends /layout/template 
 
 block content
-    .big-carousel 
-        .big-carousel__inner
+    .big-carousel.swiper-container 
+        .big-carousel__inner.swiper-wrapper
             each banner in banners
-                +banner(banner.link, banner.title, banner.desc, banner.button)
+                +banner(banner.link, banner.title, banner.desc, banner.button).swiper-slide
+        .big-carousel__pagination.slider-pagination
+        .big-carousel__nav-wrapper
+            .big-carousel__nav.big-carousel__nav_prev
+            .big-carousel__nav.big-carousel__nav_next
 
     .page-block
         .container 
-            +overview(branchParams)(class="branch-list__wrapper")
-                each branch in branches 
-                    +branch(branch.text)(svgIcon=branch.icon, type="carousel")
+            +overview(branchParams).branch-list
+                .slider-container.js-branch-slider
+                    .swiper-wrapper.swiper-no-swiping.branch-list.branch-list_carousel
+                        each branch in branches 
+                            +branch(branch.text)(svgIcon=branch.icon, type="carousel")
+                .slider-pagination.branch-list__pagination
 
     .page-block
         +intro({video: '/walk.mp4', poster: '/walk.mp4', button:'контакты медцентров'})(class='intro_animated') 
@@ -26,19 +33,23 @@ block content
         
     .page-block.page-block_background
         .container
-            +overview(reviewParams)(class="review-wrapper")
-                each review in reviews 
-                    +review(review.text, review.author)
+            +overview(reviewParams).review-list
+                .slider-container.js-review-slider
+                    .swiper-wrapper.review-list
+                        each review in reviews 
+                            +review(review.text, review.author)
+                .slider-pagination.review-list__pagination
 
 block scripts
+    script(src="/js/js/swiper-bundle.min.js") 
     script
         include index.js
 
 block vars 
     - const title = 'Главная'
     - const mainpage = true;
-    - const banners = [{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться'}]
+    - const banners = [{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться'},{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться'}]
     - const branchParams = {title:'Направления', desc:"В центре производится<br><span class='mark'>весь перечень</span> лабораторных и диагностических исследований", buttons:['Bсе направления','все специалисты']}
-    - const branches = [{text:'Хирургический стационар', icon: '#heart'}, {text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'},{text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'},{text:'Анализы и диагностика', icon: '#hirurg'}]
+    - const branches = [{text:'Хирургический стационар', icon: '#heart'}, {text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'},{text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'},{text:'Анализы и диагностика', icon: '#hirurg'},{text:'Хирургический стационар', icon: '#heart'}, {text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'},{text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'}]
     - const reviewParams = {title:'отзывы', desc:"Отзывы наших клиентов&nbsp;— <span class='mark'>лучшее&nbsp;подтверждение</span> нашего прoфессионализма", buttons:['Все отзывы']};
-    - const reviews = [{text: 'Text', author: 'Джеки'},{text: 'Супер ваще очень круто неверояьно!', author: 'Джеки'}]
+    - const reviews = [{text: 'Text', author: 'Джеки'},{text: 'Супер ваще очень круто неверояьно!', author: 'Джеки'}, {text: 'Text', author: 'Джеки'}, {text: 'Text', author: 'Джеки'},{text: 'Text', author: 'Джеки'}]

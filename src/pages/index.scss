@@ -1,0 +1,103 @@
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  min-width: 60px;
+  color: $color-accent;
+  margin: $offset-middle auto 0;
+  // width: 200px;
+
+  @include tablet_hrz {
+    display: none;
+  }
+
+  &__bullet {
+    $size: 14px;
+    display: block;
+    flex-shrink: 0;
+    @include box($size);
+    border-radius: 50%;
+
+    &:not(:last-of-type) {
+      margin-right: 2 * $size;
+    }
+
+    color: inherit;
+    background-color: transparent;
+    border: 1px solid currentColor;
+
+    cursor: pointer;
+
+    &_active {
+      background-color: currentColor;
+    }
+  }
+}
+
+.slider {
+  overflow-x: visible;
+  &-nav {
+    display: flex;
+    @include flex-gap($offset-small);
+    color: $color-accent;
+
+    @include phone_hrz {
+      display: none;
+    }
+  }
+
+  &-container {
+    overflow-x: hidden;
+    width: calc(50vw + var(--container-width)/2); //simplify from $container + (100vw - $container/2) 
+    max-width: auto;
+    position: relative;
+    padding: 30px 15px;
+    left: -15px;
+  }
+}
+
+.big-carousel {
+  position: relative;
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__nav {
+    cursor: pointer;
+    z-index: 2;
+    width: 200px;
+
+    &_next {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+    &_prev {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    z-index: 1;
+    bottom: $offset-middle;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+}
+
+/*отладочные стили*/
+// .swiper-slide-prev{
+//   background: rgb(255, 209, 209);
+// }
+// .swiper-slide-next{
+//   background: rgb(160, 255, 173);
+// }
+// .swiper-slide-active{
+//   background: rgb(255, 255, 216);
+// }

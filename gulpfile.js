@@ -7,15 +7,24 @@ const {
 } = require('gulp');
 const pug = require('gulp-pug');
 const browserSync = require("browser-sync").create();
+
 const sass = require('gulp-dart-sass');
 const bulkSass = require('gulp-sass-bulk-import');
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const mergeQueries = require('postcss-merge-queries');
+
 const svgSprite = require('gulp-svg-sprite');
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const devip = require('dev-ip');
 
 function compileHtml() {
     return src('src/pages/*.pug')
         .pipe(pug({
             pretty: true,
-            basedir: '/home/ully/Документы/dev/zimamed/src/'
+            basedir: './src/'
+
         }))
         .pipe(dest('build/'));
 }
@@ -23,24 +32,56 @@ function compileHtml() {
 function server() {
     browserSync.init({
         server: {
-            baseDir: "./build/"
-        }
+            baseDir: "./build/",
+            ghostMode: false
+        },
+        // host: devip()
     });
     watch("build/").on('change', browserSync.reload);
 }
 
+function assets() {
+    return src('assets/*')
+        .pipe(dest('build/assets/'));
+}
+
+function fonts() {
+    return src('assets/fonts/*')
+        .pipe(dest('build/fonts/'));
+}
+
 function styles() {
+    const plugins = [
+        mergeQueries(),
+        autoprefixer()
+    ];
     return src('src/sass/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(bulkSass())
         .pipe(sass({
-            outputStyle: "expanded"
+            outputStyle: "expanded",
+            // outputStyle: "compressed",
+            allowEmpty: true
         }).on('error', sass.logError))
+        .pipe(postcss(plugins))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('build/'));
 }
 
+function scripts(){
+    return src('src/**/*.js')
+    .pipe(concat('script.js'))
+    // .pipe(sourcemaps.init())
+    // .pipe(terser())
+    // .pipe(sourcemaps.write('../'))
+    .pipe(dest('build/js'));
+}
+
 function watcher() {
-    watch('src/**/*.pug', compileHtml);
+    watch(['src/**/*.pug','src/**/*.js'], compileHtml);
     watch('src/**/*.scss', styles);
+    watch('src/**/*.js', scripts);
+    
 }
 
 function svg() {
@@ -63,11 +104,8 @@ function svg() {
         }))
         .pipe(dest('build/'));
 }
-function fonts(){
-    return src('assets/font/*.ttf')
-    .pipe(dest('build/font/'))
-}
 exports.server = parallel(server, watcher);
-exports.build = parallel(compileHtml, styles, fonts);
+
+exports.build = parallel(compileHtml, styles, assets, fonts, scripts);
 exports.styles = series(styles);
 exports.svg = series(svg);

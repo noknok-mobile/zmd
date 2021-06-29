@@ -1,7 +1,8 @@
 .review {
   @extend %card;
   padding: 40px;
-  width: min(800px, 100%);/*node-sass ругается*/
+  width: min(800px, 100%);
+  flex-shrink: 0;
   &:before {
     content: '';
     background-image: url("data:image/svg+xml,%3Csvg width='72' height='52' viewBox='0 0 72 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M72 20.5716L56.5712 20.5716L66.8572 -1.55899e-05L51.4284 -1.65833e-05L41.1424 20.5716L41.1424 51.4292L72 51.4292L72 20.5716Z' fill='%23852D2E'/%3E%3Cpath d='M30.8567 51.4297L30.8567 20.5721L15.4279 20.5721L25.7138 0.000472691L10.285 0.000471698L-0.000894698 20.5721L-0.000898361 51.4297L30.8567 51.4297Z' fill='%23852D2E'/%3E%3C/svg%3E%0A");
@@ -23,7 +24,7 @@
     font-style: normal;
     line-height: 1.6;
   }
-  &-wrapper{
+  &-list{
     grid-auto-columns: 800px;
   }
 

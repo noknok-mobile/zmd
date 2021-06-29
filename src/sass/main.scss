@@ -9,8 +9,11 @@
 './basic/basic',
 './basic/text';
 
+@import './import/*';
+
 @import '../../src/components/*';
-@import '../../src/layout/*' 
+@import '../../src/layout/*';
+@import '../../src/pages/*' 
 
 
 //как заставить его компилиться первым?

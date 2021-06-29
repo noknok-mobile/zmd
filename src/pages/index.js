@@ -18,3 +18,69 @@ let targets = document.querySelectorAll('.intro_animated');
 for (let target of targets) {
     observer.observe(target);
 }
+
+const slider = new Swiper('.big-carousel', {
+    loop: true,
+    speed: 500,
+    pagination: {
+        el: '.big-carousel__pagination',
+        type: 'bullets',
+        clickable: true,
+        bulletClass: "slider-pagination__bullet",
+        bulletActiveClass: "slider-pagination__bullet_active",
+        modifierClass: "slider-pagination_",
+        clickableClass: "slider-pagination_clickable"
+    },
+    navigation: {
+        nextEl: '.big-carousel__nav_next',
+        prevEl: '.big-carousel__nav_prev',
+    },
+    autoplay: {
+        delay: 5000,
+    },
+});
+
+
+const branches = new Swiper(".js-branch-slider", {
+    loop: true,
+    slidesPerView: 'auto',
+    slidesPerGroup: 1,
+    spaceBetween: 30,
+    slideClass: "branch",
+    // slidesOffsetAfter: "600",
+    pagination: {
+        el: '.branch-list__pagination',
+        type: 'bullets',
+        clickable: true,
+        bulletClass: "slider-pagination__bullet",
+        bulletActiveClass: "slider-pagination__bullet_active",
+        modifierClass: "slider-pagination_",
+        clickableClass: "slider-pagination_clickable"
+    },
+    navigation: {
+        nextEl: '.branch-list__nav .slider-nav__btn_next',
+        prevEl: '.branch-list__nav .slider-nav__btn_prev',
+    },
+});
+
+const reviews = new Swiper(".js-review-slider", {
+    loop: true,
+    slidesPerView: 'auto',
+    // slidesPerGroup: 1,
+    spaceBetween: 30,
+    slideClass: "review",
+    // slidesOffsetAfter: "600",
+    pagination: {
+        el: '.review-list__pagination',
+        type: 'bullets',
+        clickable: true,
+        bulletClass: "slider-pagination__bullet",
+        bulletActiveClass: "slider-pagination__bullet_active",
+        modifierClass: "slider-pagination_",
+        clickableClass: "slider-pagination_clickable"
+    },
+    navigation: {
+        nextEl: '.review-list__nav .slider-nav__btn_next',
+        prevEl: '.review-list__nav .slider-nav__btn_prev',
+    },
+})
