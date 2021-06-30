@@ -9,7 +9,7 @@
   &__sidebar {
     position: relative;
     z-index: 10;
-    padding: $offset-large 0;
+    padding: $offset-l 0;
     @include tablet {
       display: none;
     }
@@ -24,7 +24,7 @@
 }
 
 .page-block {
-  margin: $offset-large 0;
+  margin: $offset-l 0;
   position: relative;
   z-index: 1;
 
@@ -43,12 +43,12 @@
 
   &_background {
     margin: 0;
-    padding: $offset-large 0;
+    padding: $offset-l 0;
     background: $color-elem-background;
     /*для блока внутри контейнера с фоном во всю ширину экрана*/
     &-wide {
       margin: 0;
-      padding: $offset-large 0;
+      padding: $offset-l 0;
       &::before {
         content: "";
         width: 100vw;
@@ -71,7 +71,7 @@
 }
 
 .banner-left {
-  margin-top: $offset-small;
+  margin-top: $offset-s;
   &__img {
     width: 100%;
     height: 100%;

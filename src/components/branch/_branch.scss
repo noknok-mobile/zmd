@@ -32,9 +32,9 @@
   }
   &_tile{
     align-items: center;
-    gap: $offset-small;
+    gap: $offset-s;
     background: $color-elem-background;
-    padding: $offset-small;
+    padding: $offset-s;
 
     &:hover {
       @extend %card;
@@ -51,7 +51,7 @@
 
     .branch__name {
       @include text(m, 600);
-      @include flex-gap(auto, $offset-small);
+      @include flex-gap(auto, $offset-s);
     }
   }
 
@@ -68,7 +68,7 @@
     }
     
     .branch__name {
-      margin-bottom: $offset-small;
+      margin-bottom: $offset-s;
     }
 
     .branch__img {

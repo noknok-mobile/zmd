@@ -67,7 +67,7 @@
     // flex-flow: wrap;
     z-index: 5;
     @include tablet {
-      padding: $offset-small 0;
+      padding: $offset-s 0;
     }
     @include phone {
       position: relative;
@@ -84,7 +84,7 @@
   &__content {
     flex-basis: clamp(320px, 50%, 800px);
     flex-wrap: wrap;
-    // @include flex-gap($offset-small);
+    // @include flex-gap($offset-s);
     @include text(h3, 300);
     @include phone {
       color: $color-text;

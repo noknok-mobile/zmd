@@ -2,7 +2,7 @@
     position: relative;
     color: white;
     // background-image: url(/img/banner.png);
-    padding: $offset-large 0;
+    padding: $offset-l 0;
     height: 700px;
     @include tablet_hrz{
       height: 665px;
@@ -50,13 +50,13 @@
   
     &__headline {
       @include header(max);
-      margin:0 0 $offset-small;
+      margin:0 0 $offset-s;
     }
   
     &__description {
       @include text(l, 300);
       line-height: 235%;
-      margin-bottom: $offset-small;
+      margin-bottom: $offset-s;
     }
   
     &__button {

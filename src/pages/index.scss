@@ -3,7 +3,7 @@
   justify-content: center;
   min-width: 60px;
   color: $color-accent;
-  margin: $offset-middle auto 0;
+  margin: $offset-m auto 0;
   // width: 200px;
 
   @include tablet_hrz {
@@ -37,7 +37,7 @@
   overflow-x: visible;
   &-nav {
     display: flex;
-    @include flex-gap($offset-small);
+    @include flex-gap($offset-s);
     color: $color-accent;
 
     @include phone_hrz {
@@ -84,7 +84,7 @@
   &__pagination {
     position: absolute;
     z-index: 1;
-    bottom: $offset-middle;
+    bottom: $offset-m;
     left: 50%;
     transform: translateX(-50%);
     color: white;

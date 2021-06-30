@@ -1,6 +1,6 @@
 .icon-menu {
   display: none;
-  @include flex-gap($offset-middle);
+  @include flex-gap($offset-m);
 
   @include tablet {
     display: flex;

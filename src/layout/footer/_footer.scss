@@ -5,8 +5,8 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "copyright menu menu info";
-        padding-top: $offset-large;
-        padding-bottom: $offset-large;
+        padding-top: $offset-l;
+        padding-bottom: $offset-l;
         grid-gap: $gutter;
 
         @include tablet-hrz {
