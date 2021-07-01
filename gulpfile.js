@@ -26,28 +26,28 @@ function compileHtml() {
             basedir: './src/'
 
         }))
-        .pipe(dest('build/'));
+        .pipe(dest('docs/'));
 }
 
 function server() {
     browserSync.init({
         server: {
-            baseDir: "./build/",
+            baseDir: "./docs/",
             ghostMode: false
         },
         // host: devip()
     });
-    watch("build/").on('change', browserSync.reload);
+    watch("docs/").on('change', browserSync.reload);
 }
 
 function assets() {
     return src('assets/*')
-        .pipe(dest('build/assets/'));
+        .pipe(dest('docs/assets/'));
 }
 
 function fonts() {
-    return src('assets/fonts/*')
-        .pipe(dest('build/fonts/'));
+    return src('assets/font/*')
+        .pipe(dest('docs/fonts/'));
 }
 
 function styles() {
@@ -65,7 +65,7 @@ function styles() {
         }).on('error', sass.logError))
         .pipe(postcss(plugins))
         .pipe(sourcemaps.write('.'))
-        .pipe(dest('build/'));
+        .pipe(dest('docs/'));
 }
 
 function scripts(){
@@ -74,7 +74,7 @@ function scripts(){
     // .pipe(sourcemaps.init())
     // .pipe(terser())
     // .pipe(sourcemaps.write('../'))
-    .pipe(dest('build/js'));
+    .pipe(dest('docs/js'));
 }
 
 function watcher() {
@@ -102,7 +102,7 @@ function svg() {
                 }
             },
         }))
-        .pipe(dest('build/'));
+        .pipe(dest('docs/'));
 }
 exports.server = parallel(server, watcher);
 

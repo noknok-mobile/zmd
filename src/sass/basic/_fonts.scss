@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(/font/OpenSans-Light.ttf) format('woff2');
+    src: url(fonts/OpenSans-Light.ttf) format('woff2');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/font/OpenSans-Regular.ttf) format('woff2');
+    src: url(fonts/OpenSans-Regular.ttf) format('woff2');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url(/font/OpenSans-SemiBold.ttf) format('woff2');
+    src: url(fonts/OpenSans-SemiBold.ttf) format('woff2');
 }
 
 @font-face {
@@ -27,7 +27,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/font/OpenSans-Bold.ttf) format('woff2');
+    src: url(fonts/OpenSans-Bold.ttf) format('woff2');
 }
 
 @font-face {
@@ -35,5 +35,5 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/font/PTSerif-Regular.ttf) format('woff2');
+    src: url(fonts/PTSerif-Regular.ttf) format('woff2');
 }
