@@ -50,11 +50,13 @@
     &__headline {
       @include header(max);
       margin:0 0 $offset-s;
+      line-height: 1
     }
   
     &__description {
       @include text(l, 300);
       margin-bottom: $offset-s;
+      line-height: 1.8;
     }
   
     &__button {
