@@ -11,11 +11,11 @@ block content
                 label.switch__label(for="switch") Детское отделение
             each filterSection, key in filter 
                 .section.js-section-switched(class={section_hidden: key == 'children'})
-                    include /components/dictionary/dictionary
+                    include /components/dictionary
 
 block scripts 
     script 
-        include /components/filter/filter.js
+        include /components/filter.js
         .
             let sectionToggle = new Switch();
             for (let section of document.querySelectorAll('.section')) new Filter(section);
