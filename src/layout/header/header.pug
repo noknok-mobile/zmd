@@ -26,11 +26,11 @@
 
             nav.icon-menu
                 a.mobile-menu__item.mobile-menu__item_personal(href="#")  
-                    img(src="assets/img/menu/profile.svg", alt="Личный кабинет")
+                    img(src="icons.svg#profile", alt="Личный кабинет")
                 a.mobile-menu__item.mobile-mobile-menu__item_add(href="#")  
-                    img(src="assets/img/menu/сalendar.svg", alt="Записаться")
+                    img(src="icons.svg#calendar", alt="Записаться")
                 a.mobile-menu__item.mobile-mobile-menu__item_phone(href="#")  
-                    img(src="assets/img/menu/phone.svg", alt="Позвонить")
+                    img(src="icons.svg#phone", alt="Позвонить")
 
         nav.header__bottom
             ul.header__bottom-menu.main-menu
@@ -49,17 +49,17 @@
                 .container.mobile-menu
                     .logo__wrapper.header__logo
                         a(href="/")
-                            img(src="assets/img/logo.png", alt=sitename)
+                            img.logo(src= logo, alt=sitename)
                     nav.icon-menu
                         a.icon-menu__item
-                            img(src="assets/img/menu/profile.svg", alt="")
+                            svg #[use(xlink:href="icons.svg#profile")]
                         a.icon-menu__item
-                            img(src="assets/img/menu/сalendar.svg", alt="")
+                            svg #[use(xlink:href="icons.svg#calendar")]
                         a.icon-menu__item
-                            img(src="assets/img/menu/phone.svg", alt="")
+                            svg #[use(xlink:href="icons.svg#phone")]
                         a.icon-menu__item.js-menu-toggler(href="#")
-                            img.icon-menu__toggle.icon-menu__toggle_open(src="assets/img/menu/burger.svg", alt="")
-                            img.icon-menu__toggle.icon-menu__toggle_close(src="assets/img/menu/close.svg", alt="")
+                            svg.icon-menu__toggle.icon-menu__toggle_open #[use(xlink:href="icons.svg#burger")]
+                            svg.icon-menu__toggle.icon-menu__toggle_close #[use(xlink:href="icons.svg#close")]
         .dropdown-menu.js-menu
             ul.main-menu.main-menu_mobile
                 each link in links

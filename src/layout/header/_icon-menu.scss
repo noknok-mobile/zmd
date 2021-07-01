@@ -1,4 +1,9 @@
 .icon-menu {
+  &__item{
+    svg{
+      @include box(30px);
+    }
+  }
   display: none;
   @include flex-gap($offset-m);
 
