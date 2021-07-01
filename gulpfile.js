@@ -41,12 +41,12 @@ function server() {
 }
 
 function assets() {
-    return src('assets/*')
+    return src('assets/**/*')
         .pipe(dest('build/assets/'));
 }
 
 function fonts() {
-    return src('assets/fonts/*')
+    return src('assets/font/*')
         .pipe(dest('build/fonts/'));
 }
 
