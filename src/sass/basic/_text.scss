@@ -59,7 +59,7 @@ ul:not([class]){
 
 .lead {
   @include text(h2, 300);
-  line-height: 1.4; //не по макету
+  line-height: 1.2;
 }
 
 .mark {
@@ -81,4 +81,5 @@ ul:not([class]){
 .title {
   font-family: 'PT Serif';
   margin: 0;
+  line-height: 1.2;
 }

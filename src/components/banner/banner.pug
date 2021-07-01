@@ -1,9 +1,10 @@
-mixin banner(src, title, desc, buttonText)
+mixin banner(props)
     .banner(class= attributes.class) 
         .banner__img-wrapper
-            img.banner__img(src=src, alt= desc)
+            img.banner__img(src=props.src, alt= props.desc)
         .banner__inner.container
             .banner__content
-                h2.banner__headline.title !{title}
-                .banner__description !{desc} 
-                +button(buttonText, '#', 'banner__button')
+                h2.banner__headline.title !{props.title}
+                .banner__description !{props.desc} 
+                a.button.banner__button(href= props.link)= props.button
+                

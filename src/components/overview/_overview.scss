@@ -1,6 +1,6 @@
 .overview {
   &__desc{
-    margin-bottom: $offset-s;
+    // margin-bottom: $offset-s;
   }
   &__links {
     display: flex;
@@ -10,6 +10,9 @@
     display: flex;
     justify-content: space-between;
     margin: $offset-m 0;
+  }
+  &__slider{
+    margin-bottom: $offset-m;
   }
   &__slider-nav{
     & .button-arrow{

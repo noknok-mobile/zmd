@@ -1,7 +1,7 @@
-mixin button(text, link, classModifier)
-    if link
-        a.button(class=classModifier? classModifier: '', href=link)= text
+mixin button(text)
+    if attributes.href
+        a.button&attributes(attributes)= text
     else 
-        button.button(class=classModifier? classModifier: '')= text
+        button.button&attributes(attributes)= text
     
 

@@ -9,14 +9,16 @@ footer.footer
         .footer__copyright
             .logo__wrapper.footer__logo
                 a(href="/")
-                    img.logo(src="/img/logo.png", alt=sitename) 
-            a.footer__link(href="/privacy") 
+                    img.logo(src= logo, alt=sitename) 
+            a.footer__link.link(href="/privacy") 
                 | Политика обработки персональных данных и пользовательское соглашение
+
         .footer__nav
-            each footerSection in footerLinks 
+            each footerSection, sectionIndex in footerLinks 
                 .footer__nav-section
-                    each link in footerSection 
-                        a.footer__link.link.footer__nav-item(href="#")= link
+                    each link, index in footerSection 
+                        a.footer__link.link.footer__nav-item(href= sectionIndex+""+index)= link
+
         .footer__info 
             span.footer__info-item.footer__info-item_address
                 | #{address.city}
@@ -31,7 +33,7 @@ footer.footer
                     | Скачайте приложение на телефон
                 .footer-promo__app-icons
                     a(href="#")
-                        img(src="/img/app_store.png", alt="AppStore")
+                        img(src="/assets/img/app_store.png", alt="AppStore")
                     a(href="#")
-                        img(src="/img/app_store.png", alt="GooglePlay")
+                        img(src="/assets/img/app_store.png", alt="GooglePlay")
 
