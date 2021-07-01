@@ -41,14 +41,14 @@ block content
                 .slider-pagination.review-list__pagination
 
 block scripts
-    script(src="/js/js/swiper-bundle.min.js") 
+    script(src="https://unpkg.com/swiper@6.7.5/swiper-bundle.min.js") 
     script
         include index.js
 
 block vars 
     - const title = 'Главная'
     - const mainpage = true;
-    - const banners = [{link: '/asd', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться', src:"/assets/img/banner.png"},{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться', src:"/assets/img/doctor_demo.jpg"}]
+    - const banners = [{link: '/asd', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться', src:"assets/img/banner.png"},{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться', src:"assets/img/doctor_demo.jpg"}]
 
     - const branchParams = {title:'Направления', desc:"В центре производится<br><span class='mark'>весь перечень</span> лабораторных и диагностических исследований", buttons:['Bсе направления','все специалисты']}
     - const branches = [{text:'Хирургический стационар', icon: '#heart'}, {text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'},{text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'},{text:'Анализы и диагностика', icon: '#hirurg'},{text:'Хирургический стационар', icon: '#heart'}, {text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'},{text:'Анализы и диагностика', icon: '#hirurg'},{text:'Компьютерная томография', icon: '#tomo'}]

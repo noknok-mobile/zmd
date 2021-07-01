@@ -26,7 +26,7 @@
 
   &_bskg {
     &-pill {
-      background-image: url("/bckg.svg#pill");
+      background-image: url("bckg.svg#pill");
       background-size: 200px;
       &::after {
         background-position-y: 50px;
@@ -34,7 +34,7 @@
     }
 
     &-cross {
-      background-image: url("/bckg.svg#cross");
+      background-image: url("bckg.svg#cross");
       background-size: 300px;
       &::after {
         background-position-y: -192px;
@@ -42,7 +42,7 @@
     }
 
     &-stethoscope {
-      background-image: url("/bckg.svg#stethoscope");
+      background-image: url("bckg.svg#stethoscope");
       background-size: 550px;
       background-position: left bottom;
       &::after {
@@ -50,7 +50,7 @@
       }
     }
     &-syringe {
-      background-image: url("/bckg.svg#syringe");
+      background-image: url("bckg.svg#syringe");
       background-size: 250px;
       background-position: right bottom;
       &::after {
