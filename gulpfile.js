@@ -84,16 +84,17 @@ function watcher() {
     
 }
 
-function svg() {
+//https://github.com/svg-sprite/svg-sprite/blob/master/docs/configuration.md
+function bckg() {
     return src('assets/bckg/*.svg')
         .pipe(svgSprite({
-            svg: { // General options for created SVG files
-                xmlDeclaration: false, // Add XML declaration to SVG sprite
-                doctypeDeclaration: false, // Add DOCTYPE declaration to SVG sprite
-                namespaceIDs: false, // Add namespace token to all IDs in SVG shapes
-                namespaceIDPrefix: '', // Add a prefix to the automatically generated namespaceIDs
-                namespaceClassnames: false, // Add namespace token to all CSS class names in SVG shapes
-                dimensionAttributes: true // Width and height attributes on the sprite
+            svg: { 
+                xmlDeclaration: false,
+                doctypeDeclaration: false, 
+                namespaceIDs: true, 
+                namespaceIDPrefix: '', 
+                namespaceClassnames: false,
+                dimensionAttributes: true
             },
             mode: {
                 stack: {
@@ -104,8 +105,30 @@ function svg() {
         }))
         .pipe(dest('build/'));
 }
-exports.server = parallel(server, watcher);
 
-exports.build = parallel(compileHtml, styles, assets, fonts, scripts);
+function icons() {
+    return src('assets/icon/*.svg')
+        .pipe(svgSprite({
+            svg: { 
+                xmlDeclaration: false,
+                doctypeDeclaration: false,
+                namespaceIDs: false, 
+                namespaceIDPrefix: '', 
+                namespaceClassnames: false, 
+                dimensionAttributes: true
+            },
+            mode: {
+                symbol: {
+                    dest: './',
+                    sprite: 'icons.svg'
+                }
+            },
+        }))
+        .pipe(dest('build/'));
+}
+
+
+exports.server = parallel(server, watcher);
+exports.build = parallel(compileHtml, styles, assets, fonts, scripts, bckg, icons);
 exports.styles = series(styles);
-exports.svg = series(svg);
+exports.svg = parallel(bckg, icons);
