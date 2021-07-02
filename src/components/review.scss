@@ -15,14 +15,12 @@
   }
 
   &__text {
-    line-height: 2;
     margin-bottom: $offset-s;
   }
   &__author {
     display: block;
     @include text(inherit, 700);
     font-style: normal;
-    line-height: 1.6;
   }
   &-list{
     grid-auto-columns: 800px;

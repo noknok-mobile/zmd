@@ -6,7 +6,7 @@
   -webkit-appearance: none;
   border: 0;
   border-radius: 100px;
-  background: $color-main;
+  background-color: $color-main;
   transition: background-color 0.2s ease-out;
   padding: 0 2em;
   @extend %tag;
@@ -17,23 +17,25 @@
   flex-shrink: 0;
   font-family: inherit;
   cursor: pointer;
+  white-space: nowrap;
 
   &:hover {
     background-color: $color-contrast;
   }
 
   &_light {
-    background: white;
-    color: $color-accent;
-    box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.05);
-
-    &:hover {
-      color: white;
-      background: $color-main;
-    }
-
-    &:active {
-      background: $color-accent;
+    @include desktop_only{
+      background-color: white;
+      color: $color-accent;
+      box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.05);
+      &:hover {
+        color: white;
+        background-color: $color-main;
+      }
+  
+      &:active {
+        background-color: $color-accent;
+      }
     }
   }
 

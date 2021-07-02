@@ -14,7 +14,7 @@ block content
         .container 
             +overview(branchParams).branch-list
                 .slider-container.js-branch-slider
-                    .swiper-wrapper.swiper-no-swiping.branch-list.branch-list_carousel
+                    .swiper-wrapper.branch-list.branch-list_carousel
                         each branch in branches 
                             +branch(branch.text)(svgIcon=branch.icon, type="carousel")
                 .slider-pagination.branch-list__pagination
