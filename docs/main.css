@@ -526,7 +526,6 @@ ul:not([class]) li {
 .header-desktop__phone {
   font-size: 24px;
   white-space: nowrap;
-  font-size: clamp(14px, 1vw, 24px);
 }
 .header-desktop__navbar {
   grid-area: mobile;
@@ -1149,6 +1148,10 @@ ul:not([class]) li {
   text-overflow: ellipsis;
   color: #852d2e;
 }
+.header-info__content_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .intro {
   max-width: 1440px;
@@ -1372,7 +1375,7 @@ ul:not([class]) li {
 
 /*отладочные стили*/
 
-@media (min-width: 1400px) {
+@media (min-width: 1900px) {
   html {
     --container-width: 1200px;
     --gutter: 30px;
@@ -1380,9 +1383,9 @@ ul:not([class]) li {
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1899px) {
   html {
-    --container-width: 1140px;
+    --container-width: 1200px;
     --gutter: 30px;
   }
   .header-desktop__top {
@@ -1415,6 +1418,13 @@ ul:not([class]) li {
   }
   .header-info::before {
     display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  html {
+    --container-width: 1140px;
+    --gutter: 30px;
   }
 }
 
