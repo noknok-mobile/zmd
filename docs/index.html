@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body> 
-    <div class="header-wrapper">
-      <div class="header header_desktop">
-        <div class="header__top">
-          <div class="logo__wrapper header__logo"><a href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a></div>
+    <div class="header">
+      <div class="header-desktop">
+        <div class="header__top"><a class="header__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
           <div class="header-menu">
-            <div class="header-card header-card_address"><span class="header-card__headline">Клиника:</span><span class="header-card__content"><a class="header__link" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></span></div>
-            <div class="header-card header-card_schedule"><span class="header-card__headline">График работы:</span><span class="header-card__content">Пн. — Сб. с 9:00 до 21:00</span></div>
-            <div class="header-card header-card_personal"><span class="header-card__headline">Личный кабинет:</span><span class="header-card__content"><a class="header__link" href="#popup_open">Вход</a><a class="header__link" href="#popup_open">Регистрация</a></span></div><a class="header-menu__button button" href="">Записаться на прием</a>
+            <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span><span class="header-info__content"><a class="header__link" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></span></div>
+            <div class="header-info header-info_schedule"><span class="header-info__title">График работы:</span><span class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
+            <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span><span class="header-info__content"><a class="header__link" href="#popup_open">Вход</a><a class="header__link" href="#popup_open">Регистрация</a></span></div><a class="header-menu__button button" href="">Записаться на прием</a>
           </div>
           <div class="header-info header__contacts"><a class="header__phone link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="header-info__content header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
-          <nav class="icon-menu"><a class="mobile-menu__item mobile-menu__item_personal" href="#"> <img src="icons.svg#profile" alt="Личный кабинет"></a><a class="mobile-menu__item mobile-mobile-menu__item_add" href="#"> <img src="icons.svg#calendar" alt="Записаться"></a><a class="mobile-menu__item mobile-mobile-menu__item_phone" href="#"> <img src="icons.svg#phone" alt="Позвонить"></a></nav>
+          <nav class="icon-menu"><a class="icon-menu__item" href="#"> <img src="icons.svg#profile" alt="Личный кабинет"></a><a class="icon-menu__item" href="#"> <img src="icons.svg#calendar" alt="Записаться"></a><a class="icon-menu__item" href="#"> <img src="icons.svg#phone" alt="Позвонить"></a></nav>
         </div>
         <nav class="header__bottom">
           <ul class="header__bottom-menu main-menu">
@@ -33,35 +32,39 @@
           </ul>
         </nav>
       </div>
-      <div class="header header_mobile">
-        <div class="header__mobile-inner">
-          <div class="header__top">
-            <div class="header-info header-info_mobile-top"><span class="header-info__headline">Клиника:</span><span class="header-info__content"><a class="header__link" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></span></div>
-          </div>
-          <div class="mobile-menu-wrapper">
-            <div class="container mobile-menu">
-              <div class="logo__wrapper header__logo"><a href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a></div>
-              <nav class="icon-menu"><a class="icon-menu__item">
+      <div class="header-mobile">
+        <div class="header-mobile__inner">
+          <div class="header-mobile__top header-info"><span class="header-info__title">Клиника: &nbsp;</span><span class="header-info__content"><a class="header__link" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></span></div>
+          <div class="container">
+            <div class="header-mobile__navbar"><a class="header__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
+              <div class="icon-menu"><a class="icon-menu__item" href="account">
                   <svg>
                     <use xlink:href="icons.svg#profile"></use>
-                  </svg></a><a class="icon-menu__item">
+                  </svg></a><a class="icon-menu__item" href="schedule">
                   <svg>
                     <use xlink:href="icons.svg#calendar"></use>
-                  </svg></a><a class="icon-menu__item">
+                  </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
                   <svg>
                     <use xlink:href="icons.svg#phone"></use>
-                  </svg></a><a class="icon-menu__item js-menu-toggler" href="#">
-                  <svg class="icon-menu__toggle icon-menu__toggle_open">
-                    <use xlink:href="icons.svg#burger"></use>
-                  </svg>
-                  <svg class="icon-menu__toggle icon-menu__toggle_close">
-                    <use xlink:href="icons.svg#close"></use>
-                  </svg></a></nav>
+                  </svg></a>
+                <div class="icon-menu__item">
+                  <button class="icon-menu__toggle icon-menu__toggle_open js-menu-open" href="#">
+                    <svg>
+                      <use xlink:href="icons.svg#burger"></use>
+                    </svg>
+                  </button>
+                  <button class="icon-menu__toggle icon-menu__toggle_close js-menu-close" href="#">
+                    <svg>
+                      <use xlink:href="icons.svg#menu-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="dropdown-menu js-menu">
-          <ul class="main-menu main-menu_mobile">
+        <div class="dropdown-menu js-menu" id="menu">
+          <ul class="header-mobile__menu main-menu">
             <li class="main-menu__item link"><a class="link" href="#">Лечение</a></li>
             <li class="main-menu__item link"><a class="link" href="#">Диагностика</a></li>
             <li class="main-menu__item link"><a class="link" href="#">Услуги</a></li>
@@ -71,12 +74,33 @@
             <li class="main-menu__item link"><a class="link" href="#">О компании</a></li>
             <li class="main-menu__item link"><a class="link" href="#">Контакты</a></li>
           </ul>
-          <div class="dropdown-menu__info">
-            <div class="header-info"> <span class="header-info__headline">График работы:</span><span class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
-            <div class="button">Записаться на прием</div>
+          <div class="dropdown-menu__footer">
+            <div class="header-info header-info_unstyled"> <span class="header-info__title">График работы:</span><span class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div><a class="button" href="schedule">Записаться на прием</a>
           </div>
         </div>
       </div>
+      <script>const openButton = document.querySelector('.js-menu-open');
+const closeButton = document.querySelector('.js-menu-close');
+openButton.addEventListener('click', openMenu);
+closeButton.addEventListener('click', hideMenu);
+
+function openMenu(e){
+    toggleMenu();
+    closeButton.style.display = 'block';
+    openButton.style.display = 'none';
+}
+function toggleMenu(){
+    document.body.classList.toggle('no-scrollable');
+    document.documentElement.classList.toggle('no-scrollable');
+    document.querySelector('.js-menu').classList.toggle('dropdown-menu_visible');
+
+}
+function hideMenu(){
+    toggleMenu();
+    openButton.style.display = 'block';
+    closeButton.style.display = 'none';
+}
+      </script>
     </div>
     <div class="big-carousel swiper-container"> 
       <div class="big-carousel__inner swiper-wrapper">
@@ -215,7 +239,7 @@
       <div class="intro container intro_animated">
         <div class="intro__video-wrapper"> 
           <div class="intro__overlay"></div>
-          <video class="intro__bckg" src="/assets/video/walk.mp4" poster="/walk.mp4" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
+          <video class="intro__bckg" src="assets/video/walk.mp4" poster="/walk.mp4" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
         </div>
         <div class="intro__inner container"> 
           <div class="intro__content">  
@@ -239,7 +263,7 @@
       <div class="intro container intro_animated">
         <div class="intro__video-wrapper"> 
           <div class="intro__overlay"></div>
-          <video class="intro__bckg" src="/assets/video/doctor.mp4" poster="/walk.mp4" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
+          <video class="intro__bckg" src="assets/video/doctor.mp4" poster="/walk.mp4" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
         </div>
         <div class="intro__inner container"> 
           <div class="intro__content"> В клинике работают профессионалы высшей медицинской категории. В отделениях центра стабильный кадровый состав, который в своей работе применяет научный подход и регулярно повышает квалификацию в лучших клиниках России и мира.
