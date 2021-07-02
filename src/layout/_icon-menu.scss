@@ -5,12 +5,11 @@
     }
   }
   display: none;
-  @include flex-gap($offset-m);
+  justify-content: space-between;
+  @include flex-gap($offset-s);
 
   @include tablet {
     display: flex;
-    justify-content: space-between;
-    grid-area: mobile;
   }
 
   @include phone{

@@ -1,3 +1,7 @@
+@import './header.scss',
+'./footer.scss',
+'./page-header.scss';
+
 .page-grid {
   display: grid;
   column-gap: $gutter;

@@ -11,7 +11,7 @@
 
 @import './import/*';
 
-@import '../../src/components/*';
-@import '../../src/layout/*';
-@import '../../src/pages/*' 
+@import '../layout/template.scss';
+@import '../components/*';
+@import '../pages/*' 
 

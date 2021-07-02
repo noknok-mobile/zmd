@@ -1,0 +1,39 @@
+.header-desktop
+    .header-desktop__top
+        a.header__logo.header-desktop__logo(href="/")
+            img.logo(src= logo, alt=sitename)
+
+        .header-summary.header-desktop__summary
+
+            .header-summary__address
+                +header-info("Клиника:")(type="address")
+                    a.header__link(href="#popup_open") #{address.city},&nbsp;#{address.address}
+
+            .header-summary__schedule
+                +header-info("График работы:")(type="schedule")
+                    | !{scheduleInfo}
+
+            .header-summary__account
+                +header-info("Личный кабинет:")(type="personal")
+                    a.header__link(href="#popup_open") Вход
+                    a.header__link(href="#popup_open") Регистрация
+
+            a.header-desktop__button.button(href="#") Записаться на прием
+
+        .header-desktop__contacts
+            a.header-desktop__phone.link(href= 'tel:'+ phone)= phone
+            span.header-desktop__schedule !{scheduleInfo}
+
+        nav.header-desktop__navbar.icon-menu
+            a.icon-menu__item(href="account")
+                svg #[use(xlink:href="icons.svg#profile")]
+            a.icon-menu__item(href="schedule")
+                svg #[use(xlink:href="icons.svg#calendar")]
+            a.icon-menu__item(href="tel:"+ phone)
+                svg #[use(xlink:href="icons.svg#phone")]
+
+    nav.header-desktop__bottom
+        ul.header-desktop__menu.main-menu
+            each link in links
+                li.main-menu__item.link
+                    a.link(href="#")= link
