@@ -6,17 +6,23 @@
         .header-summary.header-desktop__summary
 
             .header-summary__address
-                +header-info("Клиника:")(type="address")
-                    a.header__link(href="#popup_open") #{address.city},&nbsp;#{address.address}
+                .header-info.header-info_address
+                    span.header-info__title Клиника:
+                    .header-info__content
+                        a.header__link(href="#popup_open") #{address.city},&nbsp;#{address.address}
 
             .header-summary__schedule
-                +header-info("График работы:")(type="schedule")
-                    | !{scheduleInfo}
+                .header-info.header-info_schedule
+                    span.header-info__title График работы:
+                    .header-info__content
+                        | !{scheduleInfo}
 
             .header-summary__account
-                +header-info("Личный кабинет:")(type="personal")
-                    a.header__link(href="#popup_open") Вход
-                    a.header__link(href="#popup_open") Регистрация
+                .header-info.header-info_personal
+                    span.header-info__title Личный кабинет:
+                    .header-info__content.header-info__content_flex
+                        a.header__link(href="#popup_open") Вход
+                        a.header__link(href="#popup_open") Регистрация
 
             a.header-desktop__button.button(href="#") Записаться на прием
 

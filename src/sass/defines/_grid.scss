@@ -8,6 +8,10 @@ html {
     --gutter: 30px;  
     --col-width: 70px;
   }
+  @include desktop-middle{
+    --container-width: 1200px;
+    --gutter: 30px;
+  }
   @include laptop{
     --container-width: 1140px;
     --gutter: 30px;

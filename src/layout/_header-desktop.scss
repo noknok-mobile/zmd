@@ -10,7 +10,7 @@
         padding: 0 50px;
         position: relative;
         height: 120px;
-        @include laptop {
+        @include desktop-middle {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             grid-template-areas: "logo info info info info contacts";
@@ -53,7 +53,7 @@
     &__schedule {
         display: none;
         @include text(xxs);
-        @include laptop {
+        @include desktop-middle {
             display: block;
         }
     }
@@ -61,8 +61,7 @@
     &__phone {
         font-size: 24px;
         white-space: nowrap;
-        font-size: clamp(14px, 1vw, 24px);
-        @include laptop{
+        @include desktop-middle{
             font-size: 20px;
         }
         @include tablet {
@@ -90,7 +89,7 @@
         grid-area: button;
         @include text(xs);
 
-        @include laptop {
+        @include desktop-middle {
             @include text(xxs);
         }
 
@@ -109,7 +108,7 @@
     margin: 0 auto;
     flex: 0 0 var(--container-width);
 
-    @include laptop {
+    @include desktop-middle {
         grid-template-columns: repeat(8, minmax(0, 1fr));
         grid-template-areas: "address address address login login button button button";
     }
@@ -134,7 +133,7 @@
     &__schedule {
         grid-area: schedule;
 
-        @include laptop {
+        @include desktop-middle {
             display: none;
         }
     }

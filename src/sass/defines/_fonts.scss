@@ -8,7 +8,7 @@ html {
   --font-xs: 16px;
   --font-smallest: 14px;
 
-  @include laptop {}
+  @include desktop-middle {}
 
   @include tablet_hrz {
     --h1: 40px;
