@@ -1,1 +1,5 @@
-<svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="white"><path d="M0 0l14 14M14 0L0 14"/></svg>
+<svg width="29" height="29" viewBox="0 0 29 29" fill="none" transform="rotate(45, 0, 0)"
+    xmlns="http://www.w3.org/2000/svg">
+    <line x1="7.77847" y1="7.77832" x2="20.5064" y2="20.5062" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="20.5068" y1="7.77847" x2="7.77891" y2="20.5064" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>

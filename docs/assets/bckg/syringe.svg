@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 198.593 177.923">
     <defs>
-        <pattern id="a" width="198.759" height="177.948" patternTransform="translate(138.257 -897.169)" patternUnits="userSpaceOnUse" viewBox="0 0 198.759 177.948">
+        <pattern id="d" width="198.759" height="177.948" patternTransform="translate(138.257 -897.169)" patternUnits="userSpaceOnUse" viewBox="0 0 198.759 177.948">
             <rect width="198.759" height="177.948" style="fill:none"/>
             <line x1="107.663" y1="90.629" x2="139.304" y2="122.27" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
             <polyline points="146.767 123.828 142.256 119.318 137.031 124.543 141.542 129.054" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
@@ -33,7 +33,6 @@
             <line x1="79.527" y1="1" x2="91.096" y2="12.568" style="fill:none;stroke:#852d2f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
         </pattern>
     </defs>
-    <title>Ресурс 8</title>
-    <rect width="198.593" height="177.923" style="fill:url(#a);opacity:0.15"/>
+    <rect width="198.593" height="177.923" style="fill:url(#d);opacity:0.15"/>
     <rect width="198.593" height="177.923" style="fill:none"/>
 </svg>
