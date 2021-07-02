@@ -10,7 +10,7 @@ mixin overview(props)
             - const classname = `${attributes.class}__nav`
             .overview__slider-nav.slider-nav(class= classname)
                 a(href="#prev").button-arrow.slider-nav__btn_prev
-                    svg.button-arrow__icon #[use(xlink:href="#arrow")]
+                    svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow",transform="rotate(90 15 15)")]
                 a(href="#next").button-arrow.slider-nav__btn_next
-                    svg.button-arrow__icon #[use(xlink:href="#arrow", transform="rotate(180 15 15)")]
+                    svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow", transform="rotate(-90 15 15)")]
         block

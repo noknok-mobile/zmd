@@ -20,15 +20,15 @@ html(lang="ru")
         title= title 
         link(rel="stylesheet", href="main.css")
     body 
-        include header/header 
-        include page-header/page-header
+        include header 
+        include page-header
         if !mainpage
             +page-header(pageHeaderImage)
             .container
                 block content 
         else 
             block content
-        include footer/footer
+        include footer
         block scripts
         
-include icons.svg
+//- include icons.svg
