@@ -47,7 +47,7 @@
     @extend %rounded;
     @extend %absolute-centered;
     @include box($size);
-    background: white;
+    background-color: white;
     display: block;
     right: 0px;
     flex: 0 0 $size;

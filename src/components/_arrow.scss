@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     color: $color-accent;
-    background: white;
+    background-color: white;
     flex: 0 0 auto;
 
     &__icon {
@@ -18,7 +18,7 @@
     }
 
     &:hover {
-        background: $color-main;
+        background-color: $color-main;
         color: white;
     }
 

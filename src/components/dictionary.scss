@@ -62,7 +62,7 @@
   width: 44px;
   height: 22px;
   border-radius: 100px;
-  background: $color-elem-background;
+  background-color: $color-elem-background;
   cursor: pointer;
   &__button {
     content: "";
@@ -70,7 +70,7 @@
     position: relative;
     transform: translateX(-50%);
     @include box(28px);
-    background: $color-accent;
+    background-color: $color-accent;
     border-radius: 50%;
     transition: transform 0.2s ease-out;
   }

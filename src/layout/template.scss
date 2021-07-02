@@ -44,7 +44,7 @@
   &_background {
     margin: 0;
     padding: $offset-l 0;
-    background: $color-elem-background;
+    background-color: $color-elem-background;
     /*для блока внутри контейнера с фоном во всю ширину экрана*/
     &-wide {
       margin: 0;
