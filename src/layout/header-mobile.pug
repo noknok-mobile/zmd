@@ -1,0 +1,38 @@
+.header-mobile
+    .header-mobile__inner
+        .header-mobile__top.header-info
+            span.header-info__title Клиника: &nbsp;
+            span.header-info__content
+                a.header__link(href="#") #{address.city},&nbsp;#{address.address}
+
+        .container
+            .header-mobile__navbar
+                a.header__logo(href="/")
+                    img.logo(src= logo, alt=sitename)
+                .icon-menu
+                    a.icon-menu__item(href="account")
+                        svg #[use(xlink:href="icons.svg#profile")]
+                    a.icon-menu__item(href="schedule")
+                        svg #[use(xlink:href="icons.svg#calendar")]
+                    a.icon-menu__item(href="tel:"+ phone)
+                        svg #[use(xlink:href="icons.svg#phone")]
+                    .icon-menu__item
+                        button.icon-menu__toggle.icon-menu__toggle_open.js-menu-open(href="#")
+                            svg #[use(xlink:href="icons.svg#burger")]
+                        button.icon-menu__toggle.icon-menu__toggle_close.js-menu-close(href="#")
+                            svg #[use(xlink:href="icons.svg#menu-close")]
+
+    .dropdown-menu.js-menu#menu
+        ul.header-mobile__menu.main-menu
+            each link in links
+                li.main-menu__item.link
+                    a.link(href="#")= link
+
+        .dropdown-menu__footer
+            .header-info.header-info_unstyled 
+                span.header-info__title График работы:
+                span.header-info__content !{scheduleInfo}
+            a.button(href="schedule") Записаться на прием
+
+script
+    include header.js

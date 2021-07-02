@@ -1,26 +1,16 @@
-@import 'dropdown-menu',
-'header-info',
+@import 
 'header-menu',
 'icon-menu',
 'main-menu',
-'mobile-menu';
+'header-mobile',
+'header-desktop';
 
 /*to do: add fonts adaptive and lines*/
 .header {
-    &_desktop {
+    &-desktop {
       @include phone_hrz {
         display: none;
       }
-    }
-    &_mobile {
-      display: none;
-      @include phone_hrz {
-        display: block;
-      }
-    }
-    &__mobile-inner {
-      position: relative;
-      z-index: 10;
     }
     &__top {
       display: flex;
@@ -45,17 +35,6 @@
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: "logo logo logo menu menu menu menu contacts contacts mobile mobile mobile";
       }
-      @include phone_hrz{
-        display: block;
-        height: auto;
-        padding: 10px 0;
-        margin: 0;
-        max-width: unset;
-        border-bottom: $line;
-  
-      }
-  
-      
     }
   
     &__bottom {

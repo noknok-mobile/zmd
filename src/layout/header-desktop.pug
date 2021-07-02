@@ -1,0 +1,34 @@
+.header-desktop
+    .header__top
+        a.header__logo(href="/")
+            img.logo(src= logo, alt=sitename)
+        .header-menu
+            +header-info("Клиника:")(type="address")
+                a.header__link(href="#popup_open") #{address.city},&nbsp;#{address.address}
+
+            +header-info("График работы:")(type="schedule")
+                | !{scheduleInfo}
+
+            +header-info("Личный кабинет:")(type="personal")
+                a.header__link(href="#popup_open") Вход
+                a.header__link(href="#popup_open") Регистрация
+
+            a.header-menu__button.button(href="") Записаться на прием
+
+        .header-info.header__contacts
+            a.header__phone.link(href= 'tel:'+ phone)= phone
+            span.header-info__content.header__schedule !{scheduleInfo}
+
+        nav.icon-menu
+            a.icon-menu__item(href="#")  
+                img(src="icons.svg#profile" alt="Личный кабинет")
+            a.icon-menu__item(href="#")  
+                img(src="icons.svg#calendar" alt="Записаться")
+            a.icon-menu__item(href="#")  
+                img(src="icons.svg#phone" alt="Позвонить")
+
+    nav.header__bottom
+        ul.header__bottom-menu.main-menu
+            each link in links
+                li.main-menu__item.link
+                    a.link(href="#")= link
