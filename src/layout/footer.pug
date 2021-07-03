@@ -19,17 +19,17 @@ footer.footer
                         each link, index in footerSection 
                             a.footer__link.link.footer__nav-item(href= sectionIndex+""+index)= link
 
-            .footer__info
-                .footer__contacts
-                    span.footer__info-item.footer__group
-                        | #{address.city}
+            .footer__info.footer-info
+                .footer-info__contacts
+                    .footer-info__item
+                        | #{address.city},
                         br
                         | #{address.address}
-                    span.footer__group
-                        a.footer__info-item.link(href='tel:'+phone)= phone
-                        span.footer__info-item= footerSchedule
+                    .footer-info__group
+                        a.footer-info__item.link(href='tel:'+phone)= phone
+                        span.footer-info__item= footerSchedule
 
-                .footer__promo.promo
+                .footer-info__promo.promo
                     .promo__text 
                         | Скачайте приложение на телефон
                     .promo__img

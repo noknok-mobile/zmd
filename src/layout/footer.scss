@@ -42,51 +42,6 @@
 
     &__info {
         grid-area: info;
-
-        @include tablet_hrz {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-template-areas: "contacts promo";
-            // grid-gap: 0 var(--gutter);
-            grid-gap: var(--gutter);
-        }
-
-        @include phone {
-            grid-template-areas: "contacts contacts""promo promo";
-        }
-
-        &-item {
-            // @include text(s);
-            color: $color-text;
-            display: block;
-            margin-bottom: 20px;
-
-            @include tablet_hrz {
-                margin-bottom: 0;
-            }
-        }
-    }
-
-
-
-    &__contacts {
-        grid-area: contacts;
-        white-space: nowrap;
-
-        @include tablet_hrz{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: $gutter;
-            align-content: end;
-    
-        }
-    }
-
-    
-    &__promo {
-        grid-area: promo;
-        color: $color-text-semi-muted;
-        @include text(xxs);
     }
 
     &__logo {
@@ -107,11 +62,63 @@
     }
 }
 
-.promo{
-    &__text{
+.footer-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "contacts""promo";
+    grid-gap: var(--gutter);
+
+    @include tablet_hrz {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: "contacts promo";
+    }
+
+    @include phone {
+        grid-template-areas: "contacts contacts""promo promo";
+    }
+
+    &__item {
+        display: block;
+    }
+
+    &__group {
+        @include desktop-only {
+            display: contents;
+        }
+    }
+    
+    &__contacts {
+        grid-area: contacts;
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        
+        white-space: nowrap;
+        font-size: 18px;
+        
+        @include tablet_hrz {
+            gap: $gutter;
+            align-content: end;
+        }
+
+        @include phone_hrz {
+            font-size: 16px;
+        }
+    }
+
+    &__promo {
+        grid-area: promo;
+        color: $color-text-semi-muted;
+        @include text(xxs);
+    }
+}
+
+.promo {
+    &__text {
         margin-bottom: 1em;
 
     }
+
     &__img {
         display: flex;
         @include flex-gap($gutter, 0);
