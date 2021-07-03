@@ -20,7 +20,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const devip = require('dev-ip');
 
 function compileHtml() {
-    return src('src/pages/*.pug')
+    return src('src/pages/**/*.pug')
         .pipe(pug({
             pretty: true,
             basedir: './src/'
@@ -69,8 +69,8 @@ function styles() {
 }
 
 function scripts(){
-    return src('src/**/*.js')
-    .pipe(concat('script.js'))
+    return src('src/js/*.js')
+    // .pipe(concat('script.js'))
     // .pipe(sourcemaps.init())
     // .pipe(terser())
     // .pipe(sourcemaps.write('../'))

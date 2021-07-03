@@ -1,0 +1,8 @@
+extends /components/modal
+include /layout/mixins
+block append settings 
+    - const calendar = { days: ["10.11",'11.11','12.11', '13.11', '14.11'], weekdays: ["пн","вт","ср","чт","пт"]}
+block header 
+    p Записаться к врачу
+block body
+    +schedule(calendar)

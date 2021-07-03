@@ -1,0 +1,123 @@
+.modal {
+  position: relative;
+  padding: $offset-m;
+  width: min(800px, 100%);
+  background: white;
+  z-index: 50;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 10;
+    padding: 140px 0;
+
+    &_open {
+      display: flex;
+      justify-content: center;
+      animation: fadeIn 0.2s ease-in;
+    }
+
+    &_closed {
+      animation: fadeOut 0.2s;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+  }
+
+  &__close {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    top: $offset-m;
+    right: $offset-m;
+    @include box(2rem);
+    border-radius: 50%;
+    z-index: 5;
+    border: none;
+    background: #ECECEC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &-icon {
+      display: block;
+      @include box(14px);
+      flex: 0 0 14px;
+      color: white;
+
+      line {
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke: currentColor;
+      }
+    }
+
+    transition: background-color 0.15s ease-in;
+
+    &:focus {
+      background-color: $color-contrast;
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $color-contrast;
+    }
+  }
+
+  &__header {
+    margin-bottom: $offset-m;
+    padding-right: 2rem;
+    line-height: 2rem;
+
+    &_tabs {
+      display: flex;
+      @include flex-gap($offset-m);
+    }
+
+    &_doctor-info {
+      margin-top: calc(var(--offset-m) * -1);
+      margin-left: calc(var(--offset-m) * -1);
+
+    }
+  }
+
+  &__tab {
+    @extend %tag;
+    color: $color-text-semi-muted;
+
+    &-list {
+      display: flex;
+      @include flex-gap($offset-m);
+    }
+
+    &:not(&_active) {
+      color: $color-text-muted;
+    }
+
+    &-page {
+      display: none;
+
+      &:target {
+        display: block;
+        // animation: fadeIn 0.3s ease-in;
+      }
+
+      &_active {
+        display: block;
+      }
+    }
+  }
+}
