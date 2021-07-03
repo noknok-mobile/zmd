@@ -1,0 +1,130 @@
+.calendar {
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        & tbody,
+        tr {
+            display: contents;
+        }
+    }
+}
+
+.schedule {
+    &__header {
+        position: relative;
+        background-color: $color-elem-background;
+        min-height: 4em;
+
+        &_single {
+            //если не встроен в др блок
+            border-radius: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__inner {
+        padding: 0 2rem;
+        flex-shrink: 0;
+        width: 100%;
+        max-height: 100%;
+
+        &_fold {
+            max-height: 300px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+
+    &__days {
+        @include text(s, 600);
+        font-size: 12px;
+    }
+
+    &__week {
+        @extend %tag;
+        color: $color-accent;
+    }
+
+    &__nav {
+        $offset: 15px;
+        @extend %absolute-centered;
+
+        @include phone {
+            @include box(24px);
+            $offset: 5px;
+        }
+
+        &_prev {
+            left: $offset;
+        }
+
+        &_next {
+            right: $offset;
+        }
+    }
+
+    &__footer {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    &__more-link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        font-size: 14px;
+        color: $color-text-semi-muted;
+        background-color: transparent;
+
+        &_bg {
+            background-color: $color-elem-background;
+        }
+
+        &:hover {
+            background: transparent;
+            color: $color-accent;
+        }
+
+        &__arrow {
+            margin-left: 20px;
+            transition: transform 0.25s ease-in-out;
+        }
+
+        &[data-expand="true"] &__arrow {
+            transform: rotateZ(-180deg);
+        }
+    }
+}
+
+.timetable {
+    gap: $offset-s 0;
+
+    &__cell {
+        &:empty:after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 26px;
+            border-bottom: 1px solid #dad8d5;
+            margin: 0 auto;
+        }
+    }
+
+    &__time {
+        @include text(xxs, 600);
+        border: $line;
+        height: 20px;
+        text-decoration: none;
+        padding: 2px 8px;
+        border-radius: 20px;
+        color: $color-text-semi-muted;
+    }
+
+}

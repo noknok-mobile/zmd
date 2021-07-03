@@ -38,7 +38,9 @@
       }
     }
   }
-
+  &_bg-none{
+    background-color: transparent;
+  }
   &_large {
     line-height: 3.5rem;
   }

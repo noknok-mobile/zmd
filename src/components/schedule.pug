@@ -1,0 +1,37 @@
+mixin schedule_header(calendar)
+    .schedule__header(class= attributes.class)
+        .schedule__inner
+            a(href="#").schedule__nav.schedule__nav_prev.button-arrow
+                svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow" transform="rotate(90 12 12)")]
+            table.schedule__calendar.calendar-grid
+                tr.schedule__days
+                    each date in calendar.days 
+                        td= date
+                tr.schedule__week
+                    each weekday in calendar.weekdays 
+                        td= weekday
+            a(href="#").schedule__nav.schedule__nav_next.button-arrow
+                svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow" transform="rotate(-90 12 12)")]
+
+mixin schedule_body
+    .schedule__body
+        .schedule__inner.schedule__inner_fold.js-expand-target
+            table.timetable.calendar-grid
+                - for(let i= 8; i <= 21;i++)
+                    tr
+                        - for(let j=0; j<5;j++)
+                            td.timetable__cell
+                                a.timetable__time(href= orderForm data-ordertime="2020-01-12"+j+"00")= +i+":00"
+
+    .schedule__footer 
+        a.button.button_bg-none.schedule__more-link.js-expand-trigger(data-expand="") 
+            span.js-expand-label Развернуть все
+            span.button-arrow.schedule__more-link__arrow 
+                svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow")]
+
+mixin schedule(calendar)
+    .schedule.schedule_single
+        +schedule_header(calendar).schedule__header_single
+        +schedule_body()
+        script
+            include schedule.js 
