@@ -5,35 +5,36 @@
     ['Кардиология','Проктология','Педиатрия','Урология','Хирургия']]
 
 footer.footer
-    .container.footer__inner 
-        .footer__copyright
-            .logo__wrapper.footer__logo
-                a(href="/")
+    .container
+        .footer__inner 
+            .footer__copyright
+                a.footer__logo(href="/")
                     img.logo(src= logo, alt=sitename) 
-            a.footer__link.link(href="/privacy") 
-                | Политика обработки персональных данных и пользовательское соглашение
+                a.footer__link.footer__link_privacy.link(href="/privacy") 
+                    | Политика обработки персональных данных и пользовательское соглашение
 
-        .footer__nav
-            each footerSection, sectionIndex in footerLinks 
-                .footer__nav-section
-                    each link, index in footerSection 
-                        a.footer__link.link.footer__nav-item(href= sectionIndex+""+index)= link
+            .footer__nav
+                each footerSection, sectionIndex in footerLinks 
+                    .footer__nav-section
+                        each link, index in footerSection 
+                            a.footer__link.link.footer__nav-item(href= sectionIndex+""+index)= link
 
-        .footer__info 
-            span.footer__info-item.footer__info-item_address
-                | #{address.city}
-                br
-                | #{address.address}
-                
-            span.footer__info-item.footer__info-item_contacts
-                a.footer__info-item.footer__link(href='tel:'+phone)= phone
-                span.footer__info-item= footerSchedule
-            .footer__promo 
-                .footer__link.footer-promo__text 
-                    | Скачайте приложение на телефон
-                .footer-promo__app-icons
-                    a(href="#")
-                        img(src="assets/img/app_store.png", alt="AppStore")
-                    a(href="#")
-                        img(src="assets/img/app_store.png", alt="GooglePlay")
+            .footer__info
+                .footer__contacts
+                    span.footer__info-item.footer__group
+                        | #{address.city}
+                        br
+                        | #{address.address}
+                    span.footer__group
+                        a.footer__info-item.link(href='tel:'+phone)= phone
+                        span.footer__info-item= footerSchedule
+
+                .footer__promo.promo
+                    .promo__text 
+                        | Скачайте приложение на телефон
+                    .promo__img
+                        a(href="#")
+                            img(src="assets/img/app_store.png" alt="AppStore")
+                        a(href="#")
+                            img(src="assets/img/app_store.png" alt="GooglePlay")
 
