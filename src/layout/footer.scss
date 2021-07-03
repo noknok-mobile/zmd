@@ -1,3 +1,7 @@
+:root{
+    --footer-row: 50px;
+}
+$row: var(--footer-row);
 .footer {
     background-color: #e5d9c6;
 
@@ -22,19 +26,22 @@
 
     &__copyright {
         grid-area: copyright;
+        @include desktop-only{
+            display: grid;
+            grid-auto-rows: calc(2*var(--footer-row));
+        }
     }
 
     &__nav {
         grid-area: menu;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: $gutter;
+        grid-gap: 0 $gutter;
+        grid-auto-rows: $row;
 
-        &-item {
-            display: block;
-            margin-bottom: 2em;
+        &-section{
+            display: contents;
         }
-
         @include phone {
             display: none;
         }
@@ -66,9 +73,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "contacts""promo";
-    grid-gap: var(--gutter);
-
+    
     @include tablet_hrz {
+        grid-gap: var(--gutter);
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-areas: "contacts promo";
     }
@@ -79,6 +86,11 @@
 
     &__item {
         display: block;
+        &_address{
+            @include desktop-only{
+                grid-row: 1/3;
+            }
+        }
     }
 
     &__group {
@@ -95,6 +107,7 @@
         
         white-space: nowrap;
         font-size: 18px;
+        grid-auto-rows: $row;
         
         @include tablet_hrz {
             gap: $gutter;
