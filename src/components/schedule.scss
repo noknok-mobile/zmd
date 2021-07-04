@@ -94,7 +94,7 @@
 
         &__arrow {
             margin-left: 20px;
-            transition: transform 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
         }
 
         &[data-expand="true"] &__arrow {
