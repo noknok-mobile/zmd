@@ -1,11 +1,13 @@
+extends /components/modal
 include /layout/mixins
-.modal__header 
-    +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."}, footer= false).doctor-card_fold(src= 'assets/img/lady.jpg')
-.modal__body
+block settings 
+    - const modalId = 'order'
+block header
+block body
     form.form(action="#")
         +form-step('Дата и время')
-            +input({icon:"date"})(type="text" name="date" value="16 октября, 9:00", readonly disabled)
-                a.input__icon.input__icon_date.js-ajax(data-ajax="ajax/calendar.html" onclick="getAjaxPage(event)")
+            +input({icon:"date"})(type="text" value="16 октября, 9:00", readonly disabled)
+                a.input__icon.input__icon_date.js-ajax(href="ajax/calendar.html" onclick="getAjaxPage(event)")
         +form-step('Способ оплаты').form-step__body_split
             +payment({icon:"card", name:"Банковской картой"})
             +payment({icon:"cache", name:"Наличными"})
@@ -21,3 +23,5 @@ include /layout/mixins
                 span Я согласен с
                     a(href="/privacy").color-link 
                         | условиями обработки персональных данных
+                        
+        script(src="js/order.js") 

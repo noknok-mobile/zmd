@@ -7,6 +7,7 @@ mixin input(props)
             label.input__label(for= attributes.id)= props.label
         if props.info 
             span.input__info= props.info
+        block
 
 mixin checkbox()
     label.control

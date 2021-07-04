@@ -1,23 +1,29 @@
 .spec-row {
     grid-template-areas: "info info calendar";
     @extend %card;
+
     @include tablet_hrz {
         grid-template-areas: "info calendar";
     }
+
     @include tablet {
-        grid-template-areas: "info info" "calendar calendar";
+        grid-template-areas: "info info""calendar calendar";
     }
+
     @include phone {
-        grid-template-areas: "info" "calendar";
+        grid-template-areas: "info""calendar";
     }
-    &__info{
+
+    &__info {
         grid-area: info;
     }
-    &__calendar{
+
+    &__calendar {
         grid-area: calendar;
         border-left: $line;
         padding-top: $offset-s;
-        @include tablet{
+
+        @include tablet {
             border-left: unset;
         }
     }
@@ -31,6 +37,19 @@
     box-shadow: none;
     height: 100%;
 
+    &_fold {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: "image header""image body";
+        margin: calc(-1*var(--offset-middle));
+        margin-bottom: 0;
+    }
+    &_fold &__inner{
+        display: contents;
+    }
+    &_fold &__header{
+        padding-top: $offset-s;
+    }
+
     @include tablet_hrz {
         grid-template-columns: 2fr 4fr;
         max-height: 300px;
@@ -40,6 +59,7 @@
         grid-template-columns: 120px auto auto;
         grid-template-areas: "image header header""image body footer";
     }
+
     @include phone {
         grid-template-columns: 1fr 3fr;
         grid-template-areas: "image header""image body""footer footer";
@@ -74,6 +94,7 @@
         grid-area: footer;
         display: flex;
         align-items: flex-start;
+
         @include phone {
             justify-content: center;
         }

@@ -16,12 +16,12 @@ mixin schedule_header(calendar)
 mixin schedule_body
     .schedule__body
         .schedule__inner.schedule__inner_fold.js-expand-target
-            table.timetable.calendar-grid
+            table.timetable.calendar-grid.js-order-trigger.js-open(data-ajax="ajax/order.html" onclick="goToOrder(event)")
                 - for(let i= 8; i <= 21;i++)
                     tr
                         - for(let j=0; j<5;j++)
                             td.timetable__cell
-                                a.timetable__time(href= orderForm data-ordertime="2020-01-12"+j+"00")= +i+":00"
+                                a.timetable__time.js-ajax(data-ordertime="2020-01-12 "+i+":00")= +i+":00"
 
     .schedule__footer 
         a.button.button_bg-none.schedule__more-link.js-expand-trigger(data-expand="") 
