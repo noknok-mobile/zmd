@@ -99,19 +99,18 @@
   justify-content: center;
   transition: background-color, box-shadow 0.2s ease-in;
   padding-right: 3rem;
-
+  background-color: $color-elem-background;
+  border-radius: 50px;
+  &_inline{
+    border-radius: unset;
+    background-color: unset;
+  }
 
   &:focus-within {
     @extend %input;
     background: white;
 
   }
-
-  background-color: $color-elem-background;
-  border-radius: 50px;
-
-
-
   &__icon {
     @include arrow(33px);
     &::before,

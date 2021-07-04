@@ -1,0 +1,37 @@
+extends /layout/template 
+block vars 
+    - const title = 'Расписание врачей'
+    - const path = ['Главная', title]
+    - const calendar = { days: ["10.11",'11.11','12.11', '13.11', '14.11'], weekdays: ["пн","вт","ср","чт","пт"]}
+    - const orderForm = "ajax/order.html"
+block content
+    .page-block
+        .container
+            .schedule-table
+                .schedule-filter.schedule-grid
+                    .schedule-filter__section.schedule-filter__section_place
+                        .select.select_inline
+                            label.select__label(for="part") Филиал
+                            select.select__item#branch(name="part")
+                                option(value="1",selected) Ул. московская, 40
+                                option(value="2") Ул. московская, 40
+                                option(value="3") Ул. московская, 40
+                            .select__icon
+                    .schedule-filter__section.schedule-filter__section_spec 
+                        .select.select_inline
+                            label.select__label(for="branch") Направление
+                            select.select__item#branch(name="branch")
+                                option(value="1",selected) акушерство и гинекология
+                                option(value="2") кардиология
+                                option(value="3") Ул. московская, 40
+                            .select__icon
+                    .schedule-filter__section.schedule-filter__section_calendar
+                        +schedule_header(calendar)
+
+                .spec-row.schedule-grid 
+                    .spec-row__info 
+                        +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                    .spec-row__calendar
+                        +schedule_body
+block scripts
+    script(src="js/modal.js")
