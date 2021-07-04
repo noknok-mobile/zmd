@@ -75,7 +75,7 @@ button {
   font-display: swap;
   src: url(fonts/PTSerif-Regular.ttf) format("woff2");
 }
-.review, .card, .branch_carousel, .branch_tile:hover, .tile:hover, .spec-row {
+.review, .control-payment__input:checked + .control-payment__label, .card, .branch_carousel, .branch_tile:hover, .tile:hover, .spec-row {
   background-color: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 12px 24px rgba(0, 0, 0, 0.04);
 }
@@ -95,11 +95,11 @@ button {
   margin: 0 var(--grid-margin);
 }
 
-.branch_carousel .branch__link, .color-link, .header__link {
+.form-step__next, .form-step__edit, .branch_carousel .branch__link, .color-link, .header__link {
   color: #852d2e;
   transition: opacity 0.1s ease-in-out;
 }
-.branch_carousel .branch__link:hover, .color-link:hover, .header__link:hover {
+.form-step__next:hover, .form-step__edit:hover, .branch_carousel .branch__link:hover, .color-link:hover, .header__link:hover {
   opacity: 0.8;
 }
 
@@ -230,7 +230,7 @@ html {
   text-transform: uppercase;
 }
 
-.schedule__week, .modal__tab, .button, .input__label, .input__value, .tag, .select__item, .input__value::placeholder {
+.schedule__week, .modal__tab, .form-step__body_fake, .control-payment__label, .button, .input__label, .input__value, .tag, .select__item, .input__value::placeholder {
   font-size: var(--font-s);
   font-weight: 600;
   text-transform: uppercase;
@@ -887,6 +887,18 @@ ul:not([class]) li {
   box-shadow: none;
   height: 100%;
 }
+.doctor-card_fold {
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "image header" "image body";
+  margin: calc(-1*var(--offset-middle));
+  margin-bottom: 0;
+}
+.doctor-card_fold .doctor-card__inner {
+  display: contents;
+}
+.doctor-card_fold .doctor-card__header {
+  padding-top: var(--offset-small);
+}
 .doctor-card__name {
   font-weight: 600;
 }
@@ -1464,6 +1476,18 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   box-shadow: none;
   height: 100%;
 }
+.doctor-card_fold {
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "image header" "image body";
+  margin: calc(-1*var(--offset-middle));
+  margin-bottom: 0;
+}
+.doctor-card_fold .doctor-card__inner {
+  display: contents;
+}
+.doctor-card_fold .doctor-card__header {
+  padding-top: var(--offset-small);
+}
 .doctor-card__name {
   font-weight: 600;
 }
@@ -1477,6 +1501,28 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   grid-area: footer;
   display: flex;
   align-items: flex-start;
+}
+
+.control-payment__label {
+  line-height: 3.5rem;
+  white-space: nowrap;
+  padding: 0 2rem;
+  display: block;
+  align-content: center;
+  padding: 0 2rem;
+}
+.control-payment__label_rounded {
+  border-radius: 50px;
+}
+.control-payment__icon {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+.control-payment__name {
+  vertical-align: middle;
+}
+.control-payment__input:checked + .control-payment__label {
+  color: #852d2e;
 }
 
 .dictionary {
@@ -1573,6 +1619,55 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
 
 .section_hidden {
   display: none;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--offset-middle);
+}
+.form__footer_compact {
+  justify-self: start;
+  width: clamp(250px, 50%, 400px);
+}
+
+.form-step {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: var(--gutter);
+}
+.form-step__header {
+  display: flex;
+  justify-content: space-between;
+}
+.form-step__title {
+  font-size: var(--font-basic);
+  font-weight: 600;
+  color: #7d7d7d;
+  position: relative;
+}
+.form-step__edit {
+  display: none;
+}
+.form-step__body {
+  display: grid;
+  gap: var(--gutter);
+  /*стили для свернутого вида*/
+}
+.form-step__body_split {
+  grid-template-columns: repeat(2, 1fr);
+}
+.form-step__body_fake {
+  display: none;
+  color: #852d2e;
+}
+.form-step__more {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.form-step__next {
+  align-self: start;
 }
 
 .header-info {
@@ -1891,6 +1986,10 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   display: contents;
 }
 
+.schedule_single {
+  display: grid;
+  gap: var(--gutter);
+}
 .schedule__header {
   position: relative;
   width: 100%;
@@ -1907,6 +2006,7 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   padding: 0 2rem;
   flex-shrink: 0;
   max-height: 100%;
+  width: 100%;
 }
 .schedule__inner_fold {
   max-height: 300px;
@@ -2307,6 +2407,9 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
     grid-template-columns: 3fr 4fr;
     grid-template-areas: "image content";
     padding-right: 0;
+  }
+  .form-step__body_split {
+    grid-template-columns: 1fr;
   }
   .slider-nav {
     display: none;

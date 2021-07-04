@@ -1,0 +1,88 @@
+
+<div class="modal__header"> 
+  <div class="doctor-card doctor-card_fold">
+    <div class="card__img-wrapper doctor-card__photo"><img class="card__img" width="300" height="313" src="assets/img/lady.jpg"/></div>
+    <div class="card__inner doctor-card__inner">
+      <div class="doctor-card__header">
+        <h3 class="card__title doctor-card__name">Лымарь Марина Петровна</h3>
+        <div class="doctor-card__meta tag">Акушер-гинеколог</div>
+      </div>
+      <div class="doctor-card__body">
+        <div class="card__desc price">Приём от 2500 руб.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal__body">
+  <form class="form" action="#">
+    <div class="form__step form-step">
+      <div class="form-step__header">
+        <h4 class="form-step__title">Дата и время</h4>
+      </div>
+      <div class="form-step__body">
+        <div class="input"> 
+          <input class="input__value" type="text" name="date" value="16 октября, 9:00" readonly="readonly" disabled="disabled"/><span class="input__icon input__icon_date"></span><a class="input__icon input__icon_date js-ajax" data-ajax="ajax/calendar.html" onclick="getAjaxPage(event)"></a>
+        </div>
+      </div>
+    </div>
+    <div class="form__step form-step">
+      <div class="form-step__header">
+        <h4 class="form-step__title">Способ оплаты</h4>
+      </div>
+      <div class="form-step__body form-step__body_split">
+        <div class="control-payment">
+          <input class="control-payment__input control__input" type="radio" id="card" name="payment"/>
+          <label class="control-payment__label control-payment__label_rounded link tile" for="card">
+            <svg class="control-payment__icon" height="24" width="35">
+              <use xlink:href="icons.svg#card"></use>
+            </svg><span class="control-payment__name">Банковской картой</span>
+          </label>
+        </div>
+        <div class="control-payment">
+          <input class="control-payment__input control__input" type="radio" id="cache" name="payment"/>
+          <label class="control-payment__label control-payment__label_rounded link tile" for="cache">
+            <svg class="control-payment__icon" height="24" width="35">
+              <use xlink:href="icons.svg#cache"></use>
+            </svg><span class="control-payment__name">Наличными</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__step form-step">
+      <div class="form-step__header">
+        <h4 class="form-step__title">Пациент</h4>
+      </div>
+      <div class="form-step__body">
+        <div class="input"> 
+          <input class="input__value" id="name" name="name" type="text" placeholder=""/>
+          <label class="input__label" for="name">ФИО</label>
+        </div>
+        <div class="input"> 
+          <input class="input__value" id="email" name="email" type="email" placeholder=""/>
+          <label class="input__label" for="email">E-mail</label>
+        </div>
+        <div class="input"> 
+          <input class="input__value" id="phone" name="phone" type="text" placeholder=""/>
+          <label class="input__label" for="phone">Телефон</label>
+        </div>
+      </div>
+    </div>
+    <div class="form__step form-step">
+      <div class="form-step__header">
+        <h4 class="form-step__title">Услуга</h4>
+      </div>
+      <div class="form-step__body">
+        <div class="input"> 
+          <input class="input__value" id="service" name="service" type="text" value="консультация" readonly="readonly" disabled="disabled"/><span class="input__info">500 руб.</span>
+        </div>
+      </div>
+    </div>
+    <div class="form__step form__footer form-step">
+      <button class="button button_large">Записаться на прием</button>
+      <label class="control">
+        <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен с<a class="color-link" href="/privacy">
+               условиями обработки персональных данных</a></span></span>
+      </label>
+    </div>
+  </form>
+</div>

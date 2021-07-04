@@ -1,0 +1,64 @@
+
+<div class="modal__wrapper" data-modal="1">
+  <div class="modal__overlay"></div>
+  <div class="modal"> 
+    <button class="modal__close js-close" role="button" aria-label="Закрыть">
+      <svg>
+        <use xlink:href="icons.svg#close"></use>
+      </svg>
+    </button>
+    <div class="modal__inner">
+      <div class="modal__header">
+        <div class="modal__tab-list"><a class="tag" href="#auth">Вход</a><a class="tag" href="#signin">Регистрация</a></div>
+      </div>
+      <div class="modal__body">
+        <div class="modal__tab-page" id="auth">
+          <form class="form" action="#">
+            <div class="form-step">
+              <div class="input"> 
+                <input class="input__value" id="name" type="text" name="name" placeholder="Иванов Иван Иванович"/>
+                <label class="input__label" for="name">Ваше имя*</label>
+              </div>
+              <div class="input"> 
+                <input class="input__value" type="password" name="password"/>
+                <label class="input__label" for="password">Ваш пароль*</label><span class="input__icon input input__icon_password-hidden js-toggle"></span>
+              </div>
+              <div class="form-step__more"><a class="tag tag_link" href="#">Забыли пароль?</a></div>
+            </div>
+            <div class="form-step form__footer"> 
+              <div class="button button_large">войти</div>
+            </div>
+          </form>
+        </div>
+        <div class="modal__tab-page" id="signin">
+          <form class="form" action="#">
+            <div class="form-step">
+              <div class="input"> 
+                <input class="input__value" id="name" type="text" name="name" placeholder="Иванов Иван Иванович"/>
+                <label class="input__label" for="name">ФИО*</label>
+              </div>
+              <div class="input"> 
+                <input class="input__value" type="password" name="password"/>
+                <label class="input__label" for="password">Ваш пароль*</label><span class="input__icon input input__icon_password-hidden js-toggle"></span>
+              </div>
+              <div class="input"> 
+                <input class="input__value" id="phone" type="text" inputmode="numeric" name="phone" placeholder="+7(900) 000-00-00"/>
+                <label class="input__label" for="phone">Номер телефона*</label>
+              </div>
+              <div class="input"> 
+                <input class="input__value input__value" id="email" type="email" name="email" inputmode="email"/>
+                <label class="input__label" for="email">E-mail*</label>
+              </div>
+              <label class="control">
+                <input class="control__input" type="text" name="privacy"/><span class="control__label"><span class="control__label_agreement">Я согласен с<a class="color-link" href="/privacy">условиями обработки  персональных данных </a></span></span>
+              </label>
+            </div>
+            <div class="form-step form__footer"> 
+              <div class="button button_large">Зарегистрироваться</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
