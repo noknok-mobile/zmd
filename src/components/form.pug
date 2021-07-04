@@ -1,0 +1,6 @@
+mixin form-step(title)
+    .form__step.form-step
+        .form-step__header
+            h4.form-step__title= title
+        .form-step__body(class= attributes.class)
+            block

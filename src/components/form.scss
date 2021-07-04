@@ -1,0 +1,64 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: $offset-m;
+
+    &__footer {
+        &_compact {
+            justify-self: start;
+            width: clamp(250px, 50%, 400px);
+        }
+    }
+}
+
+.form-step {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: $gutter;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include text(m, 600);
+        color: $color-text-semi-muted;
+        position: relative;
+    }
+
+    &__edit {
+        @extend %color-link;
+        display: none;
+    }
+
+    &__body {
+        display: grid;
+        gap: $gutter;
+
+        &_split {
+            grid-template-columns: repeat(2, 1fr);
+            @include phone_hrz {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /*стили для свернутого вида*/
+        &_fake {
+            display: none;
+            @extend %tag;
+            color: $color-accent;
+        }
+    }
+
+    &__more {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__next {
+        @extend %color-link;
+        align-self: start;
+    }
+}

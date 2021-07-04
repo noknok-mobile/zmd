@@ -1,0 +1,28 @@
+.control-payment {
+  &__label {
+    line-height: 3.5rem;
+    white-space: nowrap;
+    padding: 0 2rem;
+    display: block;
+    @extend %tag;
+    align-content: center;
+    padding: 0 2rem;
+    &_rounded {
+      border-radius: 50px;
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+
+  &__name {
+    vertical-align: middle;
+  }
+
+  &__input:checked+&__label {
+    color: $color-accent;
+    @extend %card;
+  }
+}

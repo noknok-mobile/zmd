@@ -1,0 +1,24 @@
+extends /components/modal
+include /layout/mixins
+block settings 
+    - const modalId = 'order'
+block header
+block body
+    form.form(action="#")
+        +form-step('Дата и время')
+            +input({icon:"date"})(type="text" value="16 октября, 9:00", readonly disabled)
+        +form-step('Способ оплаты').form-step__body_split
+            +payment({icon:"card", name:"Банковской картой"})
+            +payment({icon:"cache", name:"Наличными"})
+        +form-step('Пациент')
+            +input({label: "ФИО"})#name(name="name" type="text" placeholder="")
+            +input({label:"E-mail"})#email(name="email" type="email" placeholder="")
+            +input({label:"Телефон"})#phone(name="phone" type="text" placeholder="")
+        +form-step('Услуга')
+            +input({info:"500 руб."})#service(name="service" type="text" value="консультация" readonly disabled)
+        .form__step.form__footer.form-step
+            button.button.button_large Записаться на прием
+            +checkbox(name="privacy" checked)
+                span Я согласен с
+                    a(href="/privacy").color-link 
+                        | условиями обработки персональных данных

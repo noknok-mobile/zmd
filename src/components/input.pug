@@ -1,0 +1,15 @@
+mixin input(props)
+    .input 
+        input.input__value&attributes(attributes)
+        if props.icon
+            span.input__icon(class= "input__icon_" + props.icon)
+        if props.label
+            label.input__label(for= attributes.id)= props.label
+        if props.info 
+            span.input__info= props.info
+
+mixin checkbox()
+    label.control
+        input.control__input(type="checkbox" name= attributes.name checked= attributes.checked)
+        span.control__label
+            block
