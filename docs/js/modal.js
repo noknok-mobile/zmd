@@ -63,6 +63,11 @@ function setOrderDate(datestring) {
     document.querySelector('.input__value[name="date"]').value = datetime.toLocaleString('ru', options);
 
 }
+function completeOrder(e){
+    e.preventDefault();
+    const url = 'ajax/result.html';
+    setModalContent(url);
+}
 //script for tabs
 for (tab of document.querySelectorAll('.tab')) tab.addEventListener('click', tabHandler);
 
