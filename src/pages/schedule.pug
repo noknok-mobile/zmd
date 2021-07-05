@@ -32,6 +32,7 @@ block content
                     .spec-row__info 
                         +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
                     .spec-row__calendar
-                        +schedule_body
-block scripts
-    script(src="js/modal.js")
+                        .schedule.schedule_fold
+                            +schedule_body
+block append scripts
+    script(src="js/schedule.js")
