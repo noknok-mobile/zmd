@@ -1,0 +1,22 @@
+extends /layout/template
+block vars
+    - const title = "Документы"
+    - const mainpage = false
+    - const path = ['Главная', title]
+    - const menu = ['общая информация','лицензии и сертификаты','Новости','Тендеры','вакансии','Вопрос-ответ','документы']
+    - const docs = [{title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type: "pdf", size: "7 Кб"}, {title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type: "doc", size: "4 Кб"}, {title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type:"doc", size: "16 Кб"}]
+block content
+    .page-grid 
+        .page-block.page-grid__content
+            main.docs
+                section.docs__section
+                    h2.title.docs__title.mark ТФОМС
+                    each document in docs
+                        +document(document).docs__item
+                section.docs__section.page-block
+                    h2.title.docs__title.mark Документы
+                    each document in docs
+                        +document(document).docs__item
+
+        .page-grid__sidebar
+            +sidebar-menu(menu)

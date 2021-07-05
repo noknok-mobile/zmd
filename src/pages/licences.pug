@@ -1,0 +1,15 @@
+extends /layout/template
+block vars
+    - const title = "Лицензии"
+    - const mainpage = false
+    - const path = ['Главная', title]
+    - const menu = ['общая информация','лицензии и сертификаты','Новости','Тендеры','вакансии','Вопрос-ответ','документы']
+    - const licences = [{title:"Министерство здравоохранения Краснодарского края", img: "assets/img/licence.jpg"}]
+block content
+    .page-grid 
+        .page-block.page-grid__content
+            main.licence-list
+                - for(let i=0; i < 8; i++)
+                    +licence(licences[0].title)(src= licences[0].img)
+        .page-grid__sidebar
+            +sidebar-menu(menu)
