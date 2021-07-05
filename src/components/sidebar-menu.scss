@@ -1,0 +1,18 @@
+.sidebar-menu {
+  list-style-type: none;
+  padding: 15px 50px;
+  max-width: 410px;
+  @extend %card;
+  position: sticky;
+  top: $offset-m;
+  &__item {
+    display: block;
+    padding: 1rem 0;
+    @extend %tag;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      border-bottom: $line;
+    }
+  }
+}

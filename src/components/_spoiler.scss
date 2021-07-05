@@ -1,0 +1,21 @@
+.spoiler {
+
+    &[open] &__header::after {
+      transform: translateY(-50%) rotateZ(-180deg);
+    }
+    &__header{
+      position: relative;
+      list-style: none;
+      &::-webkit-details-marker{
+        display: none;
+      }
+      @include arrow(33px);
+      cursor: pointer;
+    }
+    &__more{
+        padding: $offset-s 0;
+    }
+    &[open] &__more {
+      animation: fadeIn 0.5s;
+    }
+  }

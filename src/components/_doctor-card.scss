@@ -13,16 +13,16 @@
     @include phone {
         grid-template-areas: "info""calendar";
     }
-
     &__info {
         grid-area: info;
+        max-height: 300px;
     }
 
     &__calendar {
         grid-area: calendar;
         border-left: $line;
         padding-top: $offset-s;
-
+        
         @include tablet {
             border-left: unset;
         }

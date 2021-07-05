@@ -1,0 +1,4 @@
+mixin sidebar-menu(menu)
+    nav.sidebar-menu(class= attributes.class)
+        each item in menu
+            a.sidebar-menu__item.link(href="#")= item

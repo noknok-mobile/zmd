@@ -1,0 +1,23 @@
+.price-list {
+  width: 100%;
+  border-collapse: collapse;
+  @extend %text;
+  &__row {
+    padding: $offset-s 0;
+    @extend %text;
+    &:not(:last-of-type) {
+      border-bottom: $line;
+    }
+
+    & td {
+      padding: 20px $gutter 20px 0;
+    }
+    & td:last-of-type {
+      text-align: right;
+      @extend .price;
+    }
+  }
+  &__price {
+    //??
+  }
+}
