@@ -51,7 +51,7 @@ p {
 ul:not([class]){
   list-style-position: inside;
   & li{
-    list-style-type: '-';
+    list-style-type: '- ';
     @extend %paragraph;
   }
 }
@@ -82,4 +82,5 @@ ul:not([class]){
   font-family: 'PT Serif';
   margin: 0;
   line-height: 1.2;
+  font-weight: 400;
 }
