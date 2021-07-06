@@ -1,0 +1,19 @@
+mixin gallery__item(image, filter = null)
+    .gallery__item-wrap(class= attributes.class, data-filter= filter)
+        img.gallery__item(src= image)
+
+mixin gallery(items, filter = null)
+    if filter
+        .gallery__nav.tab-nav.filter-nav.mobile-scrollable
+            a.button.tab.js-filter.js-filter-active(href="#", data-filter="") Все
+            each filterItem in filter
+                a.button.tab.js-filter(href="#", data-filter= filterItem.id)= filterItem.name 
+        .gallery__inner.mobile-scrollable
+            each item in items
+                +gallery__item(item.src, item.filterId).filter-item
+    else 
+        .gallery__inner.mobile-scrollable
+            each item in items
+                +gallery__item(item.src)
+
+
