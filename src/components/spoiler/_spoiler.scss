@@ -3,7 +3,7 @@
     &[open] &__header::after {
       transform: translateY(-50%) rotateZ(-180deg);
     }
-    &__header{
+    &__title{
       position: relative;
       list-style: none;
       &::-webkit-details-marker{

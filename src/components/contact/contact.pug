@@ -1,0 +1,15 @@
+mixin contact(data)
+    details.contact.spoiler(class= attributes.class)
+        summary.spoiler__title.contact__address= data.address 
+        .spoiler__more.contact__more
+            table.contact__table
+                each row in data.table 
+                    tr 
+                        td= row.name
+                        td !{row.value}
+            .contact__comment= data.comment 
+            .contact__transport
+                each item in data.transport
+                    span.contact__transport-list
+                        i.transport-icon(title= item.title, class= `transport-icon_${item.type}`)
+                        | #{item.value}

@@ -3,7 +3,6 @@ block content
     .page-grid 
         main.page__content 
             section.page-block
-                .accordion
                     each item in faq 
                         +accordion(item.title)
                             | #{item.detail}

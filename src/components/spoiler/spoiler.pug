@@ -1,0 +1,5 @@
+mixin spoiler(title, component = '')
+    details.spoiler(class= [attributes.class, component])
+        summary.spoiler__title(class= `${component}__title`)= title
+        .spoiler__more(class= `${component}__more`)
+            block

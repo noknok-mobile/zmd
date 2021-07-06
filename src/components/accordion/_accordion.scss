@@ -1,7 +1,6 @@
 .accordion {
-  &__item{
-    border-bottom: $line;
-  }
+  border-bottom: $line;
+
   &__title {
     position: relative;
     display: flex;
@@ -15,23 +14,26 @@
     padding: 1.5rem 0;
     padding-right: 50px;
   }
+
   &__more {
     position: relative;
     display: block;
     padding: 40px;
+
     @include phone {
       padding: 30px 20px;
     }
+
     background: $color-elem-background;
     box-shadow: inset 0px 10px 20px -15px rgba(0, 0, 0, 0.1),
-      inset 0px -15px 20px -15px rgba(0, 0, 0, 0.1);
- 
+    inset 0px -15px 20px -15px rgba(0, 0, 0, 0.1);
+
     &::before {
       content: "";
       display: block;
       position: absolute;
       @include box(38px);
-      transform: translate(-50%, -50%) rotateZ(45deg) ;
+      transform: translate(-50%, -50%) rotateZ(45deg);
       left: 50%;
       top: 0;
       background: white;

@@ -1,3 +1,7 @@
+mixin item(href, name)
+    li 
+        a.link(href= href+".html")= name
+        
 doctype html
 html(lang="en")
     head
@@ -11,25 +15,15 @@ html(lang="en")
             .page-block
                 h1 Список страниц сайта 
                 ul 
-                    li 
-                        a.link(href="main.html") Главная
-                    li 
-                        a.link(href="schedule.html") Расписание врачей
-                    li 
-                        a.link(href="services.html") Диагностика
-                    li
-                        a.link(href="dictionary.html") Направления лечения
-                    li 
-                        a.link(href="doctor.detail.html") Доктор детальная
-                    li 
-                        a.link(href="price-list.html") Прайс-лист
-                    li
-                        a.link(href="faq.html") Вопросы и ответы
-                    li
-                        a.link(href="docs.html") Документы
-                    li 
-                        a.link(href="licences.html") Лицензии
-                    li 
-                        a.link(href="vacancy.html") Вакансии
-                    li 
-                        a.link(href="news.html") Новости 
+                    +item("main", "Главная")
+                    +item("schedule","Расписание врачей")
+                    +item("services", "Диагностика")
+                    +item("dictionary", "Направления лечения")
+                    +item("doctor.detail", "Доктор детальная")
+                    +item("price-list", "Прайс-лист")
+                    +item("faq","Вопросы и ответы")
+                    +item("docs", "Документы")
+                    +item("licences", "Лицензии")
+                    +item("vacancy", "Вакансии")
+                    +item("news", "Новости")
+                    +item("contacts", "Контакты")
