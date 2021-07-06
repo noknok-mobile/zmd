@@ -13,24 +13,26 @@
     background-color: white;
     flex: 0 0 auto;
 
-    &__icon {
-        @include box(24px);
-    }
-
     &:hover {
         background-color: $color-main;
         color: white;
     }
+    
+    &__icon {
+        @include box(50%);
+        transition: transform 0.2s ease-in-out;
+    }
 
-    &_next {
+
+    &_next &__icon {
         transform: rotateZ(-90deg);
     }
 
-    &_prev {
+    &_prev &__icon{
         transform: rotateZ(90deg);
     }
 
-    &_up {
+    &_up &__icon{
         transform: rotateZ(180deg);
     }
 
