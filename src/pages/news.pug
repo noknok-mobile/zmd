@@ -1,0 +1,12 @@
+extends /layout/template
+
+block content 
+    main.page__content
+        .page-block.card-list
+            each news in newsList
+                +news(news)
+            +pagination({count: 7, current: 1})
+
+block prepend vars 
+    - const title = "Новости"
+    - const newsList = [{date:"12.05.1996", title:"Открылся филиал нашего центра в Адыгейске",image:"assets/img/image.png", desc:"Теперь в нашем центре наши клиенты могут воспользоваться услугами диетолога-психолога"}, {date:"12.05.1996", title:"Открылся филиал нашего центра в Адыгейске",image:"assets/img/image.png", desc:"Теперь в нашем центре наши клиенты могут воспользоваться услугами диетолога-психолога"}, {date:"12.05.1996", title:"Открылся филиал нашего центра в Адыгейске",image:"assets/img/image.png", desc:"Теперь в нашем центре наши клиенты могут воспользоваться услугами диетолога-психолога"}]

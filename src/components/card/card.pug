@@ -1,12 +1,12 @@
-mixin card
+mixin card(props)
     .card(class= attributes.class)
         .card__inner
             .card__header 
                 .card__meta.tag= props.meta
-                h3.card__title= props.title
+                h3.card__title(class= attributes.class + "__title")= props.title
             .card__body
-                block body
+                block
             .card__footer
-                a.button(href="#") props.button
+                a.button(href="#")= props.button
         .card__img-wrapper
-            img.card__img(src= image)
+            img.card__img(src= props.image)

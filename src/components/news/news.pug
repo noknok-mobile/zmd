@@ -1,0 +1,4 @@
+mixin news(props)
+    +card({meta: props.date, button: "Подробнее", title: props.title, image: props.image}).news
+        .card__description.news__description
+            | #{props.desc}
