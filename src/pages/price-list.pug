@@ -1,4 +1,5 @@
 extends /layout/template
+
 block content 
     .container 
         .page-block
@@ -6,8 +7,7 @@ block content
                 each item in prices 
                         +accordion(item.title)
                             +price-list(item.priceList)
-block vars 
-    - const title = "Прайс-лист"
-    - const mainpage = false
-    - const path = ['Главная', title]
+
+block prepend vars 
+    - let title = "Прайс-лист"
     - const prices = [{title:"Аллергология и иммунология - врачебные приемы",priceList:[{name:"Коррекция нарушений",price:"2200"},{name:"Консультации по вопросам пролонгирования беременности",price:"2200"},{name:"Коррекция нарушений менструальной функции (репродуктивного и климактерического периода)",price:"2200"},{name:"Индивидуальный подбор средств и методов контрацепции",price:2200}]},{title:"Гинекология и акушерство - врачебные приемы",priceList:[{"name":"Коррекция нарушений",price:"2200"},{name:"Консультации по вопросам пролонгирования беременности",price:"2200"},{name:"Коррекция нарушений менструальной функции (репродуктивного и климактерического периода)",price:"2200"},{name:"Индивидуальный подбор средств и методов контрацепции",price:"2200"}]}]

@@ -1,9 +1,5 @@
 extends /layout/template
-block vars
-    - const title = "Вакансии"
-    - const mainpage = false
-    - const path = ['Главная', title]
-    - const menu = ['общая информация','лицензии и сертификаты','Новости','Тендеры','вакансии','Вопрос-ответ','документы']
+
 block content
     .page-grid 
         main.page-grid__content
@@ -37,3 +33,6 @@ block content
                         
         .page-grid__sidebar
             +sidebar-menu(menu)
+
+block prepend vars
+    - const title = "Вакансии"

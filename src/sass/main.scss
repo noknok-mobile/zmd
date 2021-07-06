@@ -9,9 +9,59 @@
 './basic/basic',
 './basic/text';
 
+
 @import './import/*';
 
-@import '../layout/template.scss';
-@import '../components/*';
-@import '../pages/*' 
+// template
+@import 
+'../layout/template.scss',
+'../layout/header/header-desktop',
+'../layout/header/header-mobile',
+'../layout/header/header',
+'../layout/footer/footer',
+'../layout/menu/main-menu',
+'../layout/menu/icon-menu',
+'../layout/menu/sidebar-menu',
+'../components/header-info/header-info',
+'../layout/page/page-header',
+'../components/breadcrumb/breadcrumb',
+'../components/modal/modal.scss'
+;
 
+
+
+// components
+@import
+'../components/button/button',
+'../components/link/link',
+'../components/list/list',
+'../components/input/input',
+'../components/input/control',
+'../components/form/form',
+'../components/accordion/spoiler',
+'../components/card/card',
+'../components/tile/tile',
+'../components/arrow/arrow',
+
+'../components/intro/intro',
+'../components/slider/slider',
+'../components/slider/big-carousel',
+'../components/about/about',
+'../components/accordion/accordion',
+'../components/dictionary/dictionary',
+'../components/document/document',
+'../components/branch/branch',
+'../components/banner/banner',
+'../components/doctor-card/doctor-card',
+'../components/schedule/schedule',
+'../components/schedule/schedule-filter',
+'../components/input/control-payment',
+'../components/licence/licence',
+'../components/review/review',
+'../components/overview/overview',
+'../components/price-list/price-list',
+'../components/result/result'
+;
+
+//pages
+@import '../pages/*'; 

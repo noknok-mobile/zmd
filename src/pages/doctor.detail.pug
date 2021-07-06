@@ -1,9 +1,8 @@
 extends /layout/template
 
-block vars 
-    - const title = 'Мейпариани Елена Владимировна'
-    - const path = ['Главная','Врачи', title]
-
 block content 
     .container
         .page-grid.page-block_wide
+        
+block append vars 
+    - title = 'Мейпариани Елена Владимировна'

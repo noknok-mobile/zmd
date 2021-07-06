@@ -44,9 +44,9 @@ block scripts
     script(src="js/swiper-bundle.min.js") 
     script(src="js/main.js") 
 
-block vars 
-    - const title = 'Главная'
-    - const mainpage = true;
+block append vars 
+    - title = 'Главная'
+    - mainpage = true
     - const banners = [{link: '/asd', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться', src:"assets/img/banner.png"},{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться', src:"assets/img/doctor_demo.jpg"}]
 
     - const branchParams = {title:'Направления', desc:"В центре производится<br><span class='mark'>весь перечень</span> лабораторных и диагностических исследований", buttons:['Bсе направления','все специалисты']}

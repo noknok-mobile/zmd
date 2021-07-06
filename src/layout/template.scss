@@ -1,6 +1,6 @@
-@import './header.scss',
-'./footer.scss',
-'./page-header.scss';
+@import './header/header.scss',
+'./footer/footer.scss',
+'./page/page-header.scss';
 
 .page-grid {
   display: grid;

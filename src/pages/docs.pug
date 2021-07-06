@@ -1,10 +1,5 @@
 extends /layout/template
-block vars
-    - const title = "Документы"
-    - const mainpage = false
-    - const path = ['Главная', title]
-    - const menu = ['общая информация','лицензии и сертификаты','Новости','Тендеры','вакансии','Вопрос-ответ','документы']
-    - const docs = [{title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type: "pdf", size: "7 Кб"}, {title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type: "doc", size: "4 Кб"}, {title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type:"doc", size: "16 Кб"}]
+
 block content
     .page-grid 
         .page-block.page-grid__content
@@ -20,3 +15,7 @@ block content
 
         .page-grid__sidebar
             +sidebar-menu(menu)
+
+block prepend vars
+    - const title = "Документы"
+    - const docs = [{title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type: "pdf", size: "7 Кб"}, {title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type: "doc", size: "4 Кб"}, {title:"Положение о порядке и условиях оказания услуг ООО ИМПУЛЬС", type:"doc", size: "16 Кб"}]

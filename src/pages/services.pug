@@ -1,8 +1,7 @@
 extends /layout/template
 
-block vars 
+block prepend vars 
     - const title = 'Диагностика'
-    - const path = ['Главная', title]
     - const branches = [{text:'Хирургический стационар', img: '/img/hirurg.svg'}, {text:'Функциональная диагностика', img: ''},{text:'Функциональная диагностика', img:''}]
 
 block content 
