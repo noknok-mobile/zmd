@@ -1,0 +1,50 @@
+.account {
+    &__section {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-template-areas: "label ." "input tooltip" "error .";
+    align-items: center;
+    grid-gap: $offset-small $gutter;
+    color: $color-text-semi-muted;
+
+    @include phone_hrz {
+      grid-template-columns: 1fr;
+      grid-template-areas: "label" "input" "error" "tooltip" ;
+    }
+
+    &-label {
+      grid-area: label;
+      @extend %tag;
+    }
+    &-input {
+      grid-area: input;
+    }
+    &-tip {
+      grid-area: tooltip;
+      @include text(xs);
+    }
+    &-label-error {
+      grid-area: error;
+      display: none;
+      color: $color-error;
+      @include text(xxs);
+
+      &::before{
+        content: '\00D7';
+        line-height: inherit;
+        margin-right: 1em;
+      }
+      
+      @include phone_hrz{
+        font-size: 12px;
+      }
+    }
+  }
+
+  // &__input {
+  //   display: contents;
+  // }
+  // .tag {
+  //   grid-column: 1/3;
+  // }
+}
