@@ -10,7 +10,7 @@
   &:active {
     color: $color-contrast;
   }
-}
-.color-link{
-  @extend %color-link; 
+  &_color{
+    @extend %color-link;
+  }
 }
