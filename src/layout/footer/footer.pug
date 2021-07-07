@@ -15,13 +15,14 @@ footer.footer
 
             .footer__nav
                 each footerSection, sectionIndex in footerLinks 
-                    .footer__nav-section
-                        each link, index in footerSection 
-                            a.footer__link.link.footer__nav-item(href= sectionIndex+""+index)= link
+                    .footer__nav-group
+                        each link, index in footerSection
+                            - let fakeLink = `#${sectionIndex}${index}`
+                            a.footer__link.link.footer__nav-item(href= fakeLink)= link
 
             .footer__info.footer-info
                 .footer-info__contacts
-                    .footer-info__item.footer-info__item_address
+                    .footer-info__item
                         | #{address.city},
                         br
                         | #{address.address}
