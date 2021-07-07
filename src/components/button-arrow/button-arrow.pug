@@ -1,4 +1,7 @@
 mixin button-arrow(dir = "next")
-    a.button-arrow(href= attributes.href, class= [`button-arrow_${dir}`, attributes.class])
-        svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow")]
-        //- задавать направление
+    if attributes.href 
+        a.button-arrow(href= attributes.href, class= [`button-arrow_${dir}`, attributes.class])
+            svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow")]
+    else 
+        button.button-arrow(class= [`button-arrow_${dir}`, attributes.class])
+            svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow")]

@@ -3,14 +3,13 @@ mixin overview(props)
         .overview__desc
             +about(props.title)
                 | !{props.desc}
-        .overview__nav.mobile-scrollable
+        .container.overview__nav.mobile-scrollable
             .overview__links
                 each button in props.buttons
                     a.button.button_light(href="#")= button
-            - const classname = `${attributes.class}__nav`
-            .overview__slider-nav.slider-nav(class= classname)
-                a(href="#prev").button-arrow.slider-nav__btn_prev
-                    svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow",transform="rotate(90 15 15)")]
-                a(href="#next").button-arrow.slider-nav__btn_next
-                    svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow", transform="rotate(-90 15 15)")]
-        block
+
+            .overview__slider-nav.slider-nav(class= `${attributes.class}__nav`)
+                +button-arrow('prev')
+                +button-arrow()
+        .overview__slider
+            block

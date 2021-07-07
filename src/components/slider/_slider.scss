@@ -38,7 +38,7 @@
 
     &-nav {
         display: flex;
-        @include flex-gap($offset-s);
+        @include flex-gap($gutter);
         color: $color-accent;
 
         @include phone_hrz {
