@@ -1,13 +1,14 @@
 extends /layout/template
     
 block content
-    .page-grid 
-        .page-block.page-grid__content
-            main.licence-list
-                - for(let i=0; i < 8; i++)
-                    +licence(licences[0].title)(src= licences[0].img)
-        .page-grid__sidebar
+    .page__grid 
+        .page__sidebar
             +sidebar-menu(menu)
+        .page__content
+            .page-section
+                main.licence-list
+                    - for(let i=0; i < 8; i++)
+                        +licence(licences[0].title)(src= licences[0].img)
 
 block prepend vars
     - const title = "Лицензии"

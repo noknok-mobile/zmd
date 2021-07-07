@@ -22,14 +22,15 @@ html(lang="ru")
         title= title 
         link(rel="stylesheet", href="main.css")
     body 
-        include header/header 
+        include header/header
         include page/page-header
         if !mainpage
             +page-header(pageHeaderImage)
-            .container
+            .container.page
                 block content 
         else 
-            block content
+            .page
+                block content
         include footer/footer
         include popup
         block scripts

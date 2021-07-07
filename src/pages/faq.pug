@@ -1,13 +1,13 @@
 extends /layout/template
 block content
-    .page-grid 
+    .page__grid
+        .page__sidebar
+            +sidebar-menu(menu)
         main.page__content 
-            section.page-block
+            section.page-section
                     each item in faq 
                         +accordion(item.title)
                             | #{item.detail}
-        .page-grid__sidebar
-            +sidebar-menu(menu)
             
 block prepend vars 
     - const title = 'Вопросы и ответы'

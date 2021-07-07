@@ -1,0 +1,39 @@
+.page {
+  &__grid {
+    display: grid;
+    column-gap: $gutter;
+    grid-template-columns: 8fr 4fr;
+    grid-template-areas: 'content sidebar';
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
+
+    &_reverse {
+      grid-template-columns: 4fr minmax(0,8fr);
+      grid-template-areas: 'sidebar content';
+
+    }
+  }
+  &__content {
+    grid-area: content;
+  }
+
+  &__sidebar {
+    grid-area: sidebar;
+    position: relative;
+    z-index: 10;
+    padding: $offset-l 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__menu {
+    position: sticky;
+    top: $offset-m;
+    max-width: 410px;
+  }
+}

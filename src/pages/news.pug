@@ -2,7 +2,7 @@ extends /layout/template
 
 block content 
     main.page__content
-        .page-block.card-list
+        .page-section.card-list
             each news in newsList
                 +news(news)
             +pagination({count: 7, current: 1})

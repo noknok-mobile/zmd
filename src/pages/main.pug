@@ -10,7 +10,7 @@ block content
             .big-carousel__nav.big-carousel__nav_prev
             .big-carousel__nav.big-carousel__nav_next
 
-    .page-block
+    .page-section
         .container 
             +overview(branchParams).branch-list
                 .slider-container.js-branch-slider
@@ -19,19 +19,19 @@ block content
                             +branch(branch.text)(svgIcon=branch.icon, type="carousel")
                 .slider-pagination.branch-list__pagination
 
-    .page-block
+    .page-section
         +intro({video: 'assets/video/walk.mp4', poster: '/walk.mp4', button:'контакты медцентров'}).intro_animated 
             +about('медцентры')
                 | 6 современных медицинских центров в Краснодарском крае и Республике Адыгея
 
-    .page-block     
+    .page-section     
         section.container 
             +about('специалисты')(class="about_single")
                 | Наши врачи - доктора #[br] и #[span.mark кандидаты медицинских наук]
         +intro({video: 'assets/video/doctor.mp4', poster:'/walk.mp4', button: 'контакты медцентров'}).intro_animated
             | В клинике работают профессионалы высшей медицинской категории. В отделениях центра стабильный кадровый состав, который в своей работе применяет научный подход и регулярно повышает квалификацию в лучших клиниках России и мира.
         
-    .page-block.page-block_background
+    .page-section.page-section_background
         .container
             +overview(reviewParams).review-list
                 .overview__slider.slider-container.js-review-slider

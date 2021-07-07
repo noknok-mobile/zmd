@@ -1,9 +1,11 @@
 extends /layout/template
 
 block content
-    .page-grid 
-        main.page-grid__content
-            section.page-block
+    .page__grid 
+        .page__sidebar
+            +sidebar-menu(menu)
+        main.page__content
+            section.page-section
                 +accordion('В связи с открытием новых филиалов и расширением оказываемых услуг, клиника "Зимамед" приглашает на работу:')
                     | Акушеров-гинекологов#[br]
                     | Терапевтов/врачей общей практики#[br]
@@ -22,8 +24,7 @@ block content
                     | Ангиохирургов#[br]
                     | Массажистов#[br]
                     | Пульмонологов#[br]
-            section.page-block
-                .teasers
+            section.page-section.teasers
                     h2.title Наши преимущества
                     ul.list
                         li.list__item Клиника оснащена новейшим медицинским оборудованием
@@ -31,8 +32,6 @@ block content
                         li.list__item Возможно сотрудничество как на постоянной основе, так и частичная занятость
                         li.list__item Работа предлагается как в г.Краснодаре (ул.Московская, ул. Вологодская, ул.Сормовская), так и в других городах - Ейск, Адыгейск, Сочи, пос. Красная Поляна (Сочи) 
                         
-        .page-grid__sidebar
-            +sidebar-menu(menu)
 
 block prepend vars
     - const title = "Вакансии"

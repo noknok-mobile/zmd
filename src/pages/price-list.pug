@@ -1,12 +1,11 @@
 extends /layout/template
 
-block content 
-    .container 
-        .page-block
-            .accordion
-                each item in prices 
-                        +accordion(item.title)
-                            +price-list(item.priceList)
+block content
+    .page__content
+        .page-section
+            each item in prices 
+                +accordion(item.title)
+                    +price-list(item.priceList)
 
 block prepend vars 
     - let title = "Прайс-лист"
