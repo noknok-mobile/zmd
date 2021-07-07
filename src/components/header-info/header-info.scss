@@ -58,11 +58,12 @@
         color: $color-accent;
         &_flex{
             gap: 0 $gutter;
+            display: flex;
             @include laptop{
                 gap: unset;
+                justify-content: space-between;
             }
-            display: flex;
-            justify-content: space-between;
+            
         }
     }
 
