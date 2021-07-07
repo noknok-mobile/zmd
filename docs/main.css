@@ -575,7 +575,7 @@ ul:not([class]) li {
   right: 0;
   padding-bottom: var(--offset-middle);
   padding-top: 170px;
-  min-height: 100vh;
+  height: 100vh;
   overflow-y: scroll;
   background-color: white;
   text-align: center;
@@ -764,7 +764,6 @@ ul:not([class]) li {
 .header-info__content_flex {
   gap: 0 var(--gutter);
   display: flex;
-  justify-content: space-between;
 }
 
 .page-header {
@@ -2592,6 +2591,7 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   }
   .header-info__content_flex {
     gap: unset;
+    justify-content: space-between;
   }
 }
 @media (max-width: 1199px) {
