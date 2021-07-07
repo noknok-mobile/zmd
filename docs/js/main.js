@@ -46,7 +46,6 @@ const branches = new Swiper(".js-branch-slider", {
     breakpoints: {
         320: {
             cssMode: true
-            // slidesPerView: 5
         },
         768: {
             loop: true,
@@ -65,7 +64,6 @@ const branches = new Swiper(".js-branch-slider", {
         }
 
     },
-    // slidesOffsetAfter: "600",
     navigation: {
         prevEl: '.branch-list__nav .button-arrow_prev',
         nextEl: '.branch-list__nav .button-arrow_next'
@@ -75,10 +73,8 @@ const branches = new Swiper(".js-branch-slider", {
 const reviews = new Swiper(".js-review-slider", {
     loop: true,
     slidesPerView: 'auto',
-    // slidesPerGroup: 1,
     spaceBetween: 30,
     slideClass: "review",
-    // slidesOffsetAfter: "600",
     pagination: {
         el: '.review-list__pagination',
         type: 'bullets',
