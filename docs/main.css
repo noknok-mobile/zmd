@@ -606,9 +606,6 @@ ul:not([class]) li {
 .header__link {
   font-weight: 600;
 }
-.header__link:not(:last-of-type) {
-  margin-right: var(--gutter);
-}
 
 .footer {
   background-color: #e5d9c6;
@@ -765,8 +762,9 @@ ul:not([class]) li {
   color: #852d2e;
 }
 .header-info__content_flex {
+  gap: 0 var(--gutter);
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .page-header {
@@ -2592,6 +2590,9 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
     --container-width: 1140px;
     --gutter: 30px;
   }
+  .header-info__content_flex {
+    gap: unset;
+  }
 }
 @media (max-width: 1199px) {
   html {
@@ -2939,9 +2940,6 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   }
 }
 @media (min-width: 1200px) {
-  .header-desktop__contacts {
-    margin-left: 50px;
-  }
   .footer-info__group {
     display: contents;
   }
