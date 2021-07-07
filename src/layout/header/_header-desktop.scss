@@ -42,10 +42,6 @@
     &__contacts {
         flex: 0 2 250px;
         grid-area: contacts;
-        @include desktop-only{
-            margin-left: 50px;
-
-        }
         @include phone_hrz {
             display: none;
         }

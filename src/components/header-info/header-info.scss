@@ -57,8 +57,12 @@
         text-overflow: ellipsis;
         color: $color-accent;
         &_flex{
+            gap: 0 $gutter;
+            @include laptop{
+                gap: unset;
+            }
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-between;
         }
     }
 
