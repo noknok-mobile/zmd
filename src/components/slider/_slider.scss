@@ -4,10 +4,9 @@
     min-width: 60px;
     color: $color-accent;
     margin: $offset-m auto 0;
-    // width: 200px;
 
     @include tablet_hrz {
-        display: none;
+        // display: none;
     }
 
     &__bullet {
@@ -29,6 +28,10 @@
 
         &_active {
             background-color: currentColor;
+        }
+        @include tablet_hrz{
+            $size: 10px;
+            @include box($size);
         }
     }
 }
@@ -55,4 +58,7 @@
         margin: -30px 0;
         left: -15px;
     }
+}
+.swiper-notification{
+    display: none;
 }

@@ -42,24 +42,33 @@ const slider = new Swiper('.big-carousel', {
 
 
 const branches = new Swiper(".js-branch-slider", {
-    loop: true,
-    slidesPerView: 'auto',
-    slidesPerGroup: 1,
-    spaceBetween: 30,
     slideClass: "branch",
-    // slidesOffsetAfter: "600",
-    pagination: {
-        el: '.branch-list__pagination',
-        type: 'bullets',
-        clickable: true,
-        bulletClass: "slider-pagination__bullet",
-        bulletActiveClass: "slider-pagination__bullet_active",
-        modifierClass: "slider-pagination_",
-        clickableClass: "slider-pagination_clickable"
+    breakpoints: {
+        320: {
+            cssMode: true
+            // slidesPerView: 5
+        },
+        768: {
+            loop: true,
+            slidesPerView: 'auto',
+            slidesPerGroup: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.branch-list__pagination',
+                type: 'bullets',
+                clickable: true,
+                bulletClass: "slider-pagination__bullet",
+                bulletActiveClass: "slider-pagination__bullet_active",
+                modifierClass: "slider-pagination_",
+                clickableClass: "slider-pagination_clickable"
+            }
+        }
+
     },
+    // slidesOffsetAfter: "600",
     navigation: {
-        nextEl: '.branch-list__nav .slider-nav__btn_next',
-        prevEl: '.branch-list__nav .slider-nav__btn_prev',
+        prevEl: '.branch-list__nav .button-arrow_prev',
+        nextEl: '.branch-list__nav .button-arrow_next'
     },
 });
 
@@ -80,7 +89,7 @@ const reviews = new Swiper(".js-review-slider", {
         clickableClass: "slider-pagination_clickable"
     },
     navigation: {
-        nextEl: '.review-list__nav .slider-nav__btn_next',
-        prevEl: '.review-list__nav .slider-nav__btn_prev',
+        nextEl: '.review-list__nav .button-arrow_next',
+        prevEl: '.review-list__nav .button-arrow_prev',
     },
 })

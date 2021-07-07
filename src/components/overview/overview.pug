@@ -3,10 +3,10 @@ mixin overview(props)
         .overview__desc
             +about(props.title)
                 | !{props.desc}
-        .container.overview__nav.mobile-scrollable
+        .container.overview__nav
             .overview__links
-                each button in props.buttons
-                    a.button.button_light(href="#")= button
+                each button, index in props.buttons
+                    a.button.button_light(href="#", class= (index > 0)? "mobile-hidden":"" )= button
 
             .overview__slider-nav.slider-nav(class= `${attributes.class}__nav`)
                 +button-arrow('prev')

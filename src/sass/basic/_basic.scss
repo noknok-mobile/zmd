@@ -57,6 +57,11 @@ html {
 body{
   // overflow-x: hidden;
 }
+.mobile-hidden{
+  @include phone_hrz{
+    display: none;
+  }
+}
 .container {
   @extend %container;
   @include phone_smallest {

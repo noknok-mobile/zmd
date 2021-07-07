@@ -13,8 +13,8 @@ block content
     .page-section
         .container 
             +overview(branchParams).branch-list
-                .slider-container.js-branch-slider
-                    .swiper-wrapper.branch-list.branch-list_carousel
+                .slider-container.branch-list.branch-list_carousel.js-branch-slider
+                    .swiper-wrapper.branch-list__inner
                         each branch in branches 
                             +branch(branch.text)(svgIcon=branch.icon, type="carousel")
                 .slider-pagination.branch-list__pagination
@@ -28,13 +28,13 @@ block content
         section.container 
             +about('специалисты')(class="about_single")
                 | Наши врачи - доктора #[br] и #[span.mark кандидаты медицинских наук]
-        +intro({video: 'assets/video/doctor.mp4', poster:'/walk.mp4', button: 'контакты медцентров'}).intro_animated
+        +intro({video: 'assets/video/doctor.mp4', poster:'/walk.mp4', button: 'наши специалисты'}).intro_animated
             | В клинике работают профессионалы высшей медицинской категории. В отделениях центра стабильный кадровый состав, который в своей работе применяет научный подход и регулярно повышает квалификацию в лучших клиниках России и мира.
         
     .page-section.page-section_background
         .container
             +overview(reviewParams).review-list
-                .overview__slider.slider-container.js-review-slider
+                .slider-container.js-review-slider
                     .swiper-wrapper.review-list
                         each review in reviews 
                             +review(review.text, review.author)
