@@ -100,28 +100,7 @@
           </div>
         </div>
       </div>
-      <script>const openButton = document.querySelector('.js-menu-open');
-const closeButton = document.querySelector('.js-menu-close');
-openButton.addEventListener('click', openMenu);
-closeButton.addEventListener('click', hideMenu);
-
-function openMenu(e){
-    toggleMenu();
-    closeButton.style.display = 'block';
-    openButton.style.display = 'none';
-}
-function toggleMenu(){
-    document.body.classList.toggle('no-scrollable');
-    document.documentElement.classList.toggle('no-scrollable');
-    document.querySelector('.js-menu').classList.toggle('dropdown-menu_visible');
-
-}
-function hideMenu(){
-    toggleMenu();
-    openButton.style.display = 'block';
-    closeButton.style.display = 'none';
-}
-      </script>
+      <script src="js/header.js"></script>
     </div>
         <div class="page-header page-header_bskg-stethoscope">
           <div class="container">
@@ -134,79 +113,79 @@ function hideMenu(){
             <h1 class="page-header__title title">Расписание врачей</h1>
           </div>
         </div>
-    <div class="container">
-      <div class="page-block">
-        <div class="container">
-          <div class="schedule-table">
-            <div class="schedule-filter schedule-grid">
-              <div class="schedule-filter__section schedule-filter__section_place">
-                <div class="select select_inline">
-                  <label class="select__label" for="part">Филиал</label>
-                  <select class="select__item" id="branch" name="part">
-                    <option value="1" selected>Ул. московская, 40</option>
-                    <option value="2">Ул. московская, 40</option>
-                    <option value="3">Ул. московская, 40</option>
-                  </select>
-                  <div class="select__icon"></div>
-                </div>
+    <div class="container page">
+      <div class="page__content">
+        <div class="page-section schedule-table">
+          <div class="schedule-filter schedule-grid">
+            <div class="schedule-filter__section schedule-filter__section_place">
+              <div class="select select_inline">
+                <label class="select__label" for="part">Филиал</label>
+                <select class="select__item" id="branch" name="part">
+                  <option value="1" selected>Ул. московская, 40</option>
+                  <option value="2">Ул. московская, 40</option>
+                  <option value="3">Ул. московская, 40</option>
+                </select>
+                <div class="select__icon"></div>
               </div>
-              <div class="schedule-filter__section schedule-filter__section_spec"> 
-                <div class="select select_inline">
-                  <label class="select__label" for="branch">Направление</label>
-                  <select class="select__item" id="branch" name="branch">
-                    <option value="1" selected>акушерство и гинекология</option>
-                    <option value="2">кардиология</option>
-                    <option value="3">Ул. московская, 40</option>
-                  </select>
-                  <div class="select__icon"></div>
-                </div>
+            </div>
+            <div class="schedule-filter__section schedule-filter__section_spec"> 
+              <div class="select select_inline">
+                <label class="select__label" for="branch">Направление</label>
+                <select class="select__item" id="branch" name="branch">
+                  <option value="1" selected>акушерство и гинекология</option>
+                  <option value="2">кардиология</option>
+                  <option value="3">Ул. московская, 40</option>
+                </select>
+                <div class="select__icon"></div>
               </div>
-              <div class="schedule-filter__section schedule-filter__section_calendar">
-                <div class="schedule__header">
-                  <div class="schedule__inner"><a class="schedule__nav schedule__nav_prev button-arrow" href="#">
-                      <svg class="button-arrow__icon">
-                        <use xlink:href="icons.svg#arrow" transform="rotate(90 12 12)"></use>
-                      </svg></a>
-                    <table class="schedule__calendar calendar-grid">
-                      <tr class="schedule__days">
-                        <td>10.11</td>
-                        <td>11.11</td>
-                        <td>12.11</td>
-                        <td>13.11</td>
-                        <td>14.11</td>
-                      </tr>
-                      <tr class="schedule__week">
-                        <td>пн</td>
-                        <td>вт</td>
-                        <td>ср</td>
-                        <td>чт</td>
-                        <td>пт</td>
-                      </tr>
-                    </table><a class="schedule__nav schedule__nav_next button-arrow" href="#">
-                      <svg class="button-arrow__icon">
-                        <use xlink:href="icons.svg#arrow" transform="rotate(-90 12 12)"></use>
-                      </svg></a>
-                  </div>
+            </div>
+            <div class="schedule-filter__section schedule-filter__section_calendar">
+              <div class="schedule__header">
+                <div class="schedule__inner"><a class="schedule__nav schedule__nav_prev button-arrow" href="#">
+                    <svg class="button-arrow__icon">
+                      <use xlink:href="icons.svg#arrow" transform="rotate(90 12 12)"></use>
+                    </svg></a>
+                  <table class="schedule__calendar calendar-grid">
+                    <tr class="schedule__days">
+                      <td>10.11</td>
+                      <td>11.11</td>
+                      <td>12.11</td>
+                      <td>13.11</td>
+                      <td>14.11</td>
+                    </tr>
+                    <tr class="schedule__week">
+                      <td>пн</td>
+                      <td>вт</td>
+                      <td>ср</td>
+                      <td>чт</td>
+                      <td>пт</td>
+                    </tr>
+                  </table><a class="schedule__nav schedule__nav_next button-arrow" href="#">
+                    <svg class="button-arrow__icon">
+                      <use xlink:href="icons.svg#arrow" transform="rotate(-90 12 12)"></use>
+                    </svg></a>
                 </div>
               </div>
             </div>
-            <div class="spec-row schedule-grid"> 
-              <div class="spec-row__info"> 
-                <div class="doctor-card">
-                  <div class="card__img-wrapper doctor-card__photo"><img class="card__img" width="300" height="313" src="assets/img/lady.jpg"/></div>
-                  <div class="card__inner doctor-card__inner">
-                    <div class="doctor-card__header">
-                      <h3 class="card__title doctor-card__name">Лымарь Марина Петровна</h3>
-                      <div class="doctor-card__meta tag">Акушер-гинеколог</div>
-                    </div>
-                    <div class="doctor-card__body">
-                      <div class="card__desc price">Приём от 2500 руб.</div>
-                    </div>
-                    <div class="doctor-card__footer"><a class="button js-order" href="#">Записаться на прием</a></div>
+          </div>
+          <div class="spec-row schedule-grid"> 
+            <div class="spec-row__info"> 
+              <div class="doctor-card">
+                <div class="card__img-wrapper doctor-card__photo"><img class="card__img" width="300" height="313" src="assets/img/lady.jpg"/></div>
+                <div class="card__inner doctor-card__inner">
+                  <div class="doctor-card__header">
+                    <h3 class="card__title doctor-card__name">Лымарь Марина Петровна</h3>
+                    <div class="doctor-card__meta tag">Акушер-гинеколог</div>
                   </div>
+                  <div class="doctor-card__body">
+                    <div class="card__desc price">Приём от 2500 руб.</div>
+                  </div>
+                  <div class="doctor-card__footer"><a class="button js-order" href="#">Записаться на прием</a></div>
                 </div>
               </div>
-              <div class="spec-row__calendar">
+            </div>
+            <div class="spec-row__calendar">
+              <div class="schedule"> 
                 <div class="schedule__body">
                   <div class="schedule__inner schedule__inner_fold js-expand-target">
                     <table class="timetable calendar-grid js-order-trigger js-open" data-ajax="ajax/order.html" onclick="goToOrder(event)">
@@ -327,16 +306,16 @@ function hideMenu(){
           <div class="footer__copyright"><a class="footer__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a><a class="footer__link footer__link_privacy link" href="/privacy">
                Политика обработки персональных данных и пользовательское соглашение</a></div>
           <div class="footer__nav">
-            <div class="footer__nav-section"><a class="footer__link link footer__nav-item" href="00">Лечение</a><a class="footer__link link footer__nav-item" href="01">Профилактика</a><a class="footer__link link footer__nav-item" href="02">Сдать анализы</a><a class="footer__link link footer__nav-item" href="03">Комплексное лечение</a><a class="footer__link link footer__nav-item" href="04">Комплексное обследование</a>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#00">Лечение</a><a class="footer__link link footer__nav-item" href="#01">Профилактика</a><a class="footer__link link footer__nav-item" href="#02">Сдать анализы</a><a class="footer__link link footer__nav-item" href="#03">Комплексное лечение</a><a class="footer__link link footer__nav-item" href="#04">Комплексное обследование</a>
             </div>
-            <div class="footer__nav-section"><a class="footer__link link footer__nav-item" href="10">Кардиология</a><a class="footer__link link footer__nav-item" href="11">Проктология</a><a class="footer__link link footer__nav-item" href="12">Педиатрия</a><a class="footer__link link footer__nav-item" href="13">Урология</a><a class="footer__link link footer__nav-item" href="14">Хирургия</a>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#10">Кардиология</a><a class="footer__link link footer__nav-item" href="#11">Проктология</a><a class="footer__link link footer__nav-item" href="#12">Педиатрия</a><a class="footer__link link footer__nav-item" href="#13">Урология</a><a class="footer__link link footer__nav-item" href="#14">Хирургия</a>
             </div>
-            <div class="footer__nav-section"><a class="footer__link link footer__nav-item" href="20">Кардиология</a><a class="footer__link link footer__nav-item" href="21">Проктология</a><a class="footer__link link footer__nav-item" href="22">Педиатрия</a><a class="footer__link link footer__nav-item" href="23">Урология</a><a class="footer__link link footer__nav-item" href="24">Хирургия</a>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#20">Кардиология</a><a class="footer__link link footer__nav-item" href="#21">Проктология</a><a class="footer__link link footer__nav-item" href="#22">Педиатрия</a><a class="footer__link link footer__nav-item" href="#23">Урология</a><a class="footer__link link footer__nav-item" href="#24">Хирургия</a>
             </div>
           </div>
           <div class="footer__info footer-info">
             <div class="footer-info__contacts">
-              <div class="footer-info__item footer-info__item_address">г. Краснодар,<br> ул. Московская, 40</div>
+              <div class="footer-info__item">г. Краснодар,<br> ул. Московская, 40</div>
               <div class="footer-info__group"><a class="footer-info__item link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="footer-info__item">пн-сб 8:00 — 23:00</span></div>
             </div>
             <div class="footer-info__promo promo">
@@ -363,5 +342,6 @@ function hideMenu(){
       </div>
     </div>
     <script src="js/modal.js"></script>
+    <script src="js/schedule.js"></script>
   </body>
 </html>

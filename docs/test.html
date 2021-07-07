@@ -10,17 +10,38 @@
   <body> 
     <div class="header">
       <div class="header-desktop">
-        <div class="header__top"><a class="header__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
-          <div class="header-menu">
-            <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span><span class="header-info__content"><a class="header__link" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></span></div>
-            <div class="header-info header-info_schedule"><span class="header-info__title">График работы:</span><span class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
-            <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span><span class="header-info__content"><a class="header__link" href="#popup_open">Вход</a><a class="header__link" href="#popup_open">Регистрация</a></span></div><a class="header-menu__button button" href="">Записаться на прием</a>
+        <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
+          <div class="header-summary header-desktop__summary">
+            <div class="header-summary__address">
+              <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span>
+                <div class="header-info__content"><a class="header__link" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
+              </div>
+            </div>
+            <div class="header-summary__schedule">
+              <div class="header-info header-info_schedule"><span class="header-info__title">График работы:</span>
+                <div class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</div>
+              </div>
+            </div>
+            <div class="header-summary__account">
+              <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span>
+                <div class="header-info__content header-info__content_flex"><a class="header__link" href="#popup_open">Вход</a><a class="header__link" href="#popup_open">Регистрация</a></div>
+              </div>
+            </div><a class="header-desktop__button button" href="#">Записаться на прием</a>
           </div>
-          <div class="header-info header__contacts"><a class="header__phone link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="header-info__content header__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
-          <nav class="icon-menu"><a class="icon-menu__item" href="#"> <img src="icons.svg#profile" alt="Личный кабинет"></a><a class="icon-menu__item" href="#"> <img src="icons.svg#calendar" alt="Записаться"></a><a class="icon-menu__item" href="#"> <img src="icons.svg#phone" alt="Позвонить"></a></nav>
+          <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
+          <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
+              <svg>
+                <use xlink:href="icons.svg#profile"></use>
+              </svg></a><a class="icon-menu__item" href="schedule">
+              <svg>
+                <use xlink:href="icons.svg#calendar"></use>
+              </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
+              <svg>
+                <use xlink:href="icons.svg#phone"></use>
+              </svg></a></nav>
         </div>
-        <nav class="header__bottom">
-          <ul class="header__bottom-menu main-menu">
+        <nav class="header-desktop__bottom">
+          <ul class="header-desktop__menu main-menu">
             <li class="main-menu__item link"><a class="link" href="#">Лечение</a></li>
             <li class="main-menu__item link"><a class="link" href="#">Диагностика</a></li>
             <li class="main-menu__item link"><a class="link" href="#">Услуги</a></li>
@@ -79,52 +100,54 @@
           </div>
         </div>
       </div>
-      <script>const openButton = document.querySelector('.js-menu-open');
-const closeButton = document.querySelector('.js-menu-close');
-openButton.addEventListener('click', openMenu);
-closeButton.addEventListener('click', hideMenu);
-
-function openMenu(e){
-    toggleMenu();
-    closeButton.style.display = 'block';
-    openButton.style.display = 'none';
-}
-function toggleMenu(){
-    document.body.classList.toggle('no-scrollable');
-    document.documentElement.classList.toggle('no-scrollable');
-    document.querySelector('.js-menu').classList.toggle('dropdown-menu_visible');
-
-}
-function hideMenu(){
-    toggleMenu();
-    openButton.style.display = 'block';
-    closeButton.style.display = 'none';
-}
-      </script>
-    </div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ipsum totam tenetur sunt nisi vel consequuntur officia eius cupiditate ut eligendi architecto cumque error, voluptatibus distinctio omnis odio explicabo sed.Reprehenderit suscipit repudiandae, hic repellat dolore excepturi molestiae. Consequuntur nesciunt laborum a ipsam fuga consectetur quod eaque aperiam? Delectus, error est! Cum non dolore saepe? Repellat dolores laborum cum provident!Incidunt porro quod et quidem praesentium possimus expedita modi, temporibus maxime labore accusantium. Architecto ad vero, repudiandae eum odio dolor nostrum libero ipsa magni, quos, mollitia nihil tenetur! Deleniti, vel?Alias perferendis illo mollitia minus laboriosam minima inventore rerum enim omnis! Voluptatem aut quidem minima eaque, hic repudiandae. Enim necessitatibus saepe vero nam culpa, minima numquam doloremque sapiente cumque. Eveniet!Incidunt a sequi ad rem facere. Harum iste in porro fugit sit voluptas magnam, nihil minima? Eveniet odit architecto tempore. Eum voluptas labore eligendi repellat. Quibusdam odit corporis voluptates. Dicta.Asperiores exercitationem, eveniet inventore illum et reprehenderit possimus autem, praesentium nobis consequatur necessitatibus consequuntur veritatis? Ullam harum a maiores porro tenetur? Asperiores quis, expedita numquam accusantium ex ratione omnis dignissimos.Qui, rem ipsa. Amet fugit quidem ducimus ex accusantium? Autem fugit dicta facilis voluptates, placeat, adipisci laboriosam ab ex magni doloribus ut, id earum assumenda reiciendis odio ipsa veniam soluta?Eum eaque, expedita ipsam alias voluptatem unde quos quo ea molestiae fuga tempore quia excepturi iste nisi veritatis, veniam itaque corrupti, hic eligendi reprehenderit error ipsa tempora? Dolor, assumenda vel!Aliquid nam iusto dignissimos laborum id repellendus! Unde dicta sit atque, corporis at laudantium maxime asperiores blanditiis facere nesciunt sed libero eius fuga placeat cum qui dolorem beatae? Nesciunt, eius.Ad perferendis corporis ipsa labore inventore, non ex nobis modi eius est reprehenderit beatae ea et dolorem officiis porro minus rem similique sapiente eaque ullam facere. Illum consectetur tempore omnis.Itaque enim quod, molestiae, debitis distinctio repudiandae iste officiis nihil adipisci libero rem. Itaque commodi, corrupti fugit repudiandae pariatur obcaecati ut dolorum assumenda eaque eum? Dolore molestiae illum qui corporis.Vitae delectus repellendus, maxime in officiis facere quibusdam nemo! Vero nulla natus officia vel cum provident nesciunt, amet eius aperiam dolor cumque assumenda debitis sapiente atque est earum doloribus quam?Odit eius dicta neque esse possimus? Voluptates necessitatibus, commodi labore, animi sunt consectetur consequatur minima aut dolores sit, earum doloremque exercitationem facilis enim maiores obcaecati excepturi? Quam aliquid accusamus fugit?Reiciendis non tempora veniam ab iure dolore qui sunt aliquid dolorem, distinctio similique quam exercitationem magnam reprehenderit, perspiciatis aspernatur maxime quo fugiat voluptatibus? Nam, iusto cum temporibus odit eligendi ipsa.Aliquid a animi eum temporibus ab asperiores incidunt vel quae officiis atque suscipit odio, necessitatibus, voluptatibus aut numquam ducimus sequi amet. Asperiores iste deleniti illum mollitia, adipisci debitis itaque deserunt.Quaerat culpa fugit, tempore ipsa ex fuga iste. Tempore accusamus nemo pariatur sapiente quo molestias iure, magni suscipit eveniet maiores earum, repudiandae saepe repellat eius nostrum natus magnam exercitationem ut.Ipsum odio doloribus blanditiis libero excepturi eum, totam minima obcaecati hic expedita iure! Eius, ipsa non blanditiis facere aliquid esse quos architecto laudantium molestias dolores, ipsam recusandae iusto magni voluptas?Eos sunt cumque voluptate esse eligendi fugit dolorum quos eaque. A architecto dolor saepe nihil voluptate voluptatem ipsam nemo sunt officia, sit qui sed, eum, quod maxime numquam delectus expedita?Quibusdam, facere! Cumque qui saepe atque autem aperiam assumenda recusandae! Accusantium optio, nobis explicabo ea ipsa suscipit quibusdam sunt praesentium tempora nihil expedita eaque error magni placeat architecto necessitatibus ipsam?Omnis at rem maxime blanditiis nam? Sint optio possimus dignissimos quisquam voluptates ipsa laboriosam vero sed eligendi eos saepe, voluptatem debitis neque, velit iure natus libero doloribus ea est blanditiis.
-    <div class="box"></div>
+      <script src="js/header.js"></script>
+    </div>
+    <div class="page">
+      <div class="page-block">
+        <div class="container"><a class="button js-open" href="#" data-ajax="ajax/order.html">Записаться</a></div>
+      </div>
+    </div>
     <footer class="footer">
-      <div class="container footer__inner"> 
-        <div class="footer__copyright">
-          <div class="logo__wrapper footer__logo"><a href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a></div><a class="footer__link link" href="/privacy">
-             Политика обработки персональных данных и пользовательское соглашение</a>
-        </div>
-        <div class="footer__nav">
-          <div class="footer__nav-section"><a class="footer__link link footer__nav-item" href="00">Лечение</a><a class="footer__link link footer__nav-item" href="01">Профилактика</a><a class="footer__link link footer__nav-item" href="02">Сдать анализы</a><a class="footer__link link footer__nav-item" href="03">Комплексное лечение</a><a class="footer__link link footer__nav-item" href="04">Комплексное обследование</a>
+      <div class="container">
+        <div class="footer__inner"> 
+          <div class="footer__copyright"><a class="footer__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a><a class="footer__link footer__link_privacy link" href="/privacy">
+               Политика обработки персональных данных и пользовательское соглашение</a></div>
+          <div class="footer__nav">
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#00">Лечение</a><a class="footer__link link footer__nav-item" href="#01">Профилактика</a><a class="footer__link link footer__nav-item" href="#02">Сдать анализы</a><a class="footer__link link footer__nav-item" href="#03">Комплексное лечение</a><a class="footer__link link footer__nav-item" href="#04">Комплексное обследование</a>
+            </div>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#10">Кардиология</a><a class="footer__link link footer__nav-item" href="#11">Проктология</a><a class="footer__link link footer__nav-item" href="#12">Педиатрия</a><a class="footer__link link footer__nav-item" href="#13">Урология</a><a class="footer__link link footer__nav-item" href="#14">Хирургия</a>
+            </div>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#20">Кардиология</a><a class="footer__link link footer__nav-item" href="#21">Проктология</a><a class="footer__link link footer__nav-item" href="#22">Педиатрия</a><a class="footer__link link footer__nav-item" href="#23">Урология</a><a class="footer__link link footer__nav-item" href="#24">Хирургия</a>
+            </div>
           </div>
-          <div class="footer__nav-section"><a class="footer__link link footer__nav-item" href="10">Кардиология</a><a class="footer__link link footer__nav-item" href="11">Проктология</a><a class="footer__link link footer__nav-item" href="12">Педиатрия</a><a class="footer__link link footer__nav-item" href="13">Урология</a><a class="footer__link link footer__nav-item" href="14">Хирургия</a>
-          </div>
-          <div class="footer__nav-section"><a class="footer__link link footer__nav-item" href="20">Кардиология</a><a class="footer__link link footer__nav-item" href="21">Проктология</a><a class="footer__link link footer__nav-item" href="22">Педиатрия</a><a class="footer__link link footer__nav-item" href="23">Урология</a><a class="footer__link link footer__nav-item" href="24">Хирургия</a>
-          </div>
-        </div>
-        <div class="footer__info"> <span class="footer__info-item footer__info-item_address">г. Краснодар<br> ул. Московская, 40</span><span class="footer__info-item footer__info-item_contacts"><a class="footer__info-item footer__link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="footer__info-item">пн-сб 8:00 — 23:00</span></span>
-          <div class="footer__promo"> 
-            <div class="footer__link footer-promo__text">
-               Скачайте приложение на телефон</div>
-            <div class="footer-promo__app-icons"><a href="#"><img src="assets/img/app_store.png" alt="AppStore"></a><a href="#"><img src="assets/img/app_store.png" alt="GooglePlay"></a></div>
+          <div class="footer__info footer-info">
+            <div class="footer-info__contacts">
+              <div class="footer-info__item">г. Краснодар,<br> ул. Московская, 40</div>
+              <div class="footer-info__group"><a class="footer-info__item link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="footer-info__item">пн-сб 8:00 — 23:00</span></div>
+            </div>
+            <div class="footer-info__promo promo">
+              <div class="promo__text">
+                 Скачайте приложение на телефон</div>
+              <div class="promo__img"><a href="#"><img src="assets/img/app_store.png" alt="AppStore"></a><a href="#"><img src="assets/img/app_store.png" alt="GooglePlay"></a></div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
+    <div class="modal__wrapper" data-modal="1">
+      <div class="modal__overlay"></div>
+      <div class="modal"> 
+        <button class="modal__close js-close" role="button" aria-label="Закрыть">
+          <svg>
+            <use xlink:href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"></div>
+          <div class="modal__body"></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/modal.js"> </script>
   </body>
 </html>
