@@ -29,9 +29,7 @@
 
   }
   &__caption {
-    display: inline-block;
     @include text(xs);
-    @extend %color-link;
     line-height: 1.6;
   }
 }
