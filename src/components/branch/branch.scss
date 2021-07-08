@@ -80,6 +80,9 @@
     
     .branch__name {
       margin-bottom: $offset-s;
+      &:hover, &:focus, &:active{
+        color: $color-accent
+      }
     }
 
     .branch__img {
@@ -90,8 +93,6 @@
 
     .branch__link {
       @include text(xs);
-      @extend %color-link;
-      text-decoration: none;
     }
   }
 }

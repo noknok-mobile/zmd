@@ -13,6 +13,5 @@
 
   &__link {
     @include text(inherit, 600);
-    @extend %color-link;
   }
 }

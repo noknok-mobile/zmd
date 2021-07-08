@@ -23,22 +23,32 @@
     background-color: $color-contrast;
   }
 
+  &:active,
+  &:focus {
+    background-color: $color-accent;
+  }
+
   &_light {
     background-color: white;
     color: $color-accent;
     box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.05);
-    &:hover {
+
+    &:hover,
+    &:active,
+    &:focus {
       color: white;
+    }
+
+    &:hover {
       background-color: $color-main;
     }
 
-    &:active {
-      background-color: $color-accent;
-    }
   }
-  &_bg-none{
+
+  &_bg-none {
     background-color: transparent;
   }
+
   &_large {
     line-height: 3.5rem;
   }

@@ -33,6 +33,9 @@
             $size: 10px;
             @include box($size);
         }
+        &:hover, &:focus, &:active{
+            color: $color-contrast;
+        }
     }
 }
 
