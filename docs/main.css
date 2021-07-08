@@ -95,11 +95,11 @@ button {
   margin: 0 var(--grid-margin);
 }
 
-.licence__caption, .branch_carousel .branch__link, .accordion__title, .form-step__next, .form-step__edit, .link_color, .header__link {
+.licence__caption, .accordion__title, .form-step__next, .form-step__edit {
   color: #852d2e;
   transition: opacity 0.1s ease-in-out;
 }
-.licence__caption:hover, .branch_carousel .branch__link:hover, .accordion__title:hover, .form-step__next:hover, .form-step__edit:hover, .link_color:hover, .header__link:hover {
+.licence__caption:hover, .accordion__title:hover, .form-step__next:hover, .form-step__edit:hover {
   opacity: 0.8;
 }
 
@@ -1032,17 +1032,19 @@ ul:not([class]) li {
 .button:hover {
   background-color: #c6aa80;
 }
+.button:active, .button:focus {
+  background-color: #852d2e;
+}
 .button_light, .tab, .intro__link {
   background-color: white;
   color: #852d2e;
   box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.05);
 }
-.button_light:hover, .tab:hover, .intro__link:hover {
+.button_light:hover, .tab:hover, .intro__link:hover, .button_light:active, .tab:active, .intro__link:active, .button_light:focus, .tab:focus, .intro__link:focus {
   color: white;
-  background-color: #5b423b;
 }
-.button_light:active, .tab:active, .intro__link:active {
-  background-color: #852d2e;
+.button_light:hover, .tab:hover, .intro__link:hover {
+  background-color: #5b423b;
 }
 .button_bg-none {
   background-color: transparent;
@@ -1058,12 +1060,23 @@ ul:not([class]) li {
 .link:visited {
   color: #5b423b;
 }
-.link:hover {
+.link:hover, .link:focus {
   color: #852d2e;
 }
 .link:active {
   color: #c6aa80;
 }
+.link_color {
+  color: #852d2e;
+  transition: opacity 0.1s ease-in-out;
+}
+.link_color:visited {
+  color: #852d2e;
+}
+.link_color:hover, .link_color:focus, .link_color:active {
+  opacity: 0.8;
+}
+
 .list {
   padding-left: 80px;
 }
@@ -1639,6 +1652,9 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
 .slider-pagination__bullet_active {
   background-color: currentColor;
 }
+.slider-pagination__bullet:hover, .slider-pagination__bullet:focus, .slider-pagination__bullet:active {
+  color: #c6aa80;
+}
 
 .slider {
   overflow-x: visible;
@@ -1931,12 +1947,14 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
 .branch_carousel .branch__name {
   margin-bottom: var(--offset-small);
 }
+.branch_carousel .branch__name:hover, .branch_carousel .branch__name:focus, .branch_carousel .branch__name:active {
+  color: #852d2e;
+}
 .branch_carousel .branch__img-wrapper {
   flex: 1 1 50%;
 }
 .branch_carousel .branch__link {
   font-size: var(--font-xs);
-  text-decoration: none;
 }
 
 .banner {
