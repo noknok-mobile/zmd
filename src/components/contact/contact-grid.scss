@@ -1,0 +1,19 @@
+.contact-grid {
+    display: grid;
+    grid-template-columns: 4fr minmax(0, 8fr);
+    grid-template-areas: 'addresses map';
+    padding-top: $offset-l;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        grid-template-areas: 'addresses''map';
+    }
+
+    &__sidebar {
+        max-height: 100vh;
+        overflow-y: auto;
+        padding-right: 10px;
+        margin-right: -10px;
+    }
+}

@@ -1,0 +1,19 @@
+.contact-map {
+    position: absolute;
+    width: calc(100% + (100vw - var(--container-width)) / 2);
+    height: 100%;
+
+    @include tablet {
+        width: 100%;
+    }
+
+    &__wrapper {
+        position: relative;
+        filter: grayscale(1);
+        height: 100vh;
+
+        @include tablet {
+            max-height: 50vh;
+        }
+    }
+}
