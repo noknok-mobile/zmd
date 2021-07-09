@@ -83,20 +83,22 @@
         display: inline-flex;
         align-items: center;
         font-size: 14px;
+        line-height: 3em;
         color: $color-text-semi-muted;
         background-color: transparent;
+        padding: 0 1ch 0 3ch;
 
         &_bg {
             background-color: $color-elem-background;
         }
 
-        &:hover {
+        &:hover, &:focus, &:active {
             background: transparent;
             color: $color-accent;
         }
 
         &__arrow {
-            margin-left: 20px;
+            margin-left: 2ch;
             transition: all 0.25s ease-in-out;
         }
 

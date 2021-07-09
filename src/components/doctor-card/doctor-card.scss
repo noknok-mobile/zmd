@@ -28,7 +28,20 @@
         }
     }
 }
-
+.spec-info-placeholder{
+    padding: $offset-s;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    align-content: space-between;
+    gap: $gutter;
+    @include phone_hrz{
+        grid-template-columns: 1fr;
+        justify-items: start;
+    }
+    &__link{
+        align-self: start;
+    }
+}
 .doctor-card {
     display: grid;
     grid-template-columns: 3fr 4fr;

@@ -24,12 +24,15 @@ mixin schedule_body
                                 a.timetable__time.js-ajax(data-ordertime="2020-01-12 "+i+":00")= +i+":00"
 
     .schedule__footer 
-        a.button.button_bg-none.schedule__more-link.js-expand-trigger(data-expand="") 
-            span.js-expand-label Развернуть все
-            span.button-arrow.schedule__more-link__arrow 
-                svg.button-arrow__icon #[use(xlink:href="icons.svg#arrow")]
+        +schedule__more-link('Развернуть все')(data-expand="").js-expand-trigger 
 
 mixin schedule(calendar)
     .schedule.schedule_single
         +schedule_header(calendar).schedule__header_single
         +schedule_body()
+
+mixin schedule__more-link(title, dir=null)
+    a.button.schedule__more-link&attributes(attributes)
+        span.schedule__more-label= title
+        +button-arrow(dir, true).schedule__more-link__arrow
+        
