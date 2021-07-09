@@ -25,7 +25,8 @@ html(lang="ru")
         include header/header
         include page/page-header
         if !mainpage
-            +page-header(pageHeaderImage)
+            block page_header
+                +page-header(pageHeaderImage)
             .container.page
                 block content 
         else 
@@ -34,6 +35,4 @@ html(lang="ru")
         include footer/footer
         include popup
         block scripts
-            script(src="js/modal.js") 
-        
-//- include icons.svg
+            script(src="js/modal.js")

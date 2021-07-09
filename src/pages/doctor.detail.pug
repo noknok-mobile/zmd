@@ -1,7 +1,70 @@
 extends /layout/template
 
+block page_header
+    +page-header(pageHeaderImage).page-header_overflow
 block content 
-    .page__grid
+    .doctor-preview.doctor-preview__grid
+        .doctor-preview__avatar-wrapper
+            img.doctor-preview__avatar(src= photo alt= title)
 
-block append vars 
+        .doctor-preview__info
+            table.doctor-preview__summary
+                each item in doctorInfo 
+                    tr 
+                        td= item.title 
+                        td= item.value
+            a.button.doctor-preview__action(href="#") ЗАПИСАТЬСЯ К ВРАЧУ
+    .page__grid
+        .page__sidebar 
+            +sidebar-menu(menu)
+        .page__content
+            section.page-section#education 
+                h2.title Образование
+                ul
+                    li 
+                        | Министерство здравоохранения РФ «Кубанский медицинский институт», «Акушерство и гинекология» – 1993г
+                    li 
+                        | АНО ДПО «Современная научно-техническая академия» Сертификат по специальности «Акушерство и гинекология» - 2018г.
+            section.page-section.page-section_background 
+                h2.title Услуги и цены
+                +price-list(prices)
+    .page-section
+        .schedule-table
+            .schedule-filter.schedule-grid
+                .schedule-filter__section.schedule-filter__section_place
+                    .select.select_inline
+                        label.select__label(for="part") Филиал
+                        select.select__item#branch(name="part")
+                            option(value="1",selected) Ул. московская, 40
+                            option(value="2") Ул. московская, 40
+                            option(value="3") Ул. московская, 40
+                        .select__icon
+                .schedule-filter__section.schedule-filter__section_spec 
+                    .select.select_inline
+                        label.select__label(for="branch") Направление
+                        select.select__item#branch(name="branch")
+                            option(value="1",selected) акушерство и гинекология
+                            option(value="2") кардиология
+                            option(value="3") Ул. московская, 40
+                        .select__icon
+                .schedule-filter__section.schedule-filter__section_calendar
+                    +schedule_header(calendar)
+
+            .spec-row.schedule-grid 
+                .spec-row__info 
+                    p Приём от 2500 руб. - цена первичной консультации 
+                    p Запись на консультацию осуществляется только по телефону
+                    a.button(href="#") Записаться на прием
+                .spec-row__calendar
+                    .schedule 
+                        +schedule_body
+
+block prepend vars 
     - title = 'Мейпариани Елена Владимировна'
+block append vars
+    - menu = ['Образование', 'Услуги и цены', 'Расписание']
+    //- - let customHeader = true
+    - const doctorInfo = [{title: "Врач:", value:"Акушер-гинеколог"}, {title: "Стаж:", value:"27 лет"}, {title: "Научная степень:", value:"Высшая"}, {title: "Ведёт приём:", value:"Взрослые"}]
+    - const photo = "assets/img/lady.jpg"
+    - const prices = [{name:"Коррекция нарушений",price:"2200"},{name:"Коррекция нарушений",price:"2200"},{name:"Консультации по вопросам пролонгирования беременности",price:"2200"},{name:"Индивидуальный подбор средств и методов контрацепции",price:"2200"},{name:"Коррекция нарушений",price:"2200"},{name:"Коррекция нарушений",price:"2200"},{name:"Консультации по вопросам пролонгирования беременности",price:"2200"},{name:"Индивидуальный подбор средств и методов контрацепции",price:"2200"},{name:"Коррекция нарушений",price:"2200"},{name:"Коррекция нарушений",price:"2200"},{name:"Консультации по вопросам пролонгирования беременности",price:"2200"},{name:"Индивидуальный подбор средств и методов контрацепции",price:"2200"}]
+    - const calendar = { days: ["10.11",'11.11','12.11', '13.11', '14.11'], weekdays: ["пн","вт","ср","чт","пт"]}
