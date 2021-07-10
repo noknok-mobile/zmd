@@ -3,10 +3,10 @@ html {
   --offset-small: 30px;
   --offset-middle: 60px;
   --offset-large: 120px;
+  --column: 70px;
   @include desktop{
     --container-width: 1200px;
     --gutter: 30px;  
-    --col-width: 70px;
   }
   @include desktop-middle{
     --container-width: 1200px;
@@ -47,7 +47,7 @@ $offset-m: var(--offset-middle);
 $offset-l: var(--offset-large);
 $text-margin: 1.8rem;
 
-$col-width: var(--col-width);
+$column: var(--column);
 $gutter: var(--gutter);
 $container: var(--container-width);
 
