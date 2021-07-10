@@ -16,7 +16,7 @@ block content
                 .slider-container.branch-list.branch-list_carousel.js-branch-slider
                     .swiper-wrapper.branch-list__inner
                         each branch in branches 
-                            +branch(branch.text)(svgIcon=branch.icon, type="carousel")
+                            +branch(branch, true).branch_carousel
                 .slider-pagination.branch-list__pagination
 
     .page-section

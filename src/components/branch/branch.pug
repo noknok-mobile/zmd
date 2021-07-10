@@ -1,8 +1,8 @@
-mixin branch(title)
-    .branch(class="branch_" + attributes.type)
-        .branch__img-wrapper
-          svg.branch__img(class="branch__img_"+ attributes.type)
-            use(xlink:href=attributes.svgIcon)
-        a.branch__name(href="#")= title
-        if attributes.type != 'tile'
-            a.branch__link.link.link_color(href="#") Подробнее
+mixin branch(props, moreLink = false)
+  .branch(class= attributes.class)
+    .branch__img
+      //- include /../assets/icon/tomo.svg//demo разницы currentColor и filter
+      svg #[use(href= props.icon)]
+    a.branch__name(href="#")= props.text
+    if moreLink
+      a.branch__link.link.link_color(href="#") Подробнее

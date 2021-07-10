@@ -2,13 +2,13 @@ extends /layout/template
 
 block prepend vars 
     - const title = 'Диагностика'
-    - const branches = [{text:'Хирургический стационар', img: '/img/hirurg.svg'}, {text:'Функциональная диагностика', img: ''},{text:'Функциональная диагностика', img:''}]
+    - const branches = [{text:'Хирургический стационар', icon: 'icons.svg#hirurg'}, {text:'Функциональная диагностика', icon: 'icons.svg#tomo'},{text:'Функциональная диагностика', icon:'icons.svg#heart'}]
 
 block content
     .page__content
         main.page-section
             .branch-list.branch-list_table
                 each branch in branches 
-                    +branch(branch.text)(type='tile', src=branch.img, class=['tile', 'branch_tile'])
+                    +branch(branch).tile.branch_tile
 
 

@@ -3,6 +3,7 @@
     display: grid;
     grid-gap: var(--gutter);
     grid-template-columns: repeat(2, 1fr);
+
     @include phone_hrz {
       grid-template-columns: 1fr;
     }
@@ -11,6 +12,7 @@
   &_carousel {
     display: flex;
     grid-auto-columns: max-content;
+
     @include phone_hrz {
       display: grid;
       grid: 1fr / auto-flow 260px;
@@ -21,78 +23,77 @@
 
     }
   }
-  &__inner{
-    @include phone_hrz{
+
+  &__inner {
+    @include phone_hrz {
       display: contents;
     }
   }
-  
+
 }
 
 .branch {
-  display: flex;
-  transition: 0.2s ease-in-out;
-
-  &__img{
-    &_carousel{
-      width: 40px;
-      height: 40px;
-    }
+  display: grid;
+  
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-accent
   }
-  &_tile{
-    align-items: center;
+  
+  &_tile {
     gap: $offset-s;
-    background-color: $color-elem-background;
+    grid-template-columns: 1fr 5fr;
+    grid-auto-rows: 80px;
+    align-items: center;
     padding: $offset-s;
-
-    &:hover {
-      @extend %card;
-      color: $color-accent;
-    }
-
-    .branch__img-wrapper {
-      filter: grayscale(1);
-    }
-
-    &:hover .branch__img-wrapper {
-      filter: grayscale(0);
-    }
-
-    .branch__name {
-      @include text(m, 600);
-      @include flex-gap(auto, $offset-s);
-    }
+    font-weight: 600;
   }
 
-  &_carousel{
-    @extend %card;
-    flex-direction: column;
+  &_carousel {
     align-items: start;
+    @extend %card;
+    grid-template-rows: 2fr 1fr 1fr;
+    padding: 40px;
+
     height: 292px;
     max-width: 262px;
     min-width: 260px;
-    padding: 40px;
     flex-shrink: 0;
+
     @include tablet_hrz {
       scroll-snap-align: start;
       max-height: 260px;
     }
-    
-    .branch__name {
-      margin-bottom: $offset-s;
-      &:hover, &:focus, &:active{
-        color: $color-accent
-      }
-    }
 
-    .branch__img {
-      &-wrapper {
-        flex: 1 1 50%;
-      }
-    }
+  }
 
-    .branch__link {
-      @include text(xs);
+  &__img {
+    svg {
+      @at-root {
+        .branch_carousel & {
+          @include box(40px);
+        }
+
+        .branch_tile & {
+          @include box(80px);
+          max-width: 100%;
+          max-height: 100%;
+          filter: grayscale(1);//hack, fallback for currentColor
+          path {
+            fill: currentColor;
+          }
+        }
+        .branch_tile:hover &{
+          filter: grayscale(0)//hack
+        }
+      }
     }
   }
+
+  &__link {
+    @include text(xs);
+    align-self: end;
+  }
+
 }
