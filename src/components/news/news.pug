@@ -1,4 +1,2 @@
 mixin news(props)
-    +card({meta: props.date, button: "Подробнее", title: props.title, image: props.image}).news
-        .card__description.news__description
-            | #{props.desc}
+    +card({meta: props.date, button: "Подробнее", desc: props.desc, title: props.title, image: props.image}).news

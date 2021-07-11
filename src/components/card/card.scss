@@ -1,38 +1,17 @@
 .card {
-  $horizontal: repeat(2, 1fr);
-  $vertical: 1fr;
-
   @extend %card;
   display: grid;
-  grid-template-columns: $horizontal;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "content image";
   grid-column-gap: $gutter;
   position: relative;
   justify-content: stretch;
+
   @include phone_hrz {
-    grid-template-columns: $vertical;
-    grid-template-areas: "image" "content";
+    grid-template-columns: 1fr;
+    grid-template-areas: "image""content";
   }
 
-  &_vertical {
-    grid-template-columns: $vertical;
-    grid-template-areas: "image" "content";
-
-    @include phone_hrz {
-      grid-template-columns: 3fr 4fr;
-      grid-template-areas: "image content";
-      padding-right: 0;
-    }
-    @include phone {
-      grid-template-columns: $vertical;
-      grid-template-areas: "image" "content";
-      padding-left: 0;
-    }
-  }
-
-  &_horizontal &__inner {
-    padding-right: 0;
-  }
   /*card elements*/
   &__inner {
     grid-area: content;
@@ -41,36 +20,42 @@
     align-items: flex-start;
     padding: $offset-s;
     justify-content: space-between;
-    // @include phone_hrz {
-    //   grid-row-start: 2;
-    // }
-    &_popup{
+    padding-right: 0;
+
+    @include phone_hrz {
+      padding-right: $offset-s;
+    }
+
+    &_popup {
       padding-left: 0;
     }
   }
 
   &__title {
     @include text(h3, 400);
-    font-family: inherit;
     margin-top: 0;
     margin-bottom: 15px;
     line-height: 1.4;
   }
+
   &__meta {
     margin-bottom: 1em;
   }
+
   &__description {
     @include text(xs);
     flex: 1;
     margin-bottom: $offset-s;
     line-height: 1.6;
   }
+
   &__footer {
     display: flex;
     justify-content: space-between;
     align-self: stretch;
     align-items: center;
   }
+
   &__img {
     display: block;
     position: relative;
@@ -83,6 +68,7 @@
       filter: grayscale(1);
       transition: filter 0.2s ease-out;
       overflow: hidden;
+
       &:hover {
         filter: grayscale(0);
       }

@@ -1,7 +1,7 @@
 mixin page-header(bckg = 'stethoscope')
-    .page-header(class= [`page-header_bskg-${bckg}`, attributes.class])
+    .page__header.page-header(class= [`page-header_bskg-${bckg}`, attributes.class])
         .container.page-header__inner
             .page-header__nav
                 +breadcrumbs(path)
             h1.page-header__title.title= title
-        block
+            

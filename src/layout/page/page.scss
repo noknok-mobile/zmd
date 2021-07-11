@@ -30,4 +30,7 @@
     top: $offset-m;
     max-width: 410px;
   }
+  &__intro{
+    margin-top: calc(-1*var(--custom-header));
+  }
 }

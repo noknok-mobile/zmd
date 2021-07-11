@@ -2,18 +2,19 @@ extends /layout/template
 
 block page_header
     +page-header(pageHeaderImage).page-header_overflow
-block content 
-    .doctor-preview.doctor-preview__grid
-        .doctor-preview__avatar-wrapper
-            img.doctor-preview__avatar(src= photo alt= title)
+    .page__intro 
+        .doctor-preview.doctor-preview__grid.container
+            .doctor-preview__avatar-wrapper
+                img.doctor-preview__avatar(src= photo alt= title)
 
-        .doctor-preview__info
-            table.doctor-preview__summary
-                each item in doctorInfo 
-                    tr 
-                        td= item.title 
-                        td= item.value
-            a.button.doctor-preview__action(href="#") ЗАПИСАТЬСЯ К ВРАЧУ
+            .doctor-preview__info
+                table.doctor-preview__summary
+                    each item in doctorInfo 
+                        tr 
+                            td= item.title 
+                            td= item.value
+                a.button.doctor-preview__action(href="#") ЗАПИСАТЬСЯ К ВРАЧУ
+block content 
     .page__grid
         .page__sidebar 
             +sidebar-menu(menu)
