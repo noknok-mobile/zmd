@@ -4,7 +4,7 @@ block content
     .page__content
         .page-section
             each item in prices 
-                +accordion(item.title)
+                +spoiler(item.title).spoiler_decorated
                     +price-list(item.priceList)
 
 block prepend vars 

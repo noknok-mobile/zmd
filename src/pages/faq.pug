@@ -6,7 +6,7 @@ block content
         main.page__content 
             section.page-section
                     each item in faq 
-                        +accordion(item.title)
+                        +spoiler(item.title).spoiler_decorated
                             | #{item.detail}
             
 block prepend vars 

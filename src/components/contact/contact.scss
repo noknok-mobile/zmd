@@ -6,9 +6,6 @@
   }
 
   &__title {
-    border-bottom: $line;
-    padding: 1rem 0;
-
     @at-root {
       .contact_short & {
         border-bottom: none;
@@ -19,8 +16,6 @@
   }
 
   &__more {
-    border-bottom: $line;
-
     @at-root {
       .contact_short & {
         border-bottom: none;
@@ -56,8 +51,6 @@
 
   &__transport {
     display: flex;
-    align-items: center;
-    @include flex-gap(15px);
 
     &-list {
       display: grid;
@@ -68,20 +61,10 @@
     &-icon {
       color: $color-accent;
       display: block;
-      @include box(32px);
+      @include box(1.6em);
       border-radius: 2px;
       flex: 0 0 auto;
       margin-right: 1ch;
     }
-  }
-}
-
-
-.simplebar-track.simplebar-vertical {
-  right: -15px;
-  width: 10px;
-
-  & .simplebar-scrollbar::before {
-    background: $color-line;
   }
 }
