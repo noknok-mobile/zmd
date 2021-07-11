@@ -1,6 +1,6 @@
 mixin pagination(props)
     - let {count, current = 1, baseUrl = "#"} = props;
-    .pagination 
+    .pagination(class= attributes.class)
         +button-arrow("prev")(href="#prev").pagination__arrow.pagination__arrow_prev
 
         - for(let i = 1; i <= count; i++)

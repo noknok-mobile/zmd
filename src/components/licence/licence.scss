@@ -1,15 +1,5 @@
 .licence {
-  &-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem $gutter;
-    @include phone_hrz{
-        grid-template-columns: repeat(3, 1fr);
-    }
-    @include phone{
-        grid-template-columns: repeat(2, 1fr);
-    }
-  }
+
   &__img {
     position: absolute;
     top: 0;
@@ -20,6 +10,7 @@
     &-wrapper {
       position: relative;
       margin-bottom: 0.5rem;
+
       &:before {
         content: "";
         display: block;
@@ -28,8 +19,26 @@
     }
 
   }
+
   &__caption {
     @include text(xs);
     line-height: 1.6;
   }
+}
+
+.licence-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem $gutter;
+
+  @include phone_hrz {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include phone {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.licence-pagination{
+  margin-top: $offset-m;
 }

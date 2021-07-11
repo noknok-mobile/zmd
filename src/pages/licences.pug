@@ -9,6 +9,7 @@ block content
                 main.licence-list
                     - for(let i=0; i < 8; i++)
                         +licence(licences[0].title)(src= licences[0].img)
+                +pagination({count: 7, current: 1}).licence-pagination
 
 block prepend vars
     - const title = "Лицензии"
