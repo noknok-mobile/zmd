@@ -12,8 +12,11 @@
 
     &__sidebar {
         max-height: 100vh;
-        overflow-y: auto;
-        padding-right: 10px;
-        margin-right: -10px;
+        overflow: hidden auto;
+        padding-right: $gutter;
+        margin-right: calc(-1*var(--gutter));
+        .simplebar-track{
+            right: 10px;
+        }
     }
 }
