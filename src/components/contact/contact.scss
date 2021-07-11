@@ -8,8 +8,9 @@
   &__title {
     border-bottom: $line;
     padding: 1rem 0;
-    @at-root{
-      .contact_short &{
+
+    @at-root {
+      .contact_short & {
         border-bottom: none;
         padding: 0;
         font-weight: bold;
@@ -19,8 +20,9 @@
 
   &__more {
     border-bottom: $line;
-    @at-root{
-      .contact_short &{
+
+    @at-root {
+      .contact_short & {
         border-bottom: none;
         padding: 0;
       }
@@ -53,37 +55,27 @@
   }
 
   &__transport {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    display: flex;
+    align-items: center;
+    @include flex-gap(15px);
 
     &-list {
-      display: flex;
-      align-items: center;
-      @include flex-gap(15px);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+
+    &-icon {
+      color: $color-accent;
+      display: block;
+      @include box(32px);
+      border-radius: 2px;
+      flex: 0 0 auto;
+      margin-right: 1ch;
     }
   }
 }
 
-.transport-icon {
-  display: block;
-  @include box(32px);
-  background-color: $color-accent;
-  border-radius: 2px;
-  flex: 0 0 auto;
-
-  &_tram {
-    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='2' fill='%23852D2E'/%3E%3Cpath d='M14.7397 10.4794H10.0395V8.89952H21.3159V10.4794H16.6158V23H14.7397V10.4794Z' fill='white'/%3E%3Cpath d='M10 26.5H21.5' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
-  }
-
-  &_bus {
-    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='2' fill='%23852D2E'/%3E%3Cpath d='M14.3716 8.89952H16.4452L21.9551 23H19.8815L18.3411 18.7541H12.377L10.7971 23H8.88151L14.3716 8.89952ZM17.7486 17.1742L15.3985 10.5979H15.359L12.9695 17.1742H17.7486Z' fill='white'/%3E%3C/svg%3E%0A");
-  }
-
-  &_trolley {
-    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='2' fill='%23852D2E'/%3E%3Cpath d='M14.7397 10.4794H10.0395V8.89952H21.3159V10.4794H16.6158V23H14.7397V10.4794Z' fill='white'/%3E%3C/svg%3E%0A");
-  }
-}
 
 .simplebar-track.simplebar-vertical {
   right: -15px;

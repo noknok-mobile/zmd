@@ -85,16 +85,21 @@ function watcher() {
 }
 
 //https://github.com/svg-sprite/svg-sprite/blob/master/docs/configuration.md
+// https://github.com/svg/svgo#built-in-plugins
 function bckg() {
     return src('assets/bckg/*.svg')
         .pipe(svgSprite({
+            shape:{
+
+            },
             svg: { 
                 xmlDeclaration: false,
                 doctypeDeclaration: false, 
                 namespaceIDs: true, 
                 namespaceIDPrefix: '', 
                 namespaceClassnames: false,
-                dimensionAttributes: true
+                dimensionAttributes: false,
+                rootAttributes: false
             },
             mode: {
                 stack: {
@@ -126,9 +131,28 @@ function icons() {
         }))
         .pipe(dest('build/'));
 }
-
+function contactIcons() {
+    return src('assets/icon/transport/*.svg')
+        .pipe(svgSprite({
+            svg: { 
+                xmlDeclaration: false,
+                doctypeDeclaration: false,
+                namespaceIDs: false, 
+                namespaceIDPrefix: '', 
+                namespaceClassnames: false, 
+                dimensionAttributes: true
+            },
+            mode: {
+                symbol: {
+                    dest: './',
+                    sprite: 'contact_icons.svg'
+                }
+            },
+        }))
+        .pipe(dest('build/'));
+}
 
 exports.server = parallel(server, watcher);
 exports.build = parallel(compileHtml, styles, assets, fonts, scripts, bckg, icons);
 exports.styles = series(styles);
-exports.svg = parallel(bckg, icons);
+exports.svg = parallel(bckg, icons, contactIcons);

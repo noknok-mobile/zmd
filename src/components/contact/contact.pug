@@ -6,8 +6,9 @@ mixin contact(data)
                     td= row.name
                     td !{row.value}
         .contact__comment= data.comment 
-        .contact__transport
+        .contact__transport-list
             each item in data.transport
-                span.contact__transport-list
-                    i.transport-icon(title= item.title, class= `transport-icon_${item.type}`)
+                .contact__transport(class=`contact__transport_type_${item.type}`)
+                    svg.contact__transport-icon
+                        use(href=`contact_icons.svg#${item.type}`)
                     | #{item.value}

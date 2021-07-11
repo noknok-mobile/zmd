@@ -1,5 +1,8 @@
 extends /layout/template
-
+block append styles 
+    link(rel="stylesheet", href="https://unpkg.com/simplebar@latest/dist/simplebar.css")
+block append scripts 
+    script(src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js") 
 block content 
     .page__grid.contact-grid
         .contact-grid__sidebar
