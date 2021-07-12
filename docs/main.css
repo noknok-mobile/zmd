@@ -12,10 +12,10 @@ html {
   --h1: 48px;
   --h2: 36px;
   --h3: 24px;
-  --font-basic: 20px;
+  --font-m: 20px;
   --font-s: 18px;
   --font-xs: 16px;
-  --font-smallest: 14px;
+  --font-xxs: 14px;
 }
 
 :root {
@@ -198,26 +198,6 @@ html {
   background-color: var(--color-elem-background);
 }
 
-.dictionary__letter, .about__desc, h1 {
-  font-family: "PT Serif", serif;
-  font-size: var(--h1);
-  font-weight: 400;
-}
-
-h2:not([class]) {
-  font-family: "PT Serif", serif;
-  font-size: var(--h2);
-  font-weight: 400;
-  margin-top: 1.8em;
-  margin-bottom: 1.8rem;
-}
-
-h3:not([class]) {
-  font-family: "PT Serif", serif;
-  font-size: var(--h3);
-  font-weight: 400;
-}
-
 ul:not([class]) li, p {
   margin-top: 1em;
 }
@@ -226,13 +206,8 @@ ul:not([class]) li:not(:last-child), p:not(:last-child) {
 }
 
 .price-list__row, .price-list, html {
-  font-size: var(--font-basic);
+  font-size: var(--font-m);
   font-weight: 400;
-}
-
-.price, .price-list__row td:last-of-type {
-  font-weight: 600;
-  white-space: nowrap;
 }
 
 .input__value::-moz-placeholder {
@@ -253,7 +228,19 @@ ul:not([class]) li:not(:last-child), p:not(:last-child) {
   text-transform: uppercase;
 }
 
-/*attention! global styles! поместить в самое начало результирующей табюлицы стилей*/
+/*attention! global styles*/
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
 ul:not([class]) {
   list-style-position: inside;
 }
@@ -262,6 +249,13 @@ ul:not([class]) li {
 }
 
 /*attention! global styles*/
+.title, h1:not([class]) {
+  font-family: "PT Serif";
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
 .lead {
   font-size: var(--h2);
   font-weight: 300;
@@ -291,11 +285,9 @@ ul:not([class]) li {
   border-color: transparent;
 }
 
-.title {
-  font-family: "PT Serif";
-  margin: 0;
-  line-height: 1.2;
-  font-weight: 400;
+.price, .price-list__row td:last-of-type {
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .swiper-container {
@@ -514,7 +506,7 @@ ul:not([class]) li {
 }
 .header-desktop__schedule {
   display: none;
-  font-size: var(--font-smallest);
+  font-size: var(--font-xxs);
 }
 .header-desktop__phone {
   font-size: 24px;
@@ -685,7 +677,7 @@ ul:not([class]) li {
 .footer-info__promo {
   grid-area: promo;
   color: var(--color-text-semi-muted);
-  font-size: var(--font-smallest);
+  font-size: var(--font-xxs);
 }
 
 .promo__text {
@@ -831,7 +823,7 @@ ul:not([class]) li {
 }
 .breadcrumb__item {
   color: var(--color-text-muted);
-  font-size: var(--font-smallest);
+  font-size: var(--font-xxs);
   font-weight: 600;
   text-decoration: underline;
 }
@@ -1016,6 +1008,9 @@ ul:not([class]) li {
   align-items: center;
   max-width: clamp(300px, 80%, 800px);
   margin: var(--offset-large) auto;
+}
+.page-section > .title, .page-section > h1:not([class]) {
+  margin-bottom: var(--offset-small);
 }
 
 .button {
@@ -1354,7 +1349,7 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   justify-content: space-between;
 }
 .form-step__title {
-  font-size: var(--font-basic);
+  font-size: var(--font-m);
   font-weight: 600;
   color: var(--color-text-semi-muted);
   position: relative;
@@ -1770,6 +1765,9 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   margin-bottom: var(--offset-small);
 }
 .about__desc {
+  font-family: "PT Serif", serif;
+  font-size: var(--h1);
+  font-weight: 400;
   margin: 0;
 }
 .about_single {
@@ -1809,6 +1807,9 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   color: var(--color-accent);
 }
 .dictionary__letter {
+  font-family: "PT Serif", serif;
+  font-size: var(--h1);
+  font-weight: 400;
   grid-area: letter;
   padding-left: calc(var(--gutter) + var(--column));
   line-height: 1.8rem;
@@ -2180,7 +2181,7 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   margin: 0 auto;
 }
 .timetable__time {
-  font-size: var(--font-smallest);
+  font-size: var(--font-xxs);
   font-weight: 600;
   border: 1px solid var(--color-line);
   height: 20px;
@@ -2430,7 +2431,7 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   display: contents;
 }
 .contact__table tr {
-  font-size: var(--font-smallest);
+  font-size: var(--font-xxs);
 }
 .contact__table tr td:first-child {
   color: var(--color-text-muted);
@@ -2532,7 +2533,7 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   }
 }
 .tab {
-  font-size: var(--font-smallest);
+  font-size: var(--font-xxs);
   font-weight: 400;
   text-transform: capitalize;
   line-height: 2rem;
@@ -2625,7 +2626,7 @@ body {
   order: 1;
 }
 .doctor .card__meta {
-  font-size: var(--font-smallest);
+  font-size: var(--font-xxs);
 }
 .doctor__footer {
   flex-wrap: wrap;
@@ -2683,7 +2684,7 @@ body {
     font-size: 20px;
   }
   .header-desktop__button {
-    font-size: var(--font-smallest);
+    font-size: var(--font-xxs);
   }
   .header-summary {
     grid-template-columns: repeat(8, minmax(0, 1fr));
@@ -2724,7 +2725,7 @@ body {
     --h1: 40px;
     --h2: 30px;
     --h3: 20px;
-    --font-basic: 16px;
+    --font-m: 16px;
     --font-s: 14px;
     --font-xs: 14px;
   }
