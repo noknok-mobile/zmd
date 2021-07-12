@@ -1,0 +1,34 @@
+.prices {
+    &__filter {
+        background-color: $color-elem-background;
+        border-radius: 50px;
+        margin-bottom: $offset-s;
+    }
+}
+
+.price-filter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gutter;
+
+    @include phone_hrz {
+        grid-template-columns: 1fr;
+        background-color: transparent;
+
+    }
+
+    &__item {
+        padding: 1rem 2rem;
+
+        @include not_phone_only {
+            &:first-of-type {
+                @include border-lined;
+            }
+        }
+        
+        @include phone_hrz {
+            background-color: $color-elem-background;
+            border-radius: 50px;
+        }
+    }
+}

@@ -63,4 +63,9 @@
     @content;
   }
 }
+@mixin not_phone_only {
+  @media (min-width: 768px){
+    @content;
+  }
+}
 

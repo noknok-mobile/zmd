@@ -2,7 +2,10 @@ extends /layout/template
 
 block content
     .page__content
-        .page-section
+        section.page-section.prices
+            .prices__filter.price-filter
+                +select({id:"filial", options: ["выберите филиал", "фыовдло", "asoipqn"]})(name= "filial").select_inline.price-filter__item
+                +select({id:"filial",  options: ["выберите направление", "фыовдло", "asoipqn"]})(name= "filial").select_inline.price-filter__item
             each item in prices 
                 +spoiler(item.title).spoiler_decorated
                     +price-list(item.priceList)
