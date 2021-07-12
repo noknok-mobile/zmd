@@ -35,7 +35,7 @@
     }
   }
   &__letter {
-    @extend %h1;
+    @include header(h1);
     grid-area: letter;
     padding-left: calc(var(--gutter) + var(--column));
     line-height: 1.8rem;

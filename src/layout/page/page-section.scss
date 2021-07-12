@@ -8,12 +8,9 @@
     }
 
     /*modifiers*/
-
     &_wide {
         grid-column: 1/3;
-        @include tablet {
-            // grid-column: auto;
-        }
+
     }
 
     &_background {
@@ -41,5 +38,9 @@
         align-items: center;
         max-width: clamp(300px, 80%, 800px);
         margin: var(--offset-large) auto;
+    }
+
+    > .title {
+        margin-bottom: $offset-s;
     }
 }

@@ -3,10 +3,10 @@ html {
   --h1: 48px;
   --h2: 36px;
   --h3: 24px;
-  --font-basic: 20px;
+  --font-m: 20px;
   --font-s: 18px;
   --font-xs: 16px;
-  --font-smallest: 14px;
+  --font-xxs: 14px;
 
   @include desktop-middle {}
 
@@ -14,7 +14,7 @@ html {
     --h1: 40px;
     --h2: 30px;
     --h3: 20px;
-    --font-basic: 16px;
+    --font-m: 16px;
     --font-s: 14px;
     --font-xs: 14px;
 
@@ -42,8 +42,8 @@ $font-size: (
   h1: var(--h1),
   h2: var(--h2),
   h3: var(--h3),
-  m: var(--font-basic),
+  m: var(--font-m),
   s: var(--font-s),
   xs: var(--font-xs),
-  xxs: var(--font-smallest),
+  xxs: var(--font-xxs),
 );

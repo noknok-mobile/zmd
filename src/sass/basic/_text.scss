@@ -1,16 +1,3 @@
-%h1 {
-  @include header(h1);
-}
-
-%h2 {
-  @include header(h2, true);
-}
-
-%h3 {
-  @include header(h3);
-
-}
-
 %paragraph {
   margin-top: 1em;
 
@@ -23,39 +10,42 @@
   @include text(m, 400);
 }
 
-.price {
-  @include text(inherit, 600);
-  white-space: nowrap;
-}
 
 %tag {
   @include text(s, 600, true);
 }
 
-/*attention! global styles! поместить в самое начало результирующей табюлицы стилей*/
-h1 {
-  @extend %h1;
+/*attention! global styles*/
+$headers: ("h1", 'h2', 'h3');
+@each $header in $headers {
+  #{$header} {
+    @include text($header);
+  }
 }
-
-h2:not([class]) {
-  @extend %h2;
- }
-
-h3:not([class]) {
-  @extend %h3;
+h1:not([class]){
+  @extend .title;
 }
-
 p {
   @extend %paragraph;
 }
-ul:not([class]){
+
+ul:not([class]) {
   list-style-position: inside;
-  & li{
-    list-style-type: '- ';
+  
+  & li {
+    list-style-type: "- ";
     @extend %paragraph;
   }
 }
+
 /*attention! global styles*/
+
+.title {
+  font-family: 'PT Serif';
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 400;
+}
 
 .lead {
   @include text(h2, 300);
@@ -69,18 +59,18 @@ ul:not([class]){
 .tag {
   @extend %tag;
   color: $color-text-muted;
-  &_link{
+  
+  &_link {
     transition: border-color 0.15s ease-in-out;
     border-bottom: 1px solid $color-line;
-    &:hover{
+
+    &:hover {
       border-color: transparent;
     }
   }
 }
 
-.title {
-  font-family: 'PT Serif';
-  margin: 0;
-  line-height: 1.2;
-  font-weight: 400;
+.price {
+  @include text(inherit, 600);
+  white-space: nowrap;
 }
