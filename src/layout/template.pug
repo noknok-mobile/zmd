@@ -8,6 +8,7 @@ include mixins
 - const logo = 'assets/logo.png'
 
 block vars
+    - const phoneLink = phone.replace(/[()-\s]/gi, '');
     - let mainpage = false
     - let pageHeaderImage
     - let path = ['Главная', title]

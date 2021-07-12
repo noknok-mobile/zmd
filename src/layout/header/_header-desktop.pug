@@ -27,7 +27,7 @@
             a.header-desktop__button.button(href="#") Записаться на прием
 
         .header-desktop__contacts
-            a.header-desktop__phone.link(href= 'tel:'+ phone)= phone
+            a.header-desktop__phone.link(href= 'tel:'+ phoneLink)= phone
             span.header-desktop__schedule !{scheduleInfo}
 
         nav.header-desktop__navbar.icon-menu
@@ -35,7 +35,7 @@
                 svg #[use(href="icons.svg#profile")]
             a.icon-menu__item(href="schedule")
                 svg #[use(href="icons.svg#calendar")]
-            a.icon-menu__item(href="tel:"+ phone)
+            a.icon-menu__item(href="tel:"+ phoneLink)
                 svg #[use(href="icons.svg#phone")]
 
     nav.header-desktop__bottom
