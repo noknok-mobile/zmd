@@ -7,7 +7,7 @@
     <title>Мейпариани Елена Владимировна</title>
     <link rel="stylesheet" href="main.css">
   </head>
-  <body> 
+  <body class="page">
     <div class="header">
       <div class="header-desktop">
         <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
@@ -31,13 +31,13 @@
           <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
           <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
               <svg>
-                <use xlink:href="icons.svg#profile"></use>
+                <use href="icons.svg#profile"></use>
               </svg></a><a class="icon-menu__item" href="schedule">
               <svg>
-                <use xlink:href="icons.svg#calendar"></use>
+                <use href="icons.svg#calendar"></use>
               </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
               <svg>
-                <use xlink:href="icons.svg#phone"></use>
+                <use href="icons.svg#phone"></use>
               </svg></a></nav>
         </div>
         <nav class="header-desktop__bottom">
@@ -60,23 +60,23 @@
             <div class="header-mobile__navbar"><a class="header__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
               <div class="icon-menu"><a class="icon-menu__item" href="account">
                   <svg>
-                    <use xlink:href="icons.svg#profile"></use>
+                    <use href="icons.svg#profile"></use>
                   </svg></a><a class="icon-menu__item" href="schedule">
                   <svg>
-                    <use xlink:href="icons.svg#calendar"></use>
+                    <use href="icons.svg#calendar"></use>
                   </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
                   <svg>
-                    <use xlink:href="icons.svg#phone"></use>
+                    <use href="icons.svg#phone"></use>
                   </svg></a>
                 <div class="icon-menu__item">
                   <button class="icon-menu__toggle icon-menu__toggle_open js-menu-open" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#burger"></use>
+                      <use href="icons.svg#burger"></use>
                     </svg>
                   </button>
                   <button class="icon-menu__toggle icon-menu__toggle_close js-menu-close" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#menu-close"></use>
+                      <use href="icons.svg#menu-close"></use>
                     </svg>
                   </button>
                 </div>
@@ -102,7 +102,7 @@
       </div>
       <script src="js/header.js"></script>
     </div>
-        <div class="page-header page-header_bskg-stethoscope page-header_overflow">
+        <div class="page__header page-header page-header_bskg-stethoscope page-header_overflow">
           <div class="container page-header__inner">
             <div class="page-header__nav">
               <ul class="breadcrumb">
@@ -113,8 +113,8 @@
             <h1 class="page-header__title title">Мейпариани Елена Владимировна</h1>
           </div>
         </div>
-    <div class="container page">
-      <div class="doctor-preview doctor-preview__grid">
+    <div class="page__intro"> 
+      <div class="doctor-preview doctor-preview__grid container">
         <div class="doctor-preview__avatar-wrapper"><img class="doctor-preview__avatar" src="assets/img/lady.jpg" alt="Мейпариани Елена Владимировна"></div>
         <div class="doctor-preview__info">
           <table class="doctor-preview__summary">
@@ -137,6 +137,8 @@
           </table><a class="button doctor-preview__action" href="#">ЗАПИСАТЬСЯ К ВРАЧУ</a>
         </div>
       </div>
+    </div>
+    <div class="container">
       <div class="page__grid">
         <div class="page__sidebar"> 
           <nav class="sidebar-menu page__menu"><a class="sidebar-menu__item link" href="#">Образование</a><a class="sidebar-menu__item link" href="#">Услуги и цены</a><a class="sidebar-menu__item link" href="#">Расписание</a>
@@ -236,7 +238,7 @@
               <div class="schedule__header">
                 <div class="schedule__inner"><a class="schedule__nav schedule__nav_prev button-arrow" href="#">
                     <svg class="button-arrow__icon">
-                      <use xlink:href="icons.svg#arrow" transform="rotate(90 12 12)"></use>
+                      <use href="icons.svg#arrow" transform="rotate(90 12 12)"></use>
                     </svg></a>
                   <table class="schedule__calendar calendar-grid">
                     <tr class="schedule__days">
@@ -255,7 +257,7 @@
                     </tr>
                   </table><a class="schedule__nav schedule__nav_next button-arrow" href="#">
                     <svg class="button-arrow__icon">
-                      <use xlink:href="icons.svg#arrow" transform="rotate(-90 12 12)"></use>
+                      <use href="icons.svg#arrow" transform="rotate(-90 12 12)"></use>
                     </svg></a>
                 </div>
               </div>
@@ -269,7 +271,7 @@
                   <p>Запись на консультацию осуществляется только по телефону</p>
                 </div><a class="button schedule__more-link schedule__more-link_bg spec-info-placeholder__link" href="#"><span class="schedule__more-label">ЗАПИСАТЬСЯ к другому врачу</span><span class="button-arrow button-arrow_next schedule__more-link__arrow">
                     <svg class="button-arrow__icon">
-                      <use xlink:href="icons.svg#arrow"></use>
+                      <use href="icons.svg#arrow"></use>
                     </svg></span></a><a class="button spec-info-placeholder__action" href="#">Записаться на прием</a>
               </div>
             </div>
@@ -381,7 +383,7 @@
                 </div>
                 <div class="schedule__footer"> <a class="button schedule__more-link js-expand-trigger" data-expand=""><span class="schedule__more-label">Развернуть все</span><span class="button-arrow button-arrow_null schedule__more-link__arrow">
                       <svg class="button-arrow__icon">
-                        <use xlink:href="icons.svg#arrow"></use>
+                        <use href="icons.svg#arrow"></use>
                       </svg></span></a>
                 </div>
               </div>
@@ -422,7 +424,7 @@
       <div class="modal"> 
         <button class="modal__close js-close" role="button" aria-label="Закрыть">
           <svg>
-            <use xlink:href="icons.svg#close"></use>
+            <use href="icons.svg#close"></use>
           </svg>
         </button>
         <div class="modal__inner">

@@ -7,14 +7,14 @@
     <title>Новости</title>
     <link rel="stylesheet" href="main.css">
   </head>
-  <body> 
+  <body class="page">
     <div class="header">
       <div class="header-desktop">
         <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
           <div class="header-summary header-desktop__summary">
             <div class="header-summary__address">
               <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span>
-                <div class="header-info__content"><a class="header__link" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
+                <div class="header-info__content"><a class="header__link link link_color" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
               </div>
             </div>
             <div class="header-summary__schedule">
@@ -24,20 +24,20 @@
             </div>
             <div class="header-summary__account">
               <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span>
-                <div class="header-info__content header-info__content_flex"><a class="header__link" href="#popup_open">Вход</a><a class="header__link" href="#popup_open">Регистрация</a></div>
+                <div class="header-info__content header-info__content_flex"><a class="header__link link link_color" href="#popup_open">Вход</a><a class="header__link link link_color" href="#popup_open">Регистрация</a></div>
               </div>
             </div><a class="header-desktop__button button" href="#">Записаться на прием</a>
           </div>
           <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
           <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
               <svg>
-                <use xlink:href="icons.svg#profile"></use>
+                <use href="icons.svg#profile"></use>
               </svg></a><a class="icon-menu__item" href="schedule">
               <svg>
-                <use xlink:href="icons.svg#calendar"></use>
+                <use href="icons.svg#calendar"></use>
               </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
               <svg>
-                <use xlink:href="icons.svg#phone"></use>
+                <use href="icons.svg#phone"></use>
               </svg></a></nav>
         </div>
         <nav class="header-desktop__bottom">
@@ -60,23 +60,23 @@
             <div class="header-mobile__navbar"><a class="header__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
               <div class="icon-menu"><a class="icon-menu__item" href="account">
                   <svg>
-                    <use xlink:href="icons.svg#profile"></use>
+                    <use href="icons.svg#profile"></use>
                   </svg></a><a class="icon-menu__item" href="schedule">
                   <svg>
-                    <use xlink:href="icons.svg#calendar"></use>
+                    <use href="icons.svg#calendar"></use>
                   </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
                   <svg>
-                    <use xlink:href="icons.svg#phone"></use>
+                    <use href="icons.svg#phone"></use>
                   </svg></a>
                 <div class="icon-menu__item">
                   <button class="icon-menu__toggle icon-menu__toggle_open js-menu-open" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#burger"></use>
+                      <use href="icons.svg#burger"></use>
                     </svg>
                   </button>
                   <button class="icon-menu__toggle icon-menu__toggle_close js-menu-close" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#menu-close"></use>
+                      <use href="icons.svg#menu-close"></use>
                     </svg>
                   </button>
                 </div>
@@ -102,8 +102,8 @@
       </div>
       <script src="js/header.js"></script>
     </div>
-        <div class="page-header page-header_bskg-stethoscope">
-          <div class="container">
+        <div class="page__header page-header page-header_bskg-stethoscope">
+          <div class="container page-header__inner">
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
@@ -113,19 +113,20 @@
             <h1 class="page-header__title title">Новости</h1>
           </div>
         </div>
-    <div class="container page">
+    <div class="container">
       <main class="page__content">
         <div class="page-section card-list">
           <div class="card news">
             <div class="card__inner">
               <div class="card__header"> 
                 <div class="card__meta tag">12.05.1996</div>
-                <h3 class="card__title news__title">Открылся филиал нашего центра в Адыгейске</h3>
+                <h3 class="card__title title news__title">Открылся филиал нашего центра в Адыгейске</h3>
               </div>
               <div class="card__body">
                 <div class="card__description news__description">Теперь в нашем центре наши клиенты могут воспользоваться услугами диетолога-психолога</div>
               </div>
-              <div class="card__footer"><a class="button" href="#">Подробнее</a></div>
+              <div class="card__footer news__footer"><a class="button" href="#">Подробнее</a>
+              </div>
             </div>
             <div class="card__img-wrapper"><img class="card__img" src="assets/img/image.png"/></div>
           </div>
@@ -133,12 +134,13 @@
             <div class="card__inner">
               <div class="card__header"> 
                 <div class="card__meta tag">12.05.1996</div>
-                <h3 class="card__title news__title">Открылся филиал нашего центра в Адыгейске</h3>
+                <h3 class="card__title title news__title">Открылся филиал нашего центра в Адыгейске</h3>
               </div>
               <div class="card__body">
                 <div class="card__description news__description">Теперь в нашем центре наши клиенты могут воспользоваться услугами диетолога-психолога</div>
               </div>
-              <div class="card__footer"><a class="button" href="#">Подробнее</a></div>
+              <div class="card__footer news__footer"><a class="button" href="#">Подробнее</a>
+              </div>
             </div>
             <div class="card__img-wrapper"><img class="card__img" src="assets/img/image.png"/></div>
           </div>
@@ -146,21 +148,22 @@
             <div class="card__inner">
               <div class="card__header"> 
                 <div class="card__meta tag">12.05.1996</div>
-                <h3 class="card__title news__title">Открылся филиал нашего центра в Адыгейске</h3>
+                <h3 class="card__title title news__title">Открылся филиал нашего центра в Адыгейске</h3>
               </div>
               <div class="card__body">
                 <div class="card__description news__description">Теперь в нашем центре наши клиенты могут воспользоваться услугами диетолога-психолога</div>
               </div>
-              <div class="card__footer"><a class="button" href="#">Подробнее</a></div>
+              <div class="card__footer news__footer"><a class="button" href="#">Подробнее</a>
+              </div>
             </div>
             <div class="card__img-wrapper"><img class="card__img" src="assets/img/image.png"/></div>
           </div>
-          <div class="pagination"> <a class="button-arrow button-arrow_prev pagination__arrow pagination__arrow_prev" href="#prev">
+          <div class="pagination"><a class="button-arrow button-arrow_prev pagination__arrow pagination__arrow_prev" href="#prev">
               <svg class="button-arrow__icon">
-                <use xlink:href="icons.svg#arrow"></use>
+                <use href="icons.svg#arrow"></use>
               </svg></a><span class="pagination__item pagination__item_current">1</span><a class="pagination__item link" href="#2">2</a><a class="pagination__item link" href="#3">3</a><span class="pagination__item pagination__item_dots">...</span><a class="pagination__item link" href="#7">7</a><a class="button-arrow button-arrow_next pagination__arrow pagination__arrow_next" href="#next">
               <svg class="button-arrow__icon">
-                <use xlink:href="icons.svg#arrow"></use>
+                <use href="icons.svg#arrow"></use>
               </svg></a>
           </div>
         </div>
@@ -198,7 +201,7 @@
       <div class="modal"> 
         <button class="modal__close js-close" role="button" aria-label="Закрыть">
           <svg>
-            <use xlink:href="icons.svg#close"></use>
+            <use href="icons.svg#close"></use>
           </svg>
         </button>
         <div class="modal__inner">
@@ -207,6 +210,6 @@
         </div>
       </div>
     </div>
-    <script src="js/modal.js"> </script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

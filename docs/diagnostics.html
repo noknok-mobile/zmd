@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Направления лечения</title>
+    <title>Диагностика</title>
     <link rel="stylesheet" href="main.css">
   </head>
-  <body> 
+  <body class="page">
     <div class="header">
       <div class="header-desktop">
         <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
           <div class="header-summary header-desktop__summary">
             <div class="header-summary__address">
               <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span>
-                <div class="header-info__content"><a class="header__link" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
+                <div class="header-info__content"><a class="header__link link link_color" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
               </div>
             </div>
             <div class="header-summary__schedule">
@@ -24,20 +24,20 @@
             </div>
             <div class="header-summary__account">
               <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span>
-                <div class="header-info__content header-info__content_flex"><a class="header__link" href="#popup_open">Вход</a><a class="header__link" href="#popup_open">Регистрация</a></div>
+                <div class="header-info__content header-info__content_flex"><a class="header__link link link_color" href="#popup_open">Вход</a><a class="header__link link link_color" href="#popup_open">Регистрация</a></div>
               </div>
             </div><a class="header-desktop__button button" href="#">Записаться на прием</a>
           </div>
           <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
           <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
               <svg>
-                <use xlink:href="icons.svg#profile"></use>
+                <use href="icons.svg#profile"></use>
               </svg></a><a class="icon-menu__item" href="schedule">
               <svg>
-                <use xlink:href="icons.svg#calendar"></use>
+                <use href="icons.svg#calendar"></use>
               </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
               <svg>
-                <use xlink:href="icons.svg#phone"></use>
+                <use href="icons.svg#phone"></use>
               </svg></a></nav>
         </div>
         <nav class="header-desktop__bottom">
@@ -60,23 +60,23 @@
             <div class="header-mobile__navbar"><a class="header__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
               <div class="icon-menu"><a class="icon-menu__item" href="account">
                   <svg>
-                    <use xlink:href="icons.svg#profile"></use>
+                    <use href="icons.svg#profile"></use>
                   </svg></a><a class="icon-menu__item" href="schedule">
                   <svg>
-                    <use xlink:href="icons.svg#calendar"></use>
+                    <use href="icons.svg#calendar"></use>
                   </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
                   <svg>
-                    <use xlink:href="icons.svg#phone"></use>
+                    <use href="icons.svg#phone"></use>
                   </svg></a>
                 <div class="icon-menu__item">
                   <button class="icon-menu__toggle icon-menu__toggle_open js-menu-open" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#burger"></use>
+                      <use href="icons.svg#burger"></use>
                     </svg>
                   </button>
                   <button class="icon-menu__toggle icon-menu__toggle_close js-menu-close" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#menu-close"></use>
+                      <use href="icons.svg#menu-close"></use>
                     </svg>
                   </button>
                 </div>
@@ -102,70 +102,44 @@
       </div>
       <script src="js/header.js"></script>
     </div>
-        <div class="page-header page-header_bskg-stethoscope">
-          <div class="container">
+        <div class="page__header page-header page-header_bskg-stethoscope">
+          <div class="container page-header__inner">
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
-                <li class="breadcrumb__item breadcrumb__item_active">Направления лечения</li>
+                <li class="breadcrumb__item breadcrumb__item_active">Диагностика</li>
               </ul>
             </div>
-            <h1 class="page-header__title title">Направления лечения</h1>
+            <h1 class="page-header__title title">Диагностика</h1>
           </div>
         </div>
-    <div class="container page">
+    <div class="container">
       <div class="page__content">
-        <div class="page-section">
-          <div class="switch__block">
-            <label class="switch__label switch__label_active" for="switch">Взрослое отделение</label>
-            <label class="toggle" for="switch">
-              <input class="toggle__checkbox js-switch" id="switch" type="checkbox"><span class="toggle__button"> </span>
-            </label>
-            <label class="switch__label" for="switch">Детское отделение</label>
-          </div>
-          <div class="section js-section-switched">
-            <div class="dictionary">
-              <div class="dictionary-filter"><a class="dictionary-filter__item js-filter js-filter_active" data-filter="">A-Я</a><a class="dictionary-filter__item js-filter" data-filter="A">A</a><a class="dictionary-filter__item js-filter" data-filter="Г">Г</a><a class="dictionary-filter__item js-filter" data-filter="Д">Д</a>
-              </div>
-                          <div class="dictionary__group tile filter-item" data-filter="A">
-                            <div class="dictionary__letter">A</div>
-                            <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Аллерголог-иммунолог</a><a class="dictionary__item link" href="#">Ангиохирург</a><a class="dictionary__item link" href="#">Акушерство и гинекология</a><a class="dictionary__item link" href="#">Анестезиология</a>
-                            </div>
-                          </div>
-                          <div class="dictionary__group tile filter-item" data-filter="Г">
-                            <div class="dictionary__letter">Г</div>
-                            <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Гастроэнтерология</a><a class="dictionary__item link" href="#">Гипнотерапия</a><a class="dictionary__item link" href="#">Гематология</a><a class="dictionary__item link" href="#">Гирудотерапия</a>
-                            </div>
-                          </div>
-                          <div class="dictionary__group tile filter-item" data-filter="Д">
-                            <div class="dictionary__letter">Д</div>
-                            <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Дерматовенерология</a><a class="dictionary__item link" href="#">Диетолог-психолог</a><a class="dictionary__item link" href="#">Дневной стационар</a>
-                            </div>
-                          </div>
+        <main class="page-section">
+          <div class="branch-list branch-list_table">
+            <div class="branch tile branch_tile">
+              <div class="branch__img">
+                <svg>
+                  <use href="icons.svg#hirurg"></use>
+                </svg>
+              </div><a class="branch__name" href="#">Хирургический стационар</a>
+            </div>
+            <div class="branch tile branch_tile">
+              <div class="branch__img">
+                <svg>
+                  <use href="icons.svg#tomo"></use>
+                </svg>
+              </div><a class="branch__name" href="#">Функциональная диагностика</a>
+            </div>
+            <div class="branch tile branch_tile">
+              <div class="branch__img">
+                <svg>
+                  <use href="icons.svg#heart"></use>
+                </svg>
+              </div><a class="branch__name" href="#">Функциональная диагностика</a>
             </div>
           </div>
-          <div class="section js-section-switched section_hidden">
-            <div class="dictionary">
-              <div class="dictionary-filter"><a class="dictionary-filter__item js-filter js-filter_active" data-filter="">A-Я</a><a class="dictionary-filter__item js-filter" data-filter="A">A</a><a class="dictionary-filter__item js-filter" data-filter="Г">Г</a><a class="dictionary-filter__item js-filter" data-filter="Д">Д</a>
-              </div>
-                          <div class="dictionary__group tile filter-item" data-filter="A">
-                            <div class="dictionary__letter">A</div>
-                            <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Аллерголог-иммунолог</a><a class="dictionary__item link" href="#">Ангиохирург</a>
-                            </div>
-                          </div>
-                          <div class="dictionary__group tile filter-item" data-filter="Г">
-                            <div class="dictionary__letter">Г</div>
-                            <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Гастроэнтерология</a><a class="dictionary__item link" href="#">Гипнотерапия</a>
-                            </div>
-                          </div>
-                          <div class="dictionary__group tile filter-item" data-filter="Д">
-                            <div class="dictionary__letter">Д</div>
-                            <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Диетолог-психолог</a><a class="dictionary__item link" href="#">Дневной стационар</a>
-                            </div>
-                          </div>
-            </div>
-          </div>
-        </div>
+        </main>
       </div>
     </div>
     <footer class="footer">
@@ -200,7 +174,7 @@
       <div class="modal"> 
         <button class="modal__close js-close" role="button" aria-label="Закрыть">
           <svg>
-            <use xlink:href="icons.svg#close"></use>
+            <use href="icons.svg#close"></use>
           </svg>
         </button>
         <div class="modal__inner">
@@ -209,92 +183,6 @@
         </div>
       </div>
     </div>
-    <script>
-       class Filter {
-    filterControls = {
-        itemClass: 'js-filter',
-        activeClass: 'js-filter-active',
-        higlightActiveItem: function (e) {
-            for (let elem of this.list) {
-                elem.classList.remove(this.activeClass);
-            }
-            e.target.classList.add(this.activeClass);
-        },
-        list: null
-    };
-
-    filterTarget = {
-        itemClass: 'filter-item',
-        hiddenClass: 'filter-item_hidden',
-        list: null,
-
-        resetFilter: function() {
-            for(let elem of this.list){
-                elem.classList.remove(this.hiddenClass);
-            }
-        },
-
-        filterItems: function(e){
-            let filter = e.target.dataset.filter;
-            if(filter){
-                for(let elem of this.list){
-                    if(elem.dataset.filter != filter) elem.classList.add(this.hiddenClass)
-                }
-            }
-        }
-
-    };
-    constructor(block) {
-        // let block = document.querySelector(selector);
-        this.filterTarget.list = block.querySelectorAll(`.${this.filterTarget.itemClass}`);
-        this.filterControls.list = block.querySelectorAll(`.${this.filterControls.itemClass}`);
-        this.init();
-    }
-    
-    init() {
-        for (let trigger of this.filterControls.list) {
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.filterControls.higlightActiveItem(e);
-                this.filterTarget.resetFilter();
-                this.filterTarget.filterItems(e);
-            })
-        }
-    }
-}
-
-class Switch{
-    params = {
-        switchClass: 'js-switch',
-        sectionHiddenClass: 'section_hidden',
-        tabClass: 'switch__label',
-        tabActiveClass: 'switch__label_active',
-        sectionClass: 'js-section-switched',
-    }
-    constructor(){
-        this.sectionList = document.querySelectorAll(`.${this.params.sectionClass}`);
-        this.tabList = document.querySelectorAll(`.${this.params.tabClass}`)
-        this.switch = document.querySelector(`.${this.params.switchClass}`);
-        this.init();
-    }
-    init(){
-        this.switch.addEventListener('change', (e)=>{
-            for(let tab of this.tabList) this.setActiveTab(tab);
-            for(let section of this.sectionList) this.toggleSection(section);
-        })
-    }
-    setActiveTab(tab){
-        tab.classList.toggle(this.params.tabActiveClass);
-    }
-    toggleSection(section){
-        section.classList.toggle(this.params.sectionHiddenClass);
-    }
-}
-
-
-      let sectionToggle = new Switch();
-      for (let section of document.querySelectorAll('.section')) new Filter(section);
-           
-    </script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="main.css">
   </head>
-  <body> 
+  <body class="page">
     <div class="header">
       <div class="header-desktop">
         <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
@@ -31,13 +32,13 @@
           <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
           <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
               <svg>
-                <use xlink:href="icons.svg#profile"></use>
+                <use href="icons.svg#profile"></use>
               </svg></a><a class="icon-menu__item" href="schedule">
               <svg>
-                <use xlink:href="icons.svg#calendar"></use>
+                <use href="icons.svg#calendar"></use>
               </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
               <svg>
-                <use xlink:href="icons.svg#phone"></use>
+                <use href="icons.svg#phone"></use>
               </svg></a></nav>
         </div>
         <nav class="header-desktop__bottom">
@@ -60,23 +61,23 @@
             <div class="header-mobile__navbar"><a class="header__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
               <div class="icon-menu"><a class="icon-menu__item" href="account">
                   <svg>
-                    <use xlink:href="icons.svg#profile"></use>
+                    <use href="icons.svg#profile"></use>
                   </svg></a><a class="icon-menu__item" href="schedule">
                   <svg>
-                    <use xlink:href="icons.svg#calendar"></use>
+                    <use href="icons.svg#calendar"></use>
                   </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
                   <svg>
-                    <use xlink:href="icons.svg#phone"></use>
+                    <use href="icons.svg#phone"></use>
                   </svg></a>
                 <div class="icon-menu__item">
                   <button class="icon-menu__toggle icon-menu__toggle_open js-menu-open" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#burger"></use>
+                      <use href="icons.svg#burger"></use>
                     </svg>
                   </button>
                   <button class="icon-menu__toggle icon-menu__toggle_close js-menu-close" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#menu-close"></use>
+                      <use href="icons.svg#menu-close"></use>
                     </svg>
                   </button>
                 </div>
@@ -102,8 +103,8 @@
       </div>
       <script src="js/header.js"></script>
     </div>
-        <div class="page-header page-header_bskg-stethoscope">
-          <div class="container">
+        <div class="page__header page-header page-header_bskg-stethoscope">
+          <div class="container page-header__inner">
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
@@ -113,9 +114,9 @@
             <h1 class="page-header__title title">Контакты</h1>
           </div>
         </div>
-    <div class="container page">
+    <div class="container">
       <div class="page__grid contact-grid">
-        <div class="contact-grid__sidebar">
+        <div class="contact-grid__sidebar" data-simplebar>
           <div class="contact contact_short">
             <div class="contact__title mark">Единый call-центр по г. Краснодар <br></div>
             <div class="contact__more">
@@ -124,8 +125,8 @@
             </div>
           </div>
           <details class="spoiler contact">
-            <summary class="spoiler__title contact__title">Краснодар, ул. Московская, 40</summary>
-            <div class="spoiler__more contact__more">
+            <summary class="spoiler__title">Краснодар, ул. Московская, 40</summary>
+            <div class="spoiler__more">
               <table class="contact__table">
                 <tr> 
                   <td>Телефон:</td>
@@ -149,13 +150,28 @@
                 </tr>
               </table>
               <div class="contact__comment">*прием осуществляется по предварительной записи, график работы специалистов может меняться в зависимости от числа пациентов.</div>
-              <div class="contact__transport"><span class="contact__transport-list"><i class="transport-icon transport-icon_bus" title="Автобус"></i>1, 22, 45</span><span class="contact__transport-list"><i class="transport-icon transport-icon_tram" title="Трамвай"></i>1, 22, 45</span><span class="contact__transport-list"><i class="transport-icon transport-icon_trolley" title="Троллейбус"></i>1, 22, 45</span>
+              <div class="contact__transport-list">
+                <div class="contact__transport contact__transport_type_bus">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#bus"></use>
+                  </svg>1, 22, 45
+                </div>
+                <div class="contact__transport contact__transport_type_tram">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#tram"></use>
+                  </svg>1, 22, 45
+                </div>
+                <div class="contact__transport contact__transport_type_trolley">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#trolley"></use>
+                  </svg>1, 22, 45
+                </div>
               </div>
             </div>
           </details>
           <details class="spoiler contact">
-            <summary class="spoiler__title contact__title">Краснодар, ул. Московская, 40</summary>
-            <div class="spoiler__more contact__more">
+            <summary class="spoiler__title">Краснодар, ул. Московская, 40</summary>
+            <div class="spoiler__more">
               <table class="contact__table">
                 <tr> 
                   <td>Телефон:</td>
@@ -179,13 +195,28 @@
                 </tr>
               </table>
               <div class="contact__comment">*прием осуществляется по предварительной записи, график работы специалистов может меняться в зависимости от числа пациентов.</div>
-              <div class="contact__transport"><span class="contact__transport-list"><i class="transport-icon transport-icon_bus" title="Автобус"></i>1, 22, 45</span><span class="contact__transport-list"><i class="transport-icon transport-icon_tram" title="Трамвай"></i>1, 22, 45</span><span class="contact__transport-list"><i class="transport-icon transport-icon_trolley" title="Троллейбус"></i>1, 22, 45</span>
+              <div class="contact__transport-list">
+                <div class="contact__transport contact__transport_type_bus">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#bus"></use>
+                  </svg>1, 22, 45
+                </div>
+                <div class="contact__transport contact__transport_type_tram">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#tram"></use>
+                  </svg>1, 22, 45
+                </div>
+                <div class="contact__transport contact__transport_type_trolley">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#trolley"></use>
+                  </svg>1, 22, 45
+                </div>
               </div>
             </div>
           </details>
           <details class="spoiler contact">
-            <summary class="spoiler__title contact__title">Краснодар, ул. Московская, 40</summary>
-            <div class="spoiler__more contact__more">
+            <summary class="spoiler__title">Краснодар, ул. Московская, 40</summary>
+            <div class="spoiler__more">
               <table class="contact__table">
                 <tr> 
                   <td>Телефон:</td>
@@ -209,13 +240,28 @@
                 </tr>
               </table>
               <div class="contact__comment">*прием осуществляется по предварительной записи, график работы специалистов может меняться в зависимости от числа пациентов.</div>
-              <div class="contact__transport"><span class="contact__transport-list"><i class="transport-icon transport-icon_bus" title="Автобус"></i>1, 22, 45</span><span class="contact__transport-list"><i class="transport-icon transport-icon_tram" title="Трамвай"></i>1, 22, 45</span><span class="contact__transport-list"><i class="transport-icon transport-icon_trolley" title="Троллейбус"></i>1, 22, 45</span>
+              <div class="contact__transport-list">
+                <div class="contact__transport contact__transport_type_bus">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#bus"></use>
+                  </svg>1, 22, 45
+                </div>
+                <div class="contact__transport contact__transport_type_tram">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#tram"></use>
+                  </svg>1, 22, 45
+                </div>
+                <div class="contact__transport contact__transport_type_trolley">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#trolley"></use>
+                  </svg>1, 22, 45
+                </div>
               </div>
             </div>
           </details>
           <details class="spoiler contact">
-            <summary class="spoiler__title contact__title">Краснодар, ул. Московская, 40</summary>
-            <div class="spoiler__more contact__more">
+            <summary class="spoiler__title">Краснодар, ул. Московская, 40</summary>
+            <div class="spoiler__more">
               <table class="contact__table">
                 <tr> 
                   <td>Телефон:</td>
@@ -239,7 +285,22 @@
                 </tr>
               </table>
               <div class="contact__comment">*прием осуществляется по предварительной записи, график работы специалистов может меняться в зависимости от числа пациентов.</div>
-              <div class="contact__transport"><span class="contact__transport-list"><i class="transport-icon transport-icon_bus" title="Автобус"></i>1, 22, 45</span><span class="contact__transport-list"><i class="transport-icon transport-icon_tram" title="Трамвай"></i>1, 22, 45</span><span class="contact__transport-list"><i class="transport-icon transport-icon_trolley" title="Троллейбус"></i>1, 22, 45</span>
+              <div class="contact__transport-list">
+                <div class="contact__transport contact__transport_type_bus">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#bus"></use>
+                  </svg>1, 22, 45
+                </div>
+                <div class="contact__transport contact__transport_type_tram">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#tram"></use>
+                  </svg>1, 22, 45
+                </div>
+                <div class="contact__transport contact__transport_type_trolley">
+                  <svg class="contact__transport-icon">
+                    <use href="contact_icons.svg#trolley"></use>
+                  </svg>1, 22, 45
+                </div>
               </div>
             </div>
           </details>
@@ -285,7 +346,7 @@
       <div class="modal"> 
         <button class="modal__close js-close" role="button" aria-label="Закрыть">
           <svg>
-            <use xlink:href="icons.svg#close"></use>
+            <use href="icons.svg#close"></use>
           </svg>
         </button>
         <div class="modal__inner">
@@ -294,6 +355,7 @@
         </div>
       </div>
     </div>
-    <script src="js/modal.js"> </script>
+    <script src="js/modal.js"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"> </script>
   </body>
 </html>

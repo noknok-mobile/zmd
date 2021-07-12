@@ -7,14 +7,14 @@
     <title>Общая информация</title>
     <link rel="stylesheet" href="main.css">
   </head>
-  <body> 
+  <body class="page">
     <div class="header">
       <div class="header-desktop">
         <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
           <div class="header-summary header-desktop__summary">
             <div class="header-summary__address">
               <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span>
-                <div class="header-info__content"><a class="header__link" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
+                <div class="header-info__content"><a class="header__link link link_color" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
               </div>
             </div>
             <div class="header-summary__schedule">
@@ -24,20 +24,20 @@
             </div>
             <div class="header-summary__account">
               <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span>
-                <div class="header-info__content header-info__content_flex"><a class="header__link" href="#popup_open">Вход</a><a class="header__link" href="#popup_open">Регистрация</a></div>
+                <div class="header-info__content header-info__content_flex"><a class="header__link link link_color" href="#popup_open">Вход</a><a class="header__link link link_color" href="#popup_open">Регистрация</a></div>
               </div>
             </div><a class="header-desktop__button button" href="#">Записаться на прием</a>
           </div>
           <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:8 (8642) 233-03-03">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
           <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
               <svg>
-                <use xlink:href="icons.svg#profile"></use>
+                <use href="icons.svg#profile"></use>
               </svg></a><a class="icon-menu__item" href="schedule">
               <svg>
-                <use xlink:href="icons.svg#calendar"></use>
+                <use href="icons.svg#calendar"></use>
               </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
               <svg>
-                <use xlink:href="icons.svg#phone"></use>
+                <use href="icons.svg#phone"></use>
               </svg></a></nav>
         </div>
         <nav class="header-desktop__bottom">
@@ -60,23 +60,23 @@
             <div class="header-mobile__navbar"><a class="header__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
               <div class="icon-menu"><a class="icon-menu__item" href="account">
                   <svg>
-                    <use xlink:href="icons.svg#profile"></use>
+                    <use href="icons.svg#profile"></use>
                   </svg></a><a class="icon-menu__item" href="schedule">
                   <svg>
-                    <use xlink:href="icons.svg#calendar"></use>
+                    <use href="icons.svg#calendar"></use>
                   </svg></a><a class="icon-menu__item" href="tel:8 (8642) 233-03-03">
                   <svg>
-                    <use xlink:href="icons.svg#phone"></use>
+                    <use href="icons.svg#phone"></use>
                   </svg></a>
                 <div class="icon-menu__item">
                   <button class="icon-menu__toggle icon-menu__toggle_open js-menu-open" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#burger"></use>
+                      <use href="icons.svg#burger"></use>
                     </svg>
                   </button>
                   <button class="icon-menu__toggle icon-menu__toggle_close js-menu-close" href="#">
                     <svg>
-                      <use xlink:href="icons.svg#menu-close"></use>
+                      <use href="icons.svg#menu-close"></use>
                     </svg>
                   </button>
                 </div>
@@ -102,8 +102,8 @@
       </div>
       <script src="js/header.js"></script>
     </div>
-        <div class="page-header page-header_bskg-stethoscope">
-          <div class="container">
+        <div class="page__header page-header page-header_bskg-stethoscope">
+          <div class="container page-header__inner">
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
@@ -113,7 +113,7 @@
             <h1 class="page-header__title title">Общая информация</h1>
           </div>
         </div>
-    <div class="container page">
+    <div class="container">
       <div class="page__grid">
         <div class="page__sidebar">
           <nav class="sidebar-menu page__menu"><a class="sidebar-menu__item link" href="#">общая информация</a><a class="sidebar-menu__item link" href="#">лицензии и сертификаты</a><a class="sidebar-menu__item link" href="#">Новости</a><a class="sidebar-menu__item link" href="#">Тендеры</a><a class="sidebar-menu__item link" href="#">вакансии</a><a class="sidebar-menu__item link" href="#">Вопрос-ответ</a><a class="sidebar-menu__item link" href="#">документы</a>
@@ -187,7 +187,7 @@
       <div class="modal"> 
         <button class="modal__close js-close" role="button" aria-label="Закрыть">
           <svg>
-            <use xlink:href="icons.svg#close"></use>
+            <use href="icons.svg#close"></use>
           </svg>
         </button>
         <div class="modal__inner">

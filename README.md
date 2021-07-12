@@ -16,4 +16,28 @@
 - [лого](docs/assets/logo.png)  
   
 Другие (`docs/assets/bckg`, `docs/bckg.svg`) на главной не используются.
-  
+
+## Список страниц
+- [x] [Диагностика](docs/diagnostics.html)
+- [ ] Диагностика детальная
+- [x] [Вопросы и ответы](docs/faq.html)
+- [x] [Документы](docs/docs.html)
+- [x] [Лицензии](docs/licences.html)
+- [x] [Новости список](docs/news.html)
+- [x] [Новость детальная](docs/news.detail.html)
+- [x] [Контакты](docs/contacts.html)
+- [x] [Вакансии](docs/vacancy.html)
+- [ ] [Общая информация](docs/about.html)
+- [ ] [Направления лечения](docs/treatment.html)
+- [ ] [Направления лечения детальная](docs/treatment.detail.html)
+- [ ] [Доктор детальная](docs/doctor.html)
+- [ ] [Расписание врачей](docs/schedule.html)
+- [ ] [Прайс-лист](docs/price-list.html)
+- [ ] Акции
+- [ ] Акция детально
+- [ ] Услуги
+## Ассеты
+добавился [contact_icons.svg](docs/contact_icons.svg) - спрайт для иконок в контактах
+
+### На очереди
+формы, страницы личного кабинета
