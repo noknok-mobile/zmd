@@ -1,19 +1,20 @@
 class Filter {
     filterControls = {
         itemClass: 'js-filter',
-        activeClass: 'js-filter-active',
-        higlightActiveItem: function (e) {
+        activeClass: 'js-filter_active',
+        list: null,
+
+        higlightActiveFilterItem: function (e) {
             for (let elem of this.list) {
                 elem.classList.remove(this.activeClass);
             }
             e.target.classList.add(this.activeClass);
         },
-        list: null
     };
 
     filterTarget = {
-        itemClass: 'filter-item',
-        hiddenClass: 'filter-item_hidden',
+        itemClass: 'js-filter-target',
+        hiddenClass: 'js-filter-target_hidden',
         list: null,
 
         resetFilter: function() {
@@ -43,7 +44,7 @@ class Filter {
         for (let trigger of this.filterControls.list) {
             trigger.addEventListener('click', (e) => {
                 e.preventDefault();
-                this.filterControls.higlightActiveItem(e);
+                this.filterControls.higlightActiveFilterItem(e);
                 this.filterTarget.resetFilter();
                 this.filterTarget.filterItems(e);
             })

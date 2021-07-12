@@ -14,11 +14,14 @@ block content
                     include /components/dictionary/dictionary
 
 block scripts 
+    script(src="js/filter.js") 
     script 
-        include /js/filter.js
         .
             let sectionToggle = new Switch();
-            for (let section of document.querySelectorAll('.section')) new Filter(section);
+            for (let section of document.querySelectorAll('.dictionary')) {
+                const filter = new Filter(section);
+                console.log(filter.filterControls);
+            }
                  
 block prepend vars
     - const title = 'Направления лечения'

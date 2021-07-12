@@ -1,10 +1,12 @@
 .dictionary {
   display: grid;
   grid-gap: $offset-m;
+
   &-filter {
     display: flex;
     justify-content: space-between;
     @include flex-gap(10px);
+
     @include tablet {
       overflow-x: scroll;
       padding: 15px 0;
@@ -14,33 +16,38 @@
       // @include customFont(26px, 700, 1.8);
       @include text(h3, 700);
       cursor: pointer;
+
       &:hover {
         color: $color-accent;
       }
-      &.js-filter-active {
+
+      &.js-filter_active {
         color: $color-accent;
       }
     }
   }
 
-  &__inner {
-  }
+  &__inner {}
+
   &__group {
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     grid-template-areas: "letter list list list list";
     grid-gap: $gutter;
-    &:hover{
-        color: $color-accent;
+
+    &:hover {
+      color: $color-accent;
     }
   }
+
   &__letter {
     @include header(h1);
     grid-area: letter;
-    padding-left: calc(var(--gutter) + var(--column));
     line-height: 1.8rem;
     align-self: start;
+    justify-self: center;
   }
+
   &__item-list {
     grid-area: list;
     display: grid;
@@ -51,10 +58,12 @@
       grid-template-columns: 1fr;
     }
   }
+
   &__item {
     font-weight: 600;
   }
 }
+
 .toggle {
   display: flex;
   align-items: center;
@@ -64,6 +73,7 @@
   border-radius: 100px;
   background-color: $color-elem-background;
   cursor: pointer;
+
   &__button {
     content: "";
     display: inline-block;
@@ -74,16 +84,19 @@
     border-radius: 50%;
     transition: transform 0.2s ease-out;
   }
+
   &__checkbox {
     position: absolute;
     height: 1px;
     width: 1px;
     opacity: 0;
   }
-  &__checkbox:checked + &__button {
+
+  &__checkbox:checked+&__button {
     transform: translateX(50%);
   }
 }
+
 .switch {
   &__block {
     display: flex;
@@ -91,14 +104,17 @@
     margin-bottom: $offset-s;
     align-items: center;
   }
+
   &__label {
     @extend .dictionary-filter__item;
-    &_active{
+
+    &_active {
       color: $color-accent;
     }
-    
+
   }
 }
+
 .section {
   &_hidden {
     display: none;

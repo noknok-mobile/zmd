@@ -1,15 +1,15 @@
 mixin dictionary__item(letter, items)
-    .dictionary__group.tile.filter-item(data-filter= letter)
+    .dictionary__group.tile.js-filter-target(data-filter= letter)
         .dictionary__letter= letter
         .dictionary__item-list
             each item in items
                 a.dictionary__item.link(href="#")= item
-                
+
+//- 
 .dictionary
-    .dictionary-filter
-        a.dictionary-filter__item.js-filter.js-filter_active(data-filter="") A-Я
-        each value, key in filterSection  
-            a.dictionary-filter__item.js-filter(data-filter=key)= key
+    +filter(filterSection, "A-Я").dictionary-filter
 
     each value, key in filterSection 
-            +dictionary__item(key, value)
+        +dictionary__item(key, value)
+
+
