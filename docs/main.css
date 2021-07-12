@@ -1794,7 +1794,7 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
 .dictionary-filter__item:hover, .switch__label:hover {
   color: var(--color-accent);
 }
-.dictionary-filter__item.js-filter-active, .js-filter-active.switch__label {
+.dictionary-filter__item.js-filter_active, .js-filter_active.switch__label {
   color: var(--color-accent);
 }
 .dictionary__group {
@@ -1811,9 +1811,9 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   font-size: var(--h1);
   font-weight: 400;
   grid-area: letter;
-  padding-left: calc(var(--gutter) + var(--column));
   line-height: 1.8rem;
   align-self: start;
+  justify-self: center;
 }
 .dictionary__item-list {
   grid-area: list;
@@ -2491,13 +2491,8 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: var(--gutter);
 }
-.gallery__nav {
-  display: flex;
-  flex-wrap: nowrap;
-}
-.gallery__nav > :not(:last-child) {
-  margin-right: 15px;
-  margin-bottom: 0;
+.gallery__filter {
+  margin-bottom: var(--offset-small);
 }
 .gallery__item {
   -webkit-animation: fadeIn 0.5s ease-in-out alternate;
@@ -2539,17 +2534,17 @@ input:focus ~ .input__label, input:not(:placeholder-shown) ~ .input__label {
   line-height: 2rem;
   color: var(--color-text);
 }
-.tab.js-filter-active {
-  background: var(--color-main);
-  color: white;
-}
-.tab-nav {
+
+.tab-list {
   display: flex;
-  margin-bottom: var(--offset-small);
 }
-.tab-nav > :not(:last-child) {
+.tab-list > :not(:last-child) {
   margin-right: var(--gutter);
   margin-bottom: 0;
+}
+.tab-list .js-filter_active {
+  background: var(--color-main);
+  color: white;
 }
 
 .doctor-preview {
@@ -2639,6 +2634,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: var(--gutter);
+}
+
+.js-filter-target_hidden {
+  display: none;
 }
 
 /*стили для страницы документов*/
