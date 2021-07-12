@@ -7,7 +7,7 @@ mixin dictionary__item(letter, items)
 
 //- 
 .dictionary
-    +filter(filterSection, "A-Я").dictionary-filter
+    +filter(filterSection, "A-Я")(class="dictionary-filter",itemClass= "dictionary-filter__item")
 
     each value, key in filterSection 
         +dictionary__item(key, value)

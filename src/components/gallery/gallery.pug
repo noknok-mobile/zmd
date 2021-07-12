@@ -4,13 +4,13 @@ mixin gallery__item(image, filter = null)
 
 mixin gallery(items, filter = null)
     if filter
-        .gallery__nav.tab-nav.filter-nav.mobile-scrollable
-            a.button.tab.js-filter.js-filter-active(href="#", data-filter="") Все
+        +filter(filter, "Все", true)(itemClass= "button tab").gallery__filter.tab-list.mobile-scrollable
             each filterItem in filter
-                a.button.tab.js-filter(href="#", data-filter= filterItem.id)= filterItem.name 
+                +filter-trigger(filterItem.name, filterItem.id).button.tab
+
         .gallery__inner.mobile-scrollable
             each item in items
-                +gallery__item(item.src, item.filterId).filter-item
+                +gallery__item(item.src, item.filterId).js-filter-target
     else 
         .gallery__inner.mobile-scrollable
             each item in items

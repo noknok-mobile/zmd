@@ -3,14 +3,13 @@
     text-transform: capitalize;
     line-height: 2rem;
     @extend .button_light;
-    color: $color-text;
-    &.js-filter-active{
+    color: $color-text;    
+}
+.tab-list{
+    display: flex;
+    @include flex-gap($gutter);
+    .js-filter_active{
         background: $color-main;
         color: white;
-    }
-    &-nav{
-        display: flex;
-        @include flex-gap($gutter);
-        margin-bottom: $offset-s;
     }
 }

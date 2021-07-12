@@ -1,4 +1,5 @@
 $line: 1px solid $color-line;
+
 %card {
   background-color: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05),
@@ -19,25 +20,29 @@ $line: 1px solid $color-line;
   max-width: var(--container-width);
   margin: 0 var(--grid-margin);
 }
-%color-link{
+
+%color-link {
   color: $color-accent;
   transition: opacity 0.1s ease-in-out;
-  &:hover{
+
+  &:hover {
     opacity: 0.8;
   }
 }
+
 %rounded {
   border-radius: 50%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-%stretch{
+%stretch {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
+
 %fill {
   @extend %stretch;
   width: 100%;
@@ -54,56 +59,65 @@ html {
   line-height: 1.4;
   scroll-behavior: smooth;
 }
-body{
-  // overflow-x: hidden;
-}
-.mobile-hidden{
-  @include phone_hrz{
+
+.mobile-hidden {
+  @include phone_hrz {
     display: none;
   }
 }
+
 .container {
   @extend %container;
+
   @include phone_smallest {
     padding: 0 15px;
   }
 }
+
 .logo {
   max-width: 100%;
 }
+
 .mobile-scrollable {
   display: flex;
   flex-wrap: nowrap;
+
   &_snap {
     scroll-snap-type: x mandatory;
     overscroll-behavior: contain;
     touch-action: pan-x;
   }
+
   @include tablet {
-    // & div{
-    //   padding: 15px 0;
-    //   margin: -15px 0;
-    // }
+
+    // padding: 15px 0;
+    // margin: -15px 0;
+
     width: calc(50vw + var(--container-width) / 2);
     overflow-x: scroll;
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 100%;
   }
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 100%;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 .simplebar-scrollbar::before {
   background-color: $color-elem-background;
 }

@@ -2,6 +2,7 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: $gutter;
 
     @include tablet {
       grid: 1fr / auto-flow 80%;
@@ -9,13 +10,14 @@
       overscroll-behavior: contain;
       touch-action: pan-x;
     }
-    grid-gap: $gutter;
+
   }
-  &__nav {
-    display: flex;
-    @include flex-gap(15px);
-    flex-wrap: nowrap;
+
+  &__filter {
+    margin-bottom: $offset-s;
+
   }
+
   &__item {
     @extend %fill;
     animation: fadeIn 0.5s ease-in-out alternate;
@@ -25,22 +27,26 @@
       transform: scale(0.2);
       // display: none;
     }
+
     &-wrap {
       @include ratio(1);
       scroll-snap-align: start;
       filter: grayscale(1);
       transition: filter 0.2s ease-out;
+
       &:hover {
         filter: grayscale(0);
       }
-      
+
     }
   }
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     display: none;
