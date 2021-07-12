@@ -88,85 +88,21 @@
     @extend %absolute-centered;
     right: 2rem;
   }
-}
-
-.select {
-  position: relative;
-  height: 4rem;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: background-color, box-shadow 0.2s ease-in;
-  padding-right: 3rem;
-  background-color: $color-elem-background;
-  border-radius: 50px;
-  &_inline{
-    border-radius: unset;
-    background-color: unset;
-  }
-
-  &:focus-within {
-    @extend %input;
-    background: white;
-
-  }
-  &__icon {
-    @include arrow(33px);
-    &::before,
-    &::after {
-      right: 15px;
+  &__label {
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    line-height: 3.5rem;
+    @extend %tag;
+    color: $color-text-muted;
+    transition: all 0.2s ease-in-out;
+  
+    input:focus~&,
+    input:not(:placeholder-shown)~& {
+      @extend .label;
+      text-transform: none;
+      transform: translateY(-20px);
     }
   }
-
-  &__label {
-    display: block;
-    font-size: 12px;
-    line-height: 1rem;
-    font-weight: 600;
-    color: $color-text-muted;
-  }
-
-  &__item {
-    display: block;
-    width: 100%;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background: transparent;
-    margin: 0;
-    border: none;
-    font-family: inherit;
-    @extend.tag;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  &__item:focus~&__icon::after {
-    transform: translateY(-50%) rotateZ(-180deg);
-  }
 }
 
-.label {
-  display: block;
-  font-size: 12px;
-  color: $color-text-muted;
-  font-weight: 600;
-}
-
-.input__label {
-  position: absolute;
-  left: 2rem;
-  top: 0;
-  line-height: 3.5rem;
-  @extend %tag;
-  color: $color-text-muted;
-  transition: all 0.2s ease-in-out;
-
-  input:focus~&,
-  input:not(:placeholder-shown)~& {
-    @extend .label;
-    text-transform: none;
-    transform: translateY(-20px);
-  }
-}

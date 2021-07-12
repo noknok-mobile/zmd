@@ -1,0 +1,8 @@
+mixin select(props)
+    .select(class= attributes.class, name=  attributes.name)
+        if props.label
+            label.select__label(for= props.id)= props.label
+        select.select__item#branch(name= props.id)
+            each option, index in props.options
+                option(value= index,selected= (index == 0))= option
+        .select__icon
