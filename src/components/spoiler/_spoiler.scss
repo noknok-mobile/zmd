@@ -1,5 +1,11 @@
 .spoiler {
   --title: 32px;
+  @include tablet_hrz {
+    --title: 26px;
+  }
+  @include phone_hrz {
+    --title: 18px;
+  }
   $title: var(--title);
 
   &_decorated {
@@ -37,7 +43,7 @@
         font-size: $title;
 
         padding: 1.5rem 0;
-        padding-right: 50px;
+        padding-right: 2.5rem;
         border-bottom: none;
       }
     }
