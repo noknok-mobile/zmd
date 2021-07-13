@@ -1,7 +1,7 @@
 .calendar {
     &-grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, minmax(50px, auto));
         justify-items: center;
         justify-content: space-between;
         align-items: center;
@@ -15,13 +15,15 @@
 }
 
 .schedule {
-    &_single{
+    &_single {
         display: grid;
         gap: $gutter;
     }
+
     &__header {
         position: relative;
         width: 100%;
+
         &_single {
             //если не встроен в др блок
             background-color: $color-elem-background;
@@ -34,10 +36,11 @@
     }
 
     &__inner {
-        padding: 0 2rem;
+        padding: 10px 2rem;
         flex-shrink: 0;
         max-height: 100%;
         width: 100%;
+
         &_fold {
             max-height: 300px;
             overflow-x: hidden;
@@ -92,7 +95,9 @@
             background-color: $color-elem-background;
         }
 
-        &:hover, &:focus, &:active {
+        &:hover,
+        &:focus,
+        &:active {
             background: transparent;
             color: $color-accent;
         }
@@ -106,30 +111,4 @@
             transform: rotateZ(-180deg);
         }
     }
-}
-
-.timetable {
-    gap: $offset-s 0;
-
-    &__cell {
-        &:empty:after {
-            content: "";
-            display: block;
-            height: 1px;
-            width: 26px;
-            border-bottom: 1px solid #dad8d5;
-            margin: 0 auto;
-        }
-    }
-
-    &__time {
-        @include text(xxs, 600);
-        border: $line;
-        height: 20px;
-        text-decoration: none;
-        padding: 2px 8px;
-        border-radius: 20px;
-        color: $color-text-semi-muted;
-    }
-
 }

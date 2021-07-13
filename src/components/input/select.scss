@@ -6,28 +6,31 @@
     flex-direction: column;
     justify-content: center;
     transition: background-color, box-shadow 0.2s ease-in;
-    padding-right: 3rem;
+    padding-right: 0;
     background-color: $color-elem-background;
     border-radius: 50px;
 
-    &_inline {
-        border-radius: unset;
-        background-color: unset;
-    }
-
+    
     &:focus-within {
         @extend %input;
         background: white;
-
+    }
+    
+    &_inline {
+        border-radius: unset;
+        background-color: unset;
+        width: 100%;
+        &:focus-within{
+            box-shadow: none;
+            background: unset;
+        }
     }
 
     &__icon {
-        @include arrow(33px);
-
-        &::before,
-        &::after {
-            right: 15px;
-        }
+        @extend %absolute-centered;
+        @include box(33px);
+        right: 15px;
+        z-index: 0;
     }
 
     &__label {
@@ -51,9 +54,11 @@
         @extend.tag;
         overflow: hidden;
         text-overflow: ellipsis;
+        z-index: 5;
+        padding-right: 2.5rem;
     }
 
-    &__item:focus~&__icon::after {
+    &__item:active~&__icon::after {
         transform: translateY(-50%) rotateZ(-180deg);
     }
 }

@@ -3,6 +3,8 @@
 @import './defines/fonts';
 @import './defines/colors';
 
+@import './import/*';
+
 @import './basic/normalize',
 './basic/tools',
 './basic/fonts',
@@ -10,7 +12,6 @@
 './basic/text';
 
 
-@import './import/*';
 
 // template
 @import 
@@ -59,6 +60,7 @@
 '../components/banner/banner',
 '../components/doctor-card/doctor-card',
 '../components/schedule/schedule',
+'../components/schedule/timetable',
 '../components/schedule/schedule-filter',
 '../components/input/control-payment',
 '../components/licence/licence',

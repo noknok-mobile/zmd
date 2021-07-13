@@ -4,8 +4,10 @@ block content
     .page__content
         section.page-section.prices
             .prices__filter.price-filter
-                +select({id:"filial", options: ["выберите филиал", "фыовдло", "asoipqn"]})(name= "filial").select_inline.price-filter__item
-                +select({id:"filial",  options: ["выберите направление", "фыовдло", "asoipqn"]})(name= "filial").select_inline.price-filter__item
+                .price-filter__item
+                    +select({options: ["выберите филиал", "фыовдло", "asoipqn"]})#filial.select_inline
+                .price-filter__item
+                    +select({options: ["выберите направление", "фыовдло", "asoipqn"]})#spec.select_inline
             each item in prices 
                 +spoiler(item.title).spoiler_decorated
                     +price-list(item.priceList)

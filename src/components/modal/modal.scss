@@ -4,15 +4,18 @@
   width: min(800px, 100%);
   background: white;
   z-index: 50;
+  overflow-y: scroll;
 
   &__wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    // bottom: 0;
+    mix-height:100vh;
     display: none;
     z-index: 10;
-    padding: 140px 0;
+    padding: 140px 0 0;
 
     &_open {
       display: flex;

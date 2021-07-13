@@ -1,8 +1,7 @@
 mixin schedule_header(calendar)
     .schedule__header(class= attributes.class)
         .schedule__inner
-            a(href="#").schedule__nav.schedule__nav_prev.button-arrow
-                svg.button-arrow__icon #[use(href="icons.svg#arrow" transform="rotate(90 12 12)")]
+            +button-arrow('prev')(href="#").schedule__nav.schedule__nav_prev
             table.schedule__calendar.calendar-grid
                 tr.schedule__days
                     each date in calendar.days 
@@ -10,19 +9,26 @@ mixin schedule_header(calendar)
                 tr.schedule__week
                     each weekday in calendar.weekdays 
                         td= weekday
-            a(href="#").schedule__nav.schedule__nav_next.button-arrow
-                svg.button-arrow__icon #[use(href="icons.svg#arrow" transform="rotate(-90 12 12)")]
+            +button-arrow('next')(href="#").schedule__nav.schedule__nav_next
 
 mixin schedule_body
     .schedule__body
-        .schedule__inner.schedule__inner_fold.js-expand-target
+        .schedule__inner.schedule__inner_fold.js-expand-target(data-simplebar)
             table.timetable.calendar-grid.js-order-trigger.js-open(data-ajax="ajax/order.html" onclick="goToOrder(event)")
+                - let rowsCount = calendar.days.length
                 - for(let i= 8; i <= 21;i++)
-                    tr
-                        - for(let j=0; j<5;j++)
-                            td.timetable__cell
-                                a.timetable__time.js-ajax(data-ordertime="2020-01-12 "+i+":00")= +i+":00"
-
+                    tr  
+                        - for(let j=0; j<rowsCount; j++)
+                            - let emptyIndex = Math.ceil(Math.random() * rowsCount)
+                            - let busyIndex = Math.ceil(Math.random() * rowsCount)
+                            if (j != emptyIndex )
+                                td.timetable__cell
+                                    a.timetable__time.timetable__time_available.js-ajax(href="#" data-ordertime="2020-01-12 "+i+":00")= +i+":00"
+                            else if (j == busyIndex || i == busyIndex)
+                                td.timetable__cell
+                                    span.timetable__time= +i+":00"
+                            else
+                                td.timetable__cell
     .schedule__footer 
         +schedule__more-link('Развернуть все')(data-expand="").js-expand-trigger 
 
@@ -35,4 +41,3 @@ mixin schedule__more-link(title, dir=null)
     a.button.schedule__more-link&attributes(attributes)
         span.schedule__more-label= title
         +button-arrow(dir, true).schedule__more-link__arrow
-        

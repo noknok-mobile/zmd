@@ -2,24 +2,15 @@ extends /layout/template
 
 block content
     .page__content
-        .page-section.schedule-table
+        .page-section
+            .schedule-table
                 .schedule-filter.schedule-grid
                     .schedule-filter__section.schedule-filter__section_place
-                        .select.select_inline
-                            label.select__label(for="part") Филиал
-                            select.select__item#branch(name="part")
-                                option(value="1",selected) Ул. московская, 40
-                                option(value="2") Ул. московская, 40
-                                option(value="3") Ул. московская, 40
-                            .select__icon
+                        +select({label:"Филиал", options: ["Ул. московская, 40", "Ул. московская, 40", "Ул. московская, 40"]})#filial.select_inline
+
                     .schedule-filter__section.schedule-filter__section_spec 
-                        .select.select_inline
-                            label.select__label(for="branch") Направление
-                            select.select__item#branch(name="branch")
-                                option(value="1",selected) акушерство и гинекология
-                                option(value="2") кардиология
-                                option(value="3") Ул. московская, 40
-                            .select__icon
+                        +select({label:"Направление", options: ["акушерство и гинекология", "кардиология", "Проктология"]})#spec.select_inline
+
                     .schedule-filter__section.schedule-filter__section_calendar
                         +schedule_header(calendar)
 
@@ -32,6 +23,7 @@ block content
 block scripts
     script(src="js/modal.js")
     script(src="js/schedule.js")
+    script(src="js/simplebar.min.js") 
 
 block prepend vars 
     - const title = 'Расписание врачей'

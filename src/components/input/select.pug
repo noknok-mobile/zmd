@@ -1,8 +1,8 @@
 mixin select(props)
-    .select(class= attributes.class, name=  attributes.name)
+    .select(class= attributes.class)
         if props.label
-            label.select__label(for= props.id)= props.label
-        select.select__item#branch(name= props.id)
+            label.select__label(for= attributes.id)= props.label
+        select.select__item(id=attributes.id, name= attributes.id)
             each option, index in props.options
                 option(value= index,selected= (index == 0))= option
-        .select__icon
+        +button-arrow(null, true).select__icon
