@@ -153,6 +153,6 @@ function contactIcons() {
 }
 
 exports.server = parallel(server, watcher);
-exports.build = parallel(compileHtml, styles, assets, fonts, scripts, bckg, icons);
+exports.build = parallel(compileHtml, styles, assets, fonts, scripts, bckg, icons, contactIcons);
 exports.styles = series(styles);
 exports.svg = parallel(bckg, icons, contactIcons);

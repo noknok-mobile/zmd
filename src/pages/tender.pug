@@ -1,0 +1,14 @@
+extends /layout/template
+
+block content 
+    .page__grid
+        .page__sidebar
+            +sidebar-menu(menu)
+        .page__content
+            main.page-section
+                +image('assets/img/tender.png')
+                p Медицинский центр "ЗИМАMED" объявляет тендер на закупку расходных материалов.
+                a.button(href="#") оставить заявку
+
+block prepend vars 
+    - const title = "Тендеры"
