@@ -10,6 +10,7 @@
       column-gap: 0;
     }
   }
+
   &__content {
     grid-area: content;
   }
@@ -23,14 +24,28 @@
     @include tablet {
       display: none;
     }
+
+    &_with-banner {
+      display: grid;
+      align-content: start;
+      gap: $offset-s;
+    }
+
   }
 
   &__menu {
     position: sticky;
     top: $offset-m;
     max-width: 410px;
+
+    @at-root {
+      .page__sidebar_with-banner & {
+        position: static;
+      }
+    }
   }
-  &__intro{
+
+  &__intro {
     margin-top: calc(-1*var(--custom-header));
   }
 }
