@@ -13,13 +13,33 @@ block content
 
                     .schedule-filter__section.schedule-filter__section_calendar
                         +schedule_header(calendar)
-
                 .spec-row.schedule-grid 
                     .spec-row__info 
                         +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
                     .spec-row__calendar
                         .schedule 
                             +schedule_body
+
+                .spec-row.schedule-grid 
+                    .spec-row__info 
+                        +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                    .spec-row__calendar
+                        .schedule 
+                            .schedule__placeholder
+                                .schedule__inner
+                                    p В данный момент запись к врачу не может быть осуществлена онлайн.
+                                    p Обратитесь в контактный центр для записи к этому врачу.
+
+                .spec-row.schedule-grid 
+                    .spec-row__info 
+                        +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                    .spec-row__calendar
+                        .schedule 
+                            .schedule__placeholder
+                                .schedule__inner
+                                    p Ближайшая запись к специалисту: #[br]
+                                        a.link.link_color.tag(href="#") 20 октября 
+                                            svg(width="20", height="20") #[use(href="icons.svg#arrow", transform="rotate(-90, 10, 10)")]
 block scripts
     script(src="js/modal.js")
     script(src="js/schedule.js")

@@ -13,42 +13,71 @@
     @include phone {
         grid-template-areas: "info""calendar";
     }
+
     &__info {
         grid-area: info;
-        max-height: 300px;
+        // max-height: 300px;
     }
 
     &__calendar {
         grid-area: calendar;
         border-left: $line;
         padding-top: $offset-s;
-        
+
         @include tablet {
             border-left: unset;
         }
     }
 }
-.spec-info-placeholder{
-    padding: $offset-s;
+
+.spec-info-placeholder {
     display: grid;
-    grid-template-columns: 5fr 3fr;
     align-content: space-between;
     gap: $gutter;
-    @include phone_hrz{
-        grid-template-columns: 1fr;
-        justify-items: start;
+    padding: $offset-s;
+    height: 100%;
+    @include desktop_only{
+        padding-right: 0;
     }
-    &__link{
-        align-self: start;
+
+    @include tablet {
+        grid-template-columns: 1fr min-content;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    @include phone {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        @include flex-gap($gutter);
+
+        @include tablet_hrz {
+            @include flex-gap(0, $offset-s);
+        }
+        @include phone{
+            justify-content: center;
+        }
+    }
+
+    &__action {
+        white-space: nowrap;
     }
 }
+
 .doctor-card {
     display: grid;
     grid-template-columns: 3fr 4fr;
     gap: $gutter;
     grid-template-areas: "image content";
     box-shadow: none;
-    height: 100%;
 
     &_fold {
         grid-template-columns: 1fr 3fr;
@@ -56,10 +85,12 @@
         margin: calc(-1*var(--offset-middle));
         margin-bottom: 0;
     }
-    &_fold &__inner{
+
+    &_fold &__inner {
         display: contents;
     }
-    &_fold &__header{
+
+    &_fold &__header {
         padding-top: $offset-s;
     }
 

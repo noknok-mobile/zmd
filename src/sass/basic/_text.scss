@@ -4,6 +4,9 @@
   &:not(:last-child) {
     margin-bottom: $text-margin;
   }
+  &:first-child{
+    margin-top: 0;
+  }
 }
 
 %text {
