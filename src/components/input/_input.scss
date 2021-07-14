@@ -3,33 +3,33 @@
   display: block;
 
   &__value {
-    height: 3.5rem;
-    display: block;
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    padding: 1rem 2rem;
+    display: block;
+    height: 3.5rem;
     width: 100%;
-    background: $color-elem-background;
+    padding: 1rem 2rem;
     border-radius: 35px;
+    border: $line;
+    border-color: transparent;
     @extend %tag;
-    color: $color-text-semi-muted;
-    transition: all 0.2s ease-in;
     font-family: inherit;
+    color: $color-text-semi-muted;
+    background-color: $color-elem-background;
+    transition: all 0.2s ease-in;
 
     &_password {
       text-transform: none;
     }
 
     &:hover {
-      @extend %input;
+      border-color: $color-line;
     }
 
     &:focus {
-      background: white;
-      @extend %input;
       color: $color-text;
+      background: white;
+      // box-shadow: $shadow;
+      border-color: $color-line;
       outline: none;
       text-transform: none;
     }

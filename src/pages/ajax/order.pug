@@ -4,17 +4,21 @@ include /layout/mixins
 .modal__body
     form.form(action="#", onsubmit="completeOrder(event);return false;")
         +form-step('Дата и время')
-            +input({icon:"date"})(type="text" name="date" value="16 октября, 9:00", readonly disabled)
+            .form-step__row
+                .tag 16 октября, 9:00
                 a.input__icon.input__icon_date.js-ajax(data-ajax="ajax/calendar.html" onclick="getAjaxPage(event)")
+            //- +input({icon:"date"})(type="text" name="date" value="16 октября, 9:00", readonly disabled)
         +form-step('Способ оплаты').form-step__body_split
             +payment({icon:"card", name:"Банковской картой"})
             +payment({icon:"cache", name:"Наличными"})
         +form-step('Пациент')
-            +input({label: "ФИО"})#name(name="name" type="text" placeholder="")
-            +input({label:"E-mail"})#email(name="email" type="email" placeholder="")
-            +input({label:"Телефон"})#phone(name="phone" type="text" placeholder="")
+            +input({label: "ФИО"})#name(name="name" type="text")
+            +input({label:"E-mail"})#email(name="email" type="email")
+            +input({label:"Телефон"})#phone(name="phone" type="text", placeholder="+7(___) ___-__-__")
         +form-step('Услуга')
-            +input({info:"500 руб."})#service(name="service" type="text" value="консультация" readonly disabled)
+            .form-step__row 
+                span.tag консультация
+                span.price 500 руб.
         .form__step.form__footer.form-step
             button.button.button_large Записаться на прием
             +checkbox(name="privacy" checked)

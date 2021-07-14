@@ -50,6 +50,11 @@
             color: $color-accent;
         }
     }
+    &__row{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
 
     &__more {
         display: flex;

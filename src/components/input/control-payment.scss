@@ -7,8 +7,17 @@
     @extend %tag;
     align-content: center;
     padding: 0 2rem;
+    background: $color-elem-background;
+    transition: all 0.2s ease-in;
+
     &_rounded {
+      border: $line;
+      border-color: transparent;
       border-radius: 50px;
+
+      &:hover {
+        border-color: $color-line;
+      }
     }
   }
 
@@ -23,6 +32,8 @@
 
   &__input:checked+&__label {
     color: $color-accent;
-    @extend %card;
+    background-color: white;
+    border-color: $color-line;
+
   }
 }
