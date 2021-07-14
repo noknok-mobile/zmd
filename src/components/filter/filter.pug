@@ -8,5 +8,5 @@ mixin filter(filterSection, defaultValue, custom = false)
             block
         else 
             - const filter = Object.keys(filterSection)
-            each value, index in filter
-                +filter-trigger(value, index)(class= attributes.itemClass)
+            each value in filter
+                +filter-trigger(value, value)(class= attributes.itemClass)

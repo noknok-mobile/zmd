@@ -8,8 +8,10 @@
     object-fit: cover;
 
     &-wrapper {
+      display: block;
       position: relative;
       margin-bottom: 0.5rem;
+
 
       &:before {
         content: "";
@@ -22,7 +24,6 @@
 
   &__caption {
     @include text(xs);
-    line-height: 1.6;
   }
 }
 

@@ -1,6 +1,6 @@
 mixin input(props)
     .input 
-        input.input__value&attributes(attributes)
+        input.input__value(placeholder= props.label)&attributes(attributes)
         if props.icon
             span.input__icon(class= "input__icon_" + props.icon)
         if props.label

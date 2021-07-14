@@ -1,5 +1,5 @@
 mixin gallery__item(image, filter = null)
-    .gallery__item-wrap(class= attributes.class, data-filter= filter)
+    a.gallery__item-wrap(class= attributes.class, data-filter= filter, data-fslightbox="gallery", href= image)
         img.gallery__item(src= image)
 
 mixin gallery(items, filter = null)
@@ -15,5 +15,7 @@ mixin gallery(items, filter = null)
         .gallery__inner.mobile-scrollable
             each item in items
                 +gallery__item(item.src)
+    block append script
+        script(src="js/fslightbox.js") 
 
 
