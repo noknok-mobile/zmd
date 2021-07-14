@@ -36,13 +36,6 @@
         display: grid;
         gap: $gutter;
 
-        &_split {
-            grid-template-columns: repeat(2, 1fr);
-            @include phone_hrz {
-                grid-template-columns: 1fr;
-            }
-        }
-
         /*стили для свернутого вида*/
         &_fake {
             display: none;
@@ -50,10 +43,21 @@
             color: $color-accent;
         }
     }
-    &__row{
+
+    &__row {
         position: relative;
         display: flex;
         justify-content: space-between;
+
+        &_split {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $gutter;
+
+            @include phone_hrz {
+                grid-template-columns: 1fr;
+            }
+        }
     }
 
     &__more {

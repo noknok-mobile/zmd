@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     // bottom: 0;
-    mix-height:100vh;
+    mix-height: 100vh;
     display: none;
     z-index: 10;
     padding: 140px 0 0;
@@ -57,8 +57,8 @@
 
     &-icon {
       display: block;
-      @include box(14px);
-      flex: 0 0 14px;
+      @include box(30px);
+      flex: 0 0 auto;
       color: white;
 
       line {

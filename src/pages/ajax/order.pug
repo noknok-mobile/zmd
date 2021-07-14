@@ -6,11 +6,11 @@ include /layout/mixins
         +form-step('Дата и время')
             .form-step__row
                 .tag 16 октября, 9:00
-                a.input__icon.input__icon_date.js-ajax(data-ajax="ajax/calendar.html" onclick="getAjaxPage(event)")
-            //- +input({icon:"date"})(type="text" name="date" value="16 октября, 9:00", readonly disabled)
-        +form-step('Способ оплаты').form-step__body_split
-            +payment({icon:"card", name:"Банковской картой"})
-            +payment({icon:"cache", name:"Наличными"})
+                svg(width="30", height="30") #[use(href="icons.svg#date")]
+        +form-step('Способ оплаты')
+            .form-step__row.form-step__row_split
+                +payment({icon:"card", name:"Банковской картой"})
+                +payment({icon:"cache", name:"Наличными"})
         +form-step('Пациент')
             +input({label: "ФИО"})#name(name="name" type="text")
             +input({label:"E-mail"})#email(name="email" type="email")
