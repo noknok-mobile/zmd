@@ -157,14 +157,9 @@
             Официальный сайт ресторана: ресторан-отель.рф <br>
           </p>
           <div class="gallery">
-            <div class="gallery__inner mobile-scrollable">
-              <div class="gallery__item-wrap"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></div>
-              <div class="gallery__item-wrap"><img class="gallery__item" src="assets/img/lady.jpg"/></div>
-              <div class="gallery__item-wrap"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></div>
-              <div class="gallery__item-wrap"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></div>
-              <div class="gallery__item-wrap"><img class="gallery__item" src="assets/img/lady.jpg"/></div>
-              <div class="gallery__item-wrap"><img class="gallery__item" src="assets/img/lady.jpg"/></div>
+            <div class="gallery__inner mobile-scrollable"><a class="gallery__item-wrap" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item-wrap" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__item" src="assets/img/lady.jpg"/></a><a class="gallery__item-wrap" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item-wrap" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item-wrap" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__item" src="assets/img/lady.jpg"/></a><a class="gallery__item-wrap" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__item" src="assets/img/lady.jpg"/></a>
             </div>
+            <script src="js/fslightbox.js"> </script>
           </div>
         </section>
       </div>
@@ -200,7 +195,7 @@
       <div class="modal__overlay"></div>
       <div class="modal"> 
         <button class="modal__close js-close" aria-label="Закрыть">
-          <svg>
+          <svg class="modal__close-icon">
             <use href="icons.svg#close"></use>
           </svg>
         </button>

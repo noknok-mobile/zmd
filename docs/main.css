@@ -441,12 +441,12 @@ button {
   font-display: swap;
   src: url(fonts/PTSerif-Regular.ttf) format("woff2");
 }
-.review, .control-payment__input:checked + .control-payment__label, .timetable__time_available:hover, .spec-row, .branch_carousel, .tile:hover, .card, .sidebar-menu {
+.review, .timetable__time_available:hover, .spec-row, .branch_carousel, .tile:hover, .card, .sidebar-menu {
   background-color: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.03), 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 12px 24px rgba(0, 0, 0, 0.04);
 }
 
-.price-filter__item:focus-within, .select:focus-within, .input__value:focus, .input__value:hover {
+.price-filter__item:focus-within, .select:focus-within {
   box-shadow: 2px 8px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -556,6 +556,9 @@ ul:not([class]) li, p {
 }
 ul:not([class]) li:not(:last-child), p:not(:last-child) {
   margin-bottom: 1.8rem;
+}
+ul:not([class]) li:first-child, p:first-child {
+  margin-top: 0;
 }
 
 .price-list, html {
@@ -1112,9 +1115,9 @@ ul:not([class]) li {
 }
 .modal__close-icon {
   display: block;
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
   color: white;
 }
 .modal__close-icon line {
@@ -1327,26 +1330,31 @@ ul:not([class]) li {
   display: block;
 }
 .input__value {
-  height: 3.5rem;
-  display: block;
-  appearance: none;
-  -moz-appearance: none;
   -webkit-appearance: none;
-  border: none;
-  padding: 1rem 2rem;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+  height: 3.5rem;
   width: 100%;
-  background: var(--color-elem-background);
+  padding: 1rem 2rem;
   border-radius: 35px;
-  color: var(--color-text-semi-muted);
-  transition: all 0.2s ease-in;
+  border: 1px solid var(--color-line);
+  border-color: transparent;
   font-family: inherit;
+  color: var(--color-text-semi-muted);
+  background-color: var(--color-elem-background);
+  transition: all 0.2s ease-in;
 }
 .input__value_password {
   text-transform: none;
 }
+.input__value:hover {
+  border-color: var(--color-line);
+}
 .input__value:focus {
-  background: white;
   color: var(--color-text);
+  background: white;
+  border-color: var(--color-line);
   outline: none;
   text-transform: none;
 }
@@ -1576,12 +1584,19 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   gap: var(--gutter);
   /*стили для свернутого вида*/
 }
-.form-step__body_split {
-  grid-template-columns: repeat(2, 1fr);
-}
 .form-step__body_fake {
   display: none;
   color: var(--color-accent);
+}
+.form-step__row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.form-step__row_split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gutter);
 }
 .form-step__more {
   display: flex;
@@ -1744,7 +1759,6 @@ input:not(:-ms-input-placeholder) ~ .input__label {
 
 .tile {
   background-color: var(--color-elem-background);
-  padding: 2rem;
   transition: 0.2s ease-in-out;
 }
 .arrow {
@@ -2025,6 +2039,7 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   grid-template-columns: repeat(5, 2fr);
   grid-template-areas: "letter list list list list";
   grid-gap: var(--gutter);
+  padding: 2rem;
 }
 .dictionary__group:hover {
   color: var(--color-accent);
@@ -2255,7 +2270,6 @@ input:not(:-ms-input-placeholder) ~ .input__label {
 }
 .spec-row__info {
   grid-area: info;
-  max-height: 300px;
 }
 .spec-row__calendar {
   grid-area: calendar;
@@ -2264,14 +2278,24 @@ input:not(:-ms-input-placeholder) ~ .input__label {
 }
 
 .spec-info-placeholder {
-  padding: var(--offset-small);
   display: grid;
-  grid-template-columns: 5fr 3fr;
   align-content: space-between;
   gap: var(--gutter);
+  padding: var(--offset-small);
+  height: 100%;
 }
-.spec-info-placeholder__link {
-  align-self: start;
+.spec-info-placeholder__footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+}
+.spec-info-placeholder__footer > :not(:last-child) {
+  margin-right: var(--gutter);
+  margin-bottom: 0;
+}
+.spec-info-placeholder__action {
+  white-space: nowrap;
 }
 
 .doctor-card {
@@ -2280,7 +2304,6 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   gap: var(--gutter);
   grid-template-areas: "image content";
   box-shadow: none;
-  height: 100%;
 }
 .doctor-card_fold {
   grid-template-columns: 1fr 3fr;
@@ -2322,6 +2345,9 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   display: contents;
 }
 
+.schedule {
+  height: 100%;
+}
 .schedule_single {
   display: grid;
   gap: var(--gutter);
@@ -2337,6 +2363,14 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.schedule__placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: var(--font-xs);
+  text-align: center;
 }
 .schedule__inner {
   padding: 10px 2rem;
@@ -2466,9 +2500,16 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   display: block;
   align-content: center;
   padding: 0 2rem;
+  background: var(--color-elem-background);
+  transition: all 0.2s ease-in;
 }
 .control-payment__label_rounded {
+  border: 1px solid var(--color-line);
+  border-color: transparent;
   border-radius: 50px;
+}
+.control-payment__label_rounded:hover {
+  border-color: var(--color-line);
 }
 .control-payment__icon {
   margin-right: 1rem;
@@ -2479,6 +2520,8 @@ input:not(:-ms-input-placeholder) ~ .input__label {
 }
 .control-payment__input:checked + .control-payment__label {
   color: var(--color-accent);
+  background-color: white;
+  border-color: var(--color-line);
 }
 
 .licence__img {
@@ -2490,6 +2533,7 @@ input:not(:-ms-input-placeholder) ~ .input__label {
      object-fit: cover;
 }
 .licence__img-wrapper {
+  display: block;
   position: relative;
   margin-bottom: 0.5rem;
 }
@@ -2500,7 +2544,6 @@ input:not(:-ms-input-placeholder) ~ .input__label {
 }
 .licence__caption {
   font-size: var(--font-xs);
-  line-height: 1.6;
 }
 
 .licence-list {
@@ -3030,6 +3073,10 @@ body {
   .spec-row {
     grid-template-areas: "info calendar";
   }
+  .spec-info-placeholder__footer > :not(:last-child) {
+    margin-right: 0;
+    margin-bottom: var(--offset-small);
+  }
   .doctor-card {
     grid-template-columns: 2fr 4fr;
     max-height: 300px;
@@ -3112,6 +3159,13 @@ body {
   .spec-row__calendar {
     border-left: unset;
   }
+  .spec-info-placeholder {
+    grid-template-columns: 1fr -webkit-min-content;
+    grid-template-columns: 1fr min-content;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
   .doctor-card {
     grid-template-columns: 120px auto auto;
     grid-template-areas: "image header header" "image body footer";
@@ -3193,7 +3247,7 @@ body {
   .list__item::before {
     content: url("data:image/svg+xml,%3Csvg width='30' height='15' viewBox='0 0 30 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='15' fill='%23852D2E'/%3E%3C/svg%3E");
   }
-  .form-step__body_split {
+  .form-step__row_split {
     grid-template-columns: 1fr;
   }
   .spoiler {
@@ -3231,10 +3285,6 @@ body {
   }
   .branch-list__inner {
     display: contents;
-  }
-  .spec-info-placeholder {
-    grid-template-columns: 1fr;
-    justify-items: start;
   }
   .licence-list {
     grid-template-columns: repeat(3, 1fr);
@@ -3326,6 +3376,13 @@ body {
   .spec-row {
     grid-template-areas: "info" "calendar";
   }
+  .spec-info-placeholder {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .spec-info-placeholder__footer {
+    justify-content: center;
+  }
   .doctor-card {
     grid-template-columns: 1fr 3fr;
     grid-template-areas: "image header" "image body" "footer footer";
@@ -3372,6 +3429,9 @@ body {
 @media (min-width: 1200px) {
   .footer-info__group {
     display: contents;
+  }
+  .spec-info-placeholder {
+    padding-right: 0;
   }
   .schedule-filter {
     grid-template-areas: "place spec calendar";

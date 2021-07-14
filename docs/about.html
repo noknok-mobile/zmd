@@ -148,14 +148,9 @@
               <button class="js-filter button tab" data-filter="0">Врач</button>
               <button class="js-filter button tab" data-filter="1">Море</button>
             </div>
-            <div class="gallery__inner mobile-scrollable">
-              <div class="gallery__item-wrap js-filter-target" data-filter="0"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></div>
-              <div class="gallery__item-wrap js-filter-target" data-filter="1"><img class="gallery__item" src="assets/img/lady.jpg"/></div>
-              <div class="gallery__item-wrap js-filter-target" data-filter="0"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></div>
-              <div class="gallery__item-wrap js-filter-target" data-filter="0"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></div>
-              <div class="gallery__item-wrap js-filter-target" data-filter="1"><img class="gallery__item" src="assets/img/lady.jpg"/></div>
-              <div class="gallery__item-wrap js-filter-target" data-filter="1"><img class="gallery__item" src="assets/img/lady.jpg"/></div>
+            <div class="gallery__inner mobile-scrollable"><a class="gallery__item-wrap js-filter-target" data-filter="0" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item-wrap js-filter-target" data-filter="1" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__item" src="assets/img/lady.jpg"/></a><a class="gallery__item-wrap js-filter-target" data-filter="0" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item-wrap js-filter-target" data-filter="0" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__item" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item-wrap js-filter-target" data-filter="1" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__item" src="assets/img/lady.jpg"/></a><a class="gallery__item-wrap js-filter-target" data-filter="1" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__item" src="assets/img/lady.jpg"/></a>
             </div>
+            <script src="js/fslightbox.js"> </script>
           </div>
         </section>
       </div>
@@ -191,7 +186,7 @@
       <div class="modal__overlay"></div>
       <div class="modal"> 
         <button class="modal__close js-close" aria-label="Закрыть">
-          <svg>
+          <svg class="modal__close-icon">
             <use href="icons.svg#close"></use>
           </svg>
         </button>
