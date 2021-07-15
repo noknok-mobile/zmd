@@ -13,6 +13,6 @@ mixin order(props)
                 .order__price.price Стоимость приема #{props.price}&nbsp;руб.
             if (props.status != "complete")
                 .order__actions
-                    a.order__button.button_light.order__button_cancel.button(href='#') отменить запись
+                    a.order__button.link.link_color.tag(href='#') отменить запись
                     if (props.status == "unpaid")
                         a.order__button.order__button_pay.button(href='#') Оплатить

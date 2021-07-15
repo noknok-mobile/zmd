@@ -33,7 +33,7 @@
 
         @include phone_hrz {
             flex-direction: column;
-            @include flex-gap(30px, 30px);
+            @include flex-gap(30px);
             align-items: stretch;
         }
 
@@ -41,13 +41,9 @@
     }
 
     &__button {
-        @include text(xxs, 400);
+        @include text(xxs);
         line-height: 3em;
-
-        &_cancel {
-            color: $color-text;
-        }
-
+        
     }
 
     &__status {
@@ -78,16 +74,9 @@
     }
 
     &__actions {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, auto);
-        grid-auto-flow: column;
-        grid-auto-flow: row;
-        gap: 20px;
-
-
-        @include phone_hrz {
-            grid-template-columns: auto;
-            justify-content: start;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        @include flex-gap($gutter);
+        
     }
 }
