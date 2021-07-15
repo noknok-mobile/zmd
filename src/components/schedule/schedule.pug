@@ -30,7 +30,10 @@ mixin schedule_body
                             else
                                 td.timetable__cell
     .schedule__footer 
-        +schedule__more-link('Развернуть все')(data-expand="").js-expand-trigger 
+        a.button.schedule__more-link.js-expand-trigger(data-expand="")
+            span.js-expand-label Развернуть все
+            +button-arrow(dir, true).schedule__more-link__arrow
+    
 
 mixin schedule(calendar)
     .schedule.schedule_single

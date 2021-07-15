@@ -25,6 +25,13 @@ block content
                         +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
                     .spec-row__calendar
                         .schedule 
+                            +schedule_body
+
+                .spec-row.schedule-grid 
+                    .spec-row__info 
+                        +doctor-card({name:"Мейпариани Елена Владимировна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                    .spec-row__calendar
+                        .schedule 
                             .schedule__placeholder
                                 .schedule__inner
                                     p В данный момент запись к врачу не может быть осуществлена онлайн.
@@ -32,18 +39,19 @@ block content
 
                 .spec-row.schedule-grid 
                     .spec-row__info 
-                        +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                        +doctor-card({name:"Новосартян Маргарита Геннадиевна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
                     .spec-row__calendar
                         .schedule 
                             .schedule__placeholder
                                 .schedule__inner
                                     p Ближайшая запись к специалисту: #[br]
                                         a.link.link_color.tag(href="#") 20 октября 
-                                            svg(width="20", height="20") #[use(href="icons.svg#arrow", transform="rotate(-90, 10, 10)")]
-block scripts
-    script(src="js/modal.js")
+                                            svg(width="20" height="20") #[use(href="icons.svg#arrow" transform="rotate(-90, 10, 10)")]
+
+block append scripts 
     script(src="js/schedule.js")
     script(src="js/simplebar.min.js") 
+
 
 block prepend vars 
     - const title = 'Расписание врачей'
