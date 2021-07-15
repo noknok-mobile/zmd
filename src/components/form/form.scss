@@ -6,6 +6,7 @@
     &__footer {
         &_compact {
             justify-self: start;
+            justify-content: start;
             width: clamp(250px, 50%, 400px);
         }
     }
@@ -45,9 +46,12 @@
     }
 
     &__row {
-        position: relative;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr auto;
         justify-content: space-between;
+        align-items: center;
+        gap: $gutter;
+        position: relative;
 
         &_split {
             display: grid;
@@ -58,8 +62,24 @@
                 grid-template-columns: 1fr;
             }
         }
-        .icon{
+        &_with-tip{
+            grid-template-columns: 1fr auto;
+            @include phone_hrz{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .icon {
             color: $color-text-muted;
+        }
+    }
+
+    &__tip {
+        @include text(xs);
+        color: $color-text-muted;
+        max-width: 250px;
+        @include phone_hrz{
+            grid-row: -1/1;
         }
     }
 

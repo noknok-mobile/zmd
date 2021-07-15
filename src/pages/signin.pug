@@ -2,12 +2,29 @@ extends /layout/template
 
 block content
     .page__grid
+        .page__sidebar
+            +sidebar-menu(menu)
         .page__content
             .page-section
                 form.form(action="#")
-                 
+                    +form-step('ФИО*')
+                        .form-step__row.form-step__row_with-tip
+                            +input({label:"Фамилия Имя Отчество"})#name(name="name" type="text")
+                            .form-step__tip Заполните, чтобы мы знали, как к вам обращаться
+
+                    +form-step('Email')
+                        .form-step__row.form-step__row_with-tip
+                            +input({label:"E-mail"})#email(name="email" type="email")
+                            .form-step__tip Используйте как логин для входа в личный кабинет
+                    +form-step('Телефон')
+                        .form-step__row.form-step__row_with-tip
+                            +input({label:"Телефон"})#phone(name="phone" type="text", placeholder="+7(___) ___-__-__")
+                            .form-step__tip Необходим для уточнения деталей заказа 
+                    +form-step('', "empty").form__footer.form__footer_compact
+                        button.button сохранить изменения      
 
 block prepend vars 
     - const title = "Вход"
 block append vars
     - pageHeaderImage = 'pill'
+    - menu = ['профиль', 'мои записи']

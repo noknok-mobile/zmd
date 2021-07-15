@@ -1,6 +1,13 @@
-mixin form-step(title)
-    .form__step.form-step
-        .form-step__header
-            h4.form-step__title= title
-        .form-step__body(class= attributes.class)
+//- два типа блока: 
+//- - div - структурированный с header и body
+//- - empty - только обертка form-step
+mixin form-step(title, type = "div")
+    if (type != "empty")
+        .form__step.form-step
+            .form-step__header
+                h4.form-step__title= title
+            .form-step__body(class= attributes.class)
+                block
+    else
+        .form__step.form-step(class= attributes.class)
             block
