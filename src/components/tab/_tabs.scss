@@ -1,15 +1,21 @@
-.tab{
+.tab {
     @include text(xxs, 400, false);
-    text-transform: capitalize;
+    text-transform: unset;
     line-height: 2rem;
     @extend .button_light;
-    color: $color-text;    
-}
-.tab-list{
-    display: flex;
-    @include flex-gap($gutter);
-    .js-filter_active{
+    color: $color-text;
+
+    &_active {
         background: $color-main;
         color: white;
+    }
+}
+
+.tab-list {
+    display: flex;
+    @include flex-gap($gutter);
+
+    .js-filter_active {
+        @extend .tab_active;
     }
 }

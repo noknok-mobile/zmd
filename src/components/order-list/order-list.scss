@@ -1,0 +1,27 @@
+.order-list {
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-gap: $gutter;
+    align-items: center;
+    padding: 1rem $offset-s;
+
+    @include phone_hrz {
+      grid-template-columns: 1fr;
+      gap: $offset-s;
+    }
+  }
+
+  &__head {
+    @include text(xxs);
+    color: $color-text-muted;
+    border-top: $line;
+
+    @include phone_hrz {
+      display: none;
+    }
+  }
+  &-nav{
+    margin-bottom: $offset-s;
+  }
+}

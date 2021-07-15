@@ -1,0 +1,18 @@
+mixin order(props)
+    - const status = {unpaid: "Ожидает оплаты", unavailable: "Оплата наличными", paid: "Оплачен", complete: "Завершен"}
+    details.spoiler.order
+        summary.spoiler__title.order__head
+            .order-list__row
+                .order__date !{props.date}
+                .order__address !{props.address} 
+                .order__doctor= props.doctor
+                .order__status(class= props.status? `order__status_${props.status}`: 'order__status_unavailable')= status[props.status]
+        .order-list__row.spoiler__more.order__more
+            .order__desc
+                .order__name= props.desc
+                .order__price.price Стоимость приема #{props.price}&nbsp;руб.
+            if (props.status != "complete")
+                .order__actions
+                    a.order__button.button_light.order__button_cancel.button(href='#') отменить запись
+                    if (props.status == "unpaid")
+                        a.order__button.order__button_pay.button(href='#') Оплатить
