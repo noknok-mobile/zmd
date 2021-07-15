@@ -5,9 +5,9 @@ block content
         section.page-section.prices
             .prices__filter.price-filter
                 .price-filter__item
-                    +select({options: ["выберите филиал", "фыовдло", "asoipqn"]})#filial.select_inline
+                    +select({label:"Филиал", options: ["выберите филиал", "фыовдло", "asoipqn"]})#filial.select_inline
                 .price-filter__item
-                    +select({options: ["выберите направление", "фыовдло", "asoipqn"]})#spec.select_inline
+                    +select({label:"Направление", options: ["выберите направление", "фыовдло", "asoipqn"]})#spec.select_inline
             each item in prices 
                 +spoiler(item.title).spoiler_decorated
                     +price-list(item.priceList)
