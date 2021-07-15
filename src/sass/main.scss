@@ -11,7 +11,22 @@
 './basic/basic',
 './basic/text';
 
-
+// basic components
+@import
+'../components/button/button',
+'../components/link/link',
+'../components/list/list',
+'../components/input/input',
+'../components/input/label',
+'../components/input/select',
+'../components/input/control',
+'../components/form/form',
+'../components/spoiler/spoiler',
+'../components/card/card',
+'../components/tile/tile',
+'../components/button-arrow/button-arrow',
+'../components/card/card-list',
+'../components/image/image';
 
 // template
 @import 
@@ -34,22 +49,8 @@
 
 
 // components
-@import
-'../components/button/button',
-'../components/link/link',
-'../components/list/list',
-'../components/input/input',
-'../components/input/label',
-'../components/input/select',
-'../components/input/control',
-'../components/form/form',
-'../components/spoiler/spoiler',
-'../components/card/card',
-'../components/tile/tile',
-'../components/button-arrow/button-arrow',
-'../components/card/card-list',
-'../components/image/image',
 
+@import
 '../components/intro/intro',
 '../components/slider/slider',
 '../components/slider/big-carousel',

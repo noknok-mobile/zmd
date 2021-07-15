@@ -2,14 +2,45 @@
   list-style-type: none;
   padding: 15px 50px;
   @extend %card;
+
+  &__header {
+    display: none;
+
+    @include phone_hrz {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  }
+
+  &_unfold &__header+&__item {
+    margin-top: $offset-s;
+  }
+
   &__item {
     display: block;
     padding: 1rem 0;
     @extend %tag;
     cursor: pointer;
 
+    &_active {
+      color: $color-accent;
+    }
+
     &:not(:last-of-type) {
       border-bottom: $line;
     }
+
+    @include phone_hrz {
+      display: none;
+    }
+
+    @at-root {
+      .sidebar-menu_unfold & {
+        display: block;
+      }
+    }
   }
+
 }
