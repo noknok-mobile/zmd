@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Направления лечения</title>
+    <title>Личный кабинет</title>
     <link rel="stylesheet" href="main.css">
   </head>
   <body class="page">
@@ -107,69 +107,39 @@
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
-                <li class="breadcrumb__item breadcrumb__item_active">Направления лечения</li>
+                <li class="breadcrumb__item breadcrumb__item_active">Личный кабинет</li>
               </ul>
             </div>
-            <h1 class="page-header__title title">Направления лечения</h1>
+            <h1 class="page-header__title title">Личный кабинет</h1>
           </div>
         </div>
     <div class="container">
-      <div class="page__content">
-        <div class="page-section">
-          <div class="switch__block">
-            <label class="switch__label switch__label_active" for="switch">Взрослое отделение</label>
-            <label class="toggle" for="switch">
-              <input class="toggle__checkbox js-switch" id="switch" type="checkbox"><span class="toggle__button"> </span>
-            </label>
-            <label class="switch__label" for="switch">Детское отделение</label>
-          </div>
-          <div class="section js-section-switched"> 
-            <div class="dictionary">
-              <div class="js-filter-wrapper dictionary-filter">
-                <button class="js-filter dictionary-filter__item js-filter_active" data-filter="">A-Я</button>
-                <button class="js-filter dictionary-filter__item" data-filter="A">A</button>
-                <button class="js-filter dictionary-filter__item" data-filter="Г">Г</button>
-                <button class="js-filter dictionary-filter__item" data-filter="Д">Д</button>
+      <div class="page__grid">
+        <div class="page__sidebar">
+          <nav class="sidebar-menu page__menu">
+            <div class="sidebar-menu__header tag js-sidebar-open">Меню <span class="button-arrow">
+                <svg class="button-arrow__icon">
+                  <use href="icons.svg#arrow"></use>
+                </svg></span>
+            </div><a class="sidebar-menu__item link" href="#">профиль</a><a class="sidebar-menu__item link" href="#">мои записи</a>
+          </nav>
+        </div>
+        <div class="page__content">
+          <div class="page-section">
+            <div class="branch-list branch-list_table">
+              <div class="branch tile branch_tile">
+                <div class="branch__img">
+                  <svg>
+                    <use href="icons.svg#tomo"></use>
+                  </svg>
+                </div><a class="branch__name" href="#">Профиль</a>
               </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="A">
-                <div class="dictionary__letter">A</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Аллерголог-иммунолог</a><a class="dictionary__item link" href="#">Ангиохирург</a><a class="dictionary__item link" href="#">Акушерство и гинекология</a><a class="dictionary__item link" href="#">Анестезиология</a>
-                </div>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="Г">
-                <div class="dictionary__letter">Г</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Гастроэнтерология</a><a class="dictionary__item link" href="#">Гипнотерапия</a><a class="dictionary__item link" href="#">Гематология</a><a class="dictionary__item link" href="#">Гирудотерапия</a>
-                </div>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="Д">
-                <div class="dictionary__letter">Д</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Дерматовенерология</a><a class="dictionary__item link" href="#">Диетолог-психолог</a><a class="dictionary__item link" href="#">Дневной стационар</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="section js-section-switched section_hidden"> 
-            <div class="dictionary">
-              <div class="js-filter-wrapper dictionary-filter">
-                <button class="js-filter dictionary-filter__item js-filter_active" data-filter="">A-Я</button>
-                <button class="js-filter dictionary-filter__item" data-filter="A">A</button>
-                <button class="js-filter dictionary-filter__item" data-filter="Г">Г</button>
-                <button class="js-filter dictionary-filter__item" data-filter="Д">Д</button>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="A">
-                <div class="dictionary__letter">A</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Аллерголог-иммунолог</a><a class="dictionary__item link" href="#">Ангиохирург</a>
-                </div>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="Г">
-                <div class="dictionary__letter">Г</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Гастроэнтерология</a><a class="dictionary__item link" href="#">Гипнотерапия</a>
-                </div>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="Д">
-                <div class="dictionary__letter">Д</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Диетолог-психолог</a><a class="dictionary__item link" href="#">Дневной стационар</a>
-                </div>
+              <div class="branch tile branch_tile">
+                <div class="branch__img">
+                  <svg>
+                    <use href="icons.svg#tomo"></use>
+                  </svg>
+                </div><a class="branch__name" href="#">Мои записи</a>
               </div>
             </div>
           </div>
@@ -219,14 +189,5 @@
     </div>
     <script src="js/modal.js"></script>
     <script src="js/template.js"> </script>
-    <script src="js/filter.js"> </script>
-    <script>
-       let sectionToggle = new Switch();
-      for (let section of document.querySelectorAll('.dictionary')) {
-          const filter = new Filter(section);
-          console.log(filter.filterControls);
-      }
-           
-    </script>
   </body>
 </html>

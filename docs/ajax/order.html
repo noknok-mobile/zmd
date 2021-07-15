@@ -20,8 +20,11 @@
         <h4 class="form-step__title">Дата и время</h4>
       </div>
       <div class="form-step__body">
-        <div class="input"> 
-          <input class="input__value" type="text" name="date" value="16 октября, 9:00" readonly="readonly" disabled="disabled"/><span class="input__icon input__icon_date"></span><a class="input__icon input__icon_date js-ajax" data-ajax="ajax/calendar.html" onclick="getAjaxPage(event)"></a>
+        <div class="form-step__row">
+          <div class="tag">16 октября, 9:00</div>
+          <svg class="icon" width="30" height="30">
+            <use href="icons.svg#date"></use>
+          </svg>
         </div>
       </div>
     </div>
@@ -29,22 +32,24 @@
       <div class="form-step__header">
         <h4 class="form-step__title">Способ оплаты</h4>
       </div>
-      <div class="form-step__body form-step__body_split">
-        <div class="control-payment">
-          <input class="control-payment__input control__input" type="radio" id="card" name="payment"/>
-          <label class="control-payment__label control-payment__label_rounded link tile" for="card">
-            <svg class="control-payment__icon" height="24" width="35">
-              <use xlink:href="icons.svg#card"></use>
-            </svg><span class="control-payment__name">Банковской картой</span>
-          </label>
-        </div>
-        <div class="control-payment">
-          <input class="control-payment__input control__input" type="radio" id="cache" name="payment"/>
-          <label class="control-payment__label control-payment__label_rounded link tile" for="cache">
-            <svg class="control-payment__icon" height="24" width="35">
-              <use xlink:href="icons.svg#cache"></use>
-            </svg><span class="control-payment__name">Наличными</span>
-          </label>
+      <div class="form-step__body">
+        <div class="form-step__row form-step__row_split">
+          <div class="control-payment">
+            <input class="control-payment__input control__input" type="radio" id="card" name="payment"/>
+            <label class="control-payment__label control-payment__label_rounded link" for="card">
+              <svg class="control-payment__icon" height="24" width="35">
+                <use href="icons.svg#card"></use>
+              </svg><span class="control-payment__name">Банковской картой</span>
+            </label>
+          </div>
+          <div class="control-payment">
+            <input class="control-payment__input control__input" type="radio" id="cache" name="payment"/>
+            <label class="control-payment__label control-payment__label_rounded link" for="cache">
+              <svg class="control-payment__icon" height="24" width="35">
+                <use href="icons.svg#cache"></use>
+              </svg><span class="control-payment__name">Наличными</span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -54,15 +59,15 @@
       </div>
       <div class="form-step__body">
         <div class="input"> 
-          <input class="input__value" id="name" name="name" type="text" placeholder=""/>
+          <input class="input__value" placeholder="ФИО" id="name" name="name" type="text"/>
           <label class="input__label" for="name">ФИО</label>
         </div>
         <div class="input"> 
-          <input class="input__value" id="email" name="email" type="email" placeholder=""/>
+          <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
           <label class="input__label" for="email">E-mail</label>
         </div>
         <div class="input"> 
-          <input class="input__value" id="phone" name="phone" type="text" placeholder=""/>
+          <input class="input__value" placeholder="+7(___) ___-__-__" id="phone" name="phone" type="text"/>
           <label class="input__label" for="phone">Телефон</label>
         </div>
       </div>
@@ -72,12 +77,10 @@
         <h4 class="form-step__title">Услуга</h4>
       </div>
       <div class="form-step__body">
-        <div class="input"> 
-          <input class="input__value" id="service" name="service" type="text" value="консультация" readonly="readonly" disabled="disabled"/><span class="input__info">500 руб.</span>
-        </div>
+        <div class="form-step__row"> <span class="tag">консультация</span><span class="price">500 руб.</span></div>
       </div>
     </div>
-    <div class="form__step form__footer form-step">
+    <div class="form__step form-step form__footer">
       <button class="button button_large">Записаться на прием</button>
       <label class="control">
         <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен с<a class="link_color" href="/privacy">

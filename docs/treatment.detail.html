@@ -127,7 +127,12 @@
     <div class="container">
       <div class="page__grid"> 
         <div class="page__sidebar">
-          <nav class="sidebar-menu page__menu"><a class="sidebar-menu__item link" href="#">описание</a><a class="sidebar-menu__item link" href="#">Услуги и цены</a><a class="sidebar-menu__item link" href="#">Комплексные программы</a><a class="sidebar-menu__item link" href="#">специалисты</a>
+          <nav class="sidebar-menu page__menu">
+            <div class="sidebar-menu__header tag js-sidebar-open">Меню <span class="button-arrow">
+                <svg class="button-arrow__icon">
+                  <use href="icons.svg#arrow"></use>
+                </svg></span>
+            </div><a class="sidebar-menu__item link" href="#">описание</a><a class="sidebar-menu__item link" href="#">Услуги и цены</a><a class="sidebar-menu__item link" href="#">Комплексные программы</a><a class="sidebar-menu__item link" href="#">специалисты</a>
           </nav>
         </div>
         <div class="page__content">
@@ -293,7 +298,7 @@
     </footer>
     <div class="modal__wrapper" data-modal="1">
       <div class="modal__overlay"></div>
-      <div class="modal"> 
+      <div class="modal" data-simplebar>
         <button class="modal__close js-close" aria-label="Закрыть">
           <svg class="modal__close-icon">
             <use href="icons.svg#close"></use>
@@ -306,5 +311,6 @@
       </div>
     </div>
     <script src="js/modal.js"></script>
+    <script src="js/template.js"> </script>
   </body>
 </html>

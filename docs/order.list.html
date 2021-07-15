@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Направления лечения</title>
+    <title>Мои записи</title>
     <link rel="stylesheet" href="main.css">
   </head>
   <body class="page">
@@ -102,74 +102,114 @@
       </div>
       <script src="js/header.js"></script>
     </div>
-        <div class="page__header page-header page-header_bskg-stethoscope">
+        <div class="page__header page-header page-header_bskg-pill">
           <div class="container page-header__inner">
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
-                <li class="breadcrumb__item breadcrumb__item_active">Направления лечения</li>
+                <li class="breadcrumb__item breadcrumb__item_active">Мои записи</li>
               </ul>
             </div>
-            <h1 class="page-header__title title">Направления лечения</h1>
+            <h1 class="page-header__title title">Мои записи</h1>
           </div>
         </div>
     <div class="container">
-      <div class="page__content">
-        <div class="page-section">
-          <div class="switch__block">
-            <label class="switch__label switch__label_active" for="switch">Взрослое отделение</label>
-            <label class="toggle" for="switch">
-              <input class="toggle__checkbox js-switch" id="switch" type="checkbox"><span class="toggle__button"> </span>
-            </label>
-            <label class="switch__label" for="switch">Детское отделение</label>
-          </div>
-          <div class="section js-section-switched"> 
-            <div class="dictionary">
-              <div class="js-filter-wrapper dictionary-filter">
-                <button class="js-filter dictionary-filter__item js-filter_active" data-filter="">A-Я</button>
-                <button class="js-filter dictionary-filter__item" data-filter="A">A</button>
-                <button class="js-filter dictionary-filter__item" data-filter="Г">Г</button>
-                <button class="js-filter dictionary-filter__item" data-filter="Д">Д</button>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="A">
-                <div class="dictionary__letter">A</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Аллерголог-иммунолог</a><a class="dictionary__item link" href="#">Ангиохирург</a><a class="dictionary__item link" href="#">Акушерство и гинекология</a><a class="dictionary__item link" href="#">Анестезиология</a>
-                </div>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="Г">
-                <div class="dictionary__letter">Г</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Гастроэнтерология</a><a class="dictionary__item link" href="#">Гипнотерапия</a><a class="dictionary__item link" href="#">Гематология</a><a class="dictionary__item link" href="#">Гирудотерапия</a>
-                </div>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="Д">
-                <div class="dictionary__letter">Д</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Дерматовенерология</a><a class="dictionary__item link" href="#">Диетолог-психолог</a><a class="dictionary__item link" href="#">Дневной стационар</a>
-                </div>
-              </div>
+      <div class="page__grid">
+        <div class="page__sidebar">
+          <nav class="sidebar-menu page__menu">
+            <div class="sidebar-menu__header tag js-sidebar-open">Меню <span class="button-arrow">
+                <svg class="button-arrow__icon">
+                  <use href="icons.svg#arrow"></use>
+                </svg></span>
+            </div><a class="sidebar-menu__item link" href="#">профиль</a><a class="sidebar-menu__item link" href="#">мои записи</a>
+          </nav>
+        </div>
+        <div class="page__content">
+          <div class="page-section">
+            <div class="tab-list order-list-nav">
+              <button class="js-filter button tab tab_active" data-filter="">Текущие записи</button>
+              <button class="js-filter button tab" data-filter="">Прошедшие записи</button>
             </div>
-          </div>
-          <div class="section js-section-switched section_hidden"> 
-            <div class="dictionary">
-              <div class="js-filter-wrapper dictionary-filter">
-                <button class="js-filter dictionary-filter__item js-filter_active" data-filter="">A-Я</button>
-                <button class="js-filter dictionary-filter__item" data-filter="A">A</button>
-                <button class="js-filter dictionary-filter__item" data-filter="Г">Г</button>
-                <button class="js-filter dictionary-filter__item" data-filter="Д">Д</button>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="A">
-                <div class="dictionary__letter">A</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Аллерголог-иммунолог</a><a class="dictionary__item link" href="#">Ангиохирург</a>
+            <div class="order-list">
+              <div class="order-list__head">
+                <div class="order-list__row">
+                  <div class="order-list__cell">Дата и время</div>
+                  <div class="order-list__cell">Адрес</div>
+                  <div class="order-list__cell">Врач</div>
+                  <div class="order-list__cell">Статус</div>
                 </div>
               </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="Г">
-                <div class="dictionary__letter">Г</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Гастроэнтерология</a><a class="dictionary__item link" href="#">Гипнотерапия</a>
-                </div>
-              </div>
-              <div class="dictionary__group tile js-filter-target" data-filter="Д">
-                <div class="dictionary__letter">Д</div>
-                <div class="dictionary__item-list"><a class="dictionary__item link" href="#">Диетолог-психолог</a><a class="dictionary__item link" href="#">Дневной стационар</a>
-                </div>
+              <div class="order-list__body">
+                <details class="spoiler order">
+                  <summary class="spoiler__title order__head">
+                    <div class="order-list__row">
+                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
+                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
+                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
+                      <div class="order__status order__status_paid">Оплачен</div>
+                    </div>
+                  </summary>
+                  <div class="order-list__row spoiler__more order__more">
+                    <div class="order__desc">
+                      <div class="order__name">Запись к акушер-гинекологу</div>
+                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
+                    </div>
+                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a>
+                    </div>
+                  </div>
+                </details>
+                <details class="spoiler order">
+                  <summary class="spoiler__title order__head">
+                    <div class="order-list__row">
+                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
+                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
+                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
+                      <div class="order__status order__status_unavailable">Оплата наличными</div>
+                    </div>
+                  </summary>
+                  <div class="order-list__row spoiler__more order__more">
+                    <div class="order__desc">
+                      <div class="order__name">Запись к акушер-гинекологу</div>
+                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
+                    </div>
+                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a>
+                    </div>
+                  </div>
+                </details>
+                <details class="spoiler order">
+                  <summary class="spoiler__title order__head">
+                    <div class="order-list__row">
+                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
+                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
+                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
+                      <div class="order__status order__status_unpaid">Ожидает оплаты</div>
+                    </div>
+                  </summary>
+                  <div class="order-list__row spoiler__more order__more">
+                    <div class="order__desc">
+                      <div class="order__name">Запись к акушер-гинекологу</div>
+                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
+                    </div>
+                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a><a class="order__button order__button_pay button" href="#">Оплатить</a>
+                    </div>
+                  </div>
+                </details>
+                <details class="spoiler order">
+                  <summary class="spoiler__title order__head">
+                    <div class="order-list__row">
+                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
+                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
+                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
+                      <div class="order__status order__status_complete">Завершен</div>
+                    </div>
+                  </summary>
+                  <div class="order-list__row spoiler__more order__more">
+                    <div class="order__desc">
+                      <div class="order__name">Запись к акушер-гинекологу</div>
+                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
+                    </div>
+                  </div>
+                </details>
               </div>
             </div>
           </div>
@@ -219,14 +259,5 @@
     </div>
     <script src="js/modal.js"></script>
     <script src="js/template.js"> </script>
-    <script src="js/filter.js"> </script>
-    <script>
-       let sectionToggle = new Switch();
-      for (let section of document.querySelectorAll('.dictionary')) {
-          const filter = new Filter(section);
-          console.log(filter.filterControls);
-      }
-           
-    </script>
   </body>
 </html>
