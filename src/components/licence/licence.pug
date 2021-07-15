@@ -1,5 +1,5 @@
 mixin licence(title)
     .licence
-        a(data-fslightbox="licences" href= attributes.src).licence__img-wrapper
+        a.licence__img-wrapper(data-fslightbox="licences" href= attributes.src)
             img.licence__img(src= attributes.src alt= title)
-        a.licence__caption.link.link_color(href= attributes.src)= title
+        a.licence__caption.link.link_color(data-fslightbox="licences" href= attributes.src)= title

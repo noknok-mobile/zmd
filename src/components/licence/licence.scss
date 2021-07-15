@@ -23,7 +23,9 @@
   }
 
   &__caption {
+    display: inline-block;
     @include text(xs);
+
   }
 }
 
@@ -40,6 +42,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.licence-pagination{
+
+.licence-pagination {
   margin-top: $offset-m;
 }
