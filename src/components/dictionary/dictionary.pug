@@ -4,12 +4,3 @@ mixin dictionary__item(letter, items)
         .dictionary__item-list
             each item in items
                 a.dictionary__item.link(href="#")= item
-
-//- 
-.dictionary
-    +filter(filterSection, "A-Я")(class="dictionary-filter",itemClass= "dictionary-filter__item")
-
-    each value, key in filterSection 
-        +dictionary__item(key, value)
-
-
