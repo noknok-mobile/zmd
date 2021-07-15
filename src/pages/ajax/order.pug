@@ -6,7 +6,7 @@ include /layout/mixins
         +form-step('Дата и время')
             .form-step__row
                 .tag 16 октября, 9:00
-                svg(width="30", height="30") #[use(href="icons.svg#date")]
+                svg.icon(width="30", height="30") #[use(href="icons.svg#date")]
         +form-step('Способ оплаты')
             .form-step__row.form-step__row_split
                 +payment({icon:"card", name:"Банковской картой"})

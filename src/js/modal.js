@@ -11,6 +11,7 @@ document.querySelector('.modal__wrapper').addEventListener('click', function (e)
 function openModal(e) {
     e.preventDefault();
     let targetModal = document.querySelector(`.modal__wrapper`);
+    document.documentElement.classList.add('scroll-disabled');
     targetModal.classList.add('modal__wrapper_open');
     window.addEventListener('keydown', function (event) {
         if (event.code == 'Escape') closeModal();
@@ -39,6 +40,7 @@ async function getModalContent(url) {
 function closeModal() {
     modalWindow = document.querySelector('.modal__wrapper');
     modalWindow.classList.remove('modal__wrapper_open');
+    document.documentElement.classList.remove('scroll-disabled');
 }
 
 function getAjaxPage(e) {

@@ -1,21 +1,33 @@
 .modal {
   position: relative;
-  padding: $offset-m;
+  margin: auto;
+  max-height: 100%;
   width: min(800px, 100%);
+  overflow-y: auto;
   background: white;
   z-index: 50;
-  overflow-y: scroll;
+
+  &[data-simplebar] {
+    overflow: unset;
+  }
+
+  &__inner {
+    margin: $offset-m;
+  }
 
   &__wrapper {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    // bottom: 0;
-    mix-height: 100vh;
+    bottom: 0;
+    height: 100vh;
     display: none;
     z-index: 10;
-    padding: 140px 0 0;
+    padding: $offset-m 0;
+    @include phone_hrz{
+      padding: 0;
+    }
 
     &_open {
       display: flex;
@@ -45,7 +57,7 @@
     position: absolute;
     top: $offset-m;
     right: $offset-m;
-    @include box(2rem);
+    @include box(40px);
     border-radius: 50%;
     z-index: 5;
     border: none;

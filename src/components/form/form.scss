@@ -58,6 +58,9 @@
                 grid-template-columns: 1fr;
             }
         }
+        .icon{
+            color: $color-text-muted;
+        }
     }
 
     &__more {
