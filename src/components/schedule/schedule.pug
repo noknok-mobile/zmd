@@ -11,10 +11,10 @@ mixin schedule_header(calendar)
                         td= weekday
             +button-arrow('next')(href="#").schedule__nav.schedule__nav_next
 
-mixin schedule_body
+mixin schedule_body(isExpand = false)
     .schedule__body
-        .schedule__inner.schedule__inner_fold.js-expand-target(data-simplebar)
-            table.timetable.calendar-grid.js-order-trigger.js-open(data-ajax="ajax/order.html" onclick="goToOrder(event)")
+        .schedule__inner.js-expand-target(class= !isExpand? "schedule__inner_fold" : "", data-simplebar)
+            table.timetable.calendar-grid.js-order-trigger.js-open(, data-ajax="ajax/order.html", onclick="goToOrder(event)")
                 - let rowsCount = calendar.days.length
                 - for(let i= 8; i <= 21;i++)
                     tr  
@@ -29,16 +29,17 @@ mixin schedule_body
                                     span.timetable__time= +i+":00"
                             else
                                 td.timetable__cell
-    .schedule__footer 
-        a.button.schedule__more-link.js-expand-trigger(data-expand="")
-            span.js-expand-label Развернуть все
-            +button-arrow(dir, true).schedule__more-link__arrow
+    if !isExpand
+        .schedule__footer 
+            a.button.schedule__more-link.js-expand-trigger(data-expand="")
+                span.js-expand-label Развернуть все
+                +button-arrow(dir, true).schedule__more-link__arrow
     
 
-mixin schedule(calendar)
+mixin schedule(calendar, isExpand)
     .schedule.schedule_single
         +schedule_header(calendar).schedule__header_single
-        +schedule_body()
+        +schedule_body(isExpand)
 
 mixin schedule__more-link(title, dir=null)
     a.button.schedule__more-link&attributes(attributes)

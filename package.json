@@ -22,6 +22,7 @@
     "build": "gulp build",
     "server": "gulp server",
     "styles": "gulp styles",
-    "svg": "gulp svg"
+    "svg": "gulp svg",
+    "script": "gulp script"
   }
 }
