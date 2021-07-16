@@ -11,7 +11,6 @@
     }
 
     &__sidebar {
-        max-height: 100vh;
         overflow: hidden auto;
         padding-right: $gutter;
         margin-right: calc(-1*var(--gutter));

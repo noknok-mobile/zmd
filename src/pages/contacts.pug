@@ -1,11 +1,8 @@
 extends /layout/template
-block prepend styles 
-    link(rel="stylesheet", href="https://unpkg.com/simplebar@latest/dist/simplebar.css")
-block append scripts 
-    script(src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js") 
+
 block content 
     .page__grid.contact-grid
-        .contact-grid__sidebar(data-simplebar)
+        .contact-grid__sidebar
             .contact.contact_short
                 .contact__title.mark Единый call-центр по г. Краснодар #[br]
                 .contact__more 
@@ -18,6 +15,12 @@ block content
             .contact-map__wrapper
                 .contact-map
                     script(async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abf18f3a8a6795f0ef60b69ac7a8b5c152bcfca74022dc1144cf4bdc879debfc0&amp;width=100%25&amp;")
+
+block append scripts 
+    script.
+        for (let elem of document.querySelectorAll('.contact')) {
+            elem.addEventListener('toggle', onAccordionItemToggle)
+        } 
 
 block prepend vars 
     - const title = "Контакты"
