@@ -4,16 +4,16 @@ block content
     .page__grid 
         .page__sidebar
             +sidebar-menu(menu)
-        .page__content
-            main.page-section.docs
-                section.docs__section
-                    h2.title.docs__title.mark ТФОМС
+        main.page__content
+            
+            section.page-section.page-section_docs
+                    h2.title.mark ТФОМС
                     each document in docs
-                        +document(document).docs__item
-                section.docs__section
-                    h2.title.docs__title.mark Документы
-                    each document in docs
-                        +document(document).docs__item
+                        +document(document)
+            section.page-section.page-section_docs
+                h2.title.mark Документы
+                each document in docs
+                    +document(document)
 
 
 block prepend vars

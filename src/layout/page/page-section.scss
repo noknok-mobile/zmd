@@ -40,7 +40,25 @@
         margin: var(--offset-large) auto;
     }
 
-    > .title {
+    &_docs {
+        margin-bottom: $offset-m;
+    }
+
+    &_docs + &_docs{
+        margin-top: 0;
+    }
+
+    &_no-offset {
+        &_top {
+            margin-top: 0;
+        }
+
+        &_bottom {
+            margin-bottom: 0;
+        }
+    }
+
+    >.title {
         margin-bottom: $offset-s;
     }
 }

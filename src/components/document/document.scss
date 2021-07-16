@@ -3,6 +3,11 @@
     justify-content: stretch;
     align-items: center;
     padding: $offset-s 0;
+    border-bottom: $line;
+
+    &:first-of-type {
+        border-top: $line;
+    }
 
     &::before {
         content: "";
@@ -33,4 +38,5 @@
         text-align: right;
         margin-left: $offset-s;
     }
+
 }
