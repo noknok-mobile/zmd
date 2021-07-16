@@ -3,9 +3,6 @@
     margin: 0;
     padding: 0;
 }
-// *:focus{
-//     outline: none;
-// }
 a{
     text-decoration: none;
     color: inherit;
@@ -17,4 +14,7 @@ button{
     appearance: none;
     border: none;
     background-color: unset;
+}
+summary:focus{
+    outline: none;
 }
