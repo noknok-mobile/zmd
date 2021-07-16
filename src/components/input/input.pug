@@ -1,8 +1,8 @@
 mixin input(props)
-    .input 
+    .input(class= (attributes.type == "password")? "js-password-toggle":""  )
         input.input__value(placeholder= props.label)&attributes(attributes)
         if props.icon
-            span.input__icon(class= "input__icon_" + props.icon)
+            span.icon.input__icon(class= "input__icon_" + props.icon)
         if props.label
             label.input__label(for= attributes.id)= props.label
         if props.info 

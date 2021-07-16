@@ -68,20 +68,24 @@ function styles() {
         .pipe(dest('build/'));
 }
 
-function scripts(){
+function importScripts() {
     return src('src/js/*.js')
-    // .pipe(concat('script.js'))
-    // .pipe(sourcemaps.init())
-    // .pipe(terser())
-    // .pipe(sourcemaps.write('../'))
-    .pipe(dest('build/js'));
+        .pipe(dest('build/js'));
+}
+
+function scripts() {
+    return src(['src/components/**/*.js', 'src/layout/**/*.js'])
+        .pipe(concat('app.js'))
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write('../'))
+        .pipe(dest('build/js'));
 }
 
 function watcher() {
-    watch(['src/**/*.pug','src/**/*.js'], compileHtml);
+    watch(['src/**/*.pug', 'src/**/*.js'], compileHtml);
     watch('src/**/*.scss', styles);
     watch('src/**/*.js', scripts);
-    
+
 }
 
 //https://github.com/svg-sprite/svg-sprite/blob/master/docs/configuration.md
@@ -89,14 +93,14 @@ function watcher() {
 function bckg() {
     return src('assets/bckg/*.svg')
         .pipe(svgSprite({
-            shape:{
+            shape: {
 
             },
-            svg: { 
+            svg: {
                 xmlDeclaration: false,
-                doctypeDeclaration: false, 
-                namespaceIDs: true, 
-                namespaceIDPrefix: '', 
+                doctypeDeclaration: false,
+                namespaceIDs: true,
+                namespaceIDPrefix: '',
                 namespaceClassnames: false,
                 dimensionAttributes: false,
                 rootAttributes: false
@@ -114,12 +118,12 @@ function bckg() {
 function icons() {
     return src('assets/icon/*.svg')
         .pipe(svgSprite({
-            svg: { 
+            svg: {
                 xmlDeclaration: false,
                 doctypeDeclaration: false,
-                namespaceIDs: false, 
-                namespaceIDPrefix: '', 
-                namespaceClassnames: false, 
+                namespaceIDs: false,
+                namespaceIDPrefix: '',
+                namespaceClassnames: false,
                 dimensionAttributes: true
             },
             mode: {
@@ -131,15 +135,16 @@ function icons() {
         }))
         .pipe(dest('build/'));
 }
+
 function contactIcons() {
     return src('assets/icon/transport/*.svg')
         .pipe(svgSprite({
-            svg: { 
+            svg: {
                 xmlDeclaration: false,
                 doctypeDeclaration: false,
-                namespaceIDs: false, 
-                namespaceIDPrefix: '', 
-                namespaceClassnames: false, 
+                namespaceIDs: false,
+                namespaceIDPrefix: '',
+                namespaceClassnames: false,
                 dimensionAttributes: true
             },
             mode: {
@@ -153,6 +158,7 @@ function contactIcons() {
 }
 
 exports.server = parallel(server, watcher);
-exports.build = parallel(compileHtml, styles, assets, fonts, scripts, bckg, icons, contactIcons);
+exports.build = parallel(compileHtml, styles, assets, fonts, scripts, importScripts, bckg, icons, contactIcons);
 exports.styles = series(styles);
 exports.svg = parallel(bckg, icons, contactIcons);
+exports.script = series(scripts, importScripts);

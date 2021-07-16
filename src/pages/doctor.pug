@@ -44,16 +44,13 @@ block content
                             p #[span.price Приём от 2500 руб.] - цена первичной консультации 
                             p Запись на консультацию осуществляется только по телефону
                         .spec-info-placeholder__footer
-                            a.button(href="#").spec-info-placeholder__action Записаться на прием
+                            a.button.js-open(data-ajax="ajax/calendar.html" href="#").spec-info-placeholder__action Записаться на прием
                             a.link.link_color.tag.spec-info-placeholder__action(href="#") Записаться к другому врачу
 
                 .spec-row__calendar
                     .schedule 
                         +schedule_body
 
-block append scripts 
-    script(src="js/schedule.js")
-    script(src="js/simplebar.min.js")
 block prepend vars 
     - title = 'Мейпариани Елена Владимировна'
 block append vars

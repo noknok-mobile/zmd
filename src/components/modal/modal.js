@@ -24,20 +24,30 @@ function openModal(e) {
     setModalContent(e.currentTarget.dataset.ajax, e.currentTarget.dataset.page);
 
 }
-function initModalPage(modal, pageId){
+
+function initModalPage(modal, pageId) {
     const filter = new Filter(modal, pageId);
     console.log(filter);
 }
 
 function setModalContent(url, page = null, action = null, param = null) {
     getModalContent(url)
-    .then(html => {
-        document.querySelector('.modal__inner').innerHTML = html;
-        if (action) action(param);
+        .then(html => {
+            let modal = document.querySelector('.modal__inner');
+            modal.innerHTML = html;
+            const expandButton = modal.querySelector('.js-expand-trigger');
+            if (expandButton) expandButton.addEventListener('click', expandCalendar);
 
-        if(page)
-            initModalPage(document.querySelector('.modal__inner'), page);
+            if (action) action(param);
+
+            if (page)
+                initModalPage(modal, page);
+            try {
+                for(let input of document.querySelectorAll('.js-password-toggle')) input.addEventListener('click', togglePasswordIcon)
+            } catch (e) {}
         });
+
+
 
 }
 
@@ -61,7 +71,7 @@ function getAjaxPage(e) {
 function goToOrder(e) {
     const url = 'ajax/order.html';
     const date = e.target.dataset.ordertime;
-    setModalContent(url, setOrderDate, date);
+    setModalContent(url, null, setOrderDate, date);
 }
 
 function setOrderDate(datestring) {
@@ -81,6 +91,3 @@ function completeOrder(e) {
     const url = 'ajax/result.html';
     setModalContent(url);
 }
-
-
-

@@ -64,6 +64,7 @@ ul:not([class]) {
   color: $color-text-muted;
   
   &_link {
+    width: max-content;
     transition: border-color 0.15s ease-in-out;
     border-bottom: 1px solid $color-line;
 

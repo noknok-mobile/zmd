@@ -108,31 +108,4 @@
 
     }
   }
-
-  &__tab {
-    @extend %tag;
-    color: $color-text-semi-muted;
-
-    &-list {
-      display: flex;
-      @include flex-gap($offset-m);
-    }
-
-    &:not(&_active) {
-      color: $color-text-muted;
-    }
-
-    &-page {
-      display: none;
-
-      &:target {
-        display: block;
-        // animation: fadeIn 0.3s ease-in;
-      }
-
-      &_active {
-        display: block;
-      }
-    }
-  }
 }
