@@ -9,40 +9,22 @@
   &_bskg {
     &-pill {
       background-image: url("bckg.svg#pill");
-      background-size: 200px;
-
-      &::after {
-        background-position-y: 50px;
-      }
+      background-size: 100px;
     }
 
     &-cross {
       background-image: url("bckg.svg#cross");
-      background-size: 300px;
-
-      &::after {
-        background-position-y: -192px;
-      }
+      background-size: 165px;
     }
 
     &-stethoscope {
       background-image: url("bckg.svg#stethoscope");
-      background-size: 550px;
-      background-position: left bottom;
-
-      &::after {
-        background-position-y: 385px;
-      }
+      background-size: 230px;
     }
 
     &-syringe {
       background-image: url("bckg.svg#syringe");
-      background-size: 250px;
-      background-position: right bottom;
-
-      &::after {
-        background-position-y: 224px;
-      }
+      background-size: 170px;
     }
   }
 
