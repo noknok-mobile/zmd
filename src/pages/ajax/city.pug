@@ -1,45 +1,10 @@
-extends /components/modal/modal
-block header 
-    .modal__tab-list
-        a.tag(href="#auth") Вход
-        a.tag(href="#signin") Регистрация
-
-block body 
-    .modal__tab-page#auth
-        form.form(action="#")
-            .form-step
-                .input 
-                    input#name.input__value(type="text" name="name" placeholder="Иванов Иван Иванович")
-                    label.input__label(for="name") Ваше имя*
-                .input 
-                    input.input__value(type="password" name="password")
-                    label.input__label(for="password") Ваш пароль*
-                    span.input__icon.input.input__icon_password-hidden.js-toggle
-                .form-step__more
-                    a(href="#").tag.tag_link Забыли пароль?
-            .form-step.form__footer 
-                .button.button_large войти
-    .modal__tab-page#signin
-        form.form(action="#")
-            .form-step
-                .input 
-                    input#name.input__value(type="text" name="name" placeholder="Иванов Иван Иванович")
-                    label.input__label(for="name") ФИО*
-                .input 
-                    input.input__value(type="password" name="password")
-                    label.input__label(for="password") Ваш пароль*
-                    span.input__icon.input.input__icon_password-hidden.js-toggle
-                .input 
-                    input#phone.input__value(type="text" inputmode="numeric" name="phone" placeholder="+7(900) 000-00-00")
-                    label.input__label(for="phone") Номер телефона*
-                .input 
-                    input#email.input__value(type="email" name="email" class="input__value" inputmode="email")
-                    label.input__label(for="email") E-mail*
-                label.control
-                    input(type="text" name="privacy").control__input
-                    span.control__label
-                        span.control__label_agreement
-                            | Я согласен с
-                            a(href="/privacy").link_color условиями обработки  персональных данных 
-            .form-step.form__footer 
-                .button.button_large Зарегистрироваться
+include /layout/mixins
+.modal__header
+    h3.tag Выберите филиал клиники
+.modal__body
+    form.form(action="#")
+        +form-step
+            +select({label:"Город", options: ["Краснодар", "Адыгейск", "Новороссийск"]})#filial
+            +select({label:"Филиал", options: ["Ул. московская, 40", "Ул. московская, 40", "Ул. московская, 40"]})#filial
+        +form-step.form__footer
+            button.button Выбрать

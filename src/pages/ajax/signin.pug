@@ -1,0 +1,13 @@
+include /layout/mixins
+.modal__header 
+    .modal-tabs
+        a.modal-tabs__item.tag.tag_link.js-filter(data-filter="auth" href="#") Вход
+        a.modal-tabs__item.tag.tag_link.js-filter(data-filter="signup" href="#") Регистрация
+
+.modal__body
+    .modal-tab-page.js-filter-target.js-filter-target_hidden(data-filter = "auth")
+        include auth
+    .modal__tab-page.js-filter-target.js-filter-target_hidden(data-filter = "signup")
+        include signup
+
+

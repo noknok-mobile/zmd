@@ -1,5 +1,7 @@
+for (let modalTrigger of document.querySelectorAll('.js-open')) {
+    modalTrigger.addEventListener('click', openModal);
+}
 try {
-    document.querySelector('.js-open').addEventListener('click', openModal);
     document.querySelector('.js-order-trigger').addEventListener('click', openModal);
 } catch (e) {}
 document.querySelector('.js-close').addEventListener('click', closeModal);
@@ -19,14 +21,22 @@ function openModal(e) {
         once: true
     });
 
-    setModalContent(e.currentTarget.dataset.ajax);
+    setModalContent(e.currentTarget.dataset.ajax, e.currentTarget.dataset.page);
+
+}
+function initModalPage(modal, pageId){
+    const filter = new Filter(modal, pageId);
+    console.log(filter);
 }
 
-function setModalContent(url, action = null, param = null) {
+function setModalContent(url, page = null, action = null, param = null) {
     getModalContent(url)
-        .then(html => {
-            document.querySelector('.modal__inner').innerHTML = html;
-            if (action) action(param);
+    .then(html => {
+        document.querySelector('.modal__inner').innerHTML = html;
+        if (action) action(param);
+
+        if(page)
+            initModalPage(document.querySelector('.modal__inner'), page);
         });
 
 }
@@ -65,39 +75,12 @@ function setOrderDate(datestring) {
     document.querySelector('.input__value[name="date"]').value = datetime.toLocaleString('ru', options);
 
 }
-function completeOrder(e){
+
+function completeOrder(e) {
     e.preventDefault();
     const url = 'ajax/result.html';
     setModalContent(url);
 }
-//script for tabs
-for (tab of document.querySelectorAll('.tab')) tab.addEventListener('click', tabHandler);
 
-function tabHandler(e) {
-    resetTabControl();
-    setActiveTab(e);
-    resetTabPages();
-    setActivePage(e);
-}
 
-function resetTabPages() {
-    for (let elem of document.querySelectorAll('.modal-tab__page_active')) {
-        elem.classList.remove('modal-tab__page_active');
-    }
-}
 
-function setActivePage(e) {
-    let filter = e.target.dataset.page;
-    document.querySelector(`.modal-tab__page[data-href="${filter}"]`).classList.add(
-        'modal-tab__page_active');
-}
-
-function resetTabControl() {
-    for (let elem of document.querySelectorAll('.modal-tab_active')) {
-        elem.classList.remove('modal-tab_active');
-    }
-}
-
-function setActiveTab(e) {
-    e.target.classList.add('modal-tab_active');
-}
