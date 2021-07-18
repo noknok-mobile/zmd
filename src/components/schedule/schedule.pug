@@ -11,7 +11,6 @@ mixin schedule_header
                 tr.schedule__week
                     - date = new Date()
                     - for(let i = 0; i < 5;i++)
-                        - console.log(now)
                         - date.setDate(date.getDate()+1)
                         td= date.toLocaleString('ru', {weekday:"short"})
             +button-arrow('next')(href="#").schedule__nav.schedule__nav_next
@@ -23,7 +22,6 @@ mixin schedule_body(isExpand = false)
                 - const currentDate = new Date()
                 - const month = currentDate.getMonth()
                 - let day = currentDate.getDate()
-                - console.log(day)
                 - for(let hour = 8; hour <= 21;hour++)
                     tr  
                         - let rowsCount = 5

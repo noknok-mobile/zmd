@@ -1,9 +1,10 @@
 .icon-menu {
-  &__item{
-    svg{
+  &__item {
+    svg {
       @include box(30px);
     }
   }
+
   display: none;
   justify-content: space-between;
   @include flex-gap($offset-s);
@@ -12,23 +13,27 @@
     display: flex;
   }
 
-  @include phone{
-      display: contents;
-      @include flex-gap(unset);
+  @include phone {
+    display: contents;
+    @include flex-gap(unset);
   }
 
   &__toggle {
+    &_open {
+      @at-root {
+        .header-mobile.js-open &{
+          display: none;
+        }
+      }
+    }
+
     &_close {
       display: none;
-    }
-  }
-
-  .js-menu-toggler_active {
-    .icon-menu__toggle_open {
-      display: none;
-    }
-    .icon-menu__toggle_close {
-      display: block;
+      @at-root {
+        .header-mobile.js-open &{
+          display: block;
+        }
+      }
     }
   }
 }

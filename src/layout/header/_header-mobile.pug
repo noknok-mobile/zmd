@@ -1,4 +1,4 @@
-.header-mobile
+.header-mobile.js-menu
     .header-mobile__inner
         .header-mobile__top.header-info
             span.header-info__title Клиника: &nbsp;
@@ -16,13 +16,13 @@
                         svg #[use(href="icons.svg#calendar")]
                     a.icon-menu__item(href="tel:"+ phoneLink)
                         svg #[use(href="icons.svg#phone")]
-                    .icon-menu__item
-                        button.icon-menu__toggle.icon-menu__toggle_open.js-menu-open
+                    .icon-menu__item.js-menu-toggle
+                        button.icon-menu__toggle.icon-menu__toggle_open
                             svg #[use(href="icons.svg#burger")]
-                        button.icon-menu__toggle.icon-menu__toggle_close.js-menu-close
+                        button.icon-menu__toggle.icon-menu__toggle_close
                             svg #[use(href="icons.svg#menu-close")]
 
-    .dropdown-menu.js-menu#menu
+    .dropdown-menu
         ul.header-mobile__menu.main-menu
             each link in links
                 li.main-menu__item.link
