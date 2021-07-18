@@ -17,10 +17,9 @@ const mergeQueries = require('postcss-merge-queries');
 const svgSprite = require('gulp-svg-sprite');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
-const devip = require('dev-ip');
 
 function compileHtml() {
-    return src('src/pages/**/*.pug')
+    return src('src/pages/*.pug')
         .pipe(pug({
             pretty: true,
             basedir: './src/'
@@ -35,7 +34,6 @@ function server() {
             baseDir: "./build/",
             ghostMode: false
         },
-        // host: devip()
     });
     watch("build/").on('change', browserSync.reload);
 }
@@ -136,8 +134,29 @@ function icons() {
         .pipe(dest('build/'));
 }
 
+function vectorPictures() {
+    return src('src/components/*/img/*.svg')
+        .pipe(svgSprite({
+            svg: {
+                xmlDeclaration: false,
+                doctypeDeclaration: false,
+                namespaceIDs: false,
+                namespaceIDPrefix: '',
+                namespaceClassnames: false,
+                dimensionAttributes: true
+            },
+            mode: {
+                symbol: {
+                    dest: './',
+                    sprite: 'pic.svg'
+                }
+            },
+        }))
+        .pipe(dest('build/'));
+}
+
 function contactIcons() {
-    return src('assets/icon/transport/*.svg')
+    return src('src/components/contact/icon/*.svg')
         .pipe(svgSprite({
             svg: {
                 xmlDeclaration: false,
@@ -160,5 +179,5 @@ function contactIcons() {
 exports.server = parallel(server, watcher);
 exports.build = parallel(compileHtml, styles, assets, fonts, scripts, importScripts, bckg, icons, contactIcons);
 exports.styles = series(styles);
-exports.svg = parallel(bckg, icons, contactIcons);
+exports.svg = parallel(icons, contactIcons, vectorPictures);
 exports.script = series(scripts, importScripts);
