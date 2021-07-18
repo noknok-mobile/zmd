@@ -32,7 +32,7 @@ mixin schedule_body(isExpand = false)
                             - let busyIndex = Math.ceil(Math.random() * rowsCount)
                             if (j != emptyIndex && hour != busyIndex)
                                 td.timetable__cell
-                                    a.timetable__time.timetable__time_available.js-order-time.js-open(data-modal="order" href="#" data-ordertime=`2021-${month}-${date+1} ${hour}:00`)= `${hour}:00`
+                                    a.timetable__time.timetable__time_available.js-order-time.js-open(data-modal="order" href="#" data-ordertime=`2021/${month}/${date+1} ${hour}:00`)= `${hour}:00`
                             else if (j == busyIndex || hour == busyIndex)
                                 td.timetable__cell
                                     span.timetable__time= `${hour}:00`
