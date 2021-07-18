@@ -19,26 +19,27 @@
   }
 
   &__item {
+    @include ratio(1);
+    scroll-snap-align: start;
+    filter: grayscale(1);
+    transition: filter 0.2s ease-out;
+
+    &[data-filter]:not(.js-active) {
+      display: none;
+    }
+
+    &.js-active {
+      animation: fadeOut 0.5s ease-in-out alternate;
+    }
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  &__img {
     @extend %fill;
-    animation: fadeIn 0.5s ease-in-out alternate;
 
-    &_hidden {
-      animation: fadeOut 1s;
-      transform: scale(0.2);
-      // display: none;
-    }
-
-    &-wrap {
-      @include ratio(1);
-      scroll-snap-align: start;
-      filter: grayscale(1);
-      transition: filter 0.2s ease-out;
-
-      &:hover {
-        filter: grayscale(0);
-      }
-
-    }
   }
 }
 

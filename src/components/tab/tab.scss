@@ -9,13 +9,14 @@
         background: $color-main;
         color: white;
     }
+
+    &.js-active {
+        @extend .tab_active;
+    }
 }
 
 .tab-list {
     display: flex;
     @include flex-gap($gutter);
 
-    .js-filter_active {
-        @extend .tab_active;
-    }
 }

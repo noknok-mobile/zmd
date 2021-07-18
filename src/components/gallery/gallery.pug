@@ -1,6 +1,6 @@
 mixin gallery__item(image, filter = null)
-    a.gallery__item-wrap(class= attributes.class, data-filter= filter, data-fslightbox="gallery", href= image)
-        img.gallery__item(src= image)
+    a.gallery__item(class= attributes.class, data-filter= filter, data-fslightbox="gallery", href= image)
+        img.gallery__img(src= image)
 
 mixin gallery(items, filter = null)
     if filter

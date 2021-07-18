@@ -25,10 +25,9 @@ block content
                 +gallery(gallery, filter) 
 
 block append scripts
-    script(src="js/filter.js") 
     script.
         let gallery = document.querySelector('.gallery');
-        let filter = new Filter(gallery);-
+        let filter = new Filter(gallery);
 block prepend vars 
     - const title  = "Общая информация"
     - 
