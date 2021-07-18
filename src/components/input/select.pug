@@ -2,7 +2,7 @@ mixin select(props)
     .select(class= attributes.class)
         if props.label
             label.select__label(for= attributes.id)= props.label
-        select.select__item(id=attributes.id, name= attributes.id)
+        select.select__item(id=attributes.id, name= attributes.name)
             each option, index in props.options
                 option(value= index,selected= (index == 0))= option
         +button-arrow(null, true).select__icon

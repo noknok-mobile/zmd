@@ -1,7 +1,0 @@
-include /layout/mixins
-- const calendar = { days: ["10.11",'11.11','12.11', '13.11', '14.11'], weekdays: ["пн","вт","ср","чт","пт"]}
-.modal__header 
-    +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."}, footer= false).doctor-card_fold(src= 'assets/img/lady.jpg')
-.modal__body
-    +schedule(calendar, true)
-

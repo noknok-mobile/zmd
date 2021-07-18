@@ -1,6 +1,4 @@
-include /layout/mixins
-
-form.form(action="#")
+form.form(action="#" name="signup")
     +form-step
         +input({label: "ФИО"})#name(name="name" type="text")
         +input({label: "Ваш пароль*", icon: "password"})#password(name="password" type="password")

@@ -5,28 +5,27 @@
 .modal-tabs {
     display: flex;
     @include flex-gap($gutter);
+
     &__item {
         line-height: 1.2;
-        &_active {
-            text-decoration: underline;
+
+        &.js-active {
+            color: $color-text-semi-muted;
+            border-color: transparent;
         }
     }
 
-    .js-filter_active {
-        color: $color-text-semi-muted;
-        border-color: transparent;
-    }
 }
 
 .modal-tab-page {
-    // display: none;
 
     &:target {
         display: block;
         // animation: fadeIn 0.3s ease-in;
     }
 
-    &_active {
-        display: block;
+    &[data-filter]:not(.js-active) {
+        display: none;
     }
+
 }

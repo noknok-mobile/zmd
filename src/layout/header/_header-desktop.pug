@@ -9,7 +9,7 @@
                 .header-info.header-info_address
                     span.header-info__title Клиника:
                     .header-info__content
-                        a.header__link.link.link_color.js-open(data-ajax="ajax/city.html", href="#") #{address.city},&nbsp;#{address.address}
+                        a.header__link.link.link_color.js-open(data-modal="filial" href="#") #{address.city},&nbsp;#{address.address}
 
             .header-summary__schedule
                 .header-info.header-info_schedule
@@ -21,8 +21,8 @@
                 .header-info.header-info_personal
                     span.header-info__title Личный кабинет:
                     .header-info__content.header-info__content_flex
-                        a.header__link.link.link_color.js-open(data-ajax="ajax/signin.html#auth" data-page="auth" href="#auth") Вход
-                        a.header__link.link.link_color.js-open(data-ajax="ajax/signin.html#signup" data-page="signup" href="#signup") Регистрация
+                        a.header__link.link.link_color.js-open.js-modal-filter(data-modal="login" data-filter="auth" href="#") Вход
+                        a.header__link.link.link_color.js-open.js-modal-filter(data-modal="login" data-filter="signup" href="#") Регистрация
 
             a.header-desktop__button.button(href="#") Записаться на прием
 

@@ -13,8 +13,8 @@ mixin schedule_header(calendar)
 
 mixin schedule_body(isExpand = false)
     .schedule__body
-        .schedule__inner.js-expand-target(class= !isExpand? "schedule__inner_fold" : "", data-simplebar)
-            table.timetable.calendar-grid.js-order-trigger.js-open(, data-ajax="ajax/order.html", onclick="goToOrder(event)")
+        .schedule__inner(class= !isExpand? "schedule__inner_fold js-expand-target" : "")
+            table.timetable.calendar-grid
                 - let rowsCount = calendar.days.length
                 - for(let i= 8; i <= 21;i++)
                     tr  
@@ -23,7 +23,7 @@ mixin schedule_body(isExpand = false)
                             - let busyIndex = Math.ceil(Math.random() * rowsCount)
                             if (j != emptyIndex )
                                 td.timetable__cell
-                                    a.timetable__time.timetable__time_available.js-ajax(href="#" data-ordertime="2020-01-12 "+i+":00")= +i+":00"
+                                    a.timetable__time.timetable__time_available.js-order-time.js-open(data-modal="order" href="#" data-ordertime="2020-01-12 "+i+":00")= +i+":00"
                             else if (j == busyIndex || i == busyIndex)
                                 td.timetable__cell
                                     span.timetable__time= +i+":00"

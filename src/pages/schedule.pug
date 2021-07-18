@@ -29,7 +29,7 @@ block content
 
                 .spec-row.schedule-grid 
                     .spec-row__info 
-                        +doctor-card({name:"Мейпариани Елена Владимировна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                        +doctor-card({name:"Мейпариани Елена Владимировна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."}, footer= false)(src= 'assets/img/lady.jpg')
                     .spec-row__calendar
                         .schedule 
                             .schedule__placeholder
@@ -39,7 +39,7 @@ block content
 
                 .spec-row.schedule-grid 
                     .spec-row__info 
-                        +doctor-card({name:"Новосартян Маргарита Геннадиевна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                        +doctor-card({name:"Новосартян Маргарита Геннадиевна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."}, footer= false)(src= 'assets/img/lady.jpg')
                     .spec-row__calendar
                         .schedule 
                             .schedule__placeholder
@@ -47,9 +47,11 @@ block content
                                     p Ближайшая запись к специалисту: #[br]
                                         a.link.link_color.tag(href="#") 20 октября 
                                             svg(width="20" height="20") #[use(href="icons.svg#arrow" transform="rotate(-90, 10, 10)")]
-
+block append popup 
+    include modal/order
+    include modal/calendar
+block append scripts
+    script(src="js/order.js") 
 
 block prepend vars 
     - const title = 'Расписание врачей'
-    - const calendar = { days: ["10.11",'11.11','12.11', '13.11', '14.11'], weekdays: ["пн","вт","ср","чт","пт"]}
-    - const orderForm = "ajax/order.html"

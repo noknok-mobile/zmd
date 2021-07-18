@@ -8,6 +8,7 @@ class Filter {
             for (let elem of this.list) {
                 if (elem.dataset.filter != current.dataset.filter)
                     elem.classList.remove(this.activeClass);
+                else elem.classList.add(this.activeClass);
             }
             current.classList.add(this.activeClass);
         },
@@ -35,10 +36,12 @@ class Filter {
 
     };
     constructor(block, params = null) {
-        if (params ?.controlsClass)
-            this.filterControls.itemClass = params.controlsClass;
-        if (params ?.targetClass)
-            this.filterTarget.itemClass = params.targetClass;
+        try {
+            if (params.controlsClass)
+                this.filterControls.itemClass = params.controlsClass;
+            if (params.targetClass)
+                this.filterTarget.itemClass = params.targetClass;
+        } catch (e) {}
 
         this.filterTarget.list = block.querySelectorAll(`.${this.filterTarget.itemClass}`);
         this.filterControls.list = block.querySelectorAll(`.${this.filterControls.itemClass}`);
