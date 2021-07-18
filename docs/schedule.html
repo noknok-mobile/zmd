@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body class="page">
-    <div class="header">
+    <header class="header">
       <div class="header-desktop">
         <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="/"><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
           <div class="header-summary header-desktop__summary">
             <div class="header-summary__address">
               <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span>
-                <div class="header-info__content"><a class="header__link link link_color" href="#popup_open">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
+                <div class="header-info__content"><a class="header__link link link_color js-open" data-modal="filial" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
               </div>
             </div>
             <div class="header-summary__schedule">
@@ -24,7 +24,7 @@
             </div>
             <div class="header-summary__account">
               <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span>
-                <div class="header-info__content header-info__content_flex"><a class="header__link link link_color" href="#popup_open">Вход</a><a class="header__link link link_color" href="#popup_open">Регистрация</a></div>
+                <div class="header-info__content header-info__content_flex"><a class="header__link link link_color js-open js-modal-filter" data-modal="login" data-filter="auth" href="#">Вход</a><a class="header__link link link_color js-open js-modal-filter" data-modal="login" data-filter="signup" href="#">Регистрация</a></div>
               </div>
             </div><a class="header-desktop__button button" href="#">Записаться на прием</a>
           </div>
@@ -100,8 +100,7 @@
           </div>
         </div>
       </div>
-      <script src="js/header.js"></script>
-    </div>
+    </header>
         <div class="page__header page-header page-header_bskg-stethoscope">
           <div class="container page-header__inner">
             <div class="page-header__nav">
@@ -121,7 +120,7 @@
               <div class="schedule-filter__section schedule-filter__section_place">
                 <div class="select select_inline">
                   <label class="select__label" for="filial">Филиал</label>
-                  <select class="select__item" id="filial" name="filial">
+                  <select class="select__item" id="filial">
                     <option value="0" selected="selected">Ул. московская, 40</option>
                     <option value="1">Ул. московская, 40</option>
                     <option value="2">Ул. московская, 40</option>
@@ -134,7 +133,7 @@
               <div class="schedule-filter__section schedule-filter__section_spec"> 
                 <div class="select select_inline">
                   <label class="select__label" for="spec">Направление</label>
-                  <select class="select__item" id="spec" name="spec">
+                  <select class="select__item" id="spec">
                     <option value="0" selected="selected">акушерство и гинекология</option>
                     <option value="1">кардиология</option>
                     <option value="2">Проктология</option>
@@ -152,11 +151,11 @@
                       </svg></a>
                     <table class="schedule__calendar calendar-grid">
                       <tr class="schedule__days">
-                        <td>10.11</td>
-                        <td>11.11</td>
-                        <td>12.11</td>
-                        <td>13.11</td>
-                        <td>14.11</td>
+                        <td>19.07</td>
+                        <td>20.07</td>
+                        <td>21.07</td>
+                        <td>22.07</td>
+                        <td>23.07</td>
                       </tr>
                       <tr class="schedule__week">
                         <td>пн</td>
@@ -185,112 +184,112 @@
                     <div class="doctor-card__body">
                       <div class="card__desc price">Приём от 2500 руб.</div>
                     </div>
-                    <div class="doctor-card__footer"><a class="button js-order" href="#">Записаться на прием</a></div>
+                    <div class="doctor-card__footer"><a class="button js-open" data-modal="calendar" href="#">Записаться на прием</a></div>
                   </div>
                 </div>
               </div>
               <div class="spec-row__calendar">
                 <div class="schedule"> 
                   <div class="schedule__body">
-                    <div class="schedule__inner schedule__inner_fold js-expand-target" data-simplebar="data-simplebar">
-                      <table class="timetable calendar-grid js-order-trigger js-open" data-ajax="ajax/order.html" onclick="goToOrder(event)">
+                    <div class="schedule__inner schedule__inner_fold js-expand-target">
+                      <table class="timetable calendar-grid">
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 8:00">8:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 8:00">8:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 8:00">8:00</a></td>
                           <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 8:00">8:00</a></td>
-                          <td class="timetable__cell"></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 8:00">8:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 8:00">8:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 8:00">8:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
-                          <td class="timetable__cell"><span class="timetable__time">9:00</span></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 9:00">9:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 9:00">9:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 9:00">9:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 9:00">9:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 9:00">9:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 10:00">10:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 11:00">11:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><span class="timetable__time">11:00</span></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 11:00">11:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 11:00">11:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 11:00">11:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 11:00">11:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 11:00">11:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 11:00">11:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 11:00">11:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 12:00">12:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 12:00">12:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 12:00">12:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 12:00">12:00</a></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 14:00">14:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 14:00">14:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 14:00">14:00</a></td>
-                          <td class="timetable__cell"><span class="timetable__time">14:00</span></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 12:00">12:00</a></td>
                           <td class="timetable__cell"></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 15:00">15:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><span class="timetable__time">15:00</span></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 15:00">15:00</a></td>
-                          <td class="timetable__cell"></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 18:00">18:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 18:00">18:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 18:00">18:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 18:00">18:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 13:00">13:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 13:00">13:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 13:00">13:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 13:00">13:00</a></td>
                           <td class="timetable__cell"></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 19:00">19:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 19:00">19:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 19:00">19:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 19:00">19:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 14:00">14:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 14:00">14:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 14:00">14:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 14:00">14:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 14:00">14:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 20:00">20:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 20:00">20:00</a></td>
-                          <td class="timetable__cell"><span class="timetable__time">20:00</span></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 20:00">20:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 15:00">15:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 21:00">21:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 16:00">16:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 17:00">17:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 18:00">18:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 18:00">18:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 18:00">18:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 18:00">18:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 18:00">18:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 19:00">19:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 19:00">19:00</a></td>
+                          <td class="timetable__cell"><span class="timetable__time">19:00</span></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 19:00">19:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 19:00">19:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 20:00">20:00</a></td>
                           <td class="timetable__cell"></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 20:00">20:00</a></td>
                           <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 20:00">20:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 21:00">21:00</a></td>
                         </tr>
                       </table>
                     </div>
@@ -314,112 +313,112 @@
                     <div class="doctor-card__body">
                       <div class="card__desc price">Приём от 2500 руб.</div>
                     </div>
-                    <div class="doctor-card__footer"><a class="button js-order" href="#">Записаться на прием</a></div>
+                    <div class="doctor-card__footer"><a class="button js-open" data-modal="calendar" href="#">Записаться на прием</a></div>
                   </div>
                 </div>
               </div>
               <div class="spec-row__calendar">
                 <div class="schedule"> 
                   <div class="schedule__body">
-                    <div class="schedule__inner schedule__inner_fold js-expand-target" data-simplebar="data-simplebar">
-                      <table class="timetable calendar-grid js-order-trigger js-open" data-ajax="ajax/order.html" onclick="goToOrder(event)">
+                    <div class="schedule__inner schedule__inner_fold js-expand-target">
+                      <table class="timetable calendar-grid">
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 8:00">8:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 8:00">8:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 8:00">8:00</a></td>
                           <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 8:00">8:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 8:00">8:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 8:00">8:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 8:00">8:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 8:00">8:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 9:00">9:00</a></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
-                          <td class="timetable__cell"><span class="timetable__time">10:00</span></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 10:00">10:00</a></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 11:00">11:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 11:00">11:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 11:00">11:00</a></td>
-                          <td class="timetable__cell"></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 9:00">9:00</a></td>
                           <td class="timetable__cell"></td>
                           <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 12:00">12:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 9:00">9:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 9:00">9:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 13:00">13:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 10:00">10:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 10:00">10:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 14:00">14:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 14:00">14:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 14:00">14:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 14:00">14:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 14:00">14:00</a></td>
-                        </tr>
-                        <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 15:00">15:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 15:00">15:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 15:00">15:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 11:00">11:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 11:00">11:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 11:00">11:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 11:00">11:00</a></td>
                           <td class="timetable__cell"></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 12:00">12:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 12:00">12:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 13:00">13:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 13:00">13:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 13:00">13:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 13:00">13:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 13:00">13:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 18:00">18:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 18:00">18:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 18:00">18:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 14:00">14:00</a></td>
                           <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><span class="timetable__time">18:00</span></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 14:00">14:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 14:00">14:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 14:00">14:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 19:00">19:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><span class="timetable__time">19:00</span></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 19:00">19:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 19:00">19:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 15:00">15:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 15:00">15:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 20:00">20:00</a></td>
-                          <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 20:00">20:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 20:00">20:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 20:00">20:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 16:00">16:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 16:00">16:00</a></td>
                         </tr>
                         <tr> 
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 21:00">21:00</a></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 17:00">17:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 17:00">17:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 18:00">18:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 18:00">18:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 18:00">18:00</a></td>
                           <td class="timetable__cell"></td>
-                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-ajax" href="#" data-ordertime="2020-01-12 21:00">21:00</a></td>
-                          <td class="timetable__cell"></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 18:00">18:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 19:00">19:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 19:00">19:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 19:00">19:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 19:00">19:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 19:00">19:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 20:00">20:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 20:00">20:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 20:00">20:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 20:00">20:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 20:00">20:00</a></td>
+                        </tr>
+                        <tr> 
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 21:00">21:00</a></td>
+                          <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 21:00">21:00</a></td>
                         </tr>
                       </table>
                     </div>
@@ -443,7 +442,6 @@
                     <div class="doctor-card__body">
                       <div class="card__desc price">Приём от 2500 руб.</div>
                     </div>
-                    <div class="doctor-card__footer"><a class="button js-order" href="#">Записаться на прием</a></div>
                   </div>
                 </div>
               </div>
@@ -470,7 +468,6 @@
                     <div class="doctor-card__body">
                       <div class="card__desc price">Приём от 2500 руб.</div>
                     </div>
-                    <div class="doctor-card__footer"><a class="button js-order" href="#">Записаться на прием</a></div>
                   </div>
                 </div>
               </div>
@@ -518,23 +515,380 @@
         </div>
       </div>
     </footer>
-    <div class="modal__wrapper" data-modal="1">
+    <div class="modal__wrapper" data-modal="filial">
       <div class="modal__overlay"></div>
-      <div class="modal" data-simplebar>
+      <div class="modal" data-simplebar="data-simplebar">
         <button class="modal__close js-close" aria-label="Закрыть">
           <svg class="modal__close-icon">
             <use href="icons.svg#close"></use>
           </svg>
         </button>
         <div class="modal__inner">
-          <div class="modal__header"></div>
-          <div class="modal__body"></div>
+          <div class="modal__header">
+            <h3 class="tag">Выберите филиал клиники</h3>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="#" name="filial">
+              <div class="form__step form-step">
+                <div class="select">
+                  <label class="select__label" for="city">Город</label>
+                  <select class="select__item" id="city" name="city">
+                    <option value="0" selected="selected">Краснодар</option>
+                    <option value="1">Адыгейск</option>
+                    <option value="2">Новороссийск</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+                <div class="select">
+                  <label class="select__label" for="filial">Филиал</label>
+                  <select class="select__item" id="filial" name="filial">
+                    <option value="0" selected="selected">Ул. московская, 40</option>
+                    <option value="1">Ул. московская, 40</option>
+                    <option value="2">Ул. московская, 40</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Выбрать</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <script src="js/modal.js"></script>
-    <script src="js/template.js"> </script>
-    <script src="js/schedule.js"></script>
+    <div class="modal__wrapper" data-modal="login">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <div class="modal-tabs"><a class="modal-tabs__item tag tag_link js-modal-filter" data-filter="auth" href="#">Вход</a><a class="modal-tabs__item tag tag_link js-modal-filter" data-filter="signup" href="#">Регистрация</a></div>
+          </div>
+          <div class="modal__body">
+            <div class="modal-tab-page js-modal-tab" data-filter="auth">
+              <form class="form" action="#" name="login">
+                <div class="form__step form-step">
+                  <div class="input">
+                    <input class="input__value" placeholder="Иванов Иван Иванович" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">Ваше имя*</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                    <label class="input__label" for="password">Ваш пароль*</label>
+                  </div><a class="tag tag_link auth-link" href="#">Забыли пароль?</a>
+                </div>
+                <div class="form__step form-step form__footer">
+                  <div class="button">войти</div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-tab-page js-modal-tab" data-filter="signup">
+              <form class="form" action="#" name="signup">
+                <div class="form__step form-step">
+                  <div class="input">
+                    <input class="input__value" placeholder="ФИО" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">ФИО</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                    <label class="input__label" for="password">Ваш пароль*</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="+7(___) ___-__-__" id="phone" name="phone" type="text"/>
+                    <label class="input__label" for="phone">Телефон</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                </div>
+                <div class="form__step form-step form__footer">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен с<a class="link_color" href="/privacy">
+                           условиями обработки  персональных данных </a></span></span>
+                  </label>
+                  <button class="button">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="order">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <div class="doctor-card doctor-card_fold">
+              <div class="card__img-wrapper doctor-card__photo"><img class="card__img" width="300" height="313" src="assets/img/lady.jpg"/></div>
+              <div class="card__inner doctor-card__inner">
+                <div class="doctor-card__header">
+                  <h3 class="card__title doctor-card__name">Лымарь Марина Петровна</h3>
+                  <div class="doctor-card__meta tag">Акушер-гинеколог</div>
+                </div>
+                <div class="doctor-card__body">
+                  <div class="card__desc price">Приём от 2500 руб.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="#" name="order">
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Дата и время</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="form-step__row">
+                    <output class="tag" name="ordertime_format">16 октября, 9:00</output>
+                    <svg class="icon" width="30" height="30">
+                      <use href="icons.svg#date"></use>
+                    </svg>
+                    <input type="hidden" name="ordertime">
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Способ оплаты</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="form-step__row form-step__row_split">
+                    <div class="control-payment">
+                      <input class="control-payment__input control__input" type="radio" id="card" name="payment"/>
+                      <label class="control-payment__label control-payment__label_rounded link" for="card">
+                        <svg class="control-payment__icon" height="24" width="35">
+                          <use href="icons.svg#card"></use>
+                        </svg><span class="control-payment__name">Банковской картой</span>
+                      </label>
+                    </div>
+                    <div class="control-payment">
+                      <input class="control-payment__input control__input" type="radio" id="cache" name="payment"/>
+                      <label class="control-payment__label control-payment__label_rounded link" for="cache">
+                        <svg class="control-payment__icon" height="24" width="35">
+                          <use href="icons.svg#cache"></use>
+                        </svg><span class="control-payment__name">Наличными</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Пациент</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="input">
+                    <input class="input__value" placeholder="ФИО" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">ФИО</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="+7(___) ___-__-__" id="phone" name="phone" type="text"/>
+                    <label class="input__label" for="phone">Телефон</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Услуга</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="form-step__row"> <span class="tag">консультация</span><span class="price">500 руб.</span></div>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button button_large">Записаться на прием</button>
+                <label class="control">
+                  <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен с<a class="link_color" href="/privacy">
+                         условиями обработки персональных данных</a></span></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="calendar">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <div class="doctor-card doctor-card_fold">
+              <div class="card__img-wrapper doctor-card__photo"><img class="card__img" width="300" height="313" src="assets/img/lady.jpg"/></div>
+              <div class="card__inner doctor-card__inner">
+                <div class="doctor-card__header">
+                  <h3 class="card__title doctor-card__name">Лымарь Марина Петровна</h3>
+                  <div class="doctor-card__meta tag">Акушер-гинеколог</div>
+                </div>
+                <div class="doctor-card__body">
+                  <div class="card__desc price">Приём от 2500 руб.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__body">
+            <div class="schedule schedule_single">
+              <div class="schedule__header schedule__header_single">
+                <div class="schedule__inner"><a class="button-arrow button-arrow_prev schedule__nav schedule__nav_prev" href="#">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></a>
+                  <table class="schedule__calendar calendar-grid">
+                    <tr class="schedule__days">
+                      <td>19.07</td>
+                      <td>20.07</td>
+                      <td>21.07</td>
+                      <td>22.07</td>
+                      <td>23.07</td>
+                    </tr>
+                    <tr class="schedule__week">
+                      <td>пн</td>
+                      <td>вт</td>
+                      <td>ср</td>
+                      <td>чт</td>
+                      <td>пт</td>
+                    </tr>
+                  </table><a class="button-arrow button-arrow_next schedule__nav schedule__nav_next" href="#">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="schedule__body">
+                <div class="schedule__inner">
+                  <table class="timetable calendar-grid">
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 8:00">8:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 8:00">8:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 8:00">8:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 8:00">8:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 9:00">9:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 9:00">9:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 9:00">9:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 9:00">9:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 9:00">9:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 10:00">10:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 10:00">10:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 10:00">10:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 10:00">10:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 11:00">11:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 11:00">11:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 11:00">11:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 11:00">11:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 11:00">11:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 12:00">12:00</a></td>
+                      <td class="timetable__cell"><span class="timetable__time">12:00</span></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 12:00">12:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 13:00">13:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 13:00">13:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 13:00">13:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 13:00">13:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 13:00">13:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 14:00">14:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 14:00">14:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 14:00">14:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 15:00">15:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 15:00">15:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 15:00">15:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 15:00">15:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 15:00">15:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 16:00">16:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 16:00">16:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 16:00">16:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 16:00">16:00</a></td>
+                      <td class="timetable__cell"></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 17:00">17:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 17:00">17:00</a></td>
+                      <td class="timetable__cell"><span class="timetable__time">17:00</span></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 17:00">17:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 17:00">17:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 18:00">18:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/20 18:00">18:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 18:00">18:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 18:00">18:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 19:00">19:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 19:00">19:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 19:00">19:00</a></td>
+                      <td class="timetable__cell"></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 20:00">20:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 20:00">20:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 20:00">20:00</a></td>
+                      <td class="timetable__cell"></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/19 21:00">21:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/21 21:00">21:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/22 21:00">21:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/6/23 21:00">21:00</a></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/simplebar.min.js"> </script>
+    <script src="js/app.js"></script>
+    <script src="js/order.js"> </script>
   </body>
 </html>
