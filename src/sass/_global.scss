@@ -7,7 +7,7 @@
     @include flex-gap($gutter);
 
     &__item {
-        line-height: 1.2;
+        line-height: 1.4;
 
         &.js-active {
             color: $color-text-semi-muted;
@@ -18,12 +18,6 @@
 }
 
 .modal-tab-page {
-
-    &:target {
-        display: block;
-        // animation: fadeIn 0.3s ease-in;
-    }
-
     &[data-filter]:not(.js-active) {
         display: none;
     }

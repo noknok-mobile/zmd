@@ -1,32 +1,41 @@
-mixin schedule_header(calendar)
+mixin schedule_header
     .schedule__header(class= attributes.class)
         .schedule__inner
             +button-arrow('prev')(href="#").schedule__nav.schedule__nav_prev
             table.schedule__calendar.calendar-grid
                 tr.schedule__days
-                    each date in calendar.days 
-                        td= date
+                    - let date = new Date()
+                    - for(let i = 0; i < 5;i++)
+                        - date.setDate(date.getDate()+1)
+                        td= date.toLocaleString('ru', {month:"2-digit", day:"2-digit"})
                 tr.schedule__week
-                    each weekday in calendar.weekdays 
-                        td= weekday
+                    - date = new Date()
+                    - for(let i = 0; i < 5;i++)
+                        - console.log(now)
+                        - date.setDate(date.getDate()+1)
+                        td= date.toLocaleString('ru', {weekday:"short"})
             +button-arrow('next')(href="#").schedule__nav.schedule__nav_next
 
 mixin schedule_body(isExpand = false)
     .schedule__body
         .schedule__inner(class= !isExpand? "schedule__inner_fold js-expand-target" : "")
             table.timetable.calendar-grid
-                - let rowsCount = calendar.days.length
-                - for(let i= 8; i <= 21;i++)
+                - const currentDate = new Date()
+                - const month = currentDate.getMonth()
+                - let day = currentDate.getDate()
+                - console.log(day)
+                - for(let hour = 8; hour <= 21;hour++)
                     tr  
-                        - for(let j=0; j<rowsCount; j++)
+                        - let rowsCount = 5
+                        - for(let date = day, j= 0; j < rowsCount; date++, j++)
                             - let emptyIndex = Math.ceil(Math.random() * rowsCount)
                             - let busyIndex = Math.ceil(Math.random() * rowsCount)
-                            if (j != emptyIndex )
+                            if (j != emptyIndex && hour != busyIndex)
                                 td.timetable__cell
-                                    a.timetable__time.timetable__time_available.js-order-time.js-open(data-modal="order" href="#" data-ordertime="2020-01-12 "+i+":00")= +i+":00"
-                            else if (j == busyIndex || i == busyIndex)
+                                    a.timetable__time.timetable__time_available.js-order-time.js-open(data-modal="order" href="#" data-ordertime=`2021-${month}-${date+1} ${hour}:00`)= `${hour}:00`
+                            else if (j == busyIndex || hour == busyIndex)
                                 td.timetable__cell
-                                    span.timetable__time= +i+":00"
+                                    span.timetable__time= `${hour}:00`
                             else
                                 td.timetable__cell
     if !isExpand
@@ -34,11 +43,11 @@ mixin schedule_body(isExpand = false)
             a.button.schedule__more-link.js-expand-trigger(data-expand="")
                 span.js-expand-label Развернуть все
                 +button-arrow(dir, true).schedule__more-link__arrow
-    
 
-mixin schedule(calendar, isExpand)
+
+mixin schedule(isExpand)
     .schedule.schedule_single
-        +schedule_header(calendar).schedule__header_single
+        +schedule_header.schedule__header_single
         +schedule_body(isExpand)
 
 mixin schedule__more-link(title, dir=null)

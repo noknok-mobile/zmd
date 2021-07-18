@@ -12,7 +12,7 @@ block content
                         +select({label:"Направление", options: ["акушерство и гинекология", "кардиология", "Проктология"]})#spec.select_inline
 
                     .schedule-filter__section.schedule-filter__section_calendar
-                        +schedule_header(calendar)
+                        +schedule_header
                 .spec-row.schedule-grid 
                     .spec-row__info 
                         +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
