@@ -1611,19 +1611,19 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   padding-bottom: calc(55px + var(--custom-header));
 }
 .page-header_bskg-pill {
-  background-image: url("bckg.svg#pill");
+  background-image: url("assets/bckg/pill.svg");
   background-size: 100px;
 }
 .page-header_bskg-cross {
-  background-image: url("bckg.svg#cross");
+  background-image: url("assets/bckg/cross.svg");
   background-size: 165px;
 }
 .page-header_bskg-stethoscope {
-  background-image: url("bckg.svg#stethoscope");
+  background-image: url("assets/bckg/stethoscope.svg");
   background-size: 230px;
 }
 .page-header_bskg-syringe {
-  background-image: url("bckg.svg#syringe");
+  background-image: url("assets/bckg/syringe.svg");
   background-size: 170px;
 }
 .page-header__inner_extra {
