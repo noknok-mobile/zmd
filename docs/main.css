@@ -2204,6 +2204,11 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   min-width: 260px;
   flex-shrink: 0;
 }
+.branch_account .branch__img {
+  max-width: 30px;
+  justify-self: end;
+}
+
 .branch_carousel .branch__img svg {
   width: 40px;
   height: 40px;
