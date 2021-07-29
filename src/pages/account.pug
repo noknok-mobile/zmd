@@ -7,8 +7,8 @@ block content
         .page__content
             .page-section
                 .branch-list.branch-list_table
-                    +branch({text:'Профиль', icon: 'icons.svg#tomo'}).tile.branch_tile
-                    +branch({text:'Мои записи', icon: 'icons.svg#tomo'}).tile.branch_tile
+                    +branch({text:'Профиль', icon: 'icons.svg#account_section'}).tile.branch_tile.branch_account
+                    +branch({text:'Мои записи', icon: 'icons.svg#list'}).tile.branch_tile.branch_account
 
 block prepend vars 
     - const title = "Личный кабинет"
