@@ -264,7 +264,7 @@
                   <div class="input">
                     <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
                     <label class="input__label" for="password">Ваш пароль*</label>
-                  </div><a class="tag tag_link auth-link" href="#">Забыли пароль?</a>
+                  </div><a class="tag tag_link auth-link js-open" data-modal="password" href="#">Забыли пароль?</a>
                 </div>
                 <div class="form__step form-step form__footer">
                   <div class="button">войти</div>
@@ -300,6 +300,71 @@
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="password">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <h2 class="tag">Восстановление пароля</h2>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="ajax/psw_request.html" name="password">
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Для восстановления пароля необходимо указать e-mail</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Получить ссылку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="change_password">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <h2 class="tag">Восстановление пароля</h2>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="ajax/psw_change.html" name="change_password">
+              <div class="form__step form-step">
+                <div class="input">
+                  <input class="input__value" placeholder="Введите новый пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                  <label class="input__label" for="password">Введите новый пароль*</label>
+                </div>
+                <div class="input">
+                  <input class="input__value" placeholder="Подтвердите пароль*" id="password_confirm" name="password_confirm" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                  <label class="input__label" for="password_confirm">Подтвердите пароль*</label>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Сохранить</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
