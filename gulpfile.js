@@ -19,7 +19,7 @@ const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 
 function compileHtml() {
-    return src('src/pages/*.pug')
+    return src('src/pages/**/*.pug')
         .pipe(pug({
             pretty: true,
             basedir: './src/'

@@ -1,0 +1,7 @@
+include /layout/mixins
+.form
+    +form-step
+        | Письмо со ссылкой для восстановления пароля было отправлено на iv********@mail.ru.
+        a.tag.tag_link.auth-link.js-open(data-modal="password" href="#") Изменить e-mail              
+    +form-step.form__footer
+        button.button Закрыть

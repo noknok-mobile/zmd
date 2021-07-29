@@ -35,8 +35,10 @@ html(lang="ru")
             block content
         include footer/footer
         block popup
-            include /pages/modal/filial
-            include /pages/modal/login
+            include modal/filial
+            include modal/login
+            include modal/psw_request
+            include modal/psw_change
         block scripts
             script(src="js/simplebar.min.js") 
             script(src="js/app.js")

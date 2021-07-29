@@ -48,8 +48,8 @@ block content
                                         a.link.link_color.tag(href="#") 20 октября 
                                             svg(width="20" height="20") #[use(href="icons.svg#arrow" transform="rotate(-90, 10, 10)")]
 block append popup 
-    include modal/order
-    include modal/calendar
+    include /layout/modal/order
+    include /layout/modal/calendar
 block append scripts
     script(src="js/order.js") 
 
