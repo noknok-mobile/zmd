@@ -3,6 +3,9 @@
     position: relative;
     z-index: 1;
 
+    &__inner{
+        margin-bottom: 1.8rem;
+    }
     &> :first-child {
         margin-top: 0;
     }
