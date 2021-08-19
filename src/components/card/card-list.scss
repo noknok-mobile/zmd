@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-row-gap: $offset-s;
+    grid-auto-rows: minmax(290px,auto);
 
     &_service {
         grid-auto-rows: 300px;
