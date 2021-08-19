@@ -218,6 +218,11 @@ for (let form of forms) {
   });
 }
 
+const sidebarMenu = document.querySelector('.sidebar-menu');
+if(sidebarMenu)
+    document.querySelector('.js-sidebar-open').addEventListener('click', function (e) {
+    sidebarMenu.classList.toggle('sidebar-menu_unfold');
+})
 const openButton = document.querySelector('.js-menu-toggle');
 const header = document.querySelector('.header-mobile');
 openButton.addEventListener('click', toggleMenu);
@@ -227,9 +232,4 @@ function toggleMenu() {
     isOpen = header.classList.contains('js-open');
     disableWindowScroll(isOpen);
 }
-const sidebarMenu = document.querySelector('.sidebar-menu');
-if(sidebarMenu)
-    document.querySelector('.js-sidebar-open').addEventListener('click', function (e) {
-    sidebarMenu.classList.toggle('sidebar-menu_unfold');
-})
 //# sourceMappingURL=../app.js.map

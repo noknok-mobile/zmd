@@ -1232,6 +1232,7 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   display: grid;
   grid-template-columns: auto;
   grid-row-gap: var(--offset-small);
+  grid-auto-rows: minmax(290px, auto);
 }
 .card-list_service {
   grid-auto-rows: 300px;
@@ -1789,6 +1790,9 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   position: relative;
   z-index: 1;
   /*modifiers*/
+}
+.page-section__inner {
+  margin-bottom: 1.8rem;
 }
 .page-section > :first-child {
   margin-top: 0;
@@ -3061,6 +3065,10 @@ body {
 
 .modal-tab-page[data-filter]:not(.js-active) {
   display: none;
+}
+
+.intro-image {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1900px) {

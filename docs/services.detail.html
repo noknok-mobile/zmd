@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои записи</title>
+    <title>Наши услуги</title>
     <link rel="stylesheet" href="main.css">
   </head>
   <body class="page">
@@ -101,118 +101,71 @@
         </div>
       </div>
     </header>
-        <div class="page__header page-header page-header_bskg-pill">
+        <div class="page__header page-header page-header_bskg-stethoscope">
           <div class="container page-header__inner">
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
-                <li class="breadcrumb__item breadcrumb__item_active">Мои записи</li>
+                <li class="breadcrumb__item breadcrumb__item_active">Услуги</li>
               </ul>
             </div>
-            <h1 class="page-header__title title">Мои записи</h1>
+            <h1 class="page-header__title title">Наши услуги</h1>
           </div>
         </div>
     <div class="container">
       <div class="page__grid">
-        <div class="page__sidebar">
+        <div class="page__sidebar"> 
           <nav class="sidebar-menu page__menu">
             <div class="sidebar-menu__header tag js-sidebar-open">Меню <span class="button-arrow">
                 <svg class="button-arrow__icon">
                   <use href="icons.svg#arrow"></use>
                 </svg></span>
-            </div><a class="sidebar-menu__item link" href="#">профиль</a><a class="sidebar-menu__item link" href="#">мои записи</a>
+            </div><a class="sidebar-menu__item link" href="#">общая информация</a><a class="sidebar-menu__item link" href="#">лицензии и сертификаты</a><a class="sidebar-menu__item link" href="#">Новости</a><a class="sidebar-menu__item link" href="#">Тендеры</a><a class="sidebar-menu__item link" href="#">вакансии</a><a class="sidebar-menu__item link" href="#">Вопрос-ответ</a><a class="sidebar-menu__item link" href="#">документы</a>
           </nav>
         </div>
         <div class="page__content">
-          <div class="page-section">
-            <div class="tab-list order-list-nav">
-              <button class="js-filter button tab tab_active">Текущие записи</button>
-              <button class="js-filter button tab">Прошедшие записи</button>
-            </div>
-            <div class="order-list">
-              <div class="order-list__head">
-                <div class="order-list__row">
-                  <div class="order-list__cell">Дата и время</div>
-                  <div class="order-list__cell">Адрес</div>
-                  <div class="order-list__cell">Врач</div>
-                  <div class="order-list__cell">Статус</div>
-                </div>
-              </div>
-              <div class="order-list__body">
-                <details class="spoiler order">
-                  <summary class="spoiler__title order__head">
-                    <div class="order-list__row">
-                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
-                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
-                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
-                      <div class="order__status order__status_paid">Оплачен</div>
-                    </div>
-                  </summary>
-                  <div class="order-list__row spoiler__more order__more">
-                    <div class="order__desc">
-                      <div class="order__name">Запись к акушер-гинекологу</div>
-                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
-                    </div>
-                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a>
-                    </div>
-                  </div>
-                </details>
-                <details class="spoiler order">
-                  <summary class="spoiler__title order__head">
-                    <div class="order-list__row">
-                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
-                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
-                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
-                      <div class="order__status order__status_unavailable">Оплата наличными</div>
-                    </div>
-                  </summary>
-                  <div class="order-list__row spoiler__more order__more">
-                    <div class="order__desc">
-                      <div class="order__name">Запись к акушер-гинекологу</div>
-                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
-                    </div>
-                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a>
-                    </div>
-                  </div>
-                </details>
-                <details class="spoiler order">
-                  <summary class="spoiler__title order__head">
-                    <div class="order-list__row">
-                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
-                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
-                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
-                      <div class="order__status order__status_unpaid">Ожидает оплаты</div>
-                    </div>
-                  </summary>
-                  <div class="order-list__row spoiler__more order__more">
-                    <div class="order__desc">
-                      <div class="order__name">Запись к акушер-гинекологу</div>
-                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
-                    </div>
-                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a><a class="order__button order__button_pay button" href="#">Оплатить</a>
-                    </div>
-                  </div>
-                </details>
-                <details class="spoiler order">
-                  <summary class="spoiler__title order__head">
-                    <div class="order-list__row">
-                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
-                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
-                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
-                      <div class="order__status order__status_complete">Завершен</div>
-                    </div>
-                  </summary>
-                  <div class="order-list__row spoiler__more order__more">
-                    <div class="order__desc">
-                      <div class="order__name">Запись к акушер-гинекологу</div>
-                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </div>
-          </div>
+          <section class="page-section"> 
+            <p class="lead">Вы приехали пройти обследование в медицинской клинике «ЗИМАМЕD» из другого города или региона - мы предлагаем остановиться у нас!</p>
+            <p>Клиника и гостинично-развлекательный комплекс «Южный» расположены в одном большом здании! Комфортабельные номера гостиницы располагают всем необходимым для отдыха и восстановления сил путешественников в городе Краснодаре.</p>
+            <p>ГРК "Южный" расположен в экологически чистом районе города Краснодара, внутренняя территория нашей гостиницы - уникальная парковая зона в центре нашего города</p>
+          </section>
+          <section class="page-section">
+            <h2 class="title mark">Преимущества, которые Вы оцените, посетив нашу гостиницу</h2>
+            <p>Удобная охраняемая парковка для Ваших автомобилей <br>Ресторан с разнообразной, изысканой и недорогой кухней (русская, европейская, кавказская, свежие морепродукты)<br>
+              Завтраки "шведский стол" - включены в стоимость номеров на весь период проживания <br>
+              Интернет WI-FI - включен в стоимость номеров на весь период проживания <br>
+              Накопительные дисконтные карты <br>
+              Гостиничные номера   различных категорий комфортности (стандартные, полулюксы, студии и аппартаменты) <br>
+              Просторная сауна (большой холл, три комнаты отдыха, большой бассейн с гейзером, отменная парилка) <br>
+              Приветливый и профессиональный персонал <br>
+              Трансфер из/в аэропорта и ж/д вокзала <br>
+              Традиционное для нашего города  высокое качество обслуживания <br>
+            </p>
+          </section>
+          <section class="page-section"> 
+            <h2 class="title mark">Гостиница «Отель «ЮЖНЫЙ»</h2>
+            <p>Адрес: 350072, г. Краснодар, ул. Московская, 40 <br>Служба приема и размещения: +7 (861) 257-04-16, 257-05-59 <br>
+              Факс: +7 (861) 257-05-59 <br>
+              E-mail: info@yugmotel.ru <br>
+              Web: www.yugmotel.ru <br>
+            </p>
+          </section>
+          <section class="page-section"> 
+            <h2 class="title mark">РЕСТОРАНЪ «ОТЕЛЬ»</h2>
+            <p> Тел.: +7 (861) 257-13-00, 252-00-29 <br>Тел.сот.: +7 (918) 195-66-50 <br>
+              Конференц-залы: +7 (861) 257-13-00 , +7 (918) 195-66-50 <br>
+              Банкетные залы: +7 (861 )257-13-00, 252-00-29, +7(918)195-66-50 <br>
+              Официальный сайт ресторана: ресторан-отель.рф <br>
+            </p>
+          </section>
         </div>
+        <section class="page-section page-section_wide page-section_no-offset_top">
+          <div class="gallery">
+            <div class="gallery__inner mobile-scrollable"><a class="gallery__item" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__img" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__img" src="assets/img/lady.jpg"/></a><a class="gallery__item" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__img" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item" data-fslightbox="gallery" href="assets/img/doctor_demo.jpg"><img class="gallery__img" src="assets/img/doctor_demo.jpg"/></a><a class="gallery__item" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__img" src="assets/img/lady.jpg"/></a><a class="gallery__item" data-fslightbox="gallery" href="assets/img/lady.jpg"><img class="gallery__img" src="assets/img/lady.jpg"/></a>
+            </div>
+            <script src="js/fslightbox.js"> </script>
+          </div>
+        </section>
       </div>
     </div>
     <footer class="footer">

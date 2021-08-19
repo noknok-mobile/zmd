@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои записи</title>
+    <title>Вопросы и ответы</title>
     <link rel="stylesheet" href="main.css">
   </head>
   <body class="page">
@@ -101,15 +101,15 @@
         </div>
       </div>
     </header>
-        <div class="page__header page-header page-header_bskg-pill">
+        <div class="page__header page-header page-header_bskg-stethoscope">
           <div class="container page-header__inner">
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
-                <li class="breadcrumb__item breadcrumb__item_active">Мои записи</li>
+                <li class="breadcrumb__item breadcrumb__item_active">Вопросы и ответы</li>
               </ul>
             </div>
-            <h1 class="page-header__title title">Мои записи</h1>
+            <h1 class="page-header__title title">Вопросы и ответы</h1>
           </div>
         </div>
     <div class="container">
@@ -120,99 +120,33 @@
                 <svg class="button-arrow__icon">
                   <use href="icons.svg#arrow"></use>
                 </svg></span>
-            </div><a class="sidebar-menu__item link" href="#">профиль</a><a class="sidebar-menu__item link" href="#">мои записи</a>
+            </div><a class="sidebar-menu__item link" href="#">общая информация</a><a class="sidebar-menu__item link" href="#">лицензии и сертификаты</a><a class="sidebar-menu__item link" href="#">Новости</a><a class="sidebar-menu__item link" href="#">Тендеры</a><a class="sidebar-menu__item link" href="#">вакансии</a><a class="sidebar-menu__item link" href="#">Вопрос-ответ</a><a class="sidebar-menu__item link" href="#">документы</a>
           </nav>
         </div>
-        <div class="page__content">
-          <div class="page-section">
-            <div class="tab-list order-list-nav">
-              <button class="js-filter button tab tab_active">Текущие записи</button>
-              <button class="js-filter button tab">Прошедшие записи</button>
-            </div>
-            <div class="order-list">
-              <div class="order-list__head">
-                <div class="order-list__row">
-                  <div class="order-list__cell">Дата и время</div>
-                  <div class="order-list__cell">Адрес</div>
-                  <div class="order-list__cell">Врач</div>
-                  <div class="order-list__cell">Статус</div>
-                </div>
+        <main class="page__content"> 
+          <section class="page-section">
+            <details class="spoiler spoiler_decorated">
+              <summary class="spoiler__title">Воробьев Михаил Петрович</summary>
+              <div class="spoiler__more">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень доволен.
               </div>
-              <div class="order-list__body">
-                <details class="spoiler order">
-                  <summary class="spoiler__title order__head">
-                    <div class="order-list__row">
-                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
-                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
-                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
-                      <div class="order__status order__status_paid">Оплачен</div>
-                    </div>
-                  </summary>
-                  <div class="order-list__row spoiler__more order__more">
-                    <div class="order__desc">
-                      <div class="order__name">Запись к акушер-гинекологу</div>
-                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
-                    </div>
-                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a>
-                    </div>
-                  </div>
-                </details>
-                <details class="spoiler order">
-                  <summary class="spoiler__title order__head">
-                    <div class="order-list__row">
-                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
-                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
-                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
-                      <div class="order__status order__status_unavailable">Оплата наличными</div>
-                    </div>
-                  </summary>
-                  <div class="order-list__row spoiler__more order__more">
-                    <div class="order__desc">
-                      <div class="order__name">Запись к акушер-гинекологу</div>
-                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
-                    </div>
-                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a>
-                    </div>
-                  </div>
-                </details>
-                <details class="spoiler order">
-                  <summary class="spoiler__title order__head">
-                    <div class="order-list__row">
-                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
-                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
-                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
-                      <div class="order__status order__status_unpaid">Ожидает оплаты</div>
-                    </div>
-                  </summary>
-                  <div class="order-list__row spoiler__more order__more">
-                    <div class="order__desc">
-                      <div class="order__name">Запись к акушер-гинекологу</div>
-                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
-                    </div>
-                    <div class="order__actions"><a class="order__button link link_color tag" href="#">отменить запись</a><a class="order__button order__button_pay button" href="#">Оплатить</a>
-                    </div>
-                  </div>
-                </details>
-                <details class="spoiler order">
-                  <summary class="spoiler__title order__head">
-                    <div class="order-list__row">
-                      <div class="order__date">Четверг,<br> 14.10.20, 9:00</div>
-                      <div class="order__address">г. Краснодар, ул.Московская,&nbsp;40 </div>
-                      <div class="order__doctor">Мейпариани Елена Владимировна</div>
-                      <div class="order__status order__status_complete">Завершен</div>
-                    </div>
-                  </summary>
-                  <div class="order-list__row spoiler__more order__more">
-                    <div class="order__desc">
-                      <div class="order__name">Запись к акушер-гинекологу</div>
-                      <div class="order__price price">Стоимость приема 2500&nbsp;руб.</div>
-                    </div>
-                  </div>
-                </details>
+            </details>
+            <details class="spoiler spoiler_decorated">
+              <summary class="spoiler__title">Елена</summary>
+              <div class="spoiler__more">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень доволен.
               </div>
-            </div>
-          </div>
-        </div>
+            </details>
+            <details class="spoiler spoiler_decorated">
+              <summary class="spoiler__title">Ирина</summary>
+              <div class="spoiler__more">Приезжаю в этот Центр исключительно ради получения консультации Невролога Вол Анны Евгеньевны, очень довольна, спасибо ей огромное. Отдельное спасибо администратору Марии (работала 07.06.2021), коммуникабельная, приветливая, доброжелательная, почаще бы встречались такие люди в нашей жизни! С уважением
+              </div>
+            </details>
+            <details class="spoiler spoiler_decorated">
+              <summary class="spoiler__title">Татьяна Селезнева</summary>
+              <div class="spoiler__more">Ходили на УЗИ с ребенком. Выполнили 3 вида УЗИ, все достаточно быстро, к результатам обследования вопросов нет. Девушки-администраторы все внимательны и учтивы.
+              </div>
+            </details>
+          </section>
+        </main>
       </div>
     </div>
     <footer class="footer">
