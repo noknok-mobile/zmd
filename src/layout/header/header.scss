@@ -13,5 +13,10 @@
 
   &__link {
     @include text(inherit, 600);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
   }
 }

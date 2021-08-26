@@ -7,12 +7,14 @@ include mixins
 - const footerSchedule = 'пн-сб 8:00 — 23:00'
 - const logo = 'assets/logo.png'
 
+
 block vars
     - const phoneLink = phone.replace(/[()-\s]/gi, '');
     - let mainpage = false
     - let pageHeaderImage
     - let path = ['Главная', title]
     - let menu = ['общая информация','лицензии и сертификаты','Новости','Тендеры','вакансии','Вопрос-ответ','документы']
+    - let login = false
 
 doctype html
 html(lang="ru")

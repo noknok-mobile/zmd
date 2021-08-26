@@ -53,12 +53,10 @@
 
     &__content {
         display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: $color-accent;
         &_flex{
             gap: 0 $gutter;
             display: flex;
+            flex-wrap: wrap;
             @include laptop{
                 gap: unset;
                 justify-content: space-between;

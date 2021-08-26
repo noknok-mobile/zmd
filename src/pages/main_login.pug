@@ -1,0 +1,58 @@
+extends /layout/template 
+
+block content
+    main
+        h1.visually-hidden Медицинский центр "ЗИМАМЕД"
+        .big-carousel.swiper-container 
+            .big-carousel__inner.swiper-wrapper
+                each banner in banners
+                    +banner(banner).swiper-slide
+            .big-carousel__pagination.slider-pagination
+            .big-carousel__nav-wrapper
+                .big-carousel__nav.big-carousel__nav_prev
+                .big-carousel__nav.big-carousel__nav_next
+
+        .page-section
+            .container 
+                +overview(branchParams).branch-list
+                    .slider-container.branch-list.branch-list_carousel.js-branch-slider
+                        .swiper-wrapper.branch-list__inner
+                            each branch in branches 
+                                +branch(branch, true).branch_carousel
+                    .slider-pagination.branch-list__pagination
+
+        .page-section
+            +intro({video: 'assets/video/walk.mp4', poster: '/walk.mp4', button:'контакты медцентров'}).intro_animated 
+                +about('медцентры')
+                    | 6 современных медицинских центров в Краснодарском крае и Республике Адыгея
+
+        .page-section     
+            section.container 
+                +about('специалисты')(class="about_single")
+                    | Наши врачи - доктора #[br] и #[span.mark кандидаты медицинских наук]
+            +intro({video: 'assets/video/doctor.mp4', poster:'/walk.mp4', button: 'наши специалисты'}).intro_animated
+                | В клинике работают профессионалы высшей медицинской категории. В отделениях центра стабильный кадровый состав, который в своей работе применяет научный подход и регулярно повышает квалификацию в лучших клиниках России и мира.
+            
+        .page-section.page-section_background
+            .container
+                +overview(reviewParams).review-list
+                    .slider-container.js-review-slider
+                        .swiper-wrapper.review-list
+                            each review in reviews 
+                                +review(review.text, review.author)
+                    .slider-pagination.review-list__pagination
+
+block append scripts
+    script(src="js/swiper-bundle.min.js") 
+    script(src="js/main.js") 
+
+block append vars 
+    - title = 'Главная'
+    - login = true
+    - mainpage = true
+    - const banners = [{link: '/asd', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться', src:"assets/img/banner.png"},{link: '/', title: 'Скидка 10% на МРТ в&nbsp;воскресенье', desc: 'Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40', button: 'записаться', src:"assets/img/doctor_demo.jpg"}]
+
+    - const branchParams = {title:'Направления', desc:"В центре производится<br><span class='mark'>весь перечень</span> лабораторных и диагностических исследований", buttons:['Bсе направления','все специалисты']}
+    - const branches = [{text:'Хирургический стационар', icon: 'icons.svg#heart'}, {text:'Анализы и диагностика', icon: 'icons.svg#hirurg'},{text:'Компьютерная томография', icon: 'icons.svg#tomo'},{text:'Анализы и диагностика', icon: 'icons.svg#hirurg'},{text:'Компьютерная томография', icon: 'icons.svg#tomo'},{text:'Анализы и диагностика', icon: 'icons.svg#hirurg'},{text:'Хирургический стационар', icon: 'icons.svg#heart'}, {text:'Анализы и диагностика', icon: 'icons.svg#hirurg'},{text:'Компьютерная томография', icon: 'icons.svg#tomo'},{text:'Анализы и диагностика', icon: 'icons.svg#hirurg'},{text:'Компьютерная томография', icon: 'icons.svg#tomo'}]
+    - const reviewParams = {title:'отзывы', desc:"Отзывы наших клиентов&nbsp;— <span class='mark'>лучшее&nbsp;подтверждение</span> нашего прoфессионализма", buttons:['Все отзывы']};
+    - const reviews = [{text: 'Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень доволен.', author: 'Воробьев<br>Михаил Петрович'},{text: 'Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень доволен.', author: 'Елена'}, {text: 'Приезжаю в этот Центр исключительно ради получения консультации Невролога Вол Анны Евгеньевны, очень довольна, спасибо ей огромное. Отдельное спасибо администратору Марии (работала 07.06.2021), коммуникабельная, приветливая, доброжелательная, почаще бы встречались такие люди в нашей жизни! С уважением', author: 'Ирина'}, {text: 'Ходили на УЗИ с ребенком. Выполнили 3 вида УЗИ, все достаточно быстро, к результатам обследования вопросов нет. Девушки-администраторы все внимательны и учтивы.', author: 'Татьяна Селезнева'}]

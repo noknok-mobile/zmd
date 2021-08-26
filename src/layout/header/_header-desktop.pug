@@ -21,8 +21,12 @@
                 .header-info.header-info_personal
                     span.header-info__title Личный кабинет:
                     .header-info__content.header-info__content_flex
-                        a.header__link.link.link_color.js-open.js-modal-filter(data-modal="login" data-filter="auth" href="#") Вход
-                        a.header__link.link.link_color.js-open.js-modal-filter(data-modal="login" data-filter="signup" href="#") Регистрация
+                        if login
+                            a.header__link.link.link_color(href="lk") Пользователь К.С.
+                            a.header__link.link.link_color(href=".") Выйти
+                        else
+                            a.header__link.link.link_color.js-open.js-modal-filter(data-modal="login" data-filter="auth" href="#") Вход
+                            a.header__link.link.link_color.js-open.js-modal-filter(data-modal="login" data-filter="signup" href="#") Регистрация
 
             a.header-desktop__button.button(href="#") Записаться на прием
 
