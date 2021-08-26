@@ -1430,6 +1430,11 @@ input:not(:-ms-input-placeholder) ~ .input__label {
 }
 .header__link {
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .footer {
@@ -1595,13 +1600,11 @@ input:not(:-ms-input-placeholder) ~ .input__label {
 }
 .header-info__content {
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: var(--color-accent);
 }
 .header-info__content_flex {
   gap: 0 var(--gutter);
   display: flex;
+  flex-wrap: wrap;
 }
 
 .page-header {
