@@ -1456,6 +1456,7 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0 var(--gutter);
+  align-items: start;
 }
 .footer__nav-group {
   display: grid;
@@ -1483,6 +1484,7 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "contacts" "promo";
+  gap: 1.2em;
 }
 .footer-info__item {
   display: block;
@@ -3074,13 +3076,23 @@ body {
   margin-bottom: 1rem;
 }
 
+.page-error__title {
+  font-size: calc(var(--font-max)*2.5);
+  font-family: "PT Serif";
+  margin-bottom: 0;
+}
+.page-error__desc {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-bottom: 1.8rem;
+}
 @media (min-width: 1900px) {
   html {
     --container-width: 1200px;
     --gutter: 30px;
   }
 }
-
 @media (max-width: 1899px) {
   html {
     --container-width: 1200px;
@@ -3118,7 +3130,6 @@ body {
     display: none;
   }
 }
-
 @media (max-width: 1400px) {
   html {
     --container-width: 1140px;
@@ -3135,7 +3146,6 @@ body {
     width: 100%;
   }
 }
-
 @media (max-width: 1199px) {
   html {
     --container-width: 960px;
@@ -3227,7 +3237,6 @@ body {
     --custom-header: 300px;
   }
 }
-
 @media (max-width: 991px) {
   html {
     --container-width: 720px;
@@ -3359,7 +3368,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 767px) {
   html {
     --container-width: 540px;
@@ -3496,7 +3504,6 @@ body {
     border-radius: 50px;
   }
 }
-
 @media (max-width: 575px) {
   html {
     --container-width: 320px;
@@ -3600,13 +3607,11 @@ body {
     padding-left: 0;
   }
 }
-
 @media (max-width: 340px) {
   .container {
     padding: 0 15px;
   }
 }
-
 @media (min-width: 1200px) {
   .footer-info__group {
     display: contents;
@@ -3638,7 +3643,6 @@ body {
     border-bottom-left-radius: 0;
   }
 }
-
 @media (min-width: 768px) and (max-width: 991px) {
   .schedule-filter__section_place {
     border-top-right-radius: 0;
@@ -3651,7 +3655,6 @@ body {
     border-bottom-left-radius: 0;
   }
 }
-
 @media (min-width: 576px) and (max-width: 767px) {
   .schedule-filter__section_place {
     border-top-right-radius: 0;
@@ -3664,7 +3667,6 @@ body {
     border-bottom-left-radius: 0;
   }
 }
-
 @media (min-width: 992px) and (max-width: 1199px) {
   .schedule-filter__section_spec {
     border-top-right-radius: 0;
@@ -3677,7 +3679,6 @@ body {
     border-bottom-left-radius: 0;
   }
 }
-
 @media (min-width: 768px) {
   .price-filter__item:first-of-type {
     border-top-right-radius: 0;
