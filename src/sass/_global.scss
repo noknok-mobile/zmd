@@ -26,3 +26,16 @@
 .intro-image{
     margin-bottom: 1rem;
 }
+.page-error{
+    &__title{
+        font-size: calc(var(--font-max)*2.5);
+        font-family: 'PT Serif';
+        margin-bottom: 0;
+    }
+    &__desc{
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        margin-bottom: 1.8rem;
+    }
+}
