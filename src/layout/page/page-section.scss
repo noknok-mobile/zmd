@@ -3,9 +3,14 @@
     position: relative;
     z-index: 1;
 
-    &__inner{
+    &__inner {
         margin-bottom: 1.8rem;
     }
+
+    &__pagination {
+        margin-top: $offset-m;
+    }
+
     &> :first-child {
         margin-top: 0;
     }
@@ -47,7 +52,7 @@
         margin-bottom: $offset-m;
     }
 
-    &_docs + &_docs{
+    &_docs+&_docs {
         margin-top: 0;
     }
 
