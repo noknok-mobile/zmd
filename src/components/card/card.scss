@@ -58,9 +58,8 @@
 
   &__img {
     display: block;
-    position: relative;
     @extend %fill;
-
+   
     &-wrapper {
       grid-area: image;
       max-height: 100%;
@@ -68,7 +67,6 @@
       filter: grayscale(1);
       transition: filter 0.2s ease-out;
       overflow: hidden;
-
       &:hover {
         filter: grayscale(0);
       }

@@ -114,6 +114,9 @@
     }
 
     &__photo {
+        img{
+            position: relative;
+        }
         @include tablet_hrz {
             height: auto;
         }
