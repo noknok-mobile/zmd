@@ -28,7 +28,7 @@ $headers: ("h1", 'h2', 'h3');
 h1:not([class]){
   @extend .title;
 }
-p {
+p:not([class]){
   @extend %paragraph;
 }
 
