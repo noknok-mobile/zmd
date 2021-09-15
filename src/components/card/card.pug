@@ -12,4 +12,4 @@ mixin card(props)
                 a.button(href="#")= props.button
                 block
         .card__img-wrapper
-            img.card__img(src= props.image)
+            img.card__img(class= attributes.class + "__img", src= props.image)

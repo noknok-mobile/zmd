@@ -19,7 +19,9 @@
         padding-right: $offset-s;
 
     }
-
+    &__img{
+        position: relative;
+    }
     &__title {
         font-weight: 600;
         font-family: inherit

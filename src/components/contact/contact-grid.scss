@@ -3,6 +3,7 @@
     grid-template-columns: 4fr minmax(0, 8fr);
     grid-template-areas: 'addresses map';
     padding-top: $offset-l;
+    gap: var(--gutter);
 
     @include tablet {
         grid-template-columns: 1fr;
