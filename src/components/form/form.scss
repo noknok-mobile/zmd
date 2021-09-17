@@ -1,0 +1,96 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: $offset-m;
+
+    &__footer {
+        &_compact {
+            justify-self: start;
+            justify-content: start;
+            width: clamp(250px, 50%, 400px);
+        }
+    }
+}
+
+.form-step {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: $gutter;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include text(m, 600);
+        color: $color-text-semi-muted;
+        position: relative;
+    }
+
+    &__edit {
+        @extend %color-link;
+        display: none;
+    }
+
+    &__body {
+        display: grid;
+        gap: $gutter;
+
+        /*стили для свернутого вида*/
+        &_fake {
+            display: none;
+            @extend %tag;
+            color: $color-accent;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: $gutter;
+        position: relative;
+
+        &_split {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $gutter;
+
+            @include phone_hrz {
+                grid-template-columns: 1fr;
+            }
+        }
+        &_with-tip{
+            grid-template-columns: 1fr auto;
+            @include phone_hrz{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .icon {
+            color: $color-text-muted;
+        }
+    }
+
+    &__tip {
+        @include text(xs);
+        color: $color-text-muted;
+        max-width: 250px;
+        @include phone_hrz{
+            grid-row: -1/1;
+        }
+    }
+
+    &__more {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__next {
+        @extend %color-link;
+        align-self: start;
+    }
+}

@@ -1,0 +1,17 @@
+extends /layout/template
+
+block content
+    .page__grid 
+        .page__sidebar
+            +sidebar-menu(menu)
+        .page__content
+            .page-section
+                main.licence-list
+                    - for(let i=0; i < 8; i++)
+                        +licence(licences[0].title)(src= licences[0].img)
+                +pagination({count: 7, current: 1}).page-section__pagination
+block append scripts 
+    script(src="js/fslightbox.js") 
+block prepend vars
+    - const title = "Лицензии"
+    - const licences = [{title:"Министерство здравоохранения Краснодарского края", img: "assets/img/licence.jpg"}]

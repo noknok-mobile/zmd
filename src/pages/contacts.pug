@@ -1,0 +1,58 @@
+extends /layout/template
+
+block content 
+    .contact-grid
+        .contact-grid__sidebar
+            .contact.contact_short
+                .contact__title.mark Единый call-центр по г. Краснодар #[br]
+                .contact__more 
+                    | Tел.: 8 861 257 15 00 #[br]
+                    | Режим работы: Круглосуточно
+            - for(let i =0; i < 4;i++)
+                +contact(data)
+
+        .contact-grid__map
+            .contact-map__wrapper
+                .contact-map
+                    script(async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abf18f3a8a6795f0ef60b69ac7a8b5c152bcfca74022dc1144cf4bdc879debfc0&amp;width=100%25&amp;")
+
+block append scripts 
+    script.
+        for (let elem of document.querySelectorAll('.contact')) {
+            elem.addEventListener('toggle', onAccordionItemToggle)
+        } 
+
+block prepend vars 
+    - const title = "Контакты"
+    - 
+        const data = {
+            address:"Краснодар, ул. Московская, 40", 
+            table: [
+                {
+                    name: "Телефон:", 
+                    value:"8 (861) 257-15-00 8<br>(861) 991-44-84"
+                }, 
+                {
+                    name:"Частная скорая помощь:", 
+                    value:"8 (861) 298-30-30"
+                },
+                {
+                    name:"Консультативные приемы:", 
+                    value:"ежедневно с 8 до 18"
+                },
+                {
+                    name:"Рентгенодиагностика, КТ, МРТ, УЗИ:", 
+                    value:"ежедневно с 8 до 18"
+                }, 
+                {
+                    name:"Лабораторные услуги:", 
+                    value:"ежедневно с 8 до 18"
+                }
+            ], 
+            comment:"*прием осуществляется по предварительной записи, график работы специалистов может меняться в зависимости от числа пациентов.",
+            transport: [
+                {type: "bus", title: "Автобус", value:"1, 22, 45"},
+                {type: "tram", title: "Трамвай", value:"1, 22, 45"},
+                {type: "trolley", title: "Троллейбус", value:"1, 22, 45"}
+            ]
+        }

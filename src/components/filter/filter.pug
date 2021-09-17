@@ -1,0 +1,12 @@
+mixin filter-trigger(value, index = null)
+    button.js-filter(class= attributes.class, data-filter= index)= value
+
+mixin filter(filterSection, defaultValue, custom = false)
+    .js-filter-wrapper(class= attributes.class)
+        +filter-trigger(defaultValue)(class= attributes.itemClass).js-active
+        if custom
+            block
+        else 
+            - const filter = Object.keys(filterSection)
+            each value in filter
+                +filter-trigger(value, value)(class= attributes.itemClass)

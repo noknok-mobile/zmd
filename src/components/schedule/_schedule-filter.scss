@@ -1,0 +1,99 @@
+@mixin border-lined {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -30px;
+
+    &+div {
+        border-left: $line;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 3fr 4fr 5fr;
+    gap: $gutter;
+
+    @include tablet_hrz {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include phone {
+        grid-template-columns: 1fr;
+    }
+}
+
+.schedule-filter {
+    grid-auto-rows: 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    @include desktop_only {
+        grid-template-areas: "place spec calendar";
+    }
+
+    @include tablet_hrz {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "place place""spec calendar";
+        top: -80px;
+    }
+
+    @include tablet {
+        grid-template-areas: "place spec""calendar calendar";
+    }
+
+    @include phone {
+        grid-template-areas: "place""spec""calendar";
+        top: -165px;
+    }
+
+    &__section {
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        background-color: $color-elem-background;
+        border-radius: 2rem;
+        &_place {
+            grid-area: place;
+
+            @include desktop_only {
+                @include border-lined;
+            }
+
+            @include tablet_only {
+                @include border-lined;
+            }
+
+            @include phone_hrz_only {
+                @include border-lined;
+            }
+        }
+
+        &_spec {
+            grid-area: spec;
+
+            @include desktop_only {
+                @include border-lined;
+            }
+
+            @include tablet_hrz_only {
+                @include border-lined;
+            }
+        }
+
+        &_calendar {
+            grid-area: calendar;
+            border-left: $line;
+
+            @include tablet {
+                border-left: none;
+            }
+        }
+    }
+}
+.schedule-table{
+    display: grid;
+    position: relative;
+    gap: $gutter;
+}

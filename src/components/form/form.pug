@@ -1,0 +1,12 @@
+//- два типа блока: 
+//- - div - структурированный с header и body
+//- - empty - только обертка form-step
+mixin form-step(title)
+    .form__step.form-step(class= attributes.class)
+        if title
+            .form-step__header
+                h4.form-step__title= title
+            .form-step__body
+                block
+        else 
+            block

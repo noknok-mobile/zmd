@@ -1,0 +1,8 @@
+mixin breadcrumbs(path)
+    ul.breadcrumb
+        each link, index in path
+            if index == path.length - 1
+                li.breadcrumb__item.breadcrumb__item_active= link
+            else
+                li.breadcrumb__item 
+                    a(href="#")= link 

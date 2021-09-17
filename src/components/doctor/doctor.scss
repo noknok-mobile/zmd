@@ -1,0 +1,61 @@
+.doctor {
+
+    grid-template-columns: 1fr;
+    grid-template-areas: "image""content";
+
+    @include phone_hrz {
+        grid-template-columns: 3fr 4fr;
+        grid-template-areas: "image content";
+        padding-right: 0;
+    }
+
+    @include phone {
+        grid-template-columns: 1fr;
+        grid-template-areas: "image""content";
+        padding-left: 0;
+    }
+
+    .card__inner {
+        padding-right: $offset-s;
+
+    }
+    &__img{
+        position: relative;
+    }
+    &__title {
+        font-weight: 600;
+        font-family: inherit
+    }
+
+    &__link {
+        @extend %color-link;
+        @extend %tag;
+        order: 1
+    }
+
+    .card__meta {
+        @include text(xxs);
+    }
+
+    &__footer {
+        flex-wrap: wrap;
+
+        .button {
+            order: 2;
+        }
+    }
+}
+
+.doctor-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $gutter;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include phone_hrz {
+        grid-template-columns: 1fr;
+    }
+}

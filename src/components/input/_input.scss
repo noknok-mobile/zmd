@@ -1,0 +1,91 @@
+.input {
+  position: relative;
+  display: block;
+
+  &__value {
+    appearance: none;
+    display: block;
+    height: 3.5rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 35px;
+    border: $line;
+    border-color: transparent;
+    @extend %tag;
+    font-family: inherit;
+    color: $color-text-semi-muted;
+    background-color: $color-elem-background;
+    transition: all 0.2s ease-in;
+
+    &_password {
+      text-transform: none;
+    }
+
+    &:hover {
+      border-color: $color-line;
+    }
+
+    &:focus {
+      color: $color-text;
+      background: white;
+      border-color: $color-line;
+      outline: none;
+      text-transform: none;
+    }
+
+    &:invalid {
+      outline: $color-error;
+      border: 1px solid $color-error;
+      box-shadow: 2px 8px 40px rgba(255, 0, 0, 0.09);
+    }
+
+    &::placeholder {
+      @extend .tag;
+      text-transform: none;
+      opacity: 0;
+      transition: opacity 0.1s ease-out;
+    }
+
+    &:focus::placeholder {
+      transition: opacity 0.3s ease-out;
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    @extend %absolute-centered;
+    width: 30px;
+    height: 30px;
+    right: 2rem;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+    &_password {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 28 18'%3E%3Cdefs/%3E%3Cpath fill='%23852D2E' d='M26.9132 8.4367C24.07 3.1807 19.0839 0 13.5663 0S3.0541 3.1806.2363 8.4367L0 8.8333l.2194.405c2.8431 5.256 7.8293 8.4367 13.3469 8.4367s10.5122-3.1385 13.3469-8.4368l.2194-.405-.2194-.3964zm-13.3469 7.5088c-4.7499 0-9.1117-2.6492-11.6427-7.1122 2.531-4.463 6.8928-7.1122 11.6427-7.1122 4.7499 0 9.0611 2.6576 11.6343 7.1122-2.5732 4.463-6.8929 7.1122-11.6343 7.1122z'/%3E%3Cpath fill='%23852D2E' d='M13.8132 3.0714a5.7874 5.7874 0 00-5.627 6.9517 5.7877 5.7877 0 105.627-6.9517zm0 9.8879a4.0998 4.0998 0 01-3.7555-2.5543 4.1009 4.1009 0 01.9044-4.451 4.1002 4.1002 0 016.9936 2.8797 4.1095 4.1095 0 01-1.2093 2.9283 4.1096 4.1096 0 01-2.9332 1.1973z'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__value[type="text"]+&__icon_password {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 29 24'%3E%3Cdefs/%3E%3Cpath fill='%235B423B' d='M20.1792 13.8671a5.7206 5.7206 0 00.3628-2.0248 5.7876 5.7876 0 00-5.7876-5.7876 5.7282 5.7282 0 00-1.9995.3628l1.3583 1.4005c.2065-.033.4152-.05.6243-.0506a4.1086 4.1086 0 014.1172 4.0749 4.0417 4.0417 0 01-.0507.6243l1.3752 1.4005z'/%3E%3Cpath fill='%235B423B' d='M27.8567 11.4446c-2.8432-5.2561-7.8293-8.4368-13.347-8.4368a14.1897 14.1897 0 00-4.4208.7171l1.3583 1.3668a12.4696 12.4696 0 013.0625-.3965c4.7499 0 9.0695 2.6491 11.6427 7.1121a14.9763 14.9763 0 01-3.6868 4.3028l1.198 1.198a16.815 16.815 0 004.2184-5.062l.2193-.405-.2446-.3965zM3.0343 1.5305l3.7628 3.7628a16.4685 16.4685 0 00-5.6442 6.1504l-.2193.3965.2193.405c2.8432 5.2561 7.8294 8.4367 13.347 8.4367a14.2825 14.2825 0 006.2179-1.4258l4.2183 4.2184 1.4765-1.2655L4.477.2734 3.0343 1.5305zm8.2259 8.2258l5.6104 5.6105a4.058 4.058 0 01-2.1092.6074 4.1102 4.1102 0 01-1.5782-.3151 4.1106 4.1106 0 01-1.3361-.8972 4.1099 4.1099 0 01-1.1944-2.9217 4.0574 4.0574 0 01.6075-2.0839zM10.0368 8.533a5.7793 5.7793 0 004.2277 9.1015 5.779 5.779 0 003.8294-1.0444l1.3499 1.3499a12.578 12.578 0 01-4.9439 1.0124c-4.75 0-9.0695-2.6491-11.6427-7.1122a14.5872 14.5872 0 015.1633-5.3151l2.0163 2.008z'/%3E%3C/svg%3E");
+  }
+
+  &__label {
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    line-height: 3.5rem;
+    @extend %tag;
+    color: $color-text-muted;
+    transition: all 0.2s ease-in-out;
+
+    input:focus~&,
+    input:not(:placeholder-shown)~& {
+      @extend .label;
+      text-transform: none;
+      transform: translateY(-20px);
+    }
+  }
+}

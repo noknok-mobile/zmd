@@ -1,0 +1,10 @@
+mixin input(props)
+    .input(class= attributes.class)
+        input.input__value(placeholder= props.label)&attributes(attributes)
+        if props.icon
+            span.icon.input__icon(class= "input__icon_" + props.icon, class= (props.icon == "password")? ["input__icon_" + props.icon, 'js-password-toggle']:"input__icon_" + props.icon)
+        if props.label
+            label.input__label(for= attributes.id)= props.label
+        if props.info 
+            span.input__info= props.info
+        block

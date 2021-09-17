@@ -1,0 +1,6 @@
+mixin dictionary__item(letter, items)
+    .dictionary__group.tile.js-filter-target(data-filter= letter)
+        .dictionary__letter= letter
+        .dictionary__item-list
+            each item in items
+                a.dictionary__item.link(href="#")= item

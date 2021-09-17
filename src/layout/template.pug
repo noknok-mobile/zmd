@@ -1,0 +1,46 @@
+include mixins
+
+- const sitename = 'Зимамед'
+- const phone = '8 (8642) 233-03-03'
+- const address = { city: 'г. Краснодар', address:' ул. Московская, 40'}
+- const scheduleInfo = 'Пн. — Сб. с&nbsp;9:00 до 21:00'
+- const footerSchedule = 'пн-сб 8:00 — 23:00'
+- const logo = 'assets/logo.png'
+
+
+block vars
+    - const phoneLink = phone.replace(/[()-\s]/gi, '');
+    - let mainpage = false
+    - let pageHeaderImage
+    - let path = ['Главная', title]
+    - let menu = ['общая информация','лицензии и сертификаты','Новости','Тендеры','вакансии','Вопрос-ответ','документы']
+    - let login = false
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title= title
+        block styles 
+            link(rel="stylesheet" href="main.css")
+    body.page
+        include header/header
+        include page/page-header
+        if !mainpage
+            block page_header
+                +page-header(pageHeaderImage)
+            .container
+                block content 
+        else 
+            block content
+        include footer/footer
+        block popup
+            include modal/filial
+            include modal/login
+            include modal/psw_request
+            include modal/psw_change
+        block scripts
+            script(src="js/simplebar.min.js") 
+            script(src="js/app.js")

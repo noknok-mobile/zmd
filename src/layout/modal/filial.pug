@@ -1,0 +1,10 @@
++modal('filial')
+    .modal__header
+        h3.tag Выберите филиал клиники
+    .modal__body
+        form.form(action="#" name="filial")
+            +form-step
+                +select({label:"Город", options: ["Краснодар", "Адыгейск", "Новороссийск"]})#city(name="city")
+                +select({label:"Филиал", options: ["Ул. московская, 40", "Ул. московская, 40", "Ул. московская, 40"]})#filial(name="filial")
+            +form-step.form__footer
+                button.button Выбрать

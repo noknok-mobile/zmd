@@ -1,0 +1,37 @@
+.page-header {
+  padding: 45px 0 55px;
+  background-color: $color-elem-background;
+
+  &_overflow {
+    padding-bottom: calc(55px + var(--custom-header));
+  }
+
+  &_bskg {
+    &-pill {
+      background-image: url("assets/bckg/pill.svg");
+      background-size: 100px;
+    }
+
+    &-cross {
+      background-image: url("assets/bckg/cross.svg");
+      background-size: 165px;
+    }
+
+    &-stethoscope {
+      background-image: url("assets/bckg/stethoscope.svg");
+      background-size: 230px;
+    }
+
+    &-syringe {
+      background-image: url("assets/bckg/syringe.svg");
+      background-size: 170px;
+    }
+  }
+
+  &__inner {
+    &_extra {
+      margin-top: $offset-m;
+    }
+
+  }
+}

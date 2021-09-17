@@ -1,0 +1,43 @@
+extends /layout/template
+
+block content 
+    .page__grid
+        .page__sidebar
+            +sidebar-menu(menu).page__menu
+        .page__content
+            section.page-section 
+                p.lead 
+                    | Медицинский центр ЗИМАMED - это новая современная многопрофильная медицинская клиника, с диагностическим оборудованием экспертного класса фирмы Siemens (Германия). Наши специалисты – доктора и кандидаты медицинских наук, большинство которых имеют высшую категорию.
+                p Общество с ограниченной ответственностью «Здоровье Кубани» , Общество с ограниченной ответственностью «Формула здоровья», Общество с ограниченной ответственностью «Импульс» работающие на основании лицензий Департамента здравоохранения Краснодарского края под брендом.
+                h2.title.mark У нас лучшая комплектация диагностического оборудования:
+                ul.list
+                    each item in advantages
+                        li.list__item= item
+            section.page-section.page-section_background
+                h2.title В центре производится весь перечень лабораторных и диагностических исследований:
+                p Лабораторные обследования проводятся в полном объеме в кратчайшее время! Под контролем УЗИ, компьютерных томографов, выполняются все виды пункции органов брюшной полости, щитовидной, молочной железы, патологических очагов в мягких тканях и т.д.
+                p Наш медицинский центр распологает программами по диагностике всей сосудистой патологии головного мозга, кардиологической программой по диагностике опухолевых процессов, независимо от их нахождения.
+                p Для удобства и комфорта клиентов у клиники имеется широкая парковка, большой просторный холл.
+                p При медицинском центре имеется гостиница, которой могут воспользоваться пациенты, приехавшие на обследование из других городов. Гостиничные номера укомплектованы ТВ, холодильником, кондиционером, выходом в интернет (Wi-Fi) и всем необходимым для комфортного проживания.
+        section.page-section.page-section_wide
+            h2.title Галерея
+            .gallery
+                +gallery(gallery, filter) 
+
+block append scripts
+    script.
+        let gallery = document.querySelector('.gallery');
+        let filter = new Filter(gallery);
+block prepend vars 
+    - const title  = "Общая информация"
+    - 
+        const advantages = [
+            'Компьютерный томограф Siemens Emotion',
+            'Магнитно-резонансный томограф Siemens Magnetom Essenza',
+            'Ультразвуковая система Siemens Acuson x300',
+            'Цифровой рентгенный аппарат Siemens Mobilett XP Digital'
+        ]
+    - const gallery = [{src: "assets/img/doctor_demo.jpg", filterId: "0"},{src: "assets/img/lady.jpg", filterId: "1"},{src: "assets/img/doctor_demo.jpg", filterId: "0"},{src: "assets/img/doctor_demo.jpg", filterId: "0"},{src: "assets/img/lady.jpg", filterId: "1"},{src: "assets/img/lady.jpg", filterId: "1"}]
+    - const filter = [{id: "0", name: "Врач"},{id:"1", name:"Море"}]
+block append vars   
+    - pageHeaderImage = 'cross'

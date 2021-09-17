@@ -1,0 +1,27 @@
+.link {
+  text-decoration: none;
+  color: $color-text;
+
+  &:visited {
+    color: $color-main;
+  }
+
+  &:hover, &:focus {
+    color: $color-accent;
+  }
+
+  &:active {
+    color: $color-contrast;
+  }
+
+  &_color {
+    color: $color-accent;
+    transition: opacity 0.1s ease-in-out;
+    &:visited {
+      color: $color-accent;
+    }
+    &:hover, &:focus, &:active {
+      opacity: 0.8;
+    }
+  }
+}

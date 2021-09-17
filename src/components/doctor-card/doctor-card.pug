@@ -1,0 +1,13 @@
+mixin doctor-card(props, footer = true)
+    .doctor-card(class= attributes.class)
+        .card__img-wrapper.doctor-card__photo
+            img.card__img(width="300", height="313", src= attributes.src)
+        .card__inner.doctor-card__inner
+            .doctor-card__header
+                h3.card__title.doctor-card__name= props.name
+                .doctor-card__meta.tag= props.meta
+            .doctor-card__body
+                .card__desc.price= props.desc   
+            if footer             
+                .doctor-card__footer
+                    a.button.js-open(data-modal="calendar" href="#") Записаться на прием

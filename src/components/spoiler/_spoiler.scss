@@ -1,0 +1,92 @@
+.spoiler {
+  --title: 32px;
+  @include tablet_hrz {
+    --title: 26px;
+  }
+  @include phone_hrz {
+    --title: 18px;
+  }
+  $title: var(--title);
+
+  &_decorated {
+    border-bottom: $line;
+  }
+
+  &__title {
+    @include arrow(33px);
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    border-bottom: $line;
+    padding: 1rem 0;
+
+
+    @at-root {
+      .spoiler[open] &::after {
+        transform: translateY(-50%) rotateZ(-180deg);
+      }
+
+      .spoiler_decorated & {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        @include flex-gap($gutter);
+        align-items: center;
+        z-index: 1;
+        font-weight: 400;
+        @extend %color-link;
+        font-size: $title;
+
+        padding: 1.5rem 0;
+        padding-right: 2.5rem;
+        border-bottom: none;
+      }
+    }
+
+  }
+
+  &__more {
+    padding: $offset-s 0;
+    border-bottom: $line;
+
+    @at-root {
+      .spoiler_decorated & {
+        position: relative;
+        display: block;
+        padding: 40px;
+        border-bottom: none;
+        background: $color-elem-background;
+        box-shadow: inset 0px 10px 20px -15px rgba(0, 0, 0, 0.1),
+          inset 0px -15px 20px -15px rgba(0, 0, 0, 0.1);
+
+        @include phone {
+          padding: 30px 20px;
+        }
+
+        &::before {
+          //decor triangle
+          content: "";
+          display: block;
+          position: absolute;
+          @include box(38px);
+          transform: translate(-50%, -50%) rotateZ(45deg);
+          left: 50%;
+          top: 0;
+          z-index: 10;
+          background: white;
+          box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .spoiler[open] & {
+        animation: fadeIn 0.5s;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,128 @@
+.footer {
+    background-color: #e5d9c6;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "copyright menu menu info";
+        padding-top: $offset-l;
+        padding-bottom: $offset-l;
+        grid-gap: $gutter;
+
+        @include tablet-hrz {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "copyright menu menu menu""info info info info";
+        }
+
+        @include phone {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-areas: "copyright copyright""info info";
+        }
+    }
+
+    &__copyright {
+        grid-area: copyright;
+        
+    }
+
+    &__nav {
+        grid-area: menu;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 $gutter;
+        align-items: start;
+        &-group{
+            display: grid;
+            gap: 1.2em;
+        }
+        @include phone {
+            display: none;
+        }
+    }
+
+    &__info {
+        grid-area: info;
+    }
+
+    &__logo {
+        display: block;
+        transform: translateY(-50%);
+    }
+
+    &__link {
+        display: block;
+        @include text(xs);
+        color: $color-text;
+        text-decoration: none;
+        opacity: 0.95;
+
+        &_privacy {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "contacts""promo";
+    gap: 1.2em;
+    
+    @include tablet_hrz {
+        grid-gap: var(--gutter);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: "contacts promo";
+    }
+
+    @include phone {
+        grid-template-areas: "contacts contacts""promo promo";
+    }
+
+    &__item {
+        display: block;
+    }
+
+    &__group {
+        @include desktop-only {
+            display: contents;
+        }
+    }
+    
+    &__contacts {
+        grid-area: contacts;
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        gap: 1em;
+        
+        white-space: nowrap;
+        font-size: 18px; 
+               
+        @include tablet_hrz {
+            gap: $gutter;
+            align-content: end;
+        }
+
+        @include phone_hrz {
+            font-size: 16px;
+        }
+    }
+
+    &__promo {
+        grid-area: promo;
+        color: $color-text-semi-muted;
+        @include text(xxs);
+    }
+}
+
+.promo {
+    &__text {
+        margin-bottom: 1em;
+
+    }
+
+    &__img {
+        display: flex;
+        @include flex-gap($gutter, 0);
+    }
+}

@@ -1,0 +1,22 @@
+.tab {
+    @include text(xxs, 400, false);
+    text-transform: unset;
+    line-height: 2rem;
+    @extend .button_light;
+    color: $color-text;
+
+    &_active {
+        background: $color-main;
+        color: white;
+    }
+
+    &.js-active {
+        @extend .tab_active;
+    }
+}
+
+.tab-list {
+    display: flex;
+    @include flex-gap($gutter);
+
+}

@@ -1,0 +1,29 @@
+.list {
+    padding-left: 80px;
+
+    @include tablet_hrz{
+      padding-left: 40px;
+    }
+
+    @include phone_hrz{
+        padding-left: 20px;
+    }
+    
+    &__item {
+      display: block;
+      padding-left: 1.5rem;
+      margin-bottom: $text-margin;
+      &::before {
+        content: url("data:image/svg+xml,%3Csvg width='80' height='16' viewBox='0 0 80 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='80' height='15' fill='%23852D2E'/%3E%3C/svg%3E");
+
+        position: absolute;
+        left: 0;
+        @include tablet_hrz{
+          content: url("data:image/svg+xml,%3Csvg width='40' height='8' viewBox='0 0 80 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='80' height='15' fill='%23852D2E'/%3E%3C/svg%3E");
+        }
+        @include phone_hrz{
+          content: url("data:image/svg+xml,%3Csvg width='20' height='4' viewBox='0 0 80 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='80' height='15' fill='%23852D2E'/%3E%3C/svg%3E");
+        }
+      }
+    }
+  }

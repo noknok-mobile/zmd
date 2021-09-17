@@ -1,0 +1,82 @@
+.order {
+    &__head {
+        @include text(xxs);
+
+        &::before,
+        &::after {
+            right: 15px;
+
+            @include phone_hrz {
+                top: 30px;
+            }
+        }
+
+        border-bottom: none
+    }
+
+    &__date {
+        @include text(inherit, 600);
+        color: $color-accent;
+    }
+
+    &:nth-of-type(2n + 1) {
+        background: $color-elem-background;
+    }
+
+    &__more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $offset-s;
+        padding-top: 0;
+        @include text(xs);
+
+        @include phone_hrz {
+            flex-direction: column;
+            @include flex-gap(30px);
+            align-items: stretch;
+        }
+
+        border-bottom: none;
+    }
+
+    &__button {
+        @include text(xxs);
+        line-height: 3em;
+        
+    }
+
+    &__status {
+        padding: 8px;
+        text-align: center;
+        font-size: 12px;
+        border-radius: 3px;
+        align-self: center;
+        justify-self: start;
+        width: min-content;
+
+        color: #c3811b;
+        background-color: #ffedd2;
+
+        &_unpaid {
+            color: #ba5751;
+            background-color: #fad5d3;
+        }
+
+        &_paid {
+            color: #536f62;
+            background-color: #bee3d2;
+        }
+        &_complete{
+            color: $color-text-muted;
+            background-color: $color-elem-background;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        @include flex-gap($gutter);
+        
+    }
+}

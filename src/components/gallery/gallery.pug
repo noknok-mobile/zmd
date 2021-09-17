@@ -1,0 +1,21 @@
+mixin gallery__item(image, filter = null)
+    a.gallery__item(class= attributes.class, data-filter= filter, data-fslightbox="gallery", href= image)
+        img.gallery__img(src= image)
+
+mixin gallery(items, filter = null)
+    if filter
+        +filter(filter, "Все", true)(itemClass= "button tab").gallery__filter.tab-list.mobile-scrollable
+            each filterItem in filter
+                +filter-trigger(filterItem.name, filterItem.id).button.tab
+
+        .gallery__inner.mobile-scrollable
+            each item in items
+                +gallery__item(item.src, item.filterId).js-filter-target
+    else 
+        .gallery__inner.mobile-scrollable
+            each item in items
+                +gallery__item(item.src)
+    block append script
+        script(src="js/fslightbox.js") 
+
+

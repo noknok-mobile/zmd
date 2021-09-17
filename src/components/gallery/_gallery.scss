@@ -1,0 +1,55 @@
+.gallery {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $gutter;
+
+    @include tablet {
+      grid: 1fr / auto-flow 80%;
+      scroll-snap-type: x mandatory;
+      overscroll-behavior: contain;
+      touch-action: pan-x;
+    }
+
+  }
+
+  &__filter {
+    margin-bottom: $offset-s;
+
+  }
+
+  &__item {
+    @include ratio(1);
+    scroll-snap-align: start;
+    filter: grayscale(1);
+    transition: filter 0.2s ease-out;
+
+    &[data-filter]:not(.js-active) {
+      display: none;
+    }
+
+    &.js-active {
+      animation: fadeOut 0.5s ease-in-out alternate;
+    }
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  &__img {
+    @extend %fill;
+
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

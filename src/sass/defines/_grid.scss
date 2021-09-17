@@ -1,0 +1,53 @@
+html {
+  --grid-margin: auto;
+  --offset-small: 30px;
+  --offset-middle: 60px;
+  --offset-large: 120px;
+  --column: 70px;
+  @include desktop{
+    --container-width: 1200px;
+    --gutter: 30px;  
+  }
+  @include desktop-middle{
+    --container-width: 1200px;
+    --gutter: 30px;
+  }
+  @include laptop{
+    --container-width: 1140px;
+    --gutter: 30px;
+  }
+  @include tablet-hrz{
+    --container-width: 960px;
+    --gutter: 20px;
+  
+  }
+  @include tablet{
+    --container-width: 720px;
+    --gutter: 20px;
+    --offset-large: 100px;
+    --offset-middle: 45px;
+    --offset-small: 24px;
+  
+  }
+  @include phone-hrz{
+    --container-width: 540px;
+    --gutter: 20px;
+  }
+  @include phone{
+    --container-width: 320px;
+    --gutter: 20px;
+    --offset-large: 70px;
+    --offset-middle: 32px;
+    --offset-small: 16px;
+  }
+}
+
+$offset-s: var(--offset-small);
+$offset-m: var(--offset-middle);
+$offset-l: var(--offset-large);
+$text-margin: 1.8rem;
+
+$column: var(--column);
+$gutter: var(--gutter);
+$container: var(--container-width);
+

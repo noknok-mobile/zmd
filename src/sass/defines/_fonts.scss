@@ -1,0 +1,49 @@
+html {
+  --font-max: 72px;
+  --h1: 48px;
+  --h2: 36px;
+  --h3: 24px;
+  --font-m: 20px;
+  --font-s: 18px;
+  --font-xs: 16px;
+  --font-xxs: 14px;
+
+  @include desktop-middle {}
+
+  @include tablet_hrz {
+    --h1: 40px;
+    --h2: 30px;
+    --h3: 20px;
+    --font-m: 16px;
+    --font-s: 14px;
+    --font-xs: 14px;
+
+  }
+
+  @include tablet {
+    --font-max: 64px;
+
+  }
+
+  @include phone_hrz {
+    --font-max: 48px;
+    --h1: 28px;
+    --h2: 24px;
+    --h3: 18px;
+  }
+
+  @include phone {
+    --font-max: 36px;
+  }
+}
+
+$font-size: (
+  max: var(--font-max),
+  h1: var(--h1),
+  h2: var(--h2),
+  h3: var(--h3),
+  m: var(--font-m),
+  s: var(--font-s),
+  xs: var(--font-xs),
+  xxs: var(--font-xxs),
+);

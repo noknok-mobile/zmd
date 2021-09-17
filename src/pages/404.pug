@@ -1,0 +1,13 @@
+extends /layout/template
+
+block content
+    .container
+        .page-section.page-section_centered.page-error
+            .page-error__title 404
+            h1.page-error__desc Страница не найдена 
+            a.button(href=".") На главную 
+
+block prepend vars 
+    - let title = 'Страница не найдена'
+block append vars
+    - mainpage = true

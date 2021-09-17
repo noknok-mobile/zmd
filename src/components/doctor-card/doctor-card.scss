@@ -1,0 +1,150 @@
+.spec-row {
+    grid-template-areas: "info info calendar";
+    @extend %card;
+
+    @include tablet_hrz {
+        grid-template-areas: "info calendar";
+    }
+
+    @include tablet {
+        grid-template-areas: "info info""calendar calendar";
+    }
+
+    @include phone {
+        grid-template-areas: "info""calendar";
+    }
+
+    &__info {
+        grid-area: info;
+        // max-height: 300px;
+    }
+
+    &__calendar {
+        grid-area: calendar;
+        border-left: $line;
+        padding-top: $offset-s;
+
+        @include tablet {
+            border-left: unset;
+        }
+    }
+}
+
+.spec-info-placeholder {
+    display: grid;
+    align-content: space-between;
+    gap: $gutter;
+    padding: $offset-s;
+    height: 100%;
+    @include desktop_only{
+        padding-right: 0;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr min-content;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    @include phone {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        @include flex-gap($gutter);
+
+        @include tablet_hrz {
+            @include flex-gap(0, $offset-s);
+        }
+        @include phone{
+            justify-content: center;
+        }
+    }
+
+    &__action {
+        white-space: nowrap;
+    }
+}
+
+.doctor-card {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: $gutter;
+    grid-template-areas: "image content";
+    box-shadow: none;
+
+    &_fold {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: "image header""image body";
+        margin: calc(-1*var(--offset-middle));
+        margin-bottom: 0;
+    }
+
+    &_fold &__inner {
+        display: contents;
+    }
+
+    &_fold &__header {
+        padding-top: $offset-s;
+    }
+
+    @include tablet_hrz {
+        grid-template-columns: 2fr 4fr;
+        max-height: 300px;
+    }
+
+    @include tablet {
+        grid-template-columns: 120px auto auto;
+        grid-template-areas: "image header header""image body footer";
+    }
+
+    @include phone {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: "image header""image body""footer footer";
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__photo {
+        img{
+            position: relative;
+        }
+        @include tablet_hrz {
+            height: auto;
+        }
+    }
+
+    &__inner {
+        @include tablet {
+            display: contents;
+        }
+    }
+
+    &__header {
+        grid-area: header;
+
+    }
+
+    &__body {
+        grid-area: body;
+    }
+
+    &__footer {
+        grid-area: footer;
+        display: flex;
+        align-items: flex-start;
+
+        @include phone {
+            justify-content: center;
+        }
+    }
+
+}

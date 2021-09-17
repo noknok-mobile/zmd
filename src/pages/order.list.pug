@@ -1,0 +1,34 @@
+extends /layout/template
+
+block content
+    .page__grid
+        .page__sidebar
+            +sidebar-menu(menu)
+        .page__content
+            .page-section
+                .tab-list.order-list-nav
+                    +filter-trigger("Текущие записи").button.tab.tab_active
+                    +filter-trigger("Прошедшие записи").button.tab
+                .order-list
+                    .order-list__head
+                        .order-list__row
+                            .order-list__cell Дата и время
+                            .order-list__cell Адрес
+                            .order-list__cell Врач
+                            .order-list__cell Статус
+                    .order-list__body
+                        +order({status: "paid", date: "Четверг,<br> 14.10.20, 9:00", address: "г. Краснодар, ул.Московская,&nbsp;40", doctor: "Мейпариани Елена Владимировна", desc: "Запись к акушер-гинекологу", price: "2500"})
+
+                        +order({status: "unavailable", date: "Четверг,<br> 14.10.20, 9:00", address: "г. Краснодар, ул.Московская,&nbsp;40", doctor: "Мейпариани Елена Владимировна", desc: "Запись к акушер-гинекологу", price: "2500"})
+
+                        +order({status: "unpaid", date: "Четверг,<br> 14.10.20, 9:00", address: "г. Краснодар, ул.Московская,&nbsp;40", doctor: "Мейпариани Елена Владимировна", desc: "Запись к акушер-гинекологу", price: "2500"})
+
+                        +order({status: "complete", date: "Четверг,<br> 14.10.20, 9:00", address: "г. Краснодар, ул.Московская,&nbsp;40", doctor: "Мейпариани Елена Владимировна", desc: "Запись к акушер-гинекологу", price: "2500"})
+
+
+
+block prepend vars 
+    - const title = "Мои записи"
+block append vars
+    - pageHeaderImage = 'pill'
+    - menu = ['профиль', 'мои записи']

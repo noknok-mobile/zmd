@@ -1,0 +1,11 @@
+.news {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    @include text(h2);
+    line-height: 1.2;
+  }
+  &__description {
+    @include text(s);
+  }
+}

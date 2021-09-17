@@ -1,0 +1,6 @@
+mixin price-list(data)
+    table.price-list
+        each row in data
+            tr.price-list__row
+                td= row.name
+                td.price= row.price

@@ -1,0 +1,15 @@
+//- meta,title,desc,button,image
+mixin card(props)
+    .card(class= attributes.class)
+        .card__inner
+            .card__header 
+                .card__meta.tag= props.meta
+                h3.card__title.title(class= attributes.class + "__title")= props.title
+            if props.desc
+                .card__body
+                    .card__description(class= attributes.class + "__description")= props.desc
+            .card__footer(class= attributes.class + "__footer")
+                a.button(href="#")= props.button
+                block
+        .card__img-wrapper
+            img.card__img(class= attributes.class + "__img", src= props.image)

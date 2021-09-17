@@ -1,0 +1,10 @@
+mixin button-arrow(dir = null, idle = false)
+    if idle
+         span.button-arrow(href= attributes.href, class= dir && `button-arrow_${dir}`, class= attributes.class)
+            svg.button-arrow__icon #[use(href="icons.svg#arrow")]
+    else if attributes.href 
+        a.button-arrow(href= attributes.href, class= dir && `button-arrow_${dir}`, class= attributes.class)
+            svg.button-arrow__icon #[use(href="icons.svg#arrow")]
+    else 
+        button.button-arrow(class= [`button-arrow_${dir}`, attributes.class])
+            svg.button-arrow__icon #[use(href="icons.svg#arrow")]

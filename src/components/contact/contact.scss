@@ -1,0 +1,70 @@
+.contact {
+  &_short {
+    border-top: $line;
+    padding: $offset-s 0;
+    border-bottom: $line;
+  }
+
+  &__title {
+    @at-root {
+      .contact_short & {
+        border-bottom: none;
+        padding: 0;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__more {
+    @at-root {
+      .contact_short & {
+        border-bottom: none;
+        padding: 0;
+      }
+    }
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $offset-s;
+
+    tbody,
+    tr {
+      display: contents;
+    }
+
+    & tr {
+      @include text(xxs);
+    }
+
+    & tr td:first-child {
+      color: $color-text-muted;
+      font-size: 12px;
+    }
+  }
+
+  &__comment {
+    font-size: 12px;
+    margin: $offset-s 0;
+  }
+
+  &__transport {
+    display: flex;
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+
+    &-icon {
+      color: $color-accent;
+      display: block;
+      @include box(1.6em);
+      border-radius: 2px;
+      flex: 0 0 auto;
+      margin-right: 1ch;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mixin sidebar-menu(menu)
+    nav.sidebar-menu(class= attributes.class? attributes.class : "page__menu")
+        .sidebar-menu__header.tag.js-sidebar-open Меню 
+            +button-arrow('', true)
+        each item in menu
+            a.sidebar-menu__item.link(href="#")= item

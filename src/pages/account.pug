@@ -1,0 +1,16 @@
+extends /layout/template
+
+block content
+    .page__grid
+        .page__sidebar
+            +sidebar-menu(menu)
+        .page__content
+            .page-section
+                .branch-list.branch-list_table
+                    +branch({text:'Профиль', icon: 'icons.svg#account_section'}).tile.branch_tile.branch_account
+                    +branch({text:'Мои записи', icon: 'icons.svg#list'}).tile.branch_tile.branch_account
+
+block prepend vars 
+    - const title = "Личный кабинет"
+block append vars
+    - menu = ['профиль', 'мои записи']
