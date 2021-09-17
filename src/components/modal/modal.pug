@@ -1,8 +1,0 @@
-mixin modal(id)
-    .modal__wrapper(data-modal= id)
-        .modal__overlay
-        .modal(data-simplebar)
-            button.modal__close.js-close(aria-label="Закрыть")
-                svg.modal__close-icon #[use(href="icons.svg#close")]
-            .modal__inner
-                block

@@ -1,8 +1,0 @@
-.image{
-    max-width: 100%;
-    filter: grayscale(1);
-    transition: filter 0.2s ease-in-out;
-    &:hover{
-        filter: grayscale(0);
-    }
-}

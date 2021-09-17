@@ -1,9 +1,0 @@
-+modal('password')
-    .modal__header 
-        h2.tag Восстановление пароля
-    .modal__body
-        form.form(action="ajax/psw_request.html" name="password")
-            +form-step('Для восстановления пароля необходимо указать e-mail')
-                +input({label:"E-mail"})#email(name="email" type="email")
-            +form-step.form__footer
-                button.button Получить ссылку
