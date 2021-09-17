@@ -4,7 +4,7 @@ function setOrderTime(e) {
   let datestring = e.target.dataset.ordertime;
   orderForm.ordertime.value = datestring;
 
-  options = {
+  const options = {
     month: "long",
     day: "numeric",
     hour: "numeric",

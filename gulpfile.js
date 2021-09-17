@@ -17,6 +17,7 @@ const mergeQueries = require('postcss-merge-queries');
 const svgSprite = require('gulp-svg-sprite');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
+const devip = require('dev-ip');
 
 function compileHtml() {
     return src('src/pages/**/*.pug')
@@ -34,6 +35,7 @@ function server() {
             baseDir: "./build/",
             ghostMode: false
         },
+        host: devip()
     });
     watch("build/").on('change', browserSync.reload);
 }
@@ -72,7 +74,7 @@ function importScripts() {
 }
 
 function scripts() {
-    return src(['src/components/**/*.js', 'src/layout/**/*.js'])
+    return src(['src/components/**/*.js', 'src/layout/**/*.js', 'src/js/order.js','src/js/app.js'])
         .pipe(concat('app.js'))
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write('../'))
