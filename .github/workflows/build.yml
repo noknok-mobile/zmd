@@ -25,4 +25,3 @@ jobs:
         with:
           branch: release # The branch the action should deploy to.
           folder: docs # The folder the action should deploy.
-          clean: true
