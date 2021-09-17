@@ -26,7 +26,9 @@
 
 .schedule-filter {
     grid-auto-rows: 4rem;
-
+    position: sticky;
+    top: 0;
+    z-index: 50;
     @include desktop_only {
         grid-template-areas: "place spec calendar";
     }
@@ -34,6 +36,7 @@
     @include tablet_hrz {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "place place""spec calendar";
+        top: -80px;
     }
 
     @include tablet {
@@ -42,6 +45,7 @@
 
     @include phone {
         grid-template-areas: "place""spec""calendar";
+        top: -165px;
     }
 
     &__section {
@@ -90,5 +94,6 @@
 }
 .schedule-table{
     display: grid;
+    position: relative;
     gap: $gutter;
 }
