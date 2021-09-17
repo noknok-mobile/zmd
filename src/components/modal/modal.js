@@ -1,7 +1,4 @@
 let activeModal;
-for (let modalTrigger of document.querySelectorAll(".js-open")) {
-  modalTrigger.addEventListener("click", openModal);
-}
 
 function openModal(e) {
   e.preventDefault();
