@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мейпариани Елена Владимировна</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header-desktop">
+        <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
+          <div class="header-summary header-desktop__summary">
+            <div class="header-summary__address">
+              <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span>
+                <div class="header-info__content"><a class="header__link link link_color js-open" data-modal="filial" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
+              </div>
+            </div>
+            <div class="header-summary__schedule">
+              <div class="header-info header-info_schedule"><span class="header-info__title">График работы:</span>
+                <div class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</div>
+              </div>
+            </div>
+            <div class="header-summary__account">
+              <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span>
+                <div class="header-info__content header-info__content_flex"><a class="header__link link link_color js-open js-modal-filter" data-modal="login" data-filter="auth" href="#">Вход</a><a class="header__link link link_color js-open js-modal-filter" data-modal="login" data-filter="signup" href="#">Регистрация</a>
+                </div>
+              </div>
+            </div><a class="header-desktop__button button" href="#">Записаться на прием</a>
+          </div>
+          <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:886422330303">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
+          <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
+              <svg>
+                <use href="icons.svg#profile"></use>
+              </svg></a><a class="icon-menu__item" href="schedule">
+              <svg>
+                <use href="icons.svg#calendar"></use>
+              </svg></a><a class="icon-menu__item" href="tel:886422330303">
+              <svg>
+                <use href="icons.svg#phone"></use>
+              </svg></a></nav>
+        </div>
+        <nav class="header-desktop__bottom">
+          <ul class="header-desktop__menu main-menu">
+            <li class="main-menu__item link"><a class="link" href="#">Лечение</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Диагностика</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Услуги</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Специалисты</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Прайс</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Акции</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">О компании</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-mobile js-menu">
+        <div class="header-mobile__inner">
+          <div class="header-mobile__top header-info"><span class="header-info__title">Клиника: &nbsp;</span><span class="header-info__content"><a class="header__link" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></span></div>
+          <div class="container">
+            <div class="header-mobile__navbar"><a class="header__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
+              <div class="icon-menu"><a class="icon-menu__item" href="account">
+                  <svg>
+                    <use href="icons.svg#profile"></use>
+                  </svg></a><a class="icon-menu__item" href="schedule">
+                  <svg>
+                    <use href="icons.svg#calendar"></use>
+                  </svg></a><a class="icon-menu__item" href="tel:886422330303">
+                  <svg>
+                    <use href="icons.svg#phone"></use>
+                  </svg></a>
+                <div class="icon-menu__item js-menu-toggle">
+                  <button class="icon-menu__toggle icon-menu__toggle_open">
+                    <svg>
+                      <use href="icons.svg#burger"></use>
+                    </svg>
+                  </button>
+                  <button class="icon-menu__toggle icon-menu__toggle_close">
+                    <svg>
+                      <use href="icons.svg#menu-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-menu">
+          <ul class="header-mobile__menu main-menu">
+            <li class="main-menu__item link"><a class="link" href="#">Лечение</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Диагностика</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Услуги</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Специалисты</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Прайс</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Акции</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">О компании</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Контакты</a></li>
+          </ul>
+          <div class="dropdown-menu__footer">
+            <div class="header-info header-info_unstyled"> <span class="header-info__title">График работы:</span><span class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div><a class="button" href="schedule">Записаться на прием</a>
+          </div>
+        </div>
+      </div>
+    </header>
+        <div class="page__header page-header page-header_bskg-stethoscope page-header_overflow">
+          <div class="container page-header__inner">
+            <div class="page-header__nav">
+              <ul class="breadcrumb">
+                <li class="breadcrumb__item"> <a href="#">Главная</a></li>
+                <li class="breadcrumb__item breadcrumb__item_active">Мейпариани Елена Владимировна</li>
+              </ul>
+            </div>
+            <h1 class="page-header__title title">Мейпариани Елена Владимировна</h1>
+          </div>
+        </div>
+    <div class="page__intro"> 
+      <div class="doctor-preview doctor-preview__grid container">
+        <div class="doctor-preview__avatar-wrapper"><img class="doctor-preview__avatar" src="assets/img/lady.jpg" alt="Мейпариани Елена Владимировна"></div>
+        <div class="doctor-preview__info">
+          <table class="doctor-preview__summary">
+            <tr> 
+              <td>Врач:</td>
+              <td>Акушер-гинеколог</td>
+            </tr>
+            <tr> 
+              <td>Стаж:</td>
+              <td>27 лет</td>
+            </tr>
+            <tr> 
+              <td>Научная степень:</td>
+              <td>Высшая</td>
+            </tr>
+            <tr> 
+              <td>Ведёт приём:</td>
+              <td>Взрослые</td>
+            </tr>
+          </table><a class="button doctor-preview__action js-open" data-modal="calendar" href="#">ЗАПИСАТЬСЯ К ВРАЧУ</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page__grid">
+        <div class="page__sidebar"> 
+          <nav class="sidebar-menu page__menu">
+            <div class="sidebar-menu__header tag js-sidebar-open">Меню <span class="button-arrow">
+                <svg class="button-arrow__icon">
+                  <use href="icons.svg#arrow"></use>
+                </svg></span>
+            </div><a class="sidebar-menu__item link" href="#">Образование</a><a class="sidebar-menu__item link" href="#">Услуги и цены</a><a class="sidebar-menu__item link" href="#">Расписание</a>
+          </nav>
+        </div>
+        <div class="page__content">
+          <section class="page-section" id="education"> 
+            <h2 class="title">Образование</h2>
+            <p>- Министерство здравоохранения РФ «Кубанский медицинский институт», «Акушерство и гинекология» – 1993г</p>
+            <p>- АНО ДПО «Современная научно-техническая академия» Сертификат по специальности «Акушерство и гинекология» - 2018г.</p>
+          </section>
+          <section class="page-section page-section_background"> 
+            <h2 class="title">Услуги и цены</h2>
+            <table class="price-list">
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Консультации по вопросам пролонгирования беременности</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Индивидуальный подбор средств и методов контрацепции</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Консультации по вопросам пролонгирования беременности</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Индивидуальный подбор средств и методов контрацепции</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Консультации по вопросам пролонгирования беременности</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Индивидуальный подбор средств и методов контрацепции</td>
+                <td class="price">2200</td>
+              </tr>
+            </table>
+          </section>
+        </div>
+      </div>
+      <div class="page-section">
+        <div class="schedule-table">
+          <div class="schedule-filter schedule-grid">
+            <div class="schedule-filter__section schedule-filter__section_place">
+              <div class="select select_inline">
+                <label class="select__label" for="filial">Филиал</label>
+                <select class="select__item" id="filial">
+                  <option value="0" selected="selected">Ул. московская, 40</option>
+                  <option value="1">Ул. московская, 40</option>
+                  <option value="2">Ул. московская, 40</option>
+                </select><span class="button-arrow select__icon">
+                  <svg class="button-arrow__icon">
+                    <use href="icons.svg#arrow"></use>
+                  </svg></span>
+              </div>
+            </div>
+            <div class="schedule-filter__section schedule-filter__section_spec"> 
+              <div class="select select_inline">
+                <label class="select__label" for="spec">Направление</label>
+                <select class="select__item" id="spec">
+                  <option value="0" selected="selected">акушерство и гинекология</option>
+                  <option value="1">кардиология</option>
+                  <option value="2">Проктология</option>
+                </select><span class="button-arrow select__icon">
+                  <svg class="button-arrow__icon">
+                    <use href="icons.svg#arrow"></use>
+                  </svg></span>
+              </div>
+            </div>
+            <div class="schedule-filter__section schedule-filter__section_calendar">
+              <div class="schedule__header">
+                <div class="schedule__inner"><a class="button-arrow button-arrow_prev schedule__nav schedule__nav_prev" href="#">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></a>
+                  <table class="schedule__calendar calendar-grid">
+                    <tr class="schedule__days">
+                      <td>18.09</td>
+                      <td>19.09</td>
+                      <td>20.09</td>
+                      <td>21.09</td>
+                      <td>22.09</td>
+                    </tr>
+                    <tr class="schedule__week">
+                      <td>сб</td>
+                      <td>вс</td>
+                      <td>пн</td>
+                      <td>вт</td>
+                      <td>ср</td>
+                    </tr>
+                  </table><a class="button-arrow button-arrow_next schedule__nav schedule__nav_next" href="#">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spec-row schedule-grid"> 
+            <div class="spec-row__info">
+              <div class="spec-info-placeholder">
+                <div class="spec-info-placeholder__desc">
+                  <p><span class="price">Приём от 2500 руб.</span> - цена первичной консультации </p>
+                  <p>Запись на консультацию осуществляется только по телефону</p>
+                </div>
+                <div class="spec-info-placeholder__footer"><a class="button spec-info-placeholder__action js-open" data-modal="calendar" href="#">Записаться на прием</a><a class="link link_color tag spec-info-placeholder__action" href="#">Записаться к другому врачу</a></div>
+              </div>
+            </div>
+            <div class="spec-row__calendar">
+              <div class="schedule"> 
+                <div class="schedule__body">
+                  <div class="schedule__inner schedule__inner_fold js-expand-target">
+                    <table class="timetable calendar-grid">
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 8:00">8:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 8:00">8:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 8:00">8:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 8:00">8:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 8:00">8:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 9:00">9:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 9:00">9:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 9:00">9:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 9:00">9:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 9:00">9:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 10:00">10:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 10:00">10:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 10:00">10:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 10:00">10:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 10:00">10:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 11:00">11:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 11:00">11:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 11:00">11:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 11:00">11:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 12:00">12:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 12:00">12:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 13:00">13:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 13:00">13:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 13:00">13:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 13:00">13:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 14:00">14:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"><span class="timetable__time">14:00</span></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 14:00">14:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 15:00">15:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 15:00">15:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 15:00">15:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 15:00">15:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 16:00">16:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 16:00">16:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 16:00">16:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 16:00">16:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 16:00">16:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 17:00">17:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 17:00">17:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 17:00">17:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 18:00">18:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 18:00">18:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 18:00">18:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 19:00">19:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 19:00">19:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 19:00">19:00</a></td>
+                        <td class="timetable__cell"></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 19:00">19:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 20:00">20:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 20:00">20:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 20:00">20:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 20:00">20:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 20:00">20:00</a></td>
+                      </tr>
+                      <tr> 
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 21:00">21:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 21:00">21:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 21:00">21:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 21:00">21:00</a></td>
+                        <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 21:00">21:00</a></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="schedule__footer"> <a class="button schedule__more-link js-expand-trigger" data-expand=""><span class="js-expand-label">Развернуть все</span><span class="button-arrow schedule__more-link__arrow">
+                      <svg class="button-arrow__icon">
+                        <use href="icons.svg#arrow"></use>
+                      </svg></span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner"> 
+          <div class="footer__copyright"><a class="footer__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a><a class="footer__link footer__link_privacy link" href="/privacy">
+               Политика обработки персональных данных и пользовательское соглашение</a></div>
+          <div class="footer__nav">
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#00">Лечение</a><a class="footer__link link footer__nav-item" href="#01">Профилактика</a><a class="footer__link link footer__nav-item" href="#02">Сдать анализы</a><a class="footer__link link footer__nav-item" href="#03">Комплексное лечение</a><a class="footer__link link footer__nav-item" href="#04">Комплексное обследование</a>
+            </div>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#10">Кардиология</a><a class="footer__link link footer__nav-item" href="#11">Проктология</a><a class="footer__link link footer__nav-item" href="#12">Педиатрия</a><a class="footer__link link footer__nav-item" href="#13">Урология</a><a class="footer__link link footer__nav-item" href="#14">Хирургия</a>
+            </div>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#20">Кардиология</a><a class="footer__link link footer__nav-item" href="#21">Проктология</a><a class="footer__link link footer__nav-item" href="#22">Педиатрия</a><a class="footer__link link footer__nav-item" href="#23">Урология</a><a class="footer__link link footer__nav-item" href="#24">Хирургия</a>
+            </div>
+          </div>
+          <div class="footer__info footer-info">
+            <div class="footer-info__contacts">
+              <div class="footer-info__item">г. Краснодар,<br> ул. Московская, 40</div>
+              <div class="footer-info__group"><a class="footer-info__item link" href="tel:886422330303">8 (8642) 233-03-03</a><span class="footer-info__item">пн-сб 8:00 — 23:00</span></div>
+            </div>
+            <div class="footer-info__promo promo">
+              <div class="promo__text">
+                 Скачайте приложение на телефон</div>
+              <div class="promo__img"><a href="#"><img src="assets/img/app_store.png" alt="AppStore"></a><a href="#"><img src="assets/img/app_store.png" alt="GooglePlay"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal__wrapper" data-modal="filial">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header">
+            <h3 class="tag">Выберите филиал клиники</h3>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="#" name="filial">
+              <div class="form__step form-step">
+                <div class="select">
+                  <label class="select__label" for="city">Город</label>
+                  <select class="select__item" id="city" name="city">
+                    <option value="0" selected="selected">Краснодар</option>
+                    <option value="1">Адыгейск</option>
+                    <option value="2">Новороссийск</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+                <div class="select">
+                  <label class="select__label" for="filial">Филиал</label>
+                  <select class="select__item" id="filial" name="filial">
+                    <option value="0" selected="selected">Ул. московская, 40</option>
+                    <option value="1">Ул. московская, 40</option>
+                    <option value="2">Ул. московская, 40</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Выбрать</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="login">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <div class="modal-tabs"><a class="modal-tabs__item tag tag_link js-modal-filter" data-filter="auth" href="#">Вход</a><a class="modal-tabs__item tag tag_link js-modal-filter" data-filter="signup" href="#">Регистрация</a></div>
+          </div>
+          <div class="modal__body">
+            <div class="modal-tab-page js-modal-tab" data-filter="auth">
+              <form class="form" action="#" name="login">
+                <div class="form__step form-step">
+                  <div class="input">
+                    <input class="input__value" placeholder="Иванов Иван Иванович" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">Ваше имя*</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                    <label class="input__label" for="password">Ваш пароль*</label>
+                  </div><a class="tag tag_link auth-link js-open" data-modal="password" href="#">Забыли пароль?</a>
+                </div>
+                <div class="form__step form-step form__footer">
+                  <div class="button">войти</div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-tab-page js-modal-tab" data-filter="signup">
+              <form class="form" action="#" name="signup">
+                <div class="form__step form-step">
+                  <div class="input">
+                    <input class="input__value" placeholder="ФИО" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">ФИО</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                    <label class="input__label" for="password">Ваш пароль*</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="+7(___) ___-__-__" id="phone" name="phone" type="text"/>
+                    <label class="input__label" for="phone">Телефон</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                </div>
+                <div class="form__step form-step form__footer">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен с<a class="link_color" href="/privacy">
+                           условиями обработки  персональных данных </a></span></span>
+                  </label>
+                  <button class="button">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="password">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <h2 class="tag">Восстановление пароля</h2>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="ajax/psw_request.html" name="password">
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Для восстановления пароля необходимо указать e-mail</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Получить ссылку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="change_password">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <h2 class="tag">Восстановление пароля</h2>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="ajax/psw_change.html" name="change_password">
+              <div class="form__step form-step">
+                <div class="input">
+                  <input class="input__value" placeholder="Введите новый пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                  <label class="input__label" for="password">Введите новый пароль*</label>
+                </div>
+                <div class="input">
+                  <input class="input__value" placeholder="Подтвердите пароль*" id="password_confirm" name="password_confirm" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                  <label class="input__label" for="password_confirm">Подтвердите пароль*</label>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Сохранить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="order">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <div class="doctor-card doctor-card_fold">
+              <div class="card__img-wrapper doctor-card__photo"><img class="card__img" width="300" height="313" src="assets/img/lady.jpg"/></div>
+              <div class="card__inner doctor-card__inner">
+                <div class="doctor-card__header">
+                  <h3 class="card__title doctor-card__name">Лымарь Марина Петровна</h3>
+                  <div class="doctor-card__meta tag">Акушер-гинеколог</div>
+                </div>
+                <div class="doctor-card__body">
+                  <div class="card__desc price">Приём от 2500 руб.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="#" name="order">
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Дата и время</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="form-step__row">
+                    <output class="tag" name="ordertime_format">16 октября, 9:00</output>
+                    <svg class="icon" width="30" height="30">
+                      <use href="icons.svg#date"></use>
+                    </svg>
+                    <input type="hidden" name="ordertime">
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Способ оплаты</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="form-step__row form-step__row_split">
+                    <div class="control-payment">
+                      <input class="control-payment__input control__input" type="radio" id="card" name="payment"/>
+                      <label class="control-payment__label control-payment__label_rounded link" for="card">
+                        <svg class="control-payment__icon" height="24" width="35">
+                          <use href="icons.svg#card"></use>
+                        </svg><span class="control-payment__name">Банковской картой</span>
+                      </label>
+                    </div>
+                    <div class="control-payment">
+                      <input class="control-payment__input control__input" type="radio" id="cache" name="payment"/>
+                      <label class="control-payment__label control-payment__label_rounded link" for="cache">
+                        <svg class="control-payment__icon" height="24" width="35">
+                          <use href="icons.svg#cache"></use>
+                        </svg><span class="control-payment__name">Наличными</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Пациент</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="input">
+                    <input class="input__value" placeholder="ФИО" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">ФИО</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="+7(___) ___-__-__" id="phone" name="phone" type="text"/>
+                    <label class="input__label" for="phone">Телефон</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Услуга</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="form-step__row"> <span class="tag">консультация</span><span class="price">500 руб.</span></div>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button button_large">Записаться на прием</button>
+                <label class="control">
+                  <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен с<a class="link_color" href="/privacy">
+                         условиями обработки персональных данных</a></span></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="calendar">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <div class="doctor-card doctor-card_fold">
+              <div class="card__img-wrapper doctor-card__photo"><img class="card__img" width="300" height="313" src="assets/img/lady.jpg"/></div>
+              <div class="card__inner doctor-card__inner">
+                <div class="doctor-card__header">
+                  <h3 class="card__title doctor-card__name">Лымарь Марина Петровна</h3>
+                  <div class="doctor-card__meta tag">Акушер-гинеколог</div>
+                </div>
+                <div class="doctor-card__body">
+                  <div class="card__desc price">Приём от 2500 руб.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__body">
+            <div class="schedule schedule_single">
+              <div class="schedule__header schedule__header_single">
+                <div class="schedule__inner"><a class="button-arrow button-arrow_prev schedule__nav schedule__nav_prev" href="#">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></a>
+                  <table class="schedule__calendar calendar-grid">
+                    <tr class="schedule__days">
+                      <td>18.09</td>
+                      <td>19.09</td>
+                      <td>20.09</td>
+                      <td>21.09</td>
+                      <td>22.09</td>
+                    </tr>
+                    <tr class="schedule__week">
+                      <td>сб</td>
+                      <td>вс</td>
+                      <td>пн</td>
+                      <td>вт</td>
+                      <td>ср</td>
+                    </tr>
+                  </table><a class="button-arrow button-arrow_next schedule__nav schedule__nav_next" href="#">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="schedule__body">
+                <div class="schedule__inner">
+                  <table class="timetable calendar-grid">
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 8:00">8:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 8:00">8:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 8:00">8:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 8:00">8:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 9:00">9:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 9:00">9:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 9:00">9:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 9:00">9:00</a></td>
+                      <td class="timetable__cell"><span class="timetable__time">9:00</span></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 10:00">10:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 10:00">10:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 10:00">10:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 10:00">10:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 10:00">10:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 11:00">11:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 11:00">11:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 11:00">11:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 11:00">11:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 11:00">11:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 12:00">12:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 12:00">12:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 12:00">12:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 12:00">12:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 12:00">12:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 13:00">13:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 13:00">13:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 13:00">13:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 13:00">13:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 14:00">14:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 14:00">14:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 14:00">14:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 14:00">14:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 15:00">15:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 15:00">15:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 15:00">15:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 15:00">15:00</a></td>
+                      <td class="timetable__cell"></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 16:00">16:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 16:00">16:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 16:00">16:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 16:00">16:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 17:00">17:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 17:00">17:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 17:00">17:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 17:00">17:00</a></td>
+                      <td class="timetable__cell"></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 18:00">18:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 18:00">18:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 18:00">18:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 19:00">19:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 19:00">19:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 19:00">19:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 19:00">19:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 20:00">20:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/20 20:00">20:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 20:00">20:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 20:00">20:00</a></td>
+                    </tr>
+                    <tr> 
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/18 21:00">21:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/19 21:00">21:00</a></td>
+                      <td class="timetable__cell"></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/21 21:00">21:00</a></td>
+                      <td class="timetable__cell"><a class="timetable__time timetable__time_available js-order-time js-open" data-modal="order" href="#" data-ordertime="2021/8/22 21:00">21:00</a></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/simplebar.min.js"> </script>
+    <script src="js/app.js"></script>
+    <script src="js/order.js"></script>
+  </body>
+</html>

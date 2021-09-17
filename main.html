@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header-desktop">
+        <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
+          <div class="header-summary header-desktop__summary">
+            <div class="header-summary__address">
+              <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span>
+                <div class="header-info__content"><a class="header__link link link_color js-open" data-modal="filial" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
+              </div>
+            </div>
+            <div class="header-summary__schedule">
+              <div class="header-info header-info_schedule"><span class="header-info__title">График работы:</span>
+                <div class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</div>
+              </div>
+            </div>
+            <div class="header-summary__account">
+              <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span>
+                <div class="header-info__content header-info__content_flex"><a class="header__link link link_color js-open js-modal-filter" data-modal="login" data-filter="auth" href="#">Вход</a><a class="header__link link link_color js-open js-modal-filter" data-modal="login" data-filter="signup" href="#">Регистрация</a>
+                </div>
+              </div>
+            </div><a class="header-desktop__button button" href="#">Записаться на прием</a>
+          </div>
+          <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:886422330303">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
+          <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
+              <svg>
+                <use href="icons.svg#profile"></use>
+              </svg></a><a class="icon-menu__item" href="schedule">
+              <svg>
+                <use href="icons.svg#calendar"></use>
+              </svg></a><a class="icon-menu__item" href="tel:886422330303">
+              <svg>
+                <use href="icons.svg#phone"></use>
+              </svg></a></nav>
+        </div>
+        <nav class="header-desktop__bottom">
+          <ul class="header-desktop__menu main-menu">
+            <li class="main-menu__item link"><a class="link" href="#">Лечение</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Диагностика</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Услуги</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Специалисты</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Прайс</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Акции</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">О компании</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-mobile js-menu">
+        <div class="header-mobile__inner">
+          <div class="header-mobile__top header-info"><span class="header-info__title">Клиника: &nbsp;</span><span class="header-info__content"><a class="header__link" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></span></div>
+          <div class="container">
+            <div class="header-mobile__navbar"><a class="header__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
+              <div class="icon-menu"><a class="icon-menu__item" href="account">
+                  <svg>
+                    <use href="icons.svg#profile"></use>
+                  </svg></a><a class="icon-menu__item" href="schedule">
+                  <svg>
+                    <use href="icons.svg#calendar"></use>
+                  </svg></a><a class="icon-menu__item" href="tel:886422330303">
+                  <svg>
+                    <use href="icons.svg#phone"></use>
+                  </svg></a>
+                <div class="icon-menu__item js-menu-toggle">
+                  <button class="icon-menu__toggle icon-menu__toggle_open">
+                    <svg>
+                      <use href="icons.svg#burger"></use>
+                    </svg>
+                  </button>
+                  <button class="icon-menu__toggle icon-menu__toggle_close">
+                    <svg>
+                      <use href="icons.svg#menu-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-menu">
+          <ul class="header-mobile__menu main-menu">
+            <li class="main-menu__item link"><a class="link" href="#">Лечение</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Диагностика</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Услуги</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Специалисты</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Прайс</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Акции</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">О компании</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Контакты</a></li>
+          </ul>
+          <div class="dropdown-menu__footer">
+            <div class="header-info header-info_unstyled"> <span class="header-info__title">График работы:</span><span class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div><a class="button" href="schedule">Записаться на прием</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Медицинский центр "ЗИМАМЕД"</h1>
+      <div class="big-carousel swiper-container"> 
+        <div class="big-carousel__inner swiper-wrapper">
+          <div class="banner swiper-slide"> 
+            <div class="banner__img-wrapper"><img class="banner__img" src="assets/img/banner.png" alt="Скидка предоставляется в филиале клиники ЗИМАMED,&lt;br&gt; по адресу Московская, 40"/></div>
+            <div class="banner__inner container">
+              <div class="banner__content">
+                <h2 class="banner__headline title">Скидка 10% на МРТ в&nbsp;воскресенье</h2>
+                <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40 </div><a class="button banner__button" href="/asd">записаться</a>
+              </div>
+            </div>
+          </div>
+          <div class="banner swiper-slide"> 
+            <div class="banner__img-wrapper"><img class="banner__img" src="assets/img/doctor_demo.jpg" alt="Скидка предоставляется в филиале клиники ЗИМАMED,&lt;br&gt; по адресу Московская, 40"/></div>
+            <div class="banner__inner container">
+              <div class="banner__content">
+                <h2 class="banner__headline title">Скидка 10% на МРТ в&nbsp;воскресенье</h2>
+                <div class="banner__description">Скидка предоставляется в филиале клиники ЗИМАMED,<br> по адресу Московская, 40 </div><a class="button banner__button" href="/">записаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="big-carousel__pagination slider-pagination"></div>
+        <div class="big-carousel__nav-wrapper">
+          <div class="big-carousel__nav big-carousel__nav_prev"></div>
+          <div class="big-carousel__nav big-carousel__nav_next"></div>
+        </div>
+      </div>
+      <div class="page-section">
+        <div class="container"> 
+          <div class="overview">
+            <div class="overview__desc">
+              <div class="about">
+                <h2 class="about__title tag">Направления</h2>
+                <div class="about__desc title">В центре производится<br><span class='mark'>весь перечень</span> лабораторных и диагностических исследований
+                </div>
+              </div>
+            </div>
+            <div class="container overview__nav">
+              <div class="overview__links"><a class="button button_light" href="#">Bсе направления</a><a class="button button_light mobile-hidden" href="#">все специалисты</a>
+              </div>
+              <div class="overview__slider-nav slider-nav branch-list__nav">
+                <button class="button-arrow button-arrow_prev">
+                  <svg class="button-arrow__icon">
+                    <use href="icons.svg#arrow"></use>
+                  </svg>
+                </button>
+                <button class="button-arrow button-arrow_next">
+                  <svg class="button-arrow__icon">
+                    <use href="icons.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="overview__slider">
+              <div class="slider-container branch-list branch-list_carousel js-branch-slider">
+                <div class="swiper-wrapper branch-list__inner">
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Хирургический стационар</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Анализы и диагностика</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Компьютерная томография</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Анализы и диагностика</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Компьютерная томография</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Анализы и диагностика</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Хирургический стационар</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Анализы и диагностика</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Компьютерная томография</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Анализы и диагностика</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                  <div class="branch branch_carousel">
+                    <div class="branch__img"><svg width="82" height="72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M68.303 1H1v63.53h67.303V1z" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.606 16.168l3.702 6.203L17.563 7.13l4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.773 6.02-7.754 5.365 4.87 1.897-1.89h4.498M7.606 33.88l3.702 6.202 6.255-15.24 4.755 12.6 4.685-7.367 3.35 3.805h7.005l4.615 4.797 6.02-7.778 5.365 4.87 1.897-1.89h4.498M7.606 51.617l3.702 6.178 6.255-15.216 4.755 12.6 4.685-7.39 3.35 3.828h7.005l4.615 4.773 6.02-7.753 5.365 4.846 1.897-1.866h4.498" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M73.48 44.613c-4.146 0-7.52 6.93-7.52 6.93-.257-.267-3.373-6.93-7.52-6.93-4.146 0-7.52 3.102-7.52 6.93 0 6.93 4.569 12.503 15.04 19.457C76.338 64.433 81 58.497 81 51.543c0-3.828-3.373-6.93-7.52-6.93z" fill="#F4F4F4" stroke="#852D2E" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+                      <!--demo разницы currentColor и filter-->
+                    </div><a class="branch__name" href="#">Компьютерная томография</a><a class="branch__link link link_color" href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-pagination branch-list__pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-section">
+        <div class="intro container intro_animated">
+          <div class="intro__video-wrapper"> 
+            <div class="intro__overlay"></div>
+            <video class="intro__bckg" src="assets/video/walk.mp4" poster="/walk.mp4" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
+          </div>
+          <div class="intro__inner container"> 
+            <div class="intro__content">  
+              <div class="about">
+                <h2 class="about__title tag">медцентры</h2>
+                <div class="about__desc title">6 современных медицинских центров в Краснодарском крае и Республике Адыгея
+                </div>
+              </div>
+            </div><a class="intro__link button" href="#">контакты медцентров</a>
+          </div>
+        </div>
+      </div>
+      <div class="page-section">    
+        <section class="container"> 
+          <div class="about about_single">
+            <h2 class="about__title tag">специалисты</h2>
+            <div class="about__desc title">Наши врачи - доктора <br> и <span class="mark">кандидаты медицинских наук</span>
+            </div>
+          </div>
+        </section>
+        <div class="intro container intro_animated">
+          <div class="intro__video-wrapper"> 
+            <div class="intro__overlay"></div>
+            <video class="intro__bckg" src="assets/video/doctor.mp4" poster="/walk.mp4" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
+          </div>
+          <div class="intro__inner container"> 
+            <div class="intro__content"> В клинике работают профессионалы высшей медицинской категории. В отделениях центра стабильный кадровый состав, который в своей работе применяет научный подход и регулярно повышает квалификацию в лучших клиниках России и мира.
+            </div><a class="intro__link button" href="#">наши специалисты</a>
+          </div>
+        </div>
+      </div>
+      <div class="page-section page-section_background">
+        <div class="container">
+          <div class="overview">
+            <div class="overview__desc">
+              <div class="about">
+                <h2 class="about__title tag">отзывы</h2>
+                <div class="about__desc title">Отзывы наших клиентов&nbsp;— <span class='mark'>лучшее&nbsp;подтверждение</span> нашего прoфессионализма
+                </div>
+              </div>
+            </div>
+            <div class="container overview__nav">
+              <div class="overview__links"><a class="button button_light" href="#">Все отзывы</a>
+              </div>
+              <div class="overview__slider-nav slider-nav review-list__nav">
+                <button class="button-arrow button-arrow_prev">
+                  <svg class="button-arrow__icon">
+                    <use href="icons.svg#arrow"></use>
+                  </svg>
+                </button>
+                <button class="button-arrow button-arrow_next">
+                  <svg class="button-arrow__icon">
+                    <use href="icons.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="overview__slider">
+              <div class="slider-container js-review-slider">
+                <div class="swiper-wrapper review-list">
+                  <blockquote class="review">
+                    <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень доволен.</p>
+                    <cite class="review__author">Воробьев<br>Михаил Петрович</cite>
+                  </blockquote>
+                  <blockquote class="review">
+                    <p class="review__text">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень доволен.</p>
+                    <cite class="review__author">Елена</cite>
+                  </blockquote>
+                  <blockquote class="review">
+                    <p class="review__text">Приезжаю в этот Центр исключительно ради получения консультации Невролога Вол Анны Евгеньевны, очень довольна, спасибо ей огромное. Отдельное спасибо администратору Марии (работала 07.06.2021), коммуникабельная, приветливая, доброжелательная, почаще бы встречались такие люди в нашей жизни! С уважением</p>
+                    <cite class="review__author">Ирина</cite>
+                  </blockquote>
+                  <blockquote class="review">
+                    <p class="review__text">Ходили на УЗИ с ребенком. Выполнили 3 вида УЗИ, все достаточно быстро, к результатам обследования вопросов нет. Девушки-администраторы все внимательны и учтивы.</p>
+                    <cite class="review__author">Татьяна Селезнева</cite>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="slider-pagination review-list__pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner"> 
+          <div class="footer__copyright"><a class="footer__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a><a class="footer__link footer__link_privacy link" href="/privacy">
+               Политика обработки персональных данных и пользовательское соглашение</a></div>
+          <div class="footer__nav">
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#00">Лечение</a><a class="footer__link link footer__nav-item" href="#01">Профилактика</a><a class="footer__link link footer__nav-item" href="#02">Сдать анализы</a><a class="footer__link link footer__nav-item" href="#03">Комплексное лечение</a><a class="footer__link link footer__nav-item" href="#04">Комплексное обследование</a>
+            </div>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#10">Кардиология</a><a class="footer__link link footer__nav-item" href="#11">Проктология</a><a class="footer__link link footer__nav-item" href="#12">Педиатрия</a><a class="footer__link link footer__nav-item" href="#13">Урология</a><a class="footer__link link footer__nav-item" href="#14">Хирургия</a>
+            </div>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#20">Кардиология</a><a class="footer__link link footer__nav-item" href="#21">Проктология</a><a class="footer__link link footer__nav-item" href="#22">Педиатрия</a><a class="footer__link link footer__nav-item" href="#23">Урология</a><a class="footer__link link footer__nav-item" href="#24">Хирургия</a>
+            </div>
+          </div>
+          <div class="footer__info footer-info">
+            <div class="footer-info__contacts">
+              <div class="footer-info__item">г. Краснодар,<br> ул. Московская, 40</div>
+              <div class="footer-info__group"><a class="footer-info__item link" href="tel:886422330303">8 (8642) 233-03-03</a><span class="footer-info__item">пн-сб 8:00 — 23:00</span></div>
+            </div>
+            <div class="footer-info__promo promo">
+              <div class="promo__text">
+                 Скачайте приложение на телефон</div>
+              <div class="promo__img"><a href="#"><img src="assets/img/app_store.png" alt="AppStore"></a><a href="#"><img src="assets/img/app_store.png" alt="GooglePlay"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal__wrapper" data-modal="filial">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header">
+            <h3 class="tag">Выберите филиал клиники</h3>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="#" name="filial">
+              <div class="form__step form-step">
+                <div class="select">
+                  <label class="select__label" for="city">Город</label>
+                  <select class="select__item" id="city" name="city">
+                    <option value="0" selected="selected">Краснодар</option>
+                    <option value="1">Адыгейск</option>
+                    <option value="2">Новороссийск</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+                <div class="select">
+                  <label class="select__label" for="filial">Филиал</label>
+                  <select class="select__item" id="filial" name="filial">
+                    <option value="0" selected="selected">Ул. московская, 40</option>
+                    <option value="1">Ул. московская, 40</option>
+                    <option value="2">Ул. московская, 40</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Выбрать</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="login">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <div class="modal-tabs"><a class="modal-tabs__item tag tag_link js-modal-filter" data-filter="auth" href="#">Вход</a><a class="modal-tabs__item tag tag_link js-modal-filter" data-filter="signup" href="#">Регистрация</a></div>
+          </div>
+          <div class="modal__body">
+            <div class="modal-tab-page js-modal-tab" data-filter="auth">
+              <form class="form" action="#" name="login">
+                <div class="form__step form-step">
+                  <div class="input">
+                    <input class="input__value" placeholder="Иванов Иван Иванович" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">Ваше имя*</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                    <label class="input__label" for="password">Ваш пароль*</label>
+                  </div><a class="tag tag_link auth-link js-open" data-modal="password" href="#">Забыли пароль?</a>
+                </div>
+                <div class="form__step form-step form__footer">
+                  <div class="button">войти</div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-tab-page js-modal-tab" data-filter="signup">
+              <form class="form" action="#" name="signup">
+                <div class="form__step form-step">
+                  <div class="input">
+                    <input class="input__value" placeholder="ФИО" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">ФИО</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                    <label class="input__label" for="password">Ваш пароль*</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="+7(___) ___-__-__" id="phone" name="phone" type="text"/>
+                    <label class="input__label" for="phone">Телефон</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                </div>
+                <div class="form__step form-step form__footer">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен с<a class="link_color" href="/privacy">
+                           условиями обработки  персональных данных </a></span></span>
+                  </label>
+                  <button class="button">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="password">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <h2 class="tag">Восстановление пароля</h2>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="ajax/psw_request.html" name="password">
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Для восстановления пароля необходимо указать e-mail</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Получить ссылку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="change_password">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <h2 class="tag">Восстановление пароля</h2>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="ajax/psw_change.html" name="change_password">
+              <div class="form__step form-step">
+                <div class="input">
+                  <input class="input__value" placeholder="Введите новый пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                  <label class="input__label" for="password">Введите новый пароль*</label>
+                </div>
+                <div class="input">
+                  <input class="input__value" placeholder="Подтвердите пароль*" id="password_confirm" name="password_confirm" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                  <label class="input__label" for="password_confirm">Подтвердите пароль*</label>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Сохранить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/simplebar.min.js"> </script>
+    <script src="js/app.js"></script>
+    <script src="js/swiper-bundle.min.js"> </script>
+    <script src="js/main.js"> </script>
+  </body>
+</html>

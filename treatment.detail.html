@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акушерство и гинекология</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header-desktop">
+        <div class="header-desktop__top"><a class="header__logo header-desktop__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
+          <div class="header-summary header-desktop__summary">
+            <div class="header-summary__address">
+              <div class="header-info header-info_address"><span class="header-info__title">Клиника:</span>
+                <div class="header-info__content"><a class="header__link link link_color js-open" data-modal="filial" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></div>
+              </div>
+            </div>
+            <div class="header-summary__schedule">
+              <div class="header-info header-info_schedule"><span class="header-info__title">График работы:</span>
+                <div class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</div>
+              </div>
+            </div>
+            <div class="header-summary__account">
+              <div class="header-info header-info_personal"><span class="header-info__title">Личный кабинет:</span>
+                <div class="header-info__content header-info__content_flex"><a class="header__link link link_color js-open js-modal-filter" data-modal="login" data-filter="auth" href="#">Вход</a><a class="header__link link link_color js-open js-modal-filter" data-modal="login" data-filter="signup" href="#">Регистрация</a>
+                </div>
+              </div>
+            </div><a class="header-desktop__button button" href="#">Записаться на прием</a>
+          </div>
+          <div class="header-desktop__contacts"><a class="header-desktop__phone link" href="tel:886422330303">8 (8642) 233-03-03</a><span class="header-desktop__schedule">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div>
+          <nav class="header-desktop__navbar icon-menu"><a class="icon-menu__item" href="account">
+              <svg>
+                <use href="icons.svg#profile"></use>
+              </svg></a><a class="icon-menu__item" href="schedule">
+              <svg>
+                <use href="icons.svg#calendar"></use>
+              </svg></a><a class="icon-menu__item" href="tel:886422330303">
+              <svg>
+                <use href="icons.svg#phone"></use>
+              </svg></a></nav>
+        </div>
+        <nav class="header-desktop__bottom">
+          <ul class="header-desktop__menu main-menu">
+            <li class="main-menu__item link"><a class="link" href="#">Лечение</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Диагностика</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Услуги</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Специалисты</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Прайс</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Акции</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">О компании</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-mobile js-menu">
+        <div class="header-mobile__inner">
+          <div class="header-mobile__top header-info"><span class="header-info__title">Клиника: &nbsp;</span><span class="header-info__content"><a class="header__link" href="#">г. Краснодар,&nbsp; ул. Московская, 40</a></span></div>
+          <div class="container">
+            <div class="header-mobile__navbar"><a class="header__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a>
+              <div class="icon-menu"><a class="icon-menu__item" href="account">
+                  <svg>
+                    <use href="icons.svg#profile"></use>
+                  </svg></a><a class="icon-menu__item" href="schedule">
+                  <svg>
+                    <use href="icons.svg#calendar"></use>
+                  </svg></a><a class="icon-menu__item" href="tel:886422330303">
+                  <svg>
+                    <use href="icons.svg#phone"></use>
+                  </svg></a>
+                <div class="icon-menu__item js-menu-toggle">
+                  <button class="icon-menu__toggle icon-menu__toggle_open">
+                    <svg>
+                      <use href="icons.svg#burger"></use>
+                    </svg>
+                  </button>
+                  <button class="icon-menu__toggle icon-menu__toggle_close">
+                    <svg>
+                      <use href="icons.svg#menu-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-menu">
+          <ul class="header-mobile__menu main-menu">
+            <li class="main-menu__item link"><a class="link" href="#">Лечение</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Диагностика</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Услуги</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Специалисты</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Прайс</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Акции</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">О компании</a></li>
+            <li class="main-menu__item link"><a class="link" href="#">Контакты</a></li>
+          </ul>
+          <div class="dropdown-menu__footer">
+            <div class="header-info header-info_unstyled"> <span class="header-info__title">График работы:</span><span class="header-info__content">Пн. — Сб. с&nbsp;9:00 до 21:00</span></div><a class="button" href="schedule">Записаться на прием</a>
+          </div>
+        </div>
+      </div>
+    </header>
+        <div class="page__header page-header page-header_bskg-stethoscope page-header_overflow">
+          <div class="container page-header__inner">
+            <div class="page-header__nav">
+              <ul class="breadcrumb">
+                <li class="breadcrumb__item"> <a href="#">Главная</a></li>
+                <li class="breadcrumb__item"> <a href="#">Направления лечения</a></li>
+                <li class="breadcrumb__item breadcrumb__item_active">Акушерство и гинекология</li>
+              </ul>
+            </div>
+            <h1 class="page-header__title title">Акушерство и гинекология</h1>
+          </div>
+        </div>
+    <div class="intro container page__intro">
+      <div class="intro__video-wrapper"> 
+        <div class="intro__overlay"></div>
+        <video class="intro__bckg" src="assets/video/walk.mp4" poster="assets/img/walk.jpg" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
+      </div>
+      <div class="intro__inner container"> 
+        <div class="intro__content"> Одним из самых важных докторов в жизни женщины является врач-гинеколог. Именно от его компетентности зависит и здоровье самой женщины на протяжении всей жизни, и здоровье ее будущих детей.
+        </div><a class="intro__link button" href="#">записаться к врачу</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page__grid"> 
+        <div class="page__sidebar">
+          <nav class="sidebar-menu page__menu">
+            <div class="sidebar-menu__header tag js-sidebar-open">Меню <span class="button-arrow">
+                <svg class="button-arrow__icon">
+                  <use href="icons.svg#arrow"></use>
+                </svg></span>
+            </div><a class="sidebar-menu__item link" href="#">описание</a><a class="sidebar-menu__item link" href="#">Услуги и цены</a><a class="sidebar-menu__item link" href="#">Комплексные программы</a><a class="sidebar-menu__item link" href="#">специалисты</a>
+          </nav>
+        </div>
+        <div class="page__content">
+          <div class="page-section">
+            <p>В клинике «ЗИМАМЕD» вас ждут специалисты самой высокой квалификации, женщина любого возраста получает профессиональные консультации врачей, полноценное обследование и эффективное лечение многих заболеваний.</p>
+            <p>Комплексный подход к сохранению и восстановлению здоровья женщины является ключевой составляющей в работе наших специалистов.</p>
+            <p>В клинике можно получить консультации и пройти лечение даже в самых сложных случаях, как в области общей гинекологии, так и по вопросам нарушений репродуктивной функции женщин и мужчин.</p>
+            <p>Врачи проводят консультации по вопросам планирования семьи и брака, и в индивидуальном порядке помогают осуществить правильный выбор средств контрацепции, а также предотвращения нежелательной беременности.</p>
+          </div>
+          <div class="page-section page-section_background">
+            <h2 class="title">Наша клиника оказывает <span class="mark">следующие медицинские услуги</span>:</h2>
+            <table class="price-list">
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Консультации по вопросам пролонгирования беременности</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Индивидуальный подбор средств и методов контрацепции</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Консультации по вопросам пролонгирования беременности</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Индивидуальный подбор средств и методов контрацепции</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Коррекция нарушений</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Консультации по вопросам пролонгирования беременности</td>
+                <td class="price">2200</td>
+              </tr>
+              <tr class="price-list__row">
+                <td>Индивидуальный подбор средств и методов контрацепции</td>
+                <td class="price">2200</td>
+              </tr>
+            </table>
+          </div>
+          <div class="page-section"> 
+            <h2 class="title">Мы также предлагаем <span class="mark">комплексные программы:</span></h2>
+            <div class="card-list">
+              <div class="card service">
+                <div class="card__inner">
+                  <div class="card__header"> 
+                    <div class="card__meta tag">Программа</div>
+                    <h3 class="card__title title service__title">Женское здоровье до 40 лет</h3>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__description service__description">Длительность прохождения программы - 10 рабочих дней (из которых пациент находится в клинике 4 дня)</div>
+                  </div>
+                  <div class="card__footer service__footer"><a class="button" href="#">Подробнее</a><span class="price">10 000 &#8381;</span>
+                  </div>
+                </div>
+                <div class="card__img-wrapper"><img class="card__img service__img" src="assets/img/image.png"/></div>
+              </div>
+              <div class="card service">
+                <div class="card__inner">
+                  <div class="card__header"> 
+                    <div class="card__meta tag">Программа</div>
+                    <h3 class="card__title title service__title">Будущая мама</h3>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__description service__description">Длительность прохождения программы - 10 рабочих дней (из которых пациент находится в клинике 4 дня)</div>
+                  </div>
+                  <div class="card__footer service__footer"><a class="button" href="#">Подробнее</a><span class="price">20 8260 &#8381;</span>
+                  </div>
+                </div>
+                <div class="card__img-wrapper"><img class="card__img service__img" src="assets/img/image.png"/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-section page-section_background">
+        <h2 class="title">Наши врачи - <span class="mark">доктора и кандидаты</span> медицинских наук</h2>
+        <div class="card-list doctor-list">
+          <div class="card doctor">
+            <div class="card__inner">
+              <div class="card__header"> 
+                <div class="card__meta tag">Акушер-гинеколог</div>
+                <h3 class="card__title title doctor__title">Мейпариани Елена Владимировна</h3>
+              </div>
+              <div class="card__footer doctor__footer"><a class="button" href="#">записаться</a><a class="link link_color doctor__link" href="#">Подробнее </a>
+              </div>
+            </div>
+            <div class="card__img-wrapper"><img class="card__img doctor__img" src="assets/img/lady.jpg"/></div>
+          </div>
+          <div class="card doctor">
+            <div class="card__inner">
+              <div class="card__header"> 
+                <div class="card__meta tag">Акушер-гинеколог</div>
+                <h3 class="card__title title doctor__title">Мейпариани Елена Владимировна</h3>
+              </div>
+              <div class="card__footer doctor__footer"><a class="button" href="#">записаться</a><a class="link link_color doctor__link" href="#">Подробнее </a>
+              </div>
+            </div>
+            <div class="card__img-wrapper"><img class="card__img doctor__img" src="assets/img/lady.jpg"/></div>
+          </div>
+          <div class="card doctor">
+            <div class="card__inner">
+              <div class="card__header"> 
+                <div class="card__meta tag">Акушер-гинеколог</div>
+                <h3 class="card__title title doctor__title">Мейпариани Елена Владимировна</h3>
+              </div>
+              <div class="card__footer doctor__footer"><a class="button" href="#">записаться</a><a class="link link_color doctor__link" href="#">Подробнее </a>
+              </div>
+            </div>
+            <div class="card__img-wrapper"><img class="card__img doctor__img" src="assets/img/lady.jpg"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner"> 
+          <div class="footer__copyright"><a class="footer__logo" href="."><img class="logo" src="assets/logo.png" alt="Зимамед"></a><a class="footer__link footer__link_privacy link" href="/privacy">
+               Политика обработки персональных данных и пользовательское соглашение</a></div>
+          <div class="footer__nav">
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#00">Лечение</a><a class="footer__link link footer__nav-item" href="#01">Профилактика</a><a class="footer__link link footer__nav-item" href="#02">Сдать анализы</a><a class="footer__link link footer__nav-item" href="#03">Комплексное лечение</a><a class="footer__link link footer__nav-item" href="#04">Комплексное обследование</a>
+            </div>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#10">Кардиология</a><a class="footer__link link footer__nav-item" href="#11">Проктология</a><a class="footer__link link footer__nav-item" href="#12">Педиатрия</a><a class="footer__link link footer__nav-item" href="#13">Урология</a><a class="footer__link link footer__nav-item" href="#14">Хирургия</a>
+            </div>
+            <div class="footer__nav-group"><a class="footer__link link footer__nav-item" href="#20">Кардиология</a><a class="footer__link link footer__nav-item" href="#21">Проктология</a><a class="footer__link link footer__nav-item" href="#22">Педиатрия</a><a class="footer__link link footer__nav-item" href="#23">Урология</a><a class="footer__link link footer__nav-item" href="#24">Хирургия</a>
+            </div>
+          </div>
+          <div class="footer__info footer-info">
+            <div class="footer-info__contacts">
+              <div class="footer-info__item">г. Краснодар,<br> ул. Московская, 40</div>
+              <div class="footer-info__group"><a class="footer-info__item link" href="tel:886422330303">8 (8642) 233-03-03</a><span class="footer-info__item">пн-сб 8:00 — 23:00</span></div>
+            </div>
+            <div class="footer-info__promo promo">
+              <div class="promo__text">
+                 Скачайте приложение на телефон</div>
+              <div class="promo__img"><a href="#"><img src="assets/img/app_store.png" alt="AppStore"></a><a href="#"><img src="assets/img/app_store.png" alt="GooglePlay"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal__wrapper" data-modal="filial">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header">
+            <h3 class="tag">Выберите филиал клиники</h3>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="#" name="filial">
+              <div class="form__step form-step">
+                <div class="select">
+                  <label class="select__label" for="city">Город</label>
+                  <select class="select__item" id="city" name="city">
+                    <option value="0" selected="selected">Краснодар</option>
+                    <option value="1">Адыгейск</option>
+                    <option value="2">Новороссийск</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+                <div class="select">
+                  <label class="select__label" for="filial">Филиал</label>
+                  <select class="select__item" id="filial" name="filial">
+                    <option value="0" selected="selected">Ул. московская, 40</option>
+                    <option value="1">Ул. московская, 40</option>
+                    <option value="2">Ул. московская, 40</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Выбрать</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="login">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <div class="modal-tabs"><a class="modal-tabs__item tag tag_link js-modal-filter" data-filter="auth" href="#">Вход</a><a class="modal-tabs__item tag tag_link js-modal-filter" data-filter="signup" href="#">Регистрация</a></div>
+          </div>
+          <div class="modal__body">
+            <div class="modal-tab-page js-modal-tab" data-filter="auth">
+              <form class="form" action="#" name="login">
+                <div class="form__step form-step">
+                  <div class="input">
+                    <input class="input__value" placeholder="Иванов Иван Иванович" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">Ваше имя*</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                    <label class="input__label" for="password">Ваш пароль*</label>
+                  </div><a class="tag tag_link auth-link js-open" data-modal="password" href="#">Забыли пароль?</a>
+                </div>
+                <div class="form__step form-step form__footer">
+                  <div class="button">войти</div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-tab-page js-modal-tab" data-filter="signup">
+              <form class="form" action="#" name="signup">
+                <div class="form__step form-step">
+                  <div class="input">
+                    <input class="input__value" placeholder="ФИО" id="name" name="name" type="text"/>
+                    <label class="input__label" for="name">ФИО</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="Ваш пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                    <label class="input__label" for="password">Ваш пароль*</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="+7(___) ___-__-__" id="phone" name="phone" type="text"/>
+                    <label class="input__label" for="phone">Телефон</label>
+                  </div>
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                </div>
+                <div class="form__step form-step form__footer">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен с<a class="link_color" href="/privacy">
+                           условиями обработки  персональных данных </a></span></span>
+                  </label>
+                  <button class="button">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="password">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <h2 class="tag">Восстановление пароля</h2>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="ajax/psw_request.html" name="password">
+              <div class="form__step form-step">
+                <div class="form-step__header">
+                  <h4 class="form-step__title">Для восстановления пароля необходимо указать e-mail</h4>
+                </div>
+                <div class="form-step__body">
+                  <div class="input">
+                    <input class="input__value" placeholder="E-mail" id="email" name="email" type="email"/>
+                    <label class="input__label" for="email">E-mail</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Получить ссылку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal="change_password">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header"> 
+            <h2 class="tag">Восстановление пароля</h2>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="ajax/psw_change.html" name="change_password">
+              <div class="form__step form-step">
+                <div class="input">
+                  <input class="input__value" placeholder="Введите новый пароль*" id="password" name="password" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                  <label class="input__label" for="password">Введите новый пароль*</label>
+                </div>
+                <div class="input">
+                  <input class="input__value" placeholder="Подтвердите пароль*" id="password_confirm" name="password_confirm" type="password"/><span class="icon input__icon input__icon_password input__icon_password js-password-toggle"></span>
+                  <label class="input__label" for="password_confirm">Подтвердите пароль*</label>
+                </div>
+              </div>
+              <div class="form__step form-step form__footer">
+                <button class="button">Сохранить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/simplebar.min.js"> </script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
