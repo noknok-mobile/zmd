@@ -8,12 +8,12 @@ for (let icon of document.querySelectorAll(".js-password-toggle")) {
 }
 let forms = [document.forms.password, document.forms.change_password];
 for (let form of forms) {
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    result = await getFormResult(e);
-    if(result)
-        updateModalContent(result);
-    else 
-        closePopup();
-  });
+  try {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      result = await getFormResult(e);
+      if (result) updateModalContent(result);
+      else closeModal();
+    });
+  } catch (e) {}
 }

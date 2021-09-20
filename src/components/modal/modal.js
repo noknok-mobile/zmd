@@ -42,7 +42,7 @@ function addCloseModalHandler(modal) {
   );
 }
 
-function closeModal(modal) {
+function closeModal() {
   activeModal.classList.remove("modal__wrapper_open");
   disableWindowScroll(false);
 }
