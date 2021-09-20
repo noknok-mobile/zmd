@@ -144,7 +144,7 @@ function addCloseModalHandler(modal) {
   );
 }
 
-function closeModal(modal) {
+function closeModal() {
   activeModal.classList.remove("modal__wrapper_open");
   disableWindowScroll(false);
 }
@@ -194,26 +194,6 @@ function expandCalendar(e) {
     .classList.toggle("schedule__inner_fold");
 }
 
-
-const loginTabFilter = new Filter(document.body, {
-  controlsClass: "js-modal-filter",
-  targetClass: "js-modal-tab",
-});
-
-for (let icon of document.querySelectorAll(".js-password-toggle")) {
-  icon.addEventListener("click", togglePasswordVisibility);
-}
-let forms = [document.forms.password, document.forms.change_password];
-for (let form of forms) {
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    result = await getFormResult(e);
-    if(result)
-        updateModalContent(result);
-    else 
-        closePopup();
-  });
-}
 
 const openButton = document.querySelector('.js-menu-toggle');
 const header = document.querySelector('.header-mobile');
