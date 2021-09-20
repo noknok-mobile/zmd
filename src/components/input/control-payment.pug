@@ -1,6 +1,6 @@
 mixin payment(props)
     .control-payment
-        input.control-payment__input.control__input(type="radio" id= props.icon name="payment")
+        input.control-payment__input.control__input(type="radio" id= props.icon name="payment" value= props.name)
         label.control-payment__label.control-payment__label_rounded.link(for= props.icon)
             svg.control-payment__icon(height="24" width="35")
                 use(href="icons.svg#" + props.icon)
