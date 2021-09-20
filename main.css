@@ -1850,6 +1850,7 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   max-width: 1440px;
   position: relative;
   color: white;
+  background-color: white;
   overflow: hidden;
 }
 .intro__video-wrapper {
