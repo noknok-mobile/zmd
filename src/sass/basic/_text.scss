@@ -28,18 +28,9 @@ $headers: ("h1", 'h2', 'h3');
 h1:not([class]){
   @extend .title;
 }
-p:not([class]){
-  @extend %paragraph;
-}
 
-ul:not([class]) {
-  list-style-position: inside;
-  
-  & li {
-    list-style-type: "- ";
-    @extend %paragraph;
-  }
-}
+
+
 
 /*attention! global styles*/
 

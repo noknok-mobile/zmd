@@ -14,6 +14,17 @@
 
   &__content {
     grid-area: content;
+
+    p,
+    img,
+    ul,
+    div:not([class]) {
+      margin-bottom: $text-margin;
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+    }
   }
 
   &__sidebar {

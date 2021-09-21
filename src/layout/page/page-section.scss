@@ -3,22 +3,12 @@
     position: relative;
     z-index: 1;
 
-    &__inner {
-        margin-bottom: 1.8rem;
-    }
-
     &__pagination {
         margin-top: $offset-m;
     }
 
-    &> :first-child {
-        margin-top: 0;
-    }
-
-    /*modifiers*/
     &_wide {
         grid-column: 1/3;
-
     }
 
     &_background {

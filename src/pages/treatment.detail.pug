@@ -9,7 +9,7 @@ block content
         .page__sidebar
             +sidebar-menu(["описание", "Услуги и цены", "Комплексные программы", "специалисты"])
         .page__content
-            .page-section
+            section.page-section
                 p В клинике «ЗИМАМЕD» вас ждут специалисты самой высокой квалификации, женщина любого возраста получает профессиональные консультации врачей, полноценное обследование и эффективное лечение многих заболеваний.
 
                 p Комплексный подход к сохранению и восстановлению здоровья женщины является ключевой составляющей в работе наших специалистов.
@@ -17,10 +17,10 @@ block content
                 p В клинике можно получить консультации и пройти лечение даже в самых сложных случаях, как в области общей гинекологии, так и по вопросам нарушений репродуктивной функции женщин и мужчин.
 
                 p Врачи проводят консультации по вопросам планирования семьи и брака, и в индивидуальном порядке помогают осуществить правильный выбор средств контрацепции, а также предотвращения нежелательной беременности.
-            .page-section.page-section_background
+            section.page-section.page-section_background
                 h2.title Наша клиника оказывает #[span.mark следующие медицинские услуги]:
                 +price-list(prices)
-            .page-section 
+            section.page-section 
                 h2.title Мы также предлагаем #[span.mark комплексные программы:]
                 .card-list
                     - const currency = "&#8381;"
@@ -28,7 +28,7 @@ block content
                         - program.button = "Подробнее"
                         +card(program).service
                             span.price #{program.price} !{currency}
-    .page-section.page-section_background
+    section.page-section.page-section_background
         h2.title Наши врачи - #[span.mark доктора и кандидаты] медицинских наук
         .card-list.doctor-list
             each doctor in doctors 
