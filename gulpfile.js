@@ -69,14 +69,14 @@ function styles() {
 }
 
 function importScripts() {
-    return src('src/js/*.js')
+    return src('src/js/import/*.js', 'src/js/main.js')
         .pipe(dest('build/js'));
 }
 
 function scripts() {
-    return src(['src/components/**/*.js', 'src/layout/**/*.js', 'src/js/order.js','src/js/login.js','src/js/app.js'])
-        .pipe(concat('app.js'))
+    return src(['src/components/**/*.js', 'src/js/_*.js','src/js/app.js'])
         .pipe(sourcemaps.init())
+        .pipe(concat('app.js'))
         .pipe(sourcemaps.write('../'))
         .pipe(dest('build/js'));
 }
