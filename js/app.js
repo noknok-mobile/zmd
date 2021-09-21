@@ -195,38 +195,6 @@ function expandCalendar(e) {
 }
 
 
-const openButton = document.querySelector('.js-menu-toggle');
-const header = document.querySelector('.header-mobile');
-openButton.addEventListener('click', toggleMenu);
-
-function toggleMenu() {
-    header.classList.toggle('js-open');
-    isOpen = header.classList.contains('js-open');
-    disableWindowScroll(isOpen);
-}
-const sidebarMenu = document.querySelector('.sidebar-menu');
-if(sidebarMenu)
-    document.querySelector('.js-sidebar-open').addEventListener('click', function (e) {
-    sidebarMenu.classList.toggle('sidebar-menu_unfold');
-})
-const orderForm = document.forms.order;
-
-function setOrderTime(e) {
-  let datestring = e.target.dataset.ordertime;
-  orderForm.ordertime.value = datestring;
-
-  const options = {
-    month: "long",
-    day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-  };
-  let datetime = new Date(datestring);
-  orderForm.ordertime_format.value = datetime.toLocaleString("ru", options);
-}
-
-
-
 const loginTabFilter = new Filter(document.body, {
   controlsClass: "js-modal-filter",
   targetClass: "js-modal-tab",
@@ -246,6 +214,24 @@ for (let form of forms) {
     });
   } catch (e) {}
 }
+
+const orderForm = document.forms.order;
+
+function setOrderTime(e) {
+  let datestring = e.target.dataset.ordertime;
+  orderForm.ordertime.value = datestring;
+
+  const options = {
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  };
+  let datetime = new Date(datestring);
+  orderForm.ordertime_format.value = datetime.toLocaleString("ru", options);
+}
+
+
 
 function initListeners() {
   for (let button of document.querySelectorAll(".js-expand-trigger")) {
