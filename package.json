@@ -19,7 +19,8 @@
     "pug": "^3.0.2"
   },
   "scripts": {
-    "start": "gulp build && gulp server",
+    "start": "npm run build && gulp server",
+    "prebuild":"rm -rf build",
     "build": "gulp build",
     "server": "gulp server",
     "styles": "gulp styles",

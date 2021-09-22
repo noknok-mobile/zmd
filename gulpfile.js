@@ -69,7 +69,7 @@ function styles() {
 }
 
 function importScripts() {
-    return src('src/js/import/*.js', 'src/js/main.js')
+    return src(['src/js/import/*.js', 'src/js/main.js'])
         .pipe(dest('build/js'));
 }
 
