@@ -251,4 +251,7 @@ function initListeners() {
 }
 initListeners();
 
+Inputmask({"mask": "+7 (999) 999-99-99"}).mask('[name="phone"]');
+Inputmask({"mask": "+7 (999) 999-99-99"}).mask('[inputmode="tel"]');
+
 //# sourceMappingURL=../app.js.map

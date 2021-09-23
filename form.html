@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вопросы и ответы</title>
+    <title>Шаблон формы</title>
     <link rel="stylesheet" href="main.css">
   </head>
   <body class="page">
@@ -107,10 +107,10 @@
             <div class="page-header__nav">
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"> <a href="#">Главная</a></li>
-                <li class="breadcrumb__item breadcrumb__item_active">Вопросы и ответы</li>
+                <li class="breadcrumb__item breadcrumb__item_active">Шаблон формы</li>
               </ul>
             </div>
-            <h1 class="page-header__title title">Вопросы и ответы</h1>
+            <h1 class="page-header__title title">Шаблон формы</h1>
           </div>
         </div>
     <div class="container">
@@ -124,30 +124,48 @@
             </div><a class="sidebar-menu__item link" href="#">общая информация</a><a class="sidebar-menu__item link" href="#">лицензии и сертификаты</a><a class="sidebar-menu__item link" href="#">Новости</a><a class="sidebar-menu__item link" href="#">Тендеры</a><a class="sidebar-menu__item link" href="#">вакансии</a><a class="sidebar-menu__item link" href="#">Вопрос-ответ</a><a class="sidebar-menu__item link" href="#">документы</a>
           </nav>
         </div>
-        <main class="page__content"> 
-          <section class="page-section">
-            <details class="spoiler spoiler_decorated">
-              <summary class="spoiler__title">Воробьев Михаил Петрович</summary>
-              <div class="spoiler__more">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень доволен.
+        <div class="page__content">
+          <main class="page-section"></main>
+          <div class="modal__header"> 
+            <div class="tag">Тендеры</div>
+          </div>
+          <div class="modal__body">
+            <form class="form" action="#" name="login">
+              <div class="form__step form-step">
+                <div class="input">
+                  <input class="input__value" placeholder="Иванов Иван Иванович" id="name" name="name" type="text"/>
+                  <label class="input__label" for="name">Ваше имя*</label>
+                </div>
+                <div class="input">
+                  <input class="input__value" placeholder="adasd" id="password" name="desc" type="text"/>
+                  <label class="input__label" for="password">Проект*</label>
+                </div>
+                <textarea class="textarea" name="desc" cols="30" rows="10" placeholder="Описание"></textarea>
+                <div class="input">
+                  <input class="input__value" placeholder="+ 7 (000) 000-00-00" id="password" name="phone" type="text"/>
+                  <label class="input__label" for="password">Телефон*</label>
+                </div>
+                <div class="select">
+                  <label class="select__label" for="city">Город</label>
+                  <select class="select__item" id="city" name="city">
+                    <option value="0" selected="selected">Краснодар</option>
+                    <option value="1">Адыгейск</option>
+                    <option value="2">Новороссийск</option>
+                  </select><span class="button-arrow select__icon">
+                    <svg class="button-arrow__icon">
+                      <use href="icons.svg#arrow"></use>
+                    </svg></span>
+                </div>
+                <label class="control">
+                  <input class="control__input" type="checkbox" name="privacy" checked="checked"/><span class="control__label"><span>Я согласен</span></span>
+                </label>
               </div>
-            </details>
-            <details class="spoiler spoiler_decorated">
-              <summary class="spoiler__title">Елена</summary>
-              <div class="spoiler__more">Делал УЗИ почек, мне попался очень квалифицированный специалист, ответил на абсолютно все интересующие меня вопросы, все подробно рассказал и объяснил. Получила полную консультацию, по окончанию приема выдали распечатку и заключение. Своим визитом остался очень доволен.
+              <div class="form__step form-step form__footer">
+                <div class="button">войти</div>
               </div>
-            </details>
-            <details class="spoiler spoiler_decorated">
-              <summary class="spoiler__title">Ирина</summary>
-              <div class="spoiler__more">Приезжаю в этот Центр исключительно ради получения консультации Невролога Вол Анны Евгеньевны, очень довольна, спасибо ей огромное. Отдельное спасибо администратору Марии (работала 07.06.2021), коммуникабельная, приветливая, доброжелательная, почаще бы встречались такие люди в нашей жизни! С уважением
-              </div>
-            </details>
-            <details class="spoiler spoiler_decorated">
-              <summary class="spoiler__title">Татьяна Селезнева</summary>
-              <div class="spoiler__more">Ходили на УЗИ с ребенком. Выполнили 3 вида УЗИ, все достаточно быстро, к результатам обследования вопросов нет. Девушки-администраторы все внимательны и учтивы.
-              </div>
-            </details>
-          </section>
-        </main>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <footer class="footer">
