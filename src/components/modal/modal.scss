@@ -23,7 +23,7 @@
     bottom: 0;
     height: 100vh;
     display: none;
-    z-index: 10;
+    z-index: 50;
     padding: $offset-m 0;
     @include phone_hrz{
       padding: 0;

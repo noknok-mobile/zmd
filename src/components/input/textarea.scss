@@ -1,0 +1,10 @@
+.textarea {
+    appearance: none;
+    display: block;
+    resize: none;
+    @extend %field;
+
+    &::placeholder {
+        @extend .tag;
+    }
+}

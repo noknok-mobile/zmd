@@ -1,0 +1,25 @@
+extends /layout/template
+
+block content 
+    .page__grid
+        .page__sidebar
+            +sidebar-menu(menu)
+        .page__content
+            main.page-section
+            .modal__header 
+                .tag Тендеры
+            .modal__body
+                form.form(action="#" name="login")
+                    +form-step
+                        +input({label: "Ваше имя*"})#name(name="name" type="text" placeholder="Иванов Иван Иванович")
+                        +input({label: "Проект*"})#password(name="desc" type="text" placeholder="adasd")
+                        textarea.textarea(name="desc" cols="30" rows="10" placeholder="Описание")
+                        +input({label: "Телефон*"})#password(name="phone" type="text" placeholder="+ 7 (000) 000-00-00")
+                        +select({label:"Город", options: ["Краснодар", "Адыгейск", "Новороссийск"]})#city(name="city")
+                        +checkbox(name="privacy" checked)
+                            span Я согласен
+                    +form-step.form__footer
+                        .button войти
+
+block prepend vars 
+    - const title = "Шаблон формы"

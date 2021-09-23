@@ -1,3 +1,28 @@
+%field {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 35px;
+  border: $line;
+  border-color: transparent;
+  @extend %tag;
+  font-family: inherit;
+  color: $color-text-semi-muted;
+  background-color: $color-elem-background;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    border-color: $color-line;
+  }
+
+  &:focus {
+    color: $color-text;
+    background: white;
+    border-color: $color-line;
+    outline: none;
+    text-transform: none;
+  }
+}
+
 .input {
   position: relative;
   display: block;
@@ -6,16 +31,8 @@
     appearance: none;
     display: block;
     height: 3.5rem;
-    width: 100%;
-    padding: 1rem 2rem;
-    border-radius: 35px;
-    border: $line;
-    border-color: transparent;
-    @extend %tag;
-    font-family: inherit;
-    color: $color-text-semi-muted;
-    background-color: $color-elem-background;
-    transition: all 0.2s ease-in;
+    @extend %field;
+
 
     &_password {
       text-transform: none;
