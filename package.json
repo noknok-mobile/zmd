@@ -24,6 +24,7 @@
     "server": "gulp server",
     "styles": "gulp styles",
     "svg": "gulp svg",
-    "script": "gulp script"
+    "script": "gulp script",
+    "deploy":"scp build/main.css zimamed:/home/u/ulnoknok19/public_html/local/templates/main/template_styles.css"
   }
 }
