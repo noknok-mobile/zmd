@@ -16,7 +16,15 @@
     "gulp-uglify": "^3.0.2",
     "postcss": "^8.2.13",
     "postcss-merge-queries": "^1.0.3",
-    "pug": "^3.0.2"
+    "prettier": "^2.4.1",
+    "pug": "^3.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.21.0"
   },
   "scripts": {
     "start": "gulp build && gulp server",
@@ -25,6 +33,6 @@
     "styles": "gulp styles",
     "svg": "gulp svg",
     "script": "gulp script",
-    "deploy":"scp build/main.css zimamed:/home/u/ulnoknok19/public_html/local/templates/main/template_styles.css && scp build/js/app.js zimamed:/home/u/ulnoknok19/public_html/local/templates/main/js/app.js"
+    "deploy": "scp build/main.css zimamed:/home/u/ulnoknok19/public_html/local/templates/main/template_styles.css && scp build/js/app.js zimamed:/home/u/ulnoknok19/public_html/local/templates/main/js/app.js"
   }
 }
