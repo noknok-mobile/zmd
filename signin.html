@@ -378,6 +378,24 @@
         </div>
       </div>
     </div>
+    <div class="modal__wrapper" data-modal="result">
+      <div class="modal__overlay"></div>
+      <div class="modal" data-simplebar="data-simplebar">
+        <button class="modal__close js-close" aria-label="Закрыть">
+          <svg class="modal__close-icon">
+            <use href="icons.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__inner">
+          <div class="modal__header">
+            <h2 class="result__message result__message_success title">Запись успешно оформлена</h2>
+          </div>
+          <div class="modal__body">
+            <div class="result__description">Вы можете следить за выполнением своего заказа в Личном кабинете. Обратите внимание, что для входа в этот раздел вам необходимо будет ввести логин и пароль пользователя сайта.</div><a class="result__button button" href="#" onclick="closeModal()">в личный кабинет</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/simplebar.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.5/dist/inputmask.min.js"> </script>
     <script src="js/app.js"></script>
