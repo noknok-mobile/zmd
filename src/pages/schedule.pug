@@ -1,52 +1,53 @@
 extends /layout/template 
 
 block content
-    .page__content
-        .page-section
-            .schedule-table
-                .schedule-filter.schedule-grid
-                    .schedule-filter__section.schedule-filter__section_place
-                        +select({label:"Филиал", options: ["Ул. московская, 40", "Ул. московская, 40", "Ул. московская, 40"]})#filial.select_inline
+    .page__body
+        .page__content
+            .page-section
+                .schedule-table
+                    .schedule-filter.schedule-grid
+                        .schedule-filter__section.schedule-filter__section_place
+                            +select({label:"Филиал", options: ["Ул. московская, 40", "Ул. московская, 40", "Ул. московская, 40"]})#filial.select_inline
 
-                    .schedule-filter__section.schedule-filter__section_spec 
-                        +select({label:"Направление", options: ["акушерство и гинекология", "кардиология", "Проктология"]})#spec.select_inline
+                        .schedule-filter__section.schedule-filter__section_spec 
+                            +select({label:"Направление", options: ["акушерство и гинекология", "кардиология", "Проктология"]})#spec.select_inline
 
-                    .schedule-filter__section.schedule-filter__section_calendar
-                        +schedule_header
-                .spec-row.schedule-grid 
-                    .spec-row__info 
-                        +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
-                    .spec-row__calendar
-                        .schedule 
-                            +schedule_body
+                        .schedule-filter__section.schedule-filter__section_calendar
+                            +schedule_header
+                    .spec-row.schedule-grid 
+                        .spec-row__info 
+                            +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                        .spec-row__calendar
+                            .schedule 
+                                +schedule_body
 
-                .spec-row.schedule-grid 
-                    .spec-row__info 
-                        +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
-                    .spec-row__calendar
-                        .schedule 
-                            +schedule_body
+                    .spec-row.schedule-grid 
+                        .spec-row__info 
+                            +doctor-card({name:"Лымарь Марина Петровна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."})(src= 'assets/img/lady.jpg')
+                        .spec-row__calendar
+                            .schedule 
+                                +schedule_body
 
-                .spec-row.schedule-grid 
-                    .spec-row__info 
-                        +doctor-card({name:"Мейпариани Елена Владимировна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."}, footer= false)(src= 'assets/img/lady.jpg')
-                    .spec-row__calendar
-                        .schedule 
-                            .schedule__placeholder
-                                .schedule__inner
-                                    p В данный момент запись к врачу не может быть осуществлена онлайн.
-                                    p Обратитесь в контактный центр для записи к этому врачу.
+                    .spec-row.schedule-grid 
+                        .spec-row__info 
+                            +doctor-card({name:"Мейпариани Елена Владимировна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."}, footer= false)(src= 'assets/img/lady.jpg')
+                        .spec-row__calendar
+                            .schedule 
+                                .schedule__placeholder
+                                    .schedule__inner
+                                        p В данный момент запись к врачу не может быть осуществлена онлайн.
+                                        p Обратитесь в контактный центр для записи к этому врачу.
 
-                .spec-row.schedule-grid 
-                    .spec-row__info 
-                        +doctor-card({name:"Новосартян Маргарита Геннадиевна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."}, footer= false)(src= 'assets/img/lady.jpg')
-                    .spec-row__calendar
-                        .schedule 
-                            .schedule__placeholder
-                                .schedule__inner
-                                    p Ближайшая запись к специалисту: #[br]
-                                        a.link.link_color.tag(href="#") 20 октября 
-                                            svg(width="20" height="20") #[use(href="icons.svg#arrow" transform="rotate(-90, 10, 10)")]
+                    .spec-row.schedule-grid 
+                        .spec-row__info 
+                            +doctor-card({name:"Новосартян Маргарита Геннадиевна", meta: "Акушер-гинеколог", desc: "Приём от 2500 руб."}, footer= false)(src= 'assets/img/lady.jpg')
+                        .spec-row__calendar
+                            .schedule 
+                                .schedule__placeholder
+                                    .schedule__inner
+                                        p Ближайшая запись к специалисту: #[br]
+                                            a.link.link_color.tag(href="#") 20 октября 
+                                                svg(width="20" height="20") #[use(href="icons.svg#arrow" transform="rotate(-90, 10, 10)")]
 block append popup 
     include /layout/modal/order
     include /layout/modal/calendar

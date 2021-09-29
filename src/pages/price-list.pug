@@ -1,16 +1,17 @@
 extends /layout/template
 
 block content
-    .page__content
-        section.page-section.prices
-            .prices__filter.price-filter
-                .price-filter__item
-                    +select({label:"Филиал", options: ["выберите филиал", "фыовдло", "asoipqn"]})#filial.select_inline
-                .price-filter__item
-                    +select({label:"Направление", options: ["выберите направление", "фыовдло", "asoipqn"]})#spec.select_inline
-            each item in prices 
-                +spoiler(item.title).spoiler_decorated
-                    +price-list(item.priceList)
+    .page__body
+        .page__content
+            section.page-section.prices
+                .prices__filter.price-filter
+                    .price-filter__item
+                        +select({label:"Филиал", options: ["выберите филиал", "фыовдло", "asoipqn"]})#filial.select_inline
+                    .price-filter__item
+                        +select({label:"Направление", options: ["выберите направление", "фыовдло", "asoipqn"]})#spec.select_inline
+                each item in prices 
+                    +spoiler(item.title).spoiler_decorated
+                        +price-list(item.priceList)
 
 block prepend vars 
     - let title = "Прайс-лист"
