@@ -74,7 +74,7 @@ function importScripts() {
 }
 
 function scripts() {
-    return src(['src/components/**/*.js', 'src/js/_*.js','src/js/app.js'])
+    return src(['src/components/**/*.js', 'src/layout/**/*.js', 'src/js/_*.js','src/js/app.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write('../'))
