@@ -195,6 +195,20 @@ function expandCalendar(e) {
 }
 
 
+const openButton = document.querySelector('.js-menu-toggle');
+const header = document.querySelector('.header-mobile');
+openButton.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+    header.classList.toggle('js-open');
+    isOpen = header.classList.contains('js-open');
+    disableWindowScroll(isOpen);
+}
+const sidebarMenu = document.querySelector('.sidebar-menu');
+if(sidebarMenu)
+    document.querySelector('.js-sidebar-open').addEventListener('click', function (e) {
+    sidebarMenu.classList.toggle('sidebar-menu_unfold');
+})
 const loginTabFilter = new Filter(document.body, {
   controlsClass: "js-modal-filter",
   targetClass: "js-modal-tab",
