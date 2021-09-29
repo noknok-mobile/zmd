@@ -25,6 +25,14 @@
         margin-bottom: unset;
       }
     }
+
+    ul {
+      @extend .list;
+    }
+
+    li {
+      @extend .list__item;
+    }
   }
 
   &__sidebar {

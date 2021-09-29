@@ -86,22 +86,48 @@
 }
 
 .detail-page {
+    @extend .page-section;
+
+    .page-section:first-child {
+        margin-top: 0;
+    }
+
+    .page-section:last-child {
+        margin-bottom: 0;
+    }
+
     &__image {
         margin-bottom: 1rem;
     }
-    &__meta{
+
+    &__meta {
         margin-bottom: 0.5em;
     }
+
     &__lead {
         margin-bottom: 1.8rem;
     }
 
-    &__text {
-        margin-bottom: var(--offset-middle);
+    &__button {
+        margin-top: var(--offset-middle);
     }
+
+    h1,
+    h2,
+    h3,
+    .title {
+        margin-bottom: $offset-s;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @extend .title;
+    }
+
 }
 
-.error-block{
+.error-block {
     @include text(xxs);
     color: $color-error;
 }
