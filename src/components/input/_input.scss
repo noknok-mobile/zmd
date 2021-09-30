@@ -50,7 +50,7 @@
       text-transform: none;
     }
 
-    &:invalid {
+    &:invalid, &_invalid {
       outline: $color-error;
       border: 1px solid $color-error;
       box-shadow: 2px 8px 40px rgba(255, 0, 0, 0.09);
