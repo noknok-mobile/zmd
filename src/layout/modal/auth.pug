@@ -1,7 +1,7 @@
 form.form(action="#" name="login")
     +form-step
-        +input({label: "Ваше имя*"})#name(name="name" type="text" placeholder="Иванов Иван Иванович")
-        +input({label: "Ваш пароль*", icon: "password"})#password(name="password" type="password")
+        +input({label: "Номер телефона*"})#login_phone(name="phone" type="text" placeholder="+7 (___) ___-__-__")
+        +input({label: "Ваш пароль*", icon: "password"})#login_password(name="password" type="password")
         a.tag.tag_link.auth-link.js-open(data-modal="password" href="#") Забыли пароль?
 
     +form-step.form__footer
