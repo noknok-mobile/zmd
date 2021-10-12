@@ -2244,12 +2244,7 @@ input:not(:-ms-input-placeholder) ~ .input__label {
 
 .branch_tile .branch__img svg {
   max-width: 100%;
-  max-height: 100%;
-  filter: grayscale(1);
-}
-
-.branch_tile:hover .branch__img svg {
-  filter: grayscale(0);
+  max-height: 80px;
 }
 
 .branch__link {
