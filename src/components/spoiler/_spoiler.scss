@@ -17,13 +17,13 @@
     position: relative;
     list-style: none;
     cursor: pointer;
+    border-bottom: $line;
+    padding: 1rem 2.5rem 1rem 0;
 
     &::-webkit-details-marker {
       display: none;
     }
 
-    border-bottom: $line;
-    padding: 1rem 0;
 
 
     @at-root {
