@@ -36,6 +36,7 @@
         align-items: center;
         max-width: clamp(300px, 80%, 800px);
         margin: var(--offset-large) auto;
+        text-align: center;
     }
 
     &_docs {
