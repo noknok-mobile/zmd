@@ -1830,6 +1830,7 @@ input:not(:-ms-input-placeholder) ~ .input__label {
   align-items: center;
   max-width: clamp(300px, 80%, 800px);
   margin: var(--offset-large) auto;
+  text-align: center;
 }
 .page-section_docs:not(:last-of-type) {
   margin-bottom: var(--offset-middle);
